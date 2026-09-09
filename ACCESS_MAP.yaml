@@ -2,18 +2,66 @@
 #
 # Where authoritative material lives, and who can reach it. This records what
 # has been ESTABLISHED, not what probably exists.
+#
+# NO CREDENTIAL VALUE APPEARS HERE OR ANYWHERE IN THIS REPOSITORY. Where a
+# credential is needed, this file names the FILE it is read from and the
+# VARIABLE NAME it is read under. See SECRETS_POLICY.md.
 
 reviewed_against: "0000000"
 
 repositories:
   brain:
-    name: UNKNOWN - no remote has been recorded for this Brain
-    role: The canonical documented truth for IPTV Network
-    access: UNKNOWN
+    name: UNKNOWN - no git remote has been added to this repository
+    role: >-
+      The canonical documented truth for IPTV Network. Documentation and control
+      plane only; no product code.
+    access: local only, at /home/iptv/iptv-network-project-brain on srv1731217
+    verified_by: git remote -v returns nothing on 2026-09-09
+    note: >-
+      Creating the remote is the OWNER's act, not an agent's. Until it exists,
+      this Brain has exactly one copy and no backup.
+  network:
+    name: benasjad-hub/iptv-network
+    role: >-
+      The product code: 78 site designs, the automation scripts, and the living
+      documents. Authoritative for its own code and history, and for nothing
+      else.
+    access: private, owner benasjad-hub
+    verified_by: git remote -v on 2026-09-09, HEAD 7774f723 on branch main
+  universal_standard:
+    name: benasjad-hub/universal-project-system
+    role: The standard this Brain was installed from. READ-ONLY from here.
+    access: cloned locally at /srv/traducteurassermente/.universal-ref
+    verified_by: the install manifest pins the standard at commit 044ea1f8, which resolves in that clone and NOT in the network repository
+
+push_authority: >-
+  Pushing to the network repository is allowed from the autopilot VPS
+  (IPv4 187.124.40.74) and from there only. Every push must be reported with its
+  branch, its commit ids and its files. A large or risky change - a broad
+  refactor, a history rewrite, a deletion, a force push - is never pushed
+  without asking first. The owner's own machine stays pull-only.
 
 external_vault: NOT_CHOSEN and NOT_PROVISIONED - no account, token or secret exists
+
+credential_locations:
+  note: >-
+    These are POINTERS. Each names a file and the variable names read from it.
+    No value is recorded, here or anywhere in this Brain.
+  environment_file: apps/sites/.env.local in the network repository, holding 41 variable names
+  service_account_files: the secrets/ directory of the network repository, holding 11 files
+  reachable_by: any process running as the `iptv` user on srv1731217
+
+forbidden_access:
+  note: >-
+    Recorded as access facts because a session that does not know them will
+    reach for them. Each is an owner instruction, not an agent's preference.
+  rules:
+    - "Supabase project stefvhralisxnhhdhkvj belongs to a DIFFERENT production application. No call to it, read-only included."
+    - "The volume named KODAK is never read from or written to."
+    - "A database migration is never applied until the owner has seen the full statement and answered."
 
 notes: >-
   Availability is not adoption. If a tool, service or integration is not
   recorded here or in SERVICES.yaml, this project does not use it - whatever a
-  session's harness may make available.
+  session's harness may make available. This host in particular exposes many
+  connectors and many services belonging to OTHER projects of the same owner.

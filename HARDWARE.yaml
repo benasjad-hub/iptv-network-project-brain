@@ -1,14 +1,50 @@
 # HARDWARE — IPTV Network
 #
-# Test devices and physical hardware. Kept, and empty, on purpose: an absent
-# file reads as an oversight, an empty one as an answer.
+# The physical machines this project runs on or from. Measured on the host
+# itself on 2026-09-09; nothing here is inferred from a configuration file.
 
 reviewed_against: "0000000"
 
-applicable: false
+applicable: true
 reason: >-
-  No hardware or test device has been recorded for this project. If one is ever
-  added, THE DEVICES BELONG TO THAT PROJECT and are recorded here, never in the
-  system this Brain was installed from.
+  One machine carries this project's automation, six of its 78 sites, and the
+  git working tree from which every deployment is made. It is recorded because
+  a session that does not know it exists cannot reason about why a deploy is
+  late or why a rebuild takes a site down.
 
-devices: {}
+devices:
+  autopilot_vps:
+    id: autopilot_vps
+    role: >-
+      The 24/7 operator. Runs every scheduled task, holds the working tree at
+      /home/iptv/iptv-network, and serves 6 of the 78 sites with `next start`
+      on port 2052.
+    hostname: srv1731217
+    os: Ubuntu 24.04.4 LTS, kernel 6.8.0-136-generic
+    cpu_cores: 8
+    memory: 31 GiB total
+    disk: 387 GB total, 252 GB used (66 percent) on /
+    public_ipv4: 187.124.40.74
+    verified_by: >-
+      hostname, nproc, free, df, uname and curl -4 ifconfig.me run on the host
+      on 2026-09-09.
+    push_authority: >-
+      THIS machine, identified by IPv4 187.124.40.74, is the one host allowed to
+      push to origin. Note that ifconfig.me returns an IPv6 address by default
+      and will mislead a check that does not force IPv4.
+    shared_with_other_projects: true
+    shared_note: >-
+      IMPORTANT AND EASY TO GET WRONG. This machine is NOT dedicated to the IPTV
+      network. Its 17 nginx virtual hosts and most of its running services
+      belong to unrelated projects of the same owner - a chat product, a video
+      factory, an n8n instance, a sworn-translator platform preview. Reading a
+      service list on this host and attributing it to this project is a
+      mistake. What belongs to this project is recorded in SERVICES.yaml and
+      nothing else does.
+    ports_in_use_by_this_project:
+      - "2052 — `next start` serving the 6 VPS-hosted sites"
+      - "7788 — the shared live browser, loopback only, reached through nginx at live.funey.store"
+    ports_note: >-
+      The host has more than 40 listening sockets. The two above are the only
+      ones this Brain claims. The others were observed but not attributed, and
+      attributing them would be a guess.

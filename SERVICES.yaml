@@ -3,6 +3,15 @@
 # Metadata only. A secret_ref is a LABEL under which a value would resolve in a
 # vault; NO VAULT IS CHOSEN OR PROVISIONED, so every one reads NONE_CONFIGURED.
 # No value may ever appear here - SECRETS_POLICY.md.
+#
+# `credential_location` names the FILE and the VARIABLE NAME under which a
+# credential is read today. It is a pointer, never a value, and it is not a
+# secret_ref: nothing resolves it automatically.
+#
+# EVERY entry below was verified on 2026-09-09 against the working tree at
+# benasjad-hub/iptv-network commit 7774f723, the Supabase `sites` table, the
+# generated audit data/network-audit.json (2026-09-09T06:41:16Z), and the
+# host's own listening sockets. The verification method is stated per entry.
 
 reviewed_against: "0000000"
 
@@ -13,4 +22,199 @@ vault:
   secret_ref_scheme: UNKNOWN
 
 # status: active | active_external | unverified_from_this_repo | unknown | retired
-services: {}
+services:
+
+  # ── code and data ────────────────────────────────────────────────────────
+  github_network:
+    id: github_network
+    purpose: >-
+      The product repository. Holds all 78 site designs, the automation scripts
+      and the living documents. Authoritative for its own code and history.
+    status: active
+    login_identity: benasjad-hub
+    secret_ref: NONE_CONFIGURED
+    remote: https://github.com/benasjad-hub/iptv-network.git
+    verified_by: git remote -v and git rev-parse on 2026-09-09, HEAD 7774f723 on branch main
+  github_brain:
+    id: github_brain
+    purpose: Private repository holding this Project Brain
+    status: unknown
+    login_identity: UNKNOWN - no remote has been added to this repository yet
+    secret_ref: NONE_CONFIGURED
+    verified_by: git remote -v in this repository returns nothing on 2026-09-09
+  supabase_iptv_network:
+    id: supabase_iptv_network
+    purpose: >-
+      The network's own Postgres. Holds the `sites` table (the canonical site
+      list), keywords, prices and niches. Prices in this table OVERRIDE the
+      values written in code.
+    status: active
+    login_identity: project ref xqgrfntyhizrdomxqgxv, organisation "website iptv center"
+    secret_ref: NONE_CONFIGURED
+    credential_location: apps/sites/.env.local, variable names NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY / SUPABASE_SERVICE_ROLE_KEY
+    verified_by: read queries on 2026-09-09 returned 78 rows, 35 live and 43 draft
+    warning: >-
+      A SECOND Supabase project, ref stefvhralisxnhhdhkvj, belongs to a
+      DIFFERENT production application and is FORBIDDEN to this project,
+      read-only calls included. See the owner decision on repository boundaries.
+
+  # ── hosting: four distinct paths, and they do NOT deploy the same way ─────
+  vercel:
+    id: vercel
+    purpose: Hosts 41 of the 78 sites. Deploys automatically on every push to main.
+    status: active
+    login_identity: UNKNOWN - not established from this repository
+    secret_ref: NONE_CONFIGURED
+    credential_location: apps/sites/.env.local, variable name VERCEL_TOKEN
+    verified_by: data/network-audit.json 2026-09-09, field `hosting` = vercel on 41 of 78 sites
+  cloudflare_workers:
+    id: cloudflare_workers
+    purpose: >-
+      Hosts 31 sites - 24 on a dedicated worker each, 7 sharing one cluster.
+      Also provides the image generation and the screenshot API used for visual
+      checks.
+    status: active
+    login_identity: UNKNOWN - not established from this repository
+    secret_ref: NONE_CONFIGURED
+    credential_location: >-
+      apps/sites/.env.local, variable names CLOUDFLARE_ACCOUNT_ID /
+      CLOUDFLARE_API_TOKEN / CLOUDFLARE_EMAIL / CLOUDFLARE_GLOBAL_KEY
+    verified_by: data/network-audit.json 2026-09-09, `hosting` = cloudflare-worker on 24 and cloudflare-shared on 7
+    warning: >-
+      These sites do NOT deploy on push. scripts/cron-deploy-cf.sh must run
+      (crontab: 15 */2). Without it, newly written articles return 404 on every
+      Cloudflare-hosted site until someone deploys by hand.
+  vps_next_start:
+    id: vps_next_start
+    purpose: Hosts 6 sites served by `next start` on port 2052 of this machine.
+    status: active
+    login_identity: local process on srv1731217, supervisor UNKNOWN from this account
+    secret_ref: NONE_CONFIGURED
+    verified_by: >-
+      data/network-audit.json 2026-09-09 shows `hosting` = vps:2052 on 6 sites;
+      port 2052 confirmed LISTEN by ss; `next start` processes confirmed by ps.
+      The supervising unit could not be read - pm2 runs as root and this account
+      cannot list it.
+    warning: >-
+      These sites do NOT deploy on push either. scripts/cron-deploy-vps.sh must
+      run (crontab: 45 */2), and each rebuild takes the sites down for roughly
+      15 minutes.
+
+  # ── measurement and indexing ─────────────────────────────────────────────
+  google_search_console:
+    id: google_search_console
+    purpose: >-
+      Position, impression and indexation data for all 78 sites, split across
+      SEVEN separate accounts, A through G.
+    status: active
+    login_identity: 7 accounts, keyed A-G in data/gsc-accounts.json
+    secret_ref: NONE_CONFIGURED
+    credential_location: >-
+      secrets/gsc-service-account.json, -2, -3, gsc-yannick, gsc-hebert,
+      gsc-teacher, gsc-kora; and apps/sites/.env.local variable names
+      GSC_SERVICE_ACCOUNT_KEY / _B / _C
+    verified_by: data/gsc-accounts.json on 2026-09-09 lists 7 accounts and maps all 78 sites
+    warning: >-
+      Every call must use the CALLING SITE's own account key. A shared key
+      returns 403 on the others, and the failure is silent unless the caller
+      looks for it.
+  semrush_api_v4:
+    id: semrush_api_v4
+    purpose: >-
+      SERP and keyword-volume measurement. The competition source for choosing
+      an article's target query.
+    status: active
+    login_identity: trial key supplied by the owner, rotated periodically
+    secret_ref: NONE_CONFIGURED
+    credential_location: apps/sites/.env.local, variable name SEMRUSH_V4_KEY
+    verified_by: live calls on 2026-09-09 returned CSV reports through scripts/lib/semrush-mcp.ts
+    warning: >-
+      Endpoint v2, header `Apikey`, never `Bearer`. Errors arrive as HTTP 200
+      with the message in the body. The remaining unit balance is NOT readable
+      for this key format, so the client counts its own calls. The key's expiry
+      date is UNKNOWN.
+  bright_data:
+    id: bright_data
+    purpose: Former SERP measurement source, replaced by Semrush.
+    status: retired
+    login_identity: UNKNOWN - not established from this repository
+    secret_ref: NONE_CONFIGURED
+    credential_location: apps/sites/.env.local, variable names BRIGHTDATA_API_KEY / BRIGHTDATA_ZONE
+    verified_by: returns zone_not_found since 2026-09-01; still reachable behind `--source brightdata` in scripts/keyword-sweep.ts
+  google_indexing_api:
+    id: google_indexing_api
+    purpose: Pushes new and re-slugged URLs to Google for crawling, per account.
+    status: active
+    login_identity: same 7 service accounts as Search Console
+    secret_ref: NONE_CONFIGURED
+    verified_by: scripts/gsc-index-push.ts exists and is invoked by cron-index-new-articles.sh (crontab 0 7)
+  posthog:
+    id: posthog
+    purpose: Visitor and WhatsApp-click analytics for the network.
+    status: unverified_from_this_repo
+    login_identity: UNKNOWN - not established from this repository
+    secret_ref: NONE_CONFIGURED
+    credential_location: apps/sites/.env.local, variable names NEXT_PUBLIC_POSTHOG_KEY / NEXT_PUBLIC_POSTHOG_HOST
+    verified_by: >-
+      The variable names exist in the environment file. NO live call was made
+      from this Brain, so "it collects events today" is NOT established here.
+
+  # ── contact, content and mail ────────────────────────────────────────────
+  whatsapp_contact:
+    id: whatsapp_contact
+    purpose: >-
+      The network's only conversion channel. Every site's call to action opens
+      a WhatsApp conversation.
+    status: active
+    login_identity: two numbers in service, 19029055026 and 13322541331
+    secret_ref: NONE_CONFIGURED
+    verified_by: >-
+      Supabase `sites` on 2026-09-09 - 65 sites on 19029055026, 3 on
+      13322541331, 10 rows with no number.
+    warning: >-
+      A third number, 12252179633, was BANNED by Meta on 2026-08-08 and must
+      never be reintroduced. 65 sites depending on a single number is a single
+      point of failure for the whole network's revenue.
+  openai_images:
+    id: openai_images
+    purpose: Article and banner image generation.
+    status: unverified_from_this_repo
+    login_identity: UNKNOWN - not established from this repository
+    secret_ref: NONE_CONFIGURED
+    credential_location: apps/sites/.env.local, variable name OPENAI_API_KEY
+    verified_by: >-
+      The variable name exists and scripts/cron-generate-covers.sh runs daily at
+      06:40. WHICH image model actually runs was NOT read, and two records in
+      this project disagree about it - see the open question in DECISIONS.md.
+  transactional_email:
+    id: transactional_email
+    purpose: Daily reports, alerts and Search Console digests to the owner.
+    status: active
+    login_identity: Gmail app passwords, plus a Resend key present in the environment
+    secret_ref: NONE_CONFIGURED
+    credential_location: secrets/gmail-app-passwords.json; apps/sites/.env.local variable names RESEND_API_KEY / ALERT_EMAIL_TO
+    verified_by: crontab entries at 08:00, 12:00, 20:00 and 23:00 invoke reporting scripts with --email
+
+  # ── registrars and external hosting ──────────────────────────────────────
+  domain_registrars:
+    id: domain_registrars
+    purpose: Domain registration and DNS for the network's domains.
+    status: active
+    login_identity: IONOS and Namecheap, several accounts
+    secret_ref: NONE_CONFIGURED
+    credential_location: apps/sites/.env.local, variable names IONOS_API_KEY / NAMECHEAP_API_KEY / NAMECHEAP_API_USER / NAMECHEAP_USERNAME / NAMECHEAP_CLIENT_IP
+    verified_by: the variable names exist in the environment file on 2026-09-09
+    warning: >-
+      The IONOS DNS key edits zone records ONLY. It cannot change nameserver
+      delegation at the registrar; that needs a manual action in the portal.
+  hostinger:
+    id: hostinger
+    purpose: Hosts WordPress sites owned by the same owner, OUTSIDE this repository.
+    status: active_external
+    login_identity: UNKNOWN - not established from this repository
+    secret_ref: NONE_CONFIGURED
+    credential_location: secrets/hostinger-token.env
+    verified_by: the file exists on 2026-09-09; no call was made from this Brain
+    warning: >-
+      These WordPress sites are NOT among the 78. They are not built, deployed
+      or measured by this repository.
