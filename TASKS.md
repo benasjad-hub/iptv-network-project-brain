@@ -86,6 +86,11 @@ reader is looking for, and this test only measures the Brain against itself.
 ### `IPTV-T-006` — Ratify or reject the nine engineering rules
 **Actor:** owner · **Blocking:** no · **Phase:** operations
 
+**Also inside this task:** the precedence block in `START_HERE.md` §7, which an
+agent wrote on 2026-09-09 to resolve a collision between the standard's hard
+rules and two owner decisions. It says which rule yields — a call no agent should
+make alone.
+
 `project-memory/05-DECISIONS.md` in the network repository holds nine numbered
 rules, written by an agent and running in production. They are recorded in this
 Brain as **architecture**, not as decisions. The owner reading them once and

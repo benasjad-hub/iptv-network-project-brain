@@ -106,6 +106,11 @@ These travel with the standard and apply here from the moment of installation.
 >
 > Anything not named above stays forbidden. If you find a third collision, it is
 > an open question, not a licence.
+>
+> **This block was written by an agent on 2026-09-09**, to resolve a collision a
+> blind test exposed. It is the operational answer, and **the owner has not
+> confirmed it** — it is inside the scope of `IPTV-T-006`. Until he does, treat
+> it as the narrowest reading available, never as a grant.
 
 1. **Never push on your own initiative, and never create a remote.** Both are
    owner actions, granted **per occurrence**. **Never force-push, rebase, amend,

@@ -36,7 +36,12 @@ produce.
 
 ## What it found, and what was changed because of it
 
-Eleven defects, of which these were repaired the same day:
+**Twelve findings, closed by ten changes.** Two of the twelve were the same
+defect seen from two angles - the missing rule of precedence, reported once as a
+collision over the living documents and once as a collision over pushing. One,
+the rhetorical weight of the "0 FAIL" figure repeated across six files, was not
+edited: it is answered by the limits section below, which is the honest place
+for it. The ten changes:
 
 | Found | Change |
 |---|---|
@@ -50,6 +55,7 @@ Eleven defects, of which these were repaired the same day:
 | `UNKNOWN` used for two different things without distinction | The two senses are now separated and named |
 | Revenue used to rank risks while the purpose reads `UNKNOWN` | The implicit goal is named as read off the machinery, and barred from standing in for the owner's answer |
 | Four commit ids with no statement of which means what | A table: what each answers, and why none equals HEAD |
+| No precedence between the standard's hard rules and an owner decision | An explicit block — which itself was written by an agent, says so, and is routed to `IPTV-T-006` for the owner |
 
 ## What this record does NOT prove
 
