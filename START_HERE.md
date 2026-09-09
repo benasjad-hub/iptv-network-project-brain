@@ -1,6 +1,6 @@
 # START HERE — IPTV Network
 
-**Reviewed against commit:** `602b580` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `32c0e3e` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 Canonical orientation for any coding agent or person working on
 **IPTV Network**. **Read this before touching anything.**
