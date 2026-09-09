@@ -1,6 +1,6 @@
 # RELEASE / GATE STATE — IPTV Network
 
-**Reviewed against commit:** `0000000` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `602b580` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **PUBLISHABLE: the network already is.** 78 sites are live and publishing daily.
 What is **not** accepted is this Brain: the owner has not read it and said that

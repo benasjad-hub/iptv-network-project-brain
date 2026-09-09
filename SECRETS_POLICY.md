@@ -1,6 +1,6 @@
 # SECRETS POLICY — IPTV Network
 
-**Reviewed against commit:** `0000000` · **Reviewed:** 2026-09-09 · **Status:** NOT BOOTSTRAPPED
+**Reviewed against commit:** `602b580` · **Reviewed:** 2026-09-09 · **Status:** CURRENT — the standard's policy, adopted unchanged
 
 **No credential value may enter this repository.** Not in a file, not in a
 commit message, not in a verification record, not in a comment, and not
