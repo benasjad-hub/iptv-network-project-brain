@@ -1,41 +1,55 @@
 # RELEASE / GATE STATE — IPTV Network
 
-**Reviewed against commit:** `0000000` · **Reviewed:** 2026-09-09 · **Status:** NOT BOOTSTRAPPED
+**Reviewed against commit:** `0000000` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
-**PUBLISHABLE: NO. NOT PUBLISHABLE, and nothing is scheduled.**
+**PUBLISHABLE: the network already is.** 78 sites are live and publishing daily.
+What is **not** accepted is this Brain: the owner has not read it and said that
+what it records is what he means.
 
 ## Gate board
 
 | Gate | Requires | Actor | State |
 |---|---|---|---|
-| **PG-1** | `IPTV-T-001` | agent | **NOT SATISFIED** — the Brain is installed but not filled in |
+| **PG-1** | `IPTV-T-001` | agent | **SATISFIED** 2026-09-09 — structural only |
+| **PG-2** | `IPTV-T-002` | owner | **NOT SATISFIED** — the owner has not been asked to accept it |
 
-**No gate is satisfied. PROJECT BRAIN: INSTALLED, NOT FILLED IN. PHASE 0: NOT
-STARTED.**
+**PROJECT BRAIN: FILLED IN, NOT ACCEPTED. THE NETWORK IS LIVE: 78 SITES, 77
+SERVING. PURPOSE: UNKNOWN — THE OWNER MUST ANSWER.**
 
-**What PG-1 will and will not mean.** It will mean the canonical Brain exists,
-is filled in, and `make brain-gate` reports **0 FAIL** in a verification-ready
-checkout, with every `WARN` explained rather than silenced. It is a
-**STRUCTURAL** result about file shape and internal consistency. **It is not
-acceptance**, it says nothing about whether any claim in the Brain is honest,
-and it promotes nothing.
+**What PG-1 means, and what it does not.** It means the canonical Brain exists,
+is filled in, and `make brain-gate` reports **0 FAIL** with every `WARN`
+explained rather than silenced. It is a **STRUCTURAL** result about file shape
+and internal consistency. **It is not acceptance**, it says nothing about
+whether any claim in the Brain is honest, and it promotes nothing. A confident,
+well-formed, false statement passes it.
+
+**Why the WARNs are not silenced.** Five remain at the moment of writing, and
+each has a reason a reader can check: the generated state had not been written
+yet, the reviewed-against sentinel had not been stamped, the tree was dirty
+mid-edit, and this repository has no upstream to compare against — that last one
+is `IPTV-T-007`, and `UNKNOWN` there never means "probably fine".
 
 ## What blocks the milestone
 
-**Blocking: 1 — 1 agent, 0 owner, 0 external.** Source of truth is `TASKS.md`;
-`PROJECT.yaml` `release:` is its derived projection and `context:check` fails if
-the two disagree.
+**Blocking: 1 — 0 agent, 1 owner, 0 external.** The owner answering the three
+open questions. Source of truth is `TASKS.md`; `PROJECT.yaml` `release:` is its
+derived projection and `context:check` fails if the two disagree.
 
-## Publication state of the code itself
+## Publication state of the network itself
 
 | Question | Answer |
 |---|---|
-| Is anything built? | **UNKNOWN to this Brain.** Nothing has been recorded. |
-| Is anything published? | **UNKNOWN to this Brain.** |
-| Is anything deployed? | **UNKNOWN to this Brain.** |
-| Is the repository itself pushed? | **This file does not own that fact.** Run `make context-check` after a read-only fetch — only `SYNCED` means the canonical remote holds this history, and `UNKNOWN` never means "probably fine". |
+| Is anything built? | **Yes.** 78 sites, 2 684 articles, measured 2026-09-09. |
+| Is anything published? | **Yes.** 77 of 78 answer HTTP 200. |
+| Is anything deployed? | **Yes**, across four hosting paths that do not deploy alike. |
+| Is this Brain's repository pushed? | **No remote exists.** One copy, one machine, no backup — `IPTV-T-007`. |
 
 ## The rollback position
 
-**UNKNOWN.** Nothing has been deployed as far as this Brain records, so there is
-nothing recorded to roll back to.
+For the network: each site's design folder is self-contained and its history is
+in `benasjad-hub/iptv-network`, so a bad change is reverted per site. **The
+Cloudflare and VPS sites do not roll back on push either** — the revert reaches
+them only when their deploy cron runs, up to two hours later.
+
+For this Brain: it holds documentation only. Reverting a commit here changes
+what is recorded and nothing that runs.

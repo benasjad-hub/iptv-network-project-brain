@@ -1,12 +1,16 @@
 # ARTIFACTS — IPTV Network
 #
-# Build outputs, packages, images and released binaries. Kept, and empty, on
-# purpose.
+# Build outputs, packages, images and released binaries.
 
 reviewed_against: "0000000"
 
 artifacts: {}
 
 note: >-
-  Nothing has been built, packaged, published or released for this project as
-  far as this Brain records.
+  Nothing is PACKAGED or RELEASED for this project: there is no binary, no image
+  and no published package. The network's build outputs are deployment artefacts
+  rather than releases - a Vercel build per push, a shared open-next bundle for
+  the Cloudflare workers, and a Next.js build served by `next start` on the VPS.
+  None of them is versioned, retained or rolled back as an artifact, so none is
+  registered here. Recording a deployment as an artifact would imply a
+  retrievable version that does not exist.

@@ -14,8 +14,9 @@ when you need decision context) → one task-specific doc.
 
 Do **not** read `docs/history/` by default.
 
-State lines you must not move: **PROJECT BRAIN: INSTALLED, NOT FILLED IN** ·
-**PHASE 0: NOT STARTED**.
+State lines you must not move: **PROJECT BRAIN: FILLED IN, NOT ACCEPTED** ·
+**THE NETWORK IS LIVE: 78 SITES, 77 SERVING** · **PURPOSE: UNKNOWN — THE OWNER
+MUST ANSWER**.
 
 Freshness and structure check: `make brain-gate`. Runtime requirements are Node
 18+, `git`, and a verification-ready checkout; there is no `package.json` — see

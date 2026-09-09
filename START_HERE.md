@@ -7,50 +7,82 @@ Canonical orientation for any coding agent or person working on
 
 > ## The state lines. Nothing here outranks them.
 >
-> - **PROJECT BRAIN: INSTALLED, NOT FILLED IN.**
-> - **PHASE 0: NOT STARTED.**
+> - **PROJECT BRAIN: FILLED IN, NOT ACCEPTED.**
+> - **THE NETWORK IS LIVE: 78 SITES, 77 SERVING.**
+> - **PURPOSE: UNKNOWN — THE OWNER MUST ANSWER.**
 >
-> This Brain was installed by the Universal Project System installer on
-> 2026-09-09 and **its content has not been written yet**. Every semantic
-> field below reads `UNKNOWN` because nobody has asserted anything, not because
-> the answer is nothing. The `0000000` in the header above is the sentinel for
-> "never reviewed against a real commit" — it is honest, and it is why the
-> status line says NOT BOOTSTRAPPED.
+> This Brain was installed on 2026-09-09 and filled in the same day from
+> measured sources. `make brain-gate` reports 0 FAIL, which is a **structural**
+> result about file shape — it cannot tell whether a claim here is honest.
+> The owner has not read and accepted it, so nothing here is accepted.
+> **`project_purpose` stays `UNKNOWN` deliberately**: nobody has stated what the
+> network is for, and a plausible sentence there would let every automated
+> choice be justified by a goal an agent invented.
 
 ## 1. What is IPTV Network?
 
-**UNKNOWN — a renseigner par le proprietaire**
+**A network of 78 websites that runs itself.** Each site is one self-contained
+folder in a multi-tenant Next.js application; roughly two dozen scheduled tasks
+choose keyword targets from measured search results, write articles, generate
+images, push URLs to Google for crawling, and mail the owner a daily report. On
+2026-09-09, 77 of the 78 answered HTTP 200 and 2 684 articles were live. Every
+site's call to action opens a WhatsApp conversation, which is the only
+conversion channel.
+
+**What it is FOR is `UNKNOWN`** — see `IPTV-Q-001`. That is the honest answer,
+not a missing one, and closing it is the owner's act.
+
+**The one thing to learn before touching anything.** The 78 sites sit on four
+hosting paths that do **not** deploy the same way: 41 on Vercel deploy on push,
+24 dedicated Cloudflare workers and 7 sharing a cluster deploy only when a cron
+runs every two hours, and 6 served from the VPS deploy on their own cron. A
+change can be live in ninety seconds on some sites and invisible for two hours
+on the other 37.
 
 Project id: `iptv-network`. Task, decision and question ids in this Brain
 carry the prefix `IPTV`.
 
 ## 2. Current active surface / branch
 
-**UNKNOWN.** Nobody has recorded a canonical branch or remote for this Brain.
+This Brain: branch `main`, **no remote yet** — one copy, one machine, no backup
+(`IPTV-T-007`). The governed product repository is
+`benasjad-hub/iptv-network`, branch `main`, declared in `EXTERNAL_REPOS.yaml`
+and observed at `5fe707b`.
 `make context-check` computes the repository-sync answer live from the
 remote-tracking ref after a read-only fetch; `REPO_STATE.json` checkpoints it.
 
 ## 3. Current objective
 
-**UNKNOWN.** See `TASKS.md`. Until this Brain is filled in, the only task is
-`IPTV-T-001` — write its content.
+**Get three answers from the owner** — `IPTV-T-002`. They are the only blocking
+work: what the network is for, what the site status `draft` is meant to gate,
+and which image generator is intended.
 
 ## 4. Current verified state
 
-**Nothing is verified.** No claim in this Brain has evidence behind it, because
-no claim has been made. `docs/verification/` is empty by construction.
+One record: `docs/verification/BRAIN_CONTENT_2026-09-09/`. It establishes that
+each fact in this Brain was read from the source named beside it on that date.
+It establishes **nothing** about tomorrow, about honesty, about content quality
+or about revenue, and it says so itself. `make brain-gate` reports 0 FAIL, which
+is structural.
 
 ## 5. Current blockers / open work
 
-See `TASKS.md`. **No open question is recorded** — recording one is a human's
-act, and an agent may not answer one.
+See `TASKS.md`. **Three open questions are recorded** in `DECISIONS.md`, and an
+agent may not answer any of them. The standing risks are in `STATUS.md` §5 — the
+sharpest being that 65 of the 78 sites route their only call to action through a
+single WhatsApp number.
 
 ## 6. Owner-approved / frozen areas
 
-**No decision has been recorded.** `DECISIONS.md` is empty of decisions **by
-construction** — the installer cannot write one, and neither may an agent. Only
-the owner may make a decision (`UPS-D-008`, `UPS-D-010` in the Universal system
-this Brain was installed from).
+**Seven owner decisions**, `IPTV-D-001` to `IPTV-D-007`, all sourced to the
+network repository's `CLAUDE.md`. Two are absolute and worth carrying in your
+head before you run anything: **the volume named KODAK is never touched**, and
+**the Supabase project `stefvhralisxnhhdhkvj` belongs to a different production
+application and is out of bounds, read-only calls included**.
+
+Nine further engineering rules are running in the network today. They were
+written by an agent, not approved by the owner, so they are recorded as
+**architecture** and not as decisions — `docs/architecture/ARCHITECTURE.md`.
 
 ## 7. Hard do-not-touch rules
 

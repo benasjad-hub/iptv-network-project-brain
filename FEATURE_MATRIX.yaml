@@ -1,17 +1,18 @@
 # FEATURE MATRIX — IPTV Network
 #
-# Feature x surface truth. INSTALLED AND NOT FILLED IN: the single row below
-# describes the Brain itself, which is the only thing that demonstrably exists
-# in this repository today. Add the product's real features as they are built,
-# each with a phase and an authority.
+# Feature x surface truth, filled in on 2026-09-09 from measured sources.
 #
-# State vocabulary is fixed by the validator. Provenance is kept SEPARATE from
-# the states so a judgement can never be flattened into a measurement.
+# `implemented` is STRUCTURAL: the thing exists and runs. It is never a claim
+# that it works well, that it earns anything, or that it is what the owner
+# wants. Provenance is kept SEPARATE from the states so a judgement can never
+# be flattened into a measurement.
 
 reviewed_against: "0000000"
 
 surfaces:
   - project_brain
+  - network_sites
+  - automation
 
 classifications:
   brain_installed:
@@ -19,17 +20,135 @@ classifications:
     authority: INSTALL_MANIFEST.json
     note: >-
       The file set and the copied validator exist in this tree and their digests
-      are pinned. That is a measurement of THIS REPOSITORY, and it is not a
-      claim that anything about the product is true.
+      are pinned. A measurement of THIS REPOSITORY, and not a claim about the
+      product.
+  network_measured:
+    provenance: code_verified
+    authority: docs/verification/BRAIN_CONTENT_2026-09-09/README.md
+    note: >-
+      Read on 2026-09-09 from the Supabase sites table, the generated network
+      audit, the Search Console account map and the host's own sockets. It
+      describes that day and stops there.
+  destination_absent:
+    provenance: owner_determination
+    repo_measurement: none
+    authority: DECISIONS.md IPTV-Q-001
+    note: >-
+      That no goal is written is itself a measured fact: no document in the
+      project states one. What the goal SHOULD be is the owner's to determine,
+      and no agent may supply it.
 
 features:
+
   project_brain_canonical_file_set:
     project_brain: implemented
+    network_sites: not_applicable
+    automation: not_applicable
     phase: phase_0
     authority: INSTALL_MANIFEST.json and START_HERE.md
     notes: >-
-      The canonical file set and the zero-dependency validator, copied in at
-      installation and pinned by SHA-256 digest. implemented is STRUCTURAL and
-      says only that the files exist and the gate runs. IT IS NOT A CLAIM THAT
-      THE BRAIN IS FILLED IN - it is not - and not a claim about any product
-      feature.
+      The canonical file set and the zero-dependency validator, pinned by
+      SHA-256 digest. implemented is STRUCTURAL - the files exist and the gate
+      runs. It is not a claim that any statement in them is honest.
+
+  multi_tenant_site_delivery:
+    project_brain: not_applicable
+    network_sites: implemented
+    automation: not_applicable
+    phase: operations
+    authority: docs/architecture/ARCHITECTURE.md
+    notes: >-
+      78 sites, one self-contained folder each, served by one multi-tenant
+      Next.js application across four hosting paths. 77 answered HTTP 200 on
+      2026-09-09; one, iptvbritish.uk, did not.
+
+  deployment_paths:
+    project_brain: not_applicable
+    network_sites: implemented
+    automation: implemented
+    phase: operations
+    authority: docs/architecture/ARCHITECTURE.md
+    notes: >-
+      Four paths that do NOT behave alike. Vercel deploys on push for 41 sites.
+      The 31 Cloudflare sites and the 6 VPS sites deploy only when their own
+      cron runs, every two hours. This is the single fact most likely to cost a
+      session hours, and it is why implemented here does not mean uniform.
+
+  automated_content_production:
+    project_brain: not_applicable
+    network_sites: implemented
+    automation: implemented
+    phase: operations
+    authority: docs/verification/BRAIN_CONTENT_2026-09-09/README.md
+    notes: >-
+      2 684 articles live across the 78 sites, no site at zero, written by
+      scheduled tasks rather than by hand. Quality was NOT assessed and is not
+      claimed.
+
+  keyword_target_measurement:
+    project_brain: not_applicable
+    network_sites: not_applicable
+    automation: implemented
+    phase: operations
+    authority: SERVICES.yaml semrush_api_v4
+    notes: >-
+      Restored on 2026-09-09 through the Semrush v4 API after the previous
+      source was suspended on 2026-09-01. Seven of the ten sites that had been
+      publishing with no measured target now have one; three remain saturated by
+      sibling sites, which is a configuration matter.
+
+  search_indexation_pipeline:
+    project_brain: not_applicable
+    network_sites: implemented
+    automation: implemented
+    phase: operations
+    authority: SERVICES.yaml google_search_console and google_indexing_api
+    notes: >-
+      Seven Search Console accounts cover all 78 sites, and new or re-slugged
+      URLs are pushed for crawling on a daily schedule. Each call must use the
+      calling site's own account key; a shared key fails silently on the others.
+
+  whatsapp_conversion_channel:
+    project_brain: not_applicable
+    network_sites: implemented
+    automation: not_applicable
+    phase: operations
+    authority: SERVICES.yaml whatsapp_contact
+    notes: >-
+      The network's ONLY conversion channel. 65 of the 78 sites route it through
+      one number. implemented is a statement that it exists, and simultaneously
+      the network's sharpest single point of failure.
+
+  operational_reporting:
+    project_brain: not_applicable
+    network_sites: not_applicable
+    automation: implemented
+    phase: operations
+    authority: SERVICES.yaml transactional_email
+    notes: >-
+      Daily indexation, coverage, content-health and hosting-health reports are
+      mailed to the owner on a fixed schedule.
+
+  trademark_exposure_guard:
+    project_brain: not_applicable
+    network_sites: implemented
+    automation: implemented
+    phase: operations
+    authority: docs/architecture/ARCHITECTURE.md
+    notes: >-
+      A quality gate rejects a generated article that carries a protected mark
+      in its slug, title or headings, or that places one near a verb of
+      inclusion. Rights attributions still pass, because they are protective
+      rather than a claim.
+
+  stated_destination_and_success_criteria:
+    project_brain: not_started
+    network_sites: not_started
+    automation: not_started
+    phase: phase_0
+    authority: DECISIONS.md IPTV-Q-001
+    notes: >-
+      NOT A GAP IN THE CODE. Nothing in this project states what the network is
+      for, what success looks like in numbers, or what the owner refuses. Every
+      automated choice above is therefore optimised against an unstated goal.
+      not_started is the honest state, and only the owner can move it.

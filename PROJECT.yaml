@@ -1,9 +1,12 @@
 # PROJECT — IPTV Network
 #
 # Machine-readable project facts. Installed by the Universal Project System
-# installer on 2026-09-09 and NOT FILLED IN: every semantic value below is
-# UNKNOWN because nobody has asserted anything, not because the answer is
-# nothing. UNKNOWN is a finished answer; a guess is not.
+# installer on 2026-09-09 and FILLED IN the same day from measured sources.
+#
+# `project_purpose` STAYS UNKNOWN ON PURPOSE. Nobody has stated what this
+# network is for, and a plausible sentence there would be worse than the empty
+# one - every automated choice the network makes would then be justified by a
+# goal an agent invented. It is open question IPTV-Q-001.
 
 reviewed_against: "0000000"
 
@@ -13,9 +16,14 @@ reviewed_against: "0000000"
 project_id: iptv-network
 project_name: IPTV Network
 project_status: active
-project_purpose: UNKNOWN — a renseigner par le proprietaire
+project_purpose: UNKNOWN — the owner has not stated it. See IPTV-Q-001 in DECISIONS.md.
 
-installed_from: benasjad-hub/iptv-network
+# The installer's own provenance. NOTE, because the label misleads: the commit
+# below belongs to the Universal Project System repository, NOT to
+# benasjad-hub/iptv-network - it does not resolve there. The governed product
+# repository and the commit this Brain was reviewed against are recorded in
+# EXTERNAL_REPOS.yaml and REVIEW_BASELINE.json.
+installed_from: benasjad-hub/universal-project-system
 installed_from_commit: 044ea1f8fc452c3d8856d38cfc14ea50f3fb0b9c
 installed_at: 2026-09-09
 
@@ -81,33 +89,102 @@ brain:
   # Facts a fresh session MUST be able to recover from the generated CORE pack.
   # The expectations live HERE, in the Brain being audited, never in the auditor.
   pack_audit_required_phrases:
-    - "PROJECT BRAIN: INSTALLED, NOT FILLED IN"
-    - "PHASE 0: NOT STARTED"
+    - "PROJECT BRAIN: FILLED IN, NOT ACCEPTED"
+    - "THE NETWORK IS LIVE: 78 SITES, 77 SERVING"
+    - "PURPOSE: UNKNOWN — THE OWNER MUST ANSWER"
 
 # The release ledger: a DERIVED PROJECTION of TASKS.md. Every id here must exist
 # there, and context:check FAILS if the two disagree.
 release:
   summary:
     blocking_total: 1
-    blocking_agent: 1
-    blocking_owner: 0
+    blocking_agent: 0
+    blocking_owner: 1
     blocking_external: 0
   tasks:
     IPTV-T-001:
       actor: agent
+      blocking: false
+      phase: closed
+      status: >-
+        DONE - every semantic field carries a fact recorded next to the source it
+        was read from and the date it was read. Evidence:
+        docs/verification/BRAIN_CONTENT_2026-09-09/ and a 0 FAIL gate, both
+        STRUCTURAL
+      purpose: Write this Brain's content - what exists, what is decided, what is verified, and what stays UNKNOWN
+      authority: TASKS.md
+      outcome_provenance: code_verified
+    IPTV-T-002:
+      actor: owner
       blocking: true
       phase: release_blocker
       status: >-
-        OPEN - the installer produced a structurally complete Brain and
-        deliberately wrote NO project truth into it. Filling it in is a
-        human-directed act, and UNKNOWN beats guessing on every field
-      purpose: Write this Brain's content - what exists, what is decided, what is verified, and what stays UNKNOWN
+        OPEN - three questions in DECISIONS.md that an agent may not answer. The
+        first of them, what the network is for, is the reason project_purpose is
+        UNKNOWN
+      purpose: Answer IPTV-Q-001, IPTV-Q-002 and IPTV-Q-003
+      authority: TASKS.md
+      outcome_provenance: owner_determination
+    IPTV-T-003:
+      actor: owner
+      blocking: false
+      phase: owner_action
+      status: OPEN - 65 of 78 sites route their only call to action through one WhatsApp number, and a third was banned on 2026-08-08
+      purpose: Give the network a WhatsApp number it can fall back to
+      authority: TASKS.md
+      outcome_provenance: code_verified
+    IPTV-T-004:
+      actor: owner
+      blocking: false
+      phase: owner_action
+      status: OPEN - the one site of 78 that does not answer; the reported cause is a registry deactivation an agent cannot confirm or reverse
+      purpose: Recover iptvbritish.uk or record it retired
+      authority: TASKS.md
+      outcome_provenance: code_verified
+    IPTV-T-005:
+      actor: agent
+      blocking: false
+      phase: release_gate
+      status: OPEN - the only test that matters, and it has not been run
+      purpose: Have a session that has never seen this project try to work from the Brain alone
       authority: TASKS.md
       outcome_provenance: inference
+    IPTV-T-006:
+      actor: owner
+      blocking: false
+      phase: owner_action
+      status: OPEN - nine agent-written rules are running in production without owner approval, and one of them is already stale
+      purpose: Ratify or reject the nine engineering rules recorded as architecture
+      authority: TASKS.md
+      outcome_provenance: owner_determination
+    IPTV-T-007:
+      actor: owner
+      blocking: false
+      phase: owner_action
+      status: OPEN - one copy of this Brain exists, on one machine, with no backup
+      purpose: Create the remote repository for this Brain
+      authority: TASKS.md
+      outcome_provenance: code_verified
+    IPTV-T-008:
+      actor: agent
+      blocking: false
+      phase: later
+      status: OPEN - roughly 121 pages against its own one-page rule, in a file scheduled tasks append to
+      purpose: Bring the network repository's STATE.md back to one page, safely
+      authority: TASKS.md
+      outcome_provenance: code_verified
   gates:
     PG-1:
       requires: IPTV-T-001
       purpose: The canonical Brain exists, is filled in, and make brain-gate reports 0 FAIL with every WARN explained rather than silenced
-      status: NOT SATISFIED - the Brain is installed but not filled in
+      status: >-
+        SATISFIED 2026-09-09 - STRUCTURAL ONLY. It says nothing about whether any
+        claim in this Brain is honest, and it promotes nothing
       actor: agent
+      source: docs/qa/RELEASE_STATE.md
+    PG-2:
+      requires: IPTV-T-002
+      purpose: The owner has read this Brain, answered the three open questions, and said in his own words that what it records is what he means
+      status: NOT SATISFIED - the owner has not been asked to accept it yet, and no agent may accept it for him
+      actor: owner
       source: docs/qa/RELEASE_STATE.md
