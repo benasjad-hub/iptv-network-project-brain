@@ -145,10 +145,14 @@ release:
       actor: agent
       blocking: false
       phase: release_gate
-      status: OPEN - the only test that matters, and it has not been run
+      status: >-
+        DONE 2026-09-09 and worth repeating - 4 of 7 questions answered cleanly
+        from the Brain alone, 3 answered honestly as "the Brain does not say"
+        rather than guessed; 11 defects returned and repaired the same day.
+        Evidence: docs/verification/BLIND_SESSION_2026-09-09/
       purpose: Have a session that has never seen this project try to work from the Brain alone
       authority: TASKS.md
-      outcome_provenance: inference
+      outcome_provenance: code_verified
     IPTV-T-006:
       actor: owner
       blocking: false

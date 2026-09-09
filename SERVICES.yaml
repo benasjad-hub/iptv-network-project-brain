@@ -140,7 +140,15 @@ services:
     login_identity: UNKNOWN - not established from this repository
     secret_ref: NONE_CONFIGURED
     credential_location: apps/sites/.env.local, variable names BRIGHTDATA_API_KEY / BRIGHTDATA_ZONE
-    verified_by: returns zone_not_found since 2026-09-01; still reachable behind `--source brightdata` in scripts/keyword-sweep.ts
+    verified_by: >-
+      Returns the error zone_not_found since 2026-09-01. That string is what was
+      observed; WHY it started is recorded nowhere in this project, so no cause
+      is asserted here.
+    warning: >-
+      The code path still exists behind `--source brightdata` in
+      scripts/keyword-sweep.ts. DO NOT USE IT. It is kept for the record, not as
+      a fallback, and reaching for it would put a site back on a source that has
+      not answered since 2026-09-01. Semrush is the measurement source.
   google_indexing_api:
     id: google_indexing_api
     purpose: Pushes new and re-slugged URLs to Google for crawling, per account.

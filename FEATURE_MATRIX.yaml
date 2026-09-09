@@ -92,10 +92,13 @@ features:
     phase: operations
     authority: SERVICES.yaml semrush_api_v4
     notes: >-
-      Restored on 2026-09-09 through the Semrush v4 API after the previous
-      source was suspended on 2026-09-01. Seven of the ten sites that had been
-      publishing with no measured target now have one; three remain saturated by
-      sibling sites, which is a configuration matter.
+      Restored on 2026-09-09 through the Semrush v4 API. The previous source has
+      returned the error zone_not_found since 2026-09-01 - that string is what
+      was observed, and WHY it started is recorded nowhere, so no cause is
+      asserted here. Seven of the ten sites that had been publishing with no
+      measured target now have one; three remain saturated by sibling sites,
+      which is a configuration matter. implemented describes 2026-09-09; the key
+      is a rotating trial key whose expiry the API does not expose.
 
   search_indexation_pipeline:
     project_brain: not_applicable

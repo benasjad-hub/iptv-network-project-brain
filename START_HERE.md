@@ -88,6 +88,25 @@ written by an agent, not approved by the owner, so they are recorded as
 
 These travel with the standard and apply here from the moment of installation.
 
+> **Precedence, because two of them collide with an owner decision.** A rule
+> below is the **default**, and it holds until an `IPTV-D-nnn` in `DECISIONS.md`
+> grants a **named, bounded** exception. The owner outranks the standard's
+> default; the standard outranks an agent's judgement. Two exceptions exist
+> today, and no others:
+>
+> - **Pushing.** Rule 1 forbids pushing on your own initiative. `IPTV-D-006`
+>   grants it **for the network repository only, from the host whose IPv4 is
+>   187.124.40.74, with every push reported**. That host is this one — read
+>   `HARDWARE.yaml` and force IPv4 before relying on it. Creating a remote is
+>   still forbidden, and this Brain's own repository has none.
+> - **Writing to the network repository.** Rule 2 makes every other repository
+>   read-only. `IPTV-D-001` requires updating five living documents there as
+>   part of finishing a task. Those five files, and the ordinary product work
+>   the owner asked for, are the exception; nothing else in that repository is.
+>
+> Anything not named above stays forbidden. If you find a third collision, it is
+> an open question, not a licence.
+
 1. **Never push on your own initiative, and never create a remote.** Both are
    owner actions, granted **per occurrence**. **Never force-push, rebase, amend,
    squash or rewrite history**, and **never hand-write a generated file** —

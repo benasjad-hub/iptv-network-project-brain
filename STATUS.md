@@ -42,12 +42,16 @@ Every figure below was measured on **2026-09-09** against the working tree at
 | Scheduled tasks | 26 crontab entries | `crontab -l` on the host |
 | Health score | 68 sites at 100, 4 at 99, 5 at 95, 1 at 30 | audit, field `health` |
 
-**The measurement chain is working again.** Bright Data has returned
-`zone_not_found` since 2026-09-01, which left ten sites publishing with no
-measured target. The Semrush v4 key supplied on 2026-09-09 replaced it; seven of
-those ten now have measured targets. The three that remain are saturated by
-sibling sites in the same network, which is a configuration problem and not an
-API one.
+**The measurement chain worked on 2026-09-09, and tomorrow is not established.**
+Bright Data has returned `zone_not_found` since 2026-09-01 — that is the error
+string observed, and **why** it started is recorded nowhere in this project.
+Ten sites were left publishing with no measured target. The Semrush v4 key
+supplied on 2026-09-09 replaced it, and seven of those ten now have measured
+targets; the three that remain are saturated by sibling sites, which is a
+configuration matter. **The claim stops at that date on purpose:** the key is a
+trial key the owner rotates, its expiry is not exposed by the API, and the
+remaining unit balance cannot be read for this key format. Nothing here
+establishes that a measurement made next week will succeed.
 
 ## 3. What does NOT exist, stated plainly
 
@@ -63,6 +67,13 @@ API one.
 - **No vault.** Credentials exist and are read from files; nothing resolves them
   automatically, and no value is recorded anywhere in this Brain.
 
+**Two different things are written `UNKNOWN`, and they are not interchangeable.**
+An `UNKNOWN` that says *nobody has stated it* — the purpose, the goal figures —
+is closed only by the owner. An `UNKNOWN` that says *this Brain did not measure
+it from this repository* — the analytics account, the image generator's account,
+the VPS supervising unit — is closed by anyone willing to run one command. Do
+not treat the second as permanent, and do not try to close the first yourself.
+
 ## 4. Verified state, and how it was verified
 
 `make brain-gate` reports **0 FAIL**. That is a **STRUCTURAL** result about file
@@ -72,6 +83,15 @@ The one verification record filed is `docs/verification/BRAIN_CONTENT_2026-09-09
 and it states its own limits: it establishes that each fact above was read from
 the source named beside it on that date. It establishes nothing about tomorrow,
 nothing about the sites' content quality, and nothing about revenue.
+
+**This Brain reasons about revenue while calling the purpose UNKNOWN, and that
+is worth naming.** Risks below are ranked partly by what they would cost in
+conversions, which presumes the network exists to produce contacts through
+WhatsApp. That presumption is **read off the machinery** — every site's only
+call to action opens a WhatsApp conversation — and it is `code_verified` as a
+description of what the sites do. It is **not** a statement of what the owner
+wants, how much, or by when, and it must never be used as one. That is
+`IPTV-Q-001`.
 
 **Three claims made earlier the same day were wrong and were corrected.** They
 are recorded because the corrections are the useful part:

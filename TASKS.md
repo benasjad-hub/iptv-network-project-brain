@@ -68,14 +68,20 @@ as a failure every morning.
 ## LATER — not blocking Phase 0
 
 ### `IPTV-T-005` — Have a session that has never seen this project try to use the Brain
-**Actor:** agent · **Blocking:** no · **Phase:** Phase 0 acceptance
+**Actor:** agent · **Blocking:** no · **Phase:** Phase 0 acceptance · **Status:** DONE once, and worth repeating
 
-The only test that matters. Open a session with **no** access to the network
-repository's history and **only** this Brain, and ask it: which sites are on the
-VPS and why does that matter, why is Bright Data no longer the measurement
-source, and what must never be touched. If it answers without searching, the
-Brain works. If it invents, the Brain is worse than nothing, because a confident
-wrong answer is harder to catch than a missing one.
+Run on 2026-09-09. Evidence:
+`docs/verification/BLIND_SESSION_2026-09-09/`.
+
+Four of seven questions answered cleanly from the Brain alone; three answered
+honestly as "the Brain does not say" rather than guessed — **including when the
+session's own harness was feeding it the missing answers**. It returned eleven
+defects, all repaired the same day, the two worst being an orientation file that
+sent a new session to redo a finished task, and a missing rule of precedence
+between the standard's hard rules and an owner decision.
+
+**Repeat it after `IPTV-Q-001` is answered.** A stated purpose changes what a
+reader is looking for, and this test only measures the Brain against itself.
 
 ### `IPTV-T-006` — Ratify or reject the nine engineering rules
 **Actor:** owner · **Blocking:** no · **Phase:** operations
