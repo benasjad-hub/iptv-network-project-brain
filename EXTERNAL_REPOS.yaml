@@ -1,0 +1,36 @@
+# EXTERNAL REPOSITORIES — IPTV Network
+#
+# The code repository this DOCUMENTATION-ONLY Brain governs.
+#
+# This Brain holds the network's documented truth. It contains NO product code.
+# The network repository is authoritative for its own code and history; this
+# Brain never becomes a second copy of it.
+
+schema_version: 1
+reviewed_against: "0000000"
+
+policy:
+  # 7 days rather than the 30-day default. This repository receives automated
+  # commits several times a day - article generation, deploy markers, journal
+  # entries - so an observation a month old describes a tree that no longer
+  # exists. A week is already generous here.
+  max_observation_age_days: 7
+
+repos:
+  network:
+    id: network
+    remote: https://github.com/benasjad-hub/iptv-network.git
+    branch: main
+    role: product_code
+    governs: >-
+      The 78 site designs under apps/sites/designs, the automation scripts under
+      scripts/, the multi-tenant Next.js application, and the network's own
+      living documents (JOURNAL, SOLUTIONS, STATE, PLAYBOOK, PIPELINE). This
+      Brain is authoritative for the network's DOCUMENTED truth - what exists,
+      what the owner decided, what has been verified and how, and what stays
+      UNKNOWN. It is NOT authoritative for the code.
+    authority: >-
+      The owner instruction of 2026-09-09 to build a Brain from which any model
+      can continue the work. The repository itself predates this Brain: its
+      first commits are from 2026-06-12 and its working tree stood at 7774f723
+      when this registry was written.
