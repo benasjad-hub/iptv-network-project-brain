@@ -23,11 +23,12 @@ and internal consistency. **It is not acceptance**, it says nothing about
 whether any claim in the Brain is honest, and it promotes nothing. A confident,
 well-formed, false statement passes it.
 
-**Why the WARNs are not silenced.** Five remain at the moment of writing, and
-each has a reason a reader can check: the generated state had not been written
-yet, the reviewed-against sentinel had not been stamped, the tree was dirty
-mid-edit, and this repository has no upstream to compare against — that last one
-is `IPTV-T-007`, and `UNKNOWN` there never means "probably fine".
+**Why the one remaining WARN is not silenced.** The gate reports **32 pass, 1
+warn, 0 fail**. The warning is `repository sync UNKNOWN — no upstream configured
+for main`, and it is correct: this repository has no remote, so there is nothing
+to compare its history against. That is `IPTV-T-007`, an owner action, and
+`UNKNOWN` there never means "probably fine". Silencing it would hide the fact
+that this Brain exists in a single copy.
 
 ## What blocks the milestone
 
