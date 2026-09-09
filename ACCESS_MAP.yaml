@@ -1,0 +1,19 @@
+# ACCESS MAP — IPTV Network
+#
+# Where authoritative material lives, and who can reach it. This records what
+# has been ESTABLISHED, not what probably exists.
+
+reviewed_against: "0000000"
+
+repositories:
+  brain:
+    name: UNKNOWN - no remote has been recorded for this Brain
+    role: The canonical documented truth for IPTV Network
+    access: UNKNOWN
+
+external_vault: NOT_CHOSEN and NOT_PROVISIONED - no account, token or secret exists
+
+notes: >-
+  Availability is not adoption. If a tool, service or integration is not
+  recorded here or in SERVICES.yaml, this project does not use it - whatever a
+  session's harness may make available.

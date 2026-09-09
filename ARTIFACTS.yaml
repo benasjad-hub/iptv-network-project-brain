@@ -1,0 +1,12 @@
+# ARTIFACTS — IPTV Network
+#
+# Build outputs, packages, images and released binaries. Kept, and empty, on
+# purpose.
+
+reviewed_against: "0000000"
+
+artifacts: {}
+
+note: >-
+  Nothing has been built, packaged, published or released for this project as
+  far as this Brain records.

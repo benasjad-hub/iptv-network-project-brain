@@ -1,0 +1,35 @@
+# FEATURE MATRIX — IPTV Network
+#
+# Feature x surface truth. INSTALLED AND NOT FILLED IN: the single row below
+# describes the Brain itself, which is the only thing that demonstrably exists
+# in this repository today. Add the product's real features as they are built,
+# each with a phase and an authority.
+#
+# State vocabulary is fixed by the validator. Provenance is kept SEPARATE from
+# the states so a judgement can never be flattened into a measurement.
+
+reviewed_against: "0000000"
+
+surfaces:
+  - project_brain
+
+classifications:
+  brain_installed:
+    provenance: code_verified
+    authority: INSTALL_MANIFEST.json
+    note: >-
+      The file set and the copied validator exist in this tree and their digests
+      are pinned. That is a measurement of THIS REPOSITORY, and it is not a
+      claim that anything about the product is true.
+
+features:
+  project_brain_canonical_file_set:
+    project_brain: implemented
+    phase: phase_0
+    authority: INSTALL_MANIFEST.json and START_HERE.md
+    notes: >-
+      The canonical file set and the zero-dependency validator, copied in at
+      installation and pinned by SHA-256 digest. implemented is STRUCTURAL and
+      says only that the files exist and the gate runs. IT IS NOT A CLAIM THAT
+      THE BRAIN IS FILLED IN - it is not - and not a claim about any product
+      feature.

@@ -1,0 +1,113 @@
+# PROJECT — IPTV Network
+#
+# Machine-readable project facts. Installed by the Universal Project System
+# installer on 2026-09-09 and NOT FILLED IN: every semantic value below is
+# UNKNOWN because nobody has asserted anything, not because the answer is
+# nothing. UNKNOWN is a finished answer; a guess is not.
+
+reviewed_against: "0000000"
+
+# TOP-LEVEL, not nested. pack-audit.mjs reads `project_id` at the root to check
+# that a fresh session can recover which project a context pack belongs to; a
+# nested one is invisible to it, and the pack then identifies nothing.
+project_id: iptv-network
+project_name: IPTV Network
+project_status: active
+project_purpose: UNKNOWN — a renseigner par le proprietaire
+
+installed_from: benasjad-hub/iptv-network
+installed_from_commit: 044ea1f8fc452c3d8856d38cfc14ea50f3fb0b9c
+installed_at: 2026-09-09
+
+active_branch: main
+
+# The canonical owner of each fact. One source per fact, never two.
+canonical_docs:
+  orientation: START_HERE.md
+  now_state: STATUS.md
+  active_work: TASKS.md
+  decisions: DECISIONS.md
+  secrets: SECRETS_POLICY.md
+  features: FEATURE_MATRIX.yaml
+  services: SERVICES.yaml
+  access: ACCESS_MAP.yaml
+  architecture: docs/architecture/ARCHITECTURE.md
+  gate_state: docs/qa/RELEASE_STATE.md
+
+security:
+  vault_configured: false
+  note: >-
+    No vault is chosen or provisioned and no credential exists for this project
+    as far as this Brain records. That is a claim about the REGISTRY, not about
+    the world - see SECRETS_POLICY.md.
+
+# Per-project configuration for the copied validator. The tooling names no
+# project of its own; everything project-specific is here.
+brain:
+  id_prefix: "IPTV"
+  pack_path: dist/context/PROJECT_CONTEXT.md
+  pack_token_target: 25000
+
+  # Directories whose change makes a doc's detail claims suspect. Add the
+  # product's own source roots here once they exist.
+  code_roots:
+    - tools/
+
+  doc_roots:
+    - docs/
+    - tools/
+
+  doc_subsystems:
+    STATUS.md:
+      - tools/
+    docs/architecture/ARCHITECTURE.md:
+      - tools/
+
+  size_limits:
+    START_HERE.md: 220
+    STATUS.md: 240
+    TASKS.md: 240
+
+  live_state_surfaces:
+    - STATUS.md
+    - TASKS.md
+    - FEATURE_MATRIX.yaml
+
+  live_state_docs: []
+  extra_dated_docs: []
+  pack_extra_core_sections: []
+  pack_extra_full_sections: []
+
+  # Facts a fresh session MUST be able to recover from the generated CORE pack.
+  # The expectations live HERE, in the Brain being audited, never in the auditor.
+  pack_audit_required_phrases:
+    - "PROJECT BRAIN: INSTALLED, NOT FILLED IN"
+    - "PHASE 0: NOT STARTED"
+
+# The release ledger: a DERIVED PROJECTION of TASKS.md. Every id here must exist
+# there, and context:check FAILS if the two disagree.
+release:
+  summary:
+    blocking_total: 1
+    blocking_agent: 1
+    blocking_owner: 0
+    blocking_external: 0
+  tasks:
+    IPTV-T-001:
+      actor: agent
+      blocking: true
+      phase: release_blocker
+      status: >-
+        OPEN - the installer produced a structurally complete Brain and
+        deliberately wrote NO project truth into it. Filling it in is a
+        human-directed act, and UNKNOWN beats guessing on every field
+      purpose: Write this Brain's content - what exists, what is decided, what is verified, and what stays UNKNOWN
+      authority: TASKS.md
+      outcome_provenance: inference
+  gates:
+    PG-1:
+      requires: IPTV-T-001
+      purpose: The canonical Brain exists, is filled in, and make brain-gate reports 0 FAIL with every WARN explained rather than silenced
+      status: NOT SATISFIED - the Brain is installed but not filled in
+      actor: agent
+      source: docs/qa/RELEASE_STATE.md

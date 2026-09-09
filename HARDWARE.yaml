@@ -1,0 +1,14 @@
+# HARDWARE — IPTV Network
+#
+# Test devices and physical hardware. Kept, and empty, on purpose: an absent
+# file reads as an oversight, an empty one as an answer.
+
+reviewed_against: "0000000"
+
+applicable: false
+reason: >-
+  No hardware or test device has been recorded for this project. If one is ever
+  added, THE DEVICES BELONG TO THAT PROJECT and are recorded here, never in the
+  system this Brain was installed from.
+
+devices: {}

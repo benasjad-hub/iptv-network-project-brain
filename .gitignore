@@ -1,0 +1,10 @@
+# Generated context packs. Derived from the canonical files, never authoritative.
+dist/
+
+# Node, if the product ever adds it. The Brain tooling itself has zero
+# dependencies and no package.json.
+node_modules/
+
+# Editor and OS noise.
+.DS_Store
+*.swp

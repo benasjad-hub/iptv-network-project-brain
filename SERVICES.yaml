@@ -1,0 +1,16 @@
+# SERVICES — IPTV Network
+#
+# Metadata only. A secret_ref is a LABEL under which a value would resolve in a
+# vault; NO VAULT IS CHOSEN OR PROVISIONED, so every one reads NONE_CONFIGURED.
+# No value may ever appear here - SECRETS_POLICY.md.
+
+reviewed_against: "0000000"
+
+vault:
+  configured: false
+  provisioned: false
+  product: UNKNOWN - no vault has been chosen. Naming a product would prove nothing.
+  secret_ref_scheme: UNKNOWN
+
+# status: active | active_external | unverified_from_this_repo | unknown | retired
+services: {}

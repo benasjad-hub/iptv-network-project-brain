@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "generator": "tools/install/install.mjs",
+  "generated_note": "GENERATED FILE. It pins this installation to the exact Universal Project System commit it came from, and every copied validator file to a SHA-256 digest. Never hand-edit it: the whole value of the digests is that nobody chose them. Re-verify with `make verify-install`.",
+  "installed_at": "2026-09-09T08:06:57.803Z",
+  "project_id": "iptv-network",
+  "source_repo": "benasjad-hub/iptv-network",
+  "source_commit": "044ea1f8fc452c3d8856d38cfc14ea50f3fb0b9c",
+  "portability_note": "UPS-D-020: this Brain must run its own validation from a FRESH CLONE of this repository, using only documented dependencies (Node 18+ and git). Nothing here may resolve to the universal-project-system working tree, to a symlink out of this repository, to the machine that generated this installation, or to an unpublished local file. The tooling below is COPIED IN, versioned by source_commit and pinned by digest, which is what makes sharing it permissible at all.",
+  "files": {
+    "tools/context/check.mjs": {
+      "sha256": "a36146af1eb95e41cd7f864b85e9a959a8bde84695b03152e2577721745ff2a6",
+      "bytes": 43673
+    },
+    "tools/context/checkpoint.mjs": {
+      "sha256": "d4d6ea0fc567a9c8695dd678852a02d1eba07ee0aa79a3c936b7ad65d4b0bbec",
+      "bytes": 14094
+    },
+    "tools/context/external.mjs": {
+      "sha256": "c0bb363c2e0d999d2e892c3278c9590d977df23cd1a6b9cfb080972d444b89a6",
+      "bytes": 5175
+    },
+    "tools/context/external.test.mjs": {
+      "sha256": "79a69518e1ab595860eaf795f290f7aa116ba516bd26a3b89e33130813772081",
+      "bytes": 13660
+    },
+    "tools/context/guards.test.mjs": {
+      "sha256": "4619406a2f72f4af9cb7e4152cb2a022922eb35b59f896a7bbb5cff85a59ed2c",
+      "bytes": 136904
+    },
+    "tools/context/lib.mjs": {
+      "sha256": "4bc905a27461cda412d4e78d20af95c80d047a768635e6cfae99805277f28c07",
+      "bytes": 83521
+    },
+    "tools/context/observe-external.mjs": {
+      "sha256": "962c251b4bf7e953ef07e9f9780027de1a0ce93f726798241a3fd2ec19f74d5d",
+      "bytes": 10302
+    },
+    "tools/context/pack-audit.mjs": {
+      "sha256": "39cd2db02eab8d4a33dabb841e6d5dad8c83ea6f289c0167dd5fab61e90d14a7",
+      "bytes": 8434
+    },
+    "tools/context/pack.mjs": {
+      "sha256": "975184cc4bccf97008346968f109a3c108765df5b682a76690bdaf5640d78773",
+      "bytes": 15551
+    },
+    "tools/install/core.mjs": {
+      "sha256": "fbd1b8511de53e089596ef5d6a40c28fec4cf6a54067621ed09b131146bab978",
+      "bytes": 11534
+    },
+    "tools/install/verify-manifest.mjs": {
+      "sha256": "08b117b91d01c927b7ceedc0aea61c704fc4266dcb842b66f4c1170366bec95d",
+      "bytes": 4326
+    }
+  }
+}
