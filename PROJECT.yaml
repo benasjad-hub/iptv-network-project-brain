@@ -8,7 +8,7 @@
 # one - every automated choice the network makes would then be justified by a
 # goal an agent invented. It is open question IPTV-Q-001.
 
-reviewed_against: "32c0e3e"
+reviewed_against: "76957d5"
 
 # TOP-LEVEL, not nested. pack-audit.mjs reads `project_id` at the root to check
 # that a fresh session can recover which project a context pack belongs to; a

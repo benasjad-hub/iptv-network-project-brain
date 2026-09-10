@@ -3,7 +3,7 @@
 # The physical machines this project runs on or from. Measured on the host
 # itself on 2026-09-09; nothing here is inferred from a configuration file.
 
-reviewed_against: "32c0e3e"
+reviewed_against: "76957d5"
 
 applicable: true
 reason: >-

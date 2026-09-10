@@ -1,6 +1,6 @@
 # HISTORY — IPTV Network
 
-**Reviewed against commit:** `32c0e3e` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `76957d5` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **Empty in this repository.** No superseded plan, report or decision has been
 filed here yet.
