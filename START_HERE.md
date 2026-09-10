@@ -180,7 +180,12 @@ in **another** repository — see `docs/architecture/ARCHITECTURE.md`.
 
 ## 11. Next task
 
-See `TASKS.md` → **NOW**: **`IPTV-T-001` — write this Brain's content.**
+See `TASKS.md`. The one **blocking** item is **`IPTV-T-002` — three questions
+only the owner can answer**: what the network is for, what the site status
+`draft` is meant to gate, and which image generator is intended.
+
+`IPTV-T-001`, writing this Brain's content, is **DONE** — evidence under
+`docs/verification/`. Do not start it again.
 
 ## 12. Agent handoff contract
 
