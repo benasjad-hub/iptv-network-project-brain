@@ -1,6 +1,6 @@
 # RÈGLES DE FABRICATION — comment on construit et fait vivre un site
 
-**Reviewed against commit:** `0000000` · **Reviewed:** 2026-09-13 · **Status:** CURRENT
+**Reviewed against commit:** `4e2e18b` · **Reviewed:** 2026-09-13 · **Status:** CURRENT
 
 **Ce que ce document est.** La distillation de
 `iptv-network/docs/PLAYBOOK.md`, 225 Ko et 1 252 lignes. Ce fichier-là est le

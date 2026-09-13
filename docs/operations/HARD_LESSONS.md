@@ -1,6 +1,6 @@
 # LEÇONS PAYÉES — ce que le réseau a appris en cassant
 
-**Reviewed against commit:** `0000000` · **Reviewed:** 2026-09-13 · **Status:** CURRENT
+**Reviewed against commit:** `4e2e18b` · **Reviewed:** 2026-09-13 · **Status:** CURRENT
 
 **Ce que ce document est.** La distillation de `iptv-network/docs/SOLUTIONS.md`,
 299 Ko et 2 562 lignes de problèmes rencontrés en production entre juin et

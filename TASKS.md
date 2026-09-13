@@ -1,6 +1,6 @@
 # TASKS — IPTV Network
 
-**Reviewed against commit:** `dca08da` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `4e2e18b` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **This file is the single source of task truth.** `PROJECT.yaml` `release:` is a
 **derived projection** of it — never a second task list — and `context:check`
