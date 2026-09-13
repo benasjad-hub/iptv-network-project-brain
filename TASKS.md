@@ -89,8 +89,22 @@ between the standard's hard rules and an owner decision.
 **Repeat it after `IPTV-Q-001` is answered.** A stated purpose changes what a
 reader is looking for, and this test only measures the Brain against itself.
 
-### `IPTV-T-006` — Ratify or reject the nine engineering rules
+### `IPTV-T-006` — Ratify or reject the rules that are running without your approval
 **Actor:** owner · **Blocking:** no · **Phase:** operations
+
+**The larger half, and the reason this task grew on 2026-09-13:** the **21 rules
+marked `[PROPRIÉTAIRE]`** in `docs/operations/BUILD_RULES.md`. They were
+distilled from the network's own build manual, where each is attributed to you —
+you said it, you corrected it, or you approved it. They are **not** in
+`DECISIONS.md`, because an agent reading an attribution is not the same as you
+confirming it. Read them once; those you recognise become `IPTV-D-nnn`.
+
+They are not small. Among them: no past year in visible copy · the keyword opens
+the title, the meta and the first line · never invent a WhatsApp number · two to
+three minutes between automated actions across sites · a DMCA notice is acted on
+immediately without asking · never re-slug an indexed page · buying a domain is a
+gate · never a generated product description · run the price sync after every
+price change.
 
 **Also inside this task:** the precedence block in `START_HERE.md` §7, which an
 agent wrote on 2026-09-09 to resolve a collision between the standard's hard
