@@ -9,7 +9,8 @@ Planning documents point at it; they never mirror it.
 >
 > - **PROJECT BRAIN: FILLED IN, NOT ACCEPTED.**
 > - **THE NETWORK IS LIVE: 78 SITES, 77 SERVING.**
-> - **PURPOSE: UNKNOWN — THE OWNER MUST ANSWER.**
+> - **PURPOSE: BRING CLIENTS AND CONVERT THEM IN OUR OWN CHANNELS.**
+> - **TWO QUESTIONS STILL OPEN, BOTH THE OWNER'S.**
 
 ## 1. In one paragraph
 
@@ -17,11 +18,13 @@ A network of **78 websites** is running, publishing and being measured, every
 day, without anyone driving it by hand. **77 of the 78 answer HTTP 200** and all
 78 carry published articles — **2 684** in total. Roughly two dozen scheduled
 tasks choose keyword targets, write articles, generate images, push URLs to
-Google and mail a daily report. **What none of it is aimed at is written
-nowhere**: no document in this project states what the network is for or what
-success would look like. The machinery is measurably working; whether it is
-working toward anything cannot be checked. That is `IPTV-Q-001`, and only the
-owner can close it.
+Google and mail a daily report. **What it is aimed at is now written down.** On 2026-09-13 the owner
+stated it: the sites exist to bring prospects in from search and convert them
+into paying clients inside a channel he controls, and success at six months is
+**30 000 a month across all the sites combined**, by 2027-03-13. He also named
+what he refuses — handing a client a degraded service because it is cheap. Those
+are `IPTV-D-008`, `IPTV-D-009` and `IPTV-D-010`, and every automated choice this
+network makes can now be judged against them.
 
 ## 2. What exists, measured
 
@@ -55,8 +58,8 @@ establishes that a measurement made next week will succeed.
 
 ## 3. What does NOT exist, stated plainly
 
-- **No written destination.** `project_purpose` is `UNKNOWN`, and it is UNKNOWN
-  because nobody has written it, not because the answer is nothing.
+- **No recorded currency for the target.** `IPTV-D-009` carries the figure and
+  the date. The unit is UNKNOWN, and one word from the owner closes it.
 - **No remote for this Brain.** One copy exists, on one machine, with no backup.
   Creating the remote is the owner's act.
 - **No owner ratification of the nine engineering rules** running in the network
@@ -84,14 +87,16 @@ and it states its own limits: it establishes that each fact above was read from
 the source named beside it on that date. It establishes nothing about tomorrow,
 nothing about the sites' content quality, and nothing about revenue.
 
-**This Brain reasons about revenue while calling the purpose UNKNOWN, and that
-is worth naming.** Risks below are ranked partly by what they would cost in
-conversions, which presumes the network exists to produce contacts through
-WhatsApp. That presumption is **read off the machinery** — every site's only
-call to action opens a WhatsApp conversation — and it is `code_verified` as a
-description of what the sites do. It is **not** a statement of what the owner
-wants, how much, or by when, and it must never be used as one. That is
-`IPTV-Q-001`.
+**Why the risks below are ranked by conversion.** Because the owner said that
+is what the network is for (`IPTV-D-008`). Until 2026-09-13 this Brain ranked
+them the same way while calling the purpose `UNKNOWN`, which was a tension it
+named rather than hid. The tension is closed: the ranking now rests on a stated
+decision instead of on a presumption read off the machinery.
+
+**One thing about the target is still not recorded.** `IPTV-D-009` says 30 000 a
+month, all sites combined. **Which currency has not been written down**, and this
+Brain will not guess it. The figure is binding; the unit reads UNKNOWN until the
+owner says the word.
 
 **Three claims made earlier the same day were wrong and were corrected.** They
 are recorded because the corrections are the useful part:
@@ -121,5 +126,6 @@ are recorded because the corrections are the useful part:
 
 ## 6. Next
 
-`TASKS.md`. The blocking item is `IPTV-T-002`: three questions only the owner
-can answer.
+`TASKS.md`. `IPTV-T-002` is **two thirds done**: the owner answered what the
+network is for. Two questions remain, both his — what the site status `draft` is
+meant to gate, and which image generator is intended.

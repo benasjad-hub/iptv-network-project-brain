@@ -6,9 +6,12 @@ Every `IPTV-D-nnn` recorded below is **OWNER APPROVED and binding**.
 Changing one needs a new owner decision, not an agent's judgement. An agent may
 *propose* a decision; only the owner may *make* one.
 
-**Every decision below is sourced to `CLAUDE.md` in `benasjad-hub/iptv-network`** —
-the file the owner writes to instruct coding agents, first committed 2026-06-12
-and last amended 2026-06-16. Nothing here is an agent's inference from the code.
+**`IPTV-D-001` to `IPTV-D-007` are sourced to `CLAUDE.md` in
+`benasjad-hub/iptv-network`** — the file the owner writes to instruct coding
+agents, first committed 2026-06-12 and last amended 2026-06-16.
+**`IPTV-D-008` to `IPTV-D-010` are sourced to the owner's own words on
+2026-09-13**, answering `IPTV-Q-001` directly. Nothing here is an agent's
+inference from the code.
 
 **What is deliberately NOT here.** The network's own repository carries nine
 numbered rules in `project-memory/05-DECISIONS.md`. They are sound engineering
@@ -114,6 +117,49 @@ about any other repository, and it is not a general authorisation to act.
 **Decision:** Every user-facing string on GoalStream is French.
 **Scope:** That one site.
 
+## `IPTV-D-008` — The network exists to bring clients and convert them in our own channels (answers `IPTV-Q-001`)
+
+**Provenance:** owner_decision
+**Recorded:** 2026-09-13
+**Decision:** The 78 sites exist to **attract prospects from search and turn them
+into paying clients**, inside a channel the owner controls and places on the site
+himself — DaoudChat, WhatsApp, or any other he chooses. The conversation is the
+product of the site; traffic that never reaches one has not done its job.
+**Reason:** Stated by the owner in his own words on 2026-09-13, answering the
+question this Brain had deliberately left `UNKNOWN` since it was written.
+**Scope:** This fixes what the network is FOR. It does **not** fix which channel:
+the owner names DaoudChat, WhatsApp or any other he decides to put on a site, and
+changing channel is a product choice, not a change to this decision. It also does
+not authorise adding a channel — `SERVICES.yaml` records what is actually in use.
+
+## `IPTV-D-009` — Success at six months is 30 000 a month, all sites together
+
+**Provenance:** owner_decision
+**Recorded:** 2026-09-13
+**Decision:** The target is **30 000 per month across all the sites combined**,
+reached by **2027-03-13**. Combined, never per site: one site at 20 000 and
+seventy-seven at nothing satisfies this decision exactly as well as an even
+spread, and no agent may reinterpret it as an average or a per-site quota.
+**The unit is not yet recorded.** The owner gave the figure; which currency it is
+in has not been written down, and this Brain will not guess it. Until he says the
+word, the number is binding and the unit reads UNKNOWN.
+**Scope:** This is the measure of success for the network as a whole. It is not a
+budget, not a permission to spend, and not a licence to publish faster — the
+existing rules on publication pace and automation spacing still hold.
+
+## `IPTV-D-010` — Never hand a client a degraded service to win on price
+
+**Provenance:** owner_decision
+**Recorded:** 2026-09-13
+**Decision:** The owner **refuses to give a client a weak or overloaded server
+because it is cheap**. Price is not the axis this network competes on; what the
+client actually receives is.
+**Reason:** His own words on 2026-09-13, given as the thing he will not do even
+if it brings money.
+**Scope:** This binds what is sold and promised. It does not forbid a low price
+on a service that genuinely holds up, and it does not set any price — pricing
+lives in the `sites` table, which overrides what the code says.
+
 ---
 
 # OPEN QUESTIONS
@@ -121,25 +167,6 @@ about any other repository, and it is not a general authorisation to act.
 An open question is **not** a decision and **may not be answered by an agent**.
 It is answered by a new `IPTV-D-nnn` recorded above, at which point this section
 loses the entry.
-
-## `IPTV-Q-001` — What is this network for, and what would success look like?
-
-**Provenance:** owner_determination — required
-**Raised:** 2026-09-09
-**Question:** `PROJECT.yaml` records `project_purpose` as UNKNOWN, and it is
-UNKNOWN because **the destination is written nowhere**. The network repository
-holds roughly 5.3 million characters of history, rules and state — about six
-times what a single session can read — and none of it says what the network is
-*for*, what success looks like in numbers six months out, or what the owner
-refuses to do to get there.
-**Why it blocks more than it looks like it blocks.** Every automated choice this
-network makes daily — which keyword to target, which article to write, which
-site to feed — is currently optimised against a goal nobody has stated. The
-machinery is measurably working; whether it is working *toward anything* cannot
-be checked.
-**What answering it needs:** three answers from the owner, in his own words —
-what the network is for, what success looks like in six months as a number, and
-what he will not do.
 
 ## `IPTV-Q-002` — What does `draft` mean for a site that is already serving?
 

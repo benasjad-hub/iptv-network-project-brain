@@ -9,7 +9,8 @@ Canonical orientation for any coding agent or person working on
 >
 > - **PROJECT BRAIN: FILLED IN, NOT ACCEPTED.**
 > - **THE NETWORK IS LIVE: 78 SITES, 77 SERVING.**
-> - **PURPOSE: UNKNOWN — THE OWNER MUST ANSWER.**
+> - **PURPOSE: BRING CLIENTS AND CONVERT THEM IN OUR OWN CHANNELS.**
+> - **TWO QUESTIONS STILL OPEN, BOTH THE OWNER'S.**
 >
 > This Brain was installed on 2026-09-09 and filled in the same day from
 > measured sources. `make brain-gate` reports 0 FAIL, which is a **structural**
@@ -29,8 +30,12 @@ images, push URLs to Google for crawling, and mail the owner a daily report. On
 site's call to action opens a WhatsApp conversation, which is the only
 conversion channel.
 
-**What it is FOR is `UNKNOWN`** — see `IPTV-Q-001`. That is the honest answer,
-not a missing one, and closing it is the owner's act.
+**What it is FOR**, in the owner's own words on 2026-09-13: bring prospects in
+from search and **convert them into paying clients inside a channel he controls**
+— DaoudChat, WhatsApp, or another he puts on the site. Success at six months is
+**30 000 a month across all sites combined**, by 2027-03-13. And what he refuses:
+handing a client a degraded service because it is cheap. See `IPTV-D-008`,
+`IPTV-D-009`, `IPTV-D-010`.
 
 **The one thing to learn before touching anything.** The 78 sites sit on four
 hosting paths that do **not** deploy the same way: 41 on Vercel deploy on push,
@@ -53,9 +58,10 @@ remote-tracking ref after a read-only fetch; `REPO_STATE.json` checkpoints it.
 
 ## 3. Current objective
 
-**Get three answers from the owner** — `IPTV-T-002`. They are the only blocking
-work: what the network is for, what the site status `draft` is meant to gate,
-and which image generator is intended.
+**Get the two remaining answers from the owner** — `IPTV-T-002`. The first, what
+the network is for, was answered on 2026-09-13. Two are left, and they are the
+only blocking work: what the site status `draft` is meant to gate, and which
+image generator is intended.
 
 ## 4. Current verified state
 
@@ -67,15 +73,17 @@ is structural.
 
 ## 5. Current blockers / open work
 
-See `TASKS.md`. **Three open questions are recorded** in `DECISIONS.md`, and an
-agent may not answer any of them. The standing risks are in `STATUS.md` §5 — the
+See `TASKS.md`. **Two open questions are recorded** in `DECISIONS.md`, and an
+agent may not answer either of them. The standing risks are in `STATUS.md` §5 — the
 sharpest being that 65 of the 78 sites route their only call to action through a
 single WhatsApp number.
 
 ## 6. Owner-approved / frozen areas
 
-**Seven owner decisions**, `IPTV-D-001` to `IPTV-D-007`, all sourced to the
-network repository's `CLAUDE.md`. Two are absolute and worth carrying in your
+**Ten owner decisions.** `IPTV-D-001` to `IPTV-D-007` are sourced to the network
+repository's `CLAUDE.md`; `IPTV-D-008` to `IPTV-D-010` are the owner's own words
+of 2026-09-13, stating what the network is for, its six-month target, and what he
+refuses. Two are absolute and worth carrying in your
 head before you run anything: **the volume named KODAK is never touched**, and
 **the Supabase project `stefvhralisxnhhdhkvj` belongs to a different production
 application and is out of bounds, read-only calls included**.
@@ -180,9 +188,10 @@ in **another** repository — see `docs/architecture/ARCHITECTURE.md`.
 
 ## 11. Next task
 
-See `TASKS.md`. The one **blocking** item is **`IPTV-T-002` — three questions
-only the owner can answer**: what the network is for, what the site status
-`draft` is meant to gate, and which image generator is intended.
+See `TASKS.md`. The one **blocking** item is **`IPTV-T-002` — two questions
+only the owner can answer**: what the site status `draft` is meant to gate, and
+which image generator is intended. The third, what the network is for, was
+answered on 2026-09-13 and became `IPTV-D-008` to `IPTV-D-010`.
 
 `IPTV-T-001`, writing this Brain's content, is **DONE** — evidence under
 `docs/verification/`. Do not start it again.

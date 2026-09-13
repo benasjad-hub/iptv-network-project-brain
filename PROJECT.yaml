@@ -3,10 +3,10 @@
 # Machine-readable project facts. Installed by the Universal Project System
 # installer on 2026-09-09 and FILLED IN the same day from measured sources.
 #
-# `project_purpose` STAYS UNKNOWN ON PURPOSE. Nobody has stated what this
-# network is for, and a plausible sentence there would be worse than the empty
-# one - every automated choice the network makes would then be justified by a
-# goal an agent invented. It is open question IPTV-Q-001.
+# `project_purpose` was UNKNOWN until 2026-09-13, when the owner stated it in
+# his own words. It is now IPTV-D-008, with the six-month target in IPTV-D-009
+# and what he refuses in IPTV-D-010. The field below is his answer, not an
+# agent's summary of the machinery.
 
 reviewed_against: "76957d5"
 
@@ -16,7 +16,13 @@ reviewed_against: "76957d5"
 project_id: iptv-network
 project_name: IPTV Network
 project_status: active
-project_purpose: UNKNOWN — the owner has not stated it. See IPTV-Q-001 in DECISIONS.md.
+project_purpose: >-
+  Bring prospects in from search and convert them into paying clients inside a
+  channel the owner controls and puts on the site himself - DaoudChat, WhatsApp
+  or another he chooses. Target: 30 000 per month across ALL sites combined by
+  2027-03-13, currency not yet recorded. Refused: handing a client a degraded
+  service because it is cheap. Owner's own words, 2026-09-13. See IPTV-D-008,
+  IPTV-D-009 and IPTV-D-010 in DECISIONS.md.
 
 # The installer's own provenance. NOTE, because the label misleads: the commit
 # below belongs to the Universal Project System repository, NOT to
@@ -91,7 +97,8 @@ brain:
   pack_audit_required_phrases:
     - "PROJECT BRAIN: FILLED IN, NOT ACCEPTED"
     - "THE NETWORK IS LIVE: 78 SITES, 77 SERVING"
-    - "PURPOSE: UNKNOWN — THE OWNER MUST ANSWER"
+    - "PURPOSE: BRING CLIENTS AND CONVERT THEM IN OUR OWN CHANNELS"
+    - "TWO QUESTIONS STILL OPEN, BOTH THE OWNER'S"
 
 # The release ledger: a DERIVED PROJECTION of TASKS.md. Every id here must exist
 # there, and context:check FAILS if the two disagree.
@@ -119,10 +126,10 @@ release:
       blocking: true
       phase: release_blocker
       status: >-
-        OPEN - three questions in DECISIONS.md that an agent may not answer. The
-        first of them, what the network is for, is the reason project_purpose is
-        UNKNOWN
-      purpose: Answer IPTV-Q-001, IPTV-Q-002 and IPTV-Q-003
+        OPEN, two thirds done - the owner answered what the network is for on
+        2026-09-13, which became IPTV-D-008, IPTV-D-009 and IPTV-D-010. Two
+        questions remain in DECISIONS.md that an agent may not answer
+      purpose: Answer IPTV-Q-002 and IPTV-Q-003
       authority: TASKS.md
       outcome_provenance: owner_determination
     IPTV-T-003:

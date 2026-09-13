@@ -14,7 +14,8 @@ what it records is what he means.
 | **PG-2** | `IPTV-T-002` | owner | **NOT SATISFIED** — the owner has not been asked to accept it |
 
 **PROJECT BRAIN: FILLED IN, NOT ACCEPTED. THE NETWORK IS LIVE: 78 SITES, 77
-SERVING. PURPOSE: UNKNOWN — THE OWNER MUST ANSWER.**
+SERVING. PURPOSE: BRING CLIENTS AND CONVERT THEM IN OUR OWN CHANNELS. TWO
+QUESTIONS STILL OPEN, BOTH THE OWNER'S.**
 
 **What PG-1 means, and what it does not.** It means the canonical Brain exists,
 is filled in, and `make brain-gate` reports **0 FAIL** with every `WARN`
@@ -32,8 +33,9 @@ that this Brain exists in a single copy.
 
 ## What blocks the milestone
 
-**Blocking: 1 — 0 agent, 1 owner, 0 external.** The owner answering the three
-open questions. Source of truth is `TASKS.md`; `PROJECT.yaml` `release:` is its
+**Blocking: 1 — 0 agent, 1 owner, 0 external.** The owner answering the two
+remaining open questions. The third, what the network is for, was answered on
+2026-09-13 and became `IPTV-D-008` to `IPTV-D-010`. Source of truth is `TASKS.md`; `PROJECT.yaml` `release:` is its
 derived projection and `context:check` fails if the two disagree.
 
 ## Publication state of the network itself

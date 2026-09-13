@@ -29,19 +29,25 @@ establishes that a claim here is honest, which is why `IPTV-T-005` exists.
 figure. Nobody has stated them, and a plausible sentence in that field would be
 worse than the empty one.
 
-### `IPTV-T-002` — Answer the three open questions
-**Actor:** owner · **Blocking:** yes · **Phase:** Phase 0 · **Status:** OPEN
+### `IPTV-T-002` — Answer the two remaining open questions
+**Actor:** owner · **Blocking:** yes · **Phase:** Phase 0 · **Status:** OPEN, two thirds done
 
-`DECISIONS.md` carries three questions an agent may not answer:
+**Answered 2026-09-13.** `IPTV-Q-001` — what the network is for — was answered by
+the owner in his own words and became `IPTV-D-008`, `IPTV-D-009` and
+`IPTV-D-010`: convert search traffic into clients inside an owned channel,
+30 000 a month across all sites combined by 2027-03-13, and never a degraded
+service sold cheap.
 
-- **`IPTV-Q-001`** — what is the network for, what does success look like in six
-  months as a number, and what will you not do to get there. **This is the one
-  that matters.** Every automated choice the network makes daily is currently
-  optimised against a goal nobody has stated.
+`DECISIONS.md` still carries two questions an agent may not answer:
+
 - **`IPTV-Q-002`** — what is the site status `draft` meant to gate, given that 43
   sites carry it while serving and publishing.
 - **`IPTV-Q-003`** — which image generator is intended: the one the written rule
   names, or the one the code actually runs.
+
+And one small thing the owner can close in a word: **`IPTV-D-009` records the
+figure 30 000 but not its currency.** The number is binding; the unit reads
+UNKNOWN until he says it.
 
 Each answer becomes an `IPTV-D-nnn` in `DECISIONS.md` and the question is removed
 from the waiting room.

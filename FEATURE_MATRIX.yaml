@@ -29,14 +29,15 @@ classifications:
       Read on 2026-09-09 from the Supabase sites table, the generated network
       audit, the Search Console account map and the host's own sockets. It
       describes that day and stops there.
-  destination_absent:
-    provenance: owner_determination
+  destination_stated:
+    provenance: owner_decision
     repo_measurement: none
-    authority: DECISIONS.md IPTV-Q-001
+    authority: DECISIONS.md IPTV-D-008, IPTV-D-009, IPTV-D-010
     note: >-
-      That no goal is written is itself a measured fact: no document in the
-      project states one. What the goal SHOULD be is the owner's to determine,
-      and no agent may supply it.
+      The owner stated on 2026-09-13 what the network is for, its six-month
+      target and what he refuses. owner_decision, not measurement: nothing in the
+      repository was read to produce it, and nothing in the repository can
+      contradict it. The currency of the target is still not recorded.
 
 features:
 
@@ -145,13 +146,15 @@ features:
       rather than a claim.
 
   stated_destination_and_success_criteria:
-    project_brain: not_started
+    project_brain: implemented
     network_sites: not_started
     automation: not_started
     phase: phase_0
-    authority: DECISIONS.md IPTV-Q-001
+    authority: DECISIONS.md IPTV-D-008, IPTV-D-009, IPTV-D-010
     notes: >-
-      NOT A GAP IN THE CODE. Nothing in this project states what the network is
-      for, what success looks like in numbers, or what the owner refuses. Every
-      automated choice above is therefore optimised against an unstated goal.
-      not_started is the honest state, and only the owner can move it.
+      implemented on the Brain surface ONLY, and the distinction matters. The
+      destination is now written down: convert search traffic into clients in an
+      owned channel, 30 000 a month across all sites by 2027-03-13, never at the
+      cost of a degraded service. What is NOT done is making the sites and the
+      automation actually aim at it - no scheduled task reads this target and no
+      site is measured against it. Those two stay not_started until they do.
