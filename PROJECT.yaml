@@ -8,7 +8,7 @@
 # and what he refuses in IPTV-D-010. The field below is his answer, not an
 # agent's summary of the machinery.
 
-reviewed_against: "86e8a31"
+reviewed_against: "dca08da"
 
 # TOP-LEVEL, not nested. pack-audit.mjs reads `project_id` at the root to check
 # that a fresh session can recover which project a context pack belongs to; a
