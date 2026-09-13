@@ -1,6 +1,6 @@
 # ARCHITECTURE — current only — IPTV Network
 
-**Reviewed against commit:** `76957d5` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `86e8a31` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **This document describes what EXISTS in this tree. Nothing else.** A planned
 design belongs in a separate, clearly-labelled draft; the moment a plan is

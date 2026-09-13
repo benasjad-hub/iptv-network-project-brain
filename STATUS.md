@@ -1,6 +1,6 @@
 # STATUS — IPTV Network
 
-**Reviewed against commit:** `76957d5` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `86e8a31` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **What is true right now.** This file is the single source of now-state truth.
 Planning documents point at it; they never mirror it.

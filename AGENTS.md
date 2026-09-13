@@ -1,6 +1,6 @@
 # Agents — read this first
 
-**Reviewed against commit:** `76957d5` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `86e8a31` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **READ `START_HERE.md` FIRST.** It is short and it is the canonical entry point
 for **IPTV Network**.
