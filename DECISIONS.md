@@ -1,6 +1,6 @@
 # DECISIONS — IPTV Network
 
-**Reviewed against commit:** `4e2e18b` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `b176e8b` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 Every `IPTV-D-nnn` recorded below is **OWNER APPROVED and binding**.
 Changing one needs a new owner decision, not an agent's judgement. An agent may

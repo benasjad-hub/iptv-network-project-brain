@@ -7,7 +7,7 @@
 # credential is needed, this file names the FILE it is read from and the
 # VARIABLE NAME it is read under. See SECRETS_POLICY.md.
 
-reviewed_against: "4e2e18b"
+reviewed_against: "b176e8b"
 
 repositories:
   brain:

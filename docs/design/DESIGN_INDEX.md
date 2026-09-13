@@ -1,6 +1,6 @@
 # DESIGN INDEX — IPTV Network
 
-**Reviewed against commit:** `4e2e18b` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `b176e8b` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **One approved design reference exists**, and it is the only one. Any mockup
 that exists outside this repository is **REFERENCE ONLY, never specification** —

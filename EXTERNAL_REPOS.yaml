@@ -7,7 +7,7 @@
 # Brain never becomes a second copy of it.
 
 schema_version: 1
-reviewed_against: "4e2e18b"
+reviewed_against: "b176e8b"
 
 policy:
   # 7 days rather than the 30-day default. This repository receives automated
