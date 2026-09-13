@@ -27,8 +27,9 @@ folder in a multi-tenant Next.js application; roughly two dozen scheduled tasks
 choose keyword targets from measured search results, write articles, generate
 images, push URLs to Google for crawling, and mail the owner a daily report. On
 2026-09-09, 77 of the 78 answered HTTP 200 and 2 684 articles were live. Every
-site's call to action opens a WhatsApp conversation, which is the only
-conversion channel.
+site's call to action opens the **DaoudChat widget**, an in-page chat served by
+the owner's own product. WhatsApp is the fallback when the widget cannot load,
+not the primary channel — that changed on 2026-09-13.
 
 **What it is FOR**, in the owner's own words on 2026-09-13: bring prospects in
 from search and **convert them into paying clients inside a channel he controls**
@@ -75,8 +76,9 @@ is structural.
 
 See `TASKS.md`. **Two open questions are recorded** in `DECISIONS.md`, and an
 agent may not answer either of them. The standing risks are in `STATUS.md` §5 — the
-sharpest being that 65 of the 78 sites route their only call to action through a
-single WhatsApp number.
+sharpest being that the conversion channel of all 78 sites is now a field in
+another product's database, changeable from a dashboard with no commit and no
+deploy, and that nobody has yet measured whether it converts.
 
 ## 6. Owner-approved / frozen areas
 

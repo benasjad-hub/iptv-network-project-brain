@@ -103,6 +103,22 @@ Brain as **architecture**, not as decisions. The owner reading them once and
 saying which are his turns nine inherited habits into seven or eight rules with
 authority behind them. One of them, the WhatsApp list, is already stale.
 
+### `IPTV-T-009` — Read the Brain together, out loud
+**Actor:** owner + agent · **Blocking:** no · **Phase:** Phase 0 acceptance
+
+The owner reads `START_HERE.md` and says, section by section, where he does not
+follow. A blind session can only check the Brain against itself; it cannot say
+whether what is written matches what the owner meant. This is the only test that
+catches a statement that is well-formed, passes the gate, and is still not true.
+
+### `IPTV-T-010` — Have an independent session review the whole Brain
+**Actor:** agent · **Blocking:** no · **Phase:** Phase 0 acceptance
+
+Different from `IPTV-T-005`. That one asked whether a newcomer can ORIENT itself
+from the Brain. This one asks whether the Brain is RIGHT: open every canonical
+file, check each claim against the source named beside it, and report what does
+not hold. It must be a session that did not write any of it.
+
 ### `IPTV-T-007` — Give this Brain a remote
 **Actor:** owner · **Blocking:** no · **Phase:** operations
 

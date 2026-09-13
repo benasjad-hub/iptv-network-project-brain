@@ -168,11 +168,36 @@ services:
       from this Brain, so "it collects events today" is NOT established here.
 
   # ── contact, content and mail ────────────────────────────────────────────
+  daoudchat_widget:
+    id: daoudchat_widget
+    purpose: >-
+      THE conversion channel since 2026-09-13. Every site's call to action opens
+      an in-page chat served by the owner's own product, DaoudChat. The site
+      loads widget.daoudchat.com/widget.js and identifies itself with a public
+      key of its own; the button calls openChat(), never a wa.me link.
+    status: active
+    login_identity: >-
+      admin.daoudchat.com, and the login is an 8-DIGIT CODE, not an email and
+      password. The code is workspace_members.login_code; the email and password
+      it resolves to are stored in the same row and never typed by a human.
+    secret_ref: NONE_CONFIGURED
+    credential_location: per-site public key in each design's components/ChatInit.tsx - public by design, served to every visitor
+    verified_by: >-
+      Live calls to the config endpoint on 2026-09-13 returned ctaMode "widget"
+      on every site sampled; widget.js served 200 and defines window.DaoudChat.
+    warning: >-
+      The mode is a SERVER-SIDE field, channels.cta_mode in the Supabase project
+      gevvsfsmcnsiwujerjku - NOT in this repository. Flipping it changes every
+      site instantly with no deploy. NEVER run a global UPDATE on that column:
+      one already overwrote 4 live sites by mistake. Change it channel by
+      channel, through PATCH /api/staff/channel/:id.
   whatsapp_contact:
     id: whatsapp_contact
     purpose: >-
-      The network's only conversion channel. Every site's call to action opens
-      a WhatsApp conversation.
+      THE FALLBACK, no longer the primary channel. Since 2026-09-13 the call to
+      action opens the DaoudChat widget; WhatsApp is what a visitor reaches only
+      when the widget fails to load or its channel is unprovisioned. The fallback
+      is deliberate: a dead button loses the visitor entirely.
     status: active
     login_identity: two numbers in service, 19029055026 and 13322541331
     secret_ref: NONE_CONFIGURED
@@ -202,6 +227,50 @@ services:
     secret_ref: NONE_CONFIGURED
     credential_location: secrets/gmail-app-passwords.json; apps/sites/.env.local variable names RESEND_API_KEY / ALERT_EMAIL_TO
     verified_by: crontab entries at 08:00, 12:00, 20:00 and 23:00 invoke reporting scripts with --email
+
+  # ── outillage de la machine, pas du produit ──────────────────────────────
+  live_browser:
+    id: live_browser
+    purpose: >-
+      A shared Chromium that a person and a model watch and drive at the same
+      time, at https://live.funey.store/. Used to check a live page together, or
+      to let the owner hand a browsing task to whoever operates the machine.
+    status: active_external
+    login_identity: an access code, read from /etc/live-browser.env
+    secret_ref: NONE_CONFIGURED
+    credential_location: /etc/live-browser.env, variable name LIVE_BROWSER_TOKEN, root-owned 600
+    verified_by: >-
+      On 2026-09-13 the systemd unit live-browser.service is ENABLED but
+      INACTIVE - it is not running right now. Port 7788 is loopback-only; nginx
+      terminates TLS at /etc/nginx/conf.d/live.funey.store.conf.
+    warning: >-
+      Until 2026-09-11 this was NOT a service: it ran as a child of a Claude
+      session and died with it, and its access code was drawn at random on every
+      start. The unit now fixes both. Full detail, including the screencast
+      protocol and the nginx settings without which the screen freezes, is in
+      iptv-network/docs/HANDOFF-live-browser-daoud-ops.md.
+  daoud_ops_gateway:
+    id: daoud_ops_gateway
+    purpose: >-
+      An MCP server running AS ROOT on this machine, exposed at ops.viziona.tv.
+      It is the only thing here that sees every project at once: one call
+      returns the 20 git repositories across five roots with their branch, head
+      and dirty count.
+    status: active
+    login_identity: OAuth 2.1 for claude.ai connectors, or a static bearer token of 32 characters minimum
+    secret_ref: NONE_CONFIGURED
+    credential_location: /opt/daoud-ops-mcp/.env, variable names OPS_MCP_TOKEN and OPS_MCP_ADMIN_PASSWORD_HASH
+    verified_by: >-
+      Source read on 2026-09-13: it refuses to start without a credential,
+      never logs the presented token, audits every call with actor and remote
+      IP, and redacts secrets from every response - observed live, it returned a
+      GitHub token in a git remote URL already masked.
+    warning: >-
+      IT GIVES ROOT, AND IT IS ON THE PUBLIC INTERNET. OAuth is sound, but a
+      stolen token is root on this machine; it deserves an IP restriction or an
+      access proxy in front. Note also that its most powerful tool, shell_exec,
+      is refused by Claude Code's own classifier rather than by the server - the
+      risk is carried without the benefit.
 
   # ── registrars and external hosting ──────────────────────────────────────
   domain_registrars:

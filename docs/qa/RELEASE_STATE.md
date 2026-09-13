@@ -10,8 +10,16 @@ what it records is what he means.
 
 | Gate | Requires | Actor | State |
 |---|---|---|---|
-| **PG-1** | `IPTV-T-001` | agent | **SATISFIED** 2026-09-09 — structural only |
-| **PG-2** | `IPTV-T-002` | owner | **NOT SATISFIED** — the owner has not been asked to accept it |
+| **PG-1** — the Brain stands up | `IPTV-T-001` | agent | **SATISFIED** 2026-09-09 — structural only |
+| **PG-2** — a newcomer orients itself | `IPTV-T-005` | agent | **SATISFIED** 2026-09-09 — 4 of 7 answered cleanly |
+| **PG-3** — it does not invent | `IPTV-T-005` | agent | **SATISFIED** 2026-09-09 — refused the answers its harness fed it |
+| **PG-4** — read together with the owner | `IPTV-T-009` | owner | **NOT SATISFIED** — never run |
+| **PG-5** — independent review | `IPTV-T-010` | agent | **NOT SATISFIED** — never run |
+| **PG-6** — the owner accepts it | `IPTV-T-002` | owner | **NOT SATISFIED** — two questions remain his |
+
+**Six gates, as the plan had them.** An earlier version of this Brain declared
+only two and gave number 2 to the owner's acceptance, which is the sixth. That
+was the agent's error, corrected on 2026-09-13.
 
 **PROJECT BRAIN: FILLED IN, NOT ACCEPTED. THE NETWORK IS LIVE: 78 SITES, 77
 SERVING. PURPOSE: BRING CLIENTS AND CONVERT THEM IN OUR OWN CHANNELS. TWO

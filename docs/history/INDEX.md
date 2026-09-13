@@ -25,6 +25,7 @@ and can open the one file it needs.
 | `iptv-network/docs/PLAYBOOK.md` | ~225 kB, 1 252 lines | The reusable rules extracted from the owner's choices and corrections. |
 | `iptv-network/docs/PIPELINE.md` | ~7 kB, 112 lines | The stage-by-stage site pipeline, S0 to S9. |
 | `project-memory/05-DECISIONS.md` | ~8 kB | The nine agent-written engineering rules. Recorded in this Brain as architecture, not as decisions. |
+| `iptv-network/docs/HANDOFF-live-browser-daoud-ops.md` | ~16 kB | The shared browser and the root operations gateway, written for a model that has never seen the machine. Not history: it describes what runs today. |
 
 **How to use them.** Do not read them front to back. Search them for the term
 you need, and prefer this Brain's canonical files for anything they both cover —

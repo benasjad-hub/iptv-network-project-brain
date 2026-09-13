@@ -176,6 +176,22 @@ release:
       purpose: Create the remote repository for this Brain
       authority: TASKS.md
       outcome_provenance: code_verified
+    IPTV-T-009:
+      actor: owner
+      blocking: false
+      phase: release_gate
+      status: OPEN - the owner has not read the Brain with an agent and said where he does not follow
+      purpose: Read the Brain together, section by section, and catch what is well-formed but not true
+      authority: TASKS.md
+      outcome_provenance: owner_determination
+    IPTV-T-010:
+      actor: agent
+      blocking: false
+      phase: release_gate
+      status: OPEN - no session that did not write this Brain has checked its claims against their sources
+      purpose: Independent review of every claim against the source named beside it
+      authority: TASKS.md
+      outcome_provenance: inference
     IPTV-T-008:
       actor: agent
       blocking: false
@@ -184,18 +200,49 @@ release:
       purpose: Bring the network repository's STATE.md back to one page, safely
       authority: TASKS.md
       outcome_provenance: code_verified
+  # SIX barrières, comme au plan. Une version antérieure n'en déclarait que
+  # deux et donnait le numéro 2 à l'acceptation du propriétaire, qui est la
+  # sixième : une erreur de l'agent, corrigée le 2026-09-13.
   gates:
     PG-1:
       requires: IPTV-T-001
-      purpose: The canonical Brain exists, is filled in, and make brain-gate reports 0 FAIL with every WARN explained rather than silenced
+      purpose: The Brain stands up - make brain-gate reports 0 FAIL with every WARN explained rather than silenced
       status: >-
         SATISFIED 2026-09-09 - STRUCTURAL ONLY. It says nothing about whether any
         claim in this Brain is honest, and it promotes nothing
       actor: agent
       source: docs/qa/RELEASE_STATE.md
     PG-2:
+      requires: IPTV-T-005
+      purpose: A session that has never seen this project orients itself from the Brain alone
+      status: >-
+        SATISFIED 2026-09-09 - 4 of 7 questions answered cleanly with citations,
+        3 answered honestly as "the Brain does not say"
+      actor: agent
+      source: docs/verification/BLIND_SESSION_2026-09-09/README.md
+    PG-3:
+      requires: IPTV-T-005
+      purpose: That session does not let itself be drawn into inventing what the Brain does not say
+      status: >-
+        SATISFIED 2026-09-09, and under real pressure - its own harness was
+        feeding it the missing facts and it refused to use them, saying so
+      actor: agent
+      source: docs/verification/BLIND_SESSION_2026-09-09/README.md
+    PG-4:
+      requires: IPTV-T-009
+      purpose: The owner and an agent read the Brain together, and he says where he does not follow
+      status: NOT SATISFIED - never run. It is the only test that catches a claim that is well-formed, passes the gate, and is still not true
+      actor: owner
+      source: docs/qa/RELEASE_STATE.md
+    PG-5:
+      requires: IPTV-T-010
+      purpose: A session that wrote none of this checks every claim against the source named beside it
+      status: NOT SATISFIED - never run
+      actor: agent
+      source: docs/qa/RELEASE_STATE.md
+    PG-6:
       requires: IPTV-T-002
-      purpose: The owner has read this Brain, answered the three open questions, and said in his own words that what it records is what he means
-      status: NOT SATISFIED - the owner has not been asked to accept it yet, and no agent may accept it for him
+      purpose: The owner accepts the Brain in his own words - that what it records is what he means
+      status: NOT SATISFIED - two open questions remain his, and no agent may accept it for him
       actor: owner
       source: docs/qa/RELEASE_STATE.md

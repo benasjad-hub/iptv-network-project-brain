@@ -112,9 +112,18 @@ are recorded because the corrections are the useful part:
 
 ## 5. What is at risk right now
 
-- **65 of the 78 sites depend on a single WhatsApp number.** WhatsApp is the
-  network's only conversion channel, and a third number was banned by Meta on
-  2026-08-08. One more ban takes most of the network's revenue path with it.
+- **The conversion channel changed on 2026-09-13, and nothing about it lives in
+  this repository.** Every site's call to action now opens the DaoudChat widget.
+  Which channel a site uses is a field in ANOTHER product's database
+  (`channels.cta_mode`, Supabase `gevvsfsmcnsiwujerjku`), flipped from a
+  dashboard. It changes all 78 sites instantly, with no commit and no deploy —
+  and nothing in this repository records or guards that switch.
+- **65 of the 78 sites still fall back to a single WhatsApp number.** WhatsApp is
+  no longer the primary channel, but it is what a visitor reaches when the widget
+  fails, and a third number was banned by Meta on 2026-08-08.
+- **Nobody has yet measured whether the widget converts.** It became the only
+  entry point on 78 live sites the day it was switched on. If a conversation
+  opens and no one answers, the visitor is lost and no alert fires.
 - **37 sites do not deploy on push.** A change is live in ninety seconds on
   Vercel and up to two hours later everywhere else, and only if the deploy cron
   ran.
