@@ -10,6 +10,22 @@ material that was once current and is now superseded — kept because a supersed
 plan is provenance for why the current one exists, and separated because reading
 it as current is how an agent revives an abandoned design.
 
+## The history has been distilled, not copied
+
+Two of these files have been read in full and reduced to the rules they earned.
+**Read the distillation first; open the source only when you need the case
+behind a rule.**
+
+| Distillation | From | Reduction |
+|---|---|---|
+| `docs/operations/HARD_LESSONS.md` — 60 rules, each with what its breach cost | `iptv-network/docs/SOLUTIONS.md`, 299 kB | about 1 to 12 |
+| `docs/operations/BUILD_RULES.md` — 58 rules, each marked owner or agent | `iptv-network/docs/PLAYBOOK.md`, 225 kB | about 1 to 9 |
+
+The journal is **not** distilled: 4.4 MB, 1 116 entries over 94 days, from
+2026-06-12 to 2026-09-13. It is a diary, not a rule book — the rules it held were
+extracted into the two files above as they happened. Search it for a date or a
+term; never read it forward.
+
 ## Where the network's own history actually lives
 
 The governed repository carries a large historical record. **It is not copied

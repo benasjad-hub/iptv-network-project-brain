@@ -156,6 +156,7 @@ These travel with the standard and apply here from the moment of installation.
 | Feature × surface truth · where authoritative material lives | `FEATURE_MATRIX.yaml` · `ACCESS_MAP.yaml` |
 | Test devices · artifacts · classified old reports | `HARDWARE.yaml` · `ARTIFACTS.yaml` · `docs/history/INDEX.md` |
 | Architecture — **current only** | `docs/architecture/ARCHITECTURE.md` |
+| What breaking things taught, with the price · how a site is built | `docs/operations/HARD_LESSONS.md` · `docs/operations/BUILD_RULES.md` |
 | Design authority · gate state | `docs/design/DESIGN_INDEX.md` · `docs/qa/RELEASE_STATE.md` |
 | Verification evidence | `docs/verification/` |
 | What this installation is pinned to | `INSTALL_MANIFEST.json` |

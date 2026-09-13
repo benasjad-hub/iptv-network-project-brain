@@ -47,6 +47,8 @@ canonical_docs:
   access: ACCESS_MAP.yaml
   architecture: docs/architecture/ARCHITECTURE.md
   gate_state: docs/qa/RELEASE_STATE.md
+  hard_lessons: docs/operations/HARD_LESSONS.md
+  build_rules: docs/operations/BUILD_RULES.md
 
 security:
   vault_configured: false
@@ -88,7 +90,9 @@ brain:
     - FEATURE_MATRIX.yaml
 
   live_state_docs: []
-  extra_dated_docs: []
+  extra_dated_docs:
+    - docs/operations/HARD_LESSONS.md
+    - docs/operations/BUILD_RULES.md
   pack_extra_core_sections: []
   pack_extra_full_sections: []
 
