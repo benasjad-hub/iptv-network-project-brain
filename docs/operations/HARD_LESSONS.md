@@ -30,7 +30,12 @@ dit « 230 commits d'articles détruits » ne se discute pas, elle se respecte.
 seul chemin non fusionné bloque tout commit sans pathspec.
 Un commit « docs » a emporté 218 fichiers dont une suppression ; un
 `JOURNAL.md` en conflit a bloqué 60 articles pendant 21 h, en silence.
-2026-09-01 · 2026-09-02
+Nommer un DOSSIER (`git add apps/sites/designs`) revient au même piège : le
+2026-09-21, une modification de 78 rendus a ramassé au passage **35 brouillons
+`_draft-*.json`**, rattrapés avant le commit. Avant tout commit touchant
+`apps/sites/designs`, exiger
+`git diff --cached --name-only | grep -c _draft` = 0.
+2026-09-01 · 2026-09-02 · 2026-09-21
 
 **2.** Ne jamais `git worktree add -f <branche>` : utiliser `--detach`, et
 contrôler `git worktree list | grep -c '\[main\]'` = 1.
