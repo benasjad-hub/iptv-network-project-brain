@@ -1,6 +1,6 @@
 # IPTV Network — instructions for coding agents
 
-**Reviewed against commit:** `b176e8b` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
+**Reviewed against commit:** `97f1654` · **Reviewed:** 2026-09-09 · **Status:** CURRENT
 
 **READ `START_HERE.md` FIRST.** Everything you need to orient — what this is,
 branch, verified state, frozen areas, do-not-touch rules, next task — is there,

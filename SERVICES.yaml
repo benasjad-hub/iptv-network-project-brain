@@ -13,7 +13,7 @@
 # generated audit data/network-audit.json (2026-09-09T06:41:16Z), and the
 # host's own listening sockets. The verification method is stated per entry.
 
-reviewed_against: "b176e8b"
+reviewed_against: "97f1654"
 
 vault:
   configured: false
