@@ -324,6 +324,11 @@ pour zéro gain.
 **45.** `[PROPRIÉTAIRE]` DMCA = **action autonome immédiate** : re-slug,
 redirection, build, déploiement, poussée d'indexation, rapport après. Jamais de
 contre-notification.
+**Ordre précisé le 2026-09-21, par l'expérience et non par décision du
+propriétaire :** retirer la marque de la méta et du titre **avant** le re-slug.
+Une page re-sluguée sans cela est réclamée de nouveau — mesuré sur
+`liste-iptv.srl`, réclamée deux fois à deux mois d'intervalle, la seconde sur le
+slug de remplacement lui-même.
 La suppression est un filtre de résultats invisible à l'inspection d'URL, et une
 contre-notification exige une déclaration sous serment qui révèle l'identité
 réelle du propriétaire.

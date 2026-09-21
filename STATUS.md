@@ -121,6 +121,13 @@ are recorded because the corrections are the useful part:
 - **65 of the 78 sites still fall back to a single WhatsApp number.** WhatsApp is
   no longer the primary channel, but it is what a visitor reaches when the widget
   fails, and a third number was banned by Meta on 2026-08-08.
+- **Copyright notices arrive and can sit unhandled.** A 365-day sweep of the
+  seven Search Console mailboxes on 2026-09-21 found **19 notices**. Three had
+  been handled. One had not: it targeted the **home page** of `liste-iptv.srl`
+  and that page was still served 200 **thirteen days** after the notice. It has
+  since been corrected. The gap is structural, not accidental: the mailbox watch
+  runs every three hours but **only ever looks at the last 24 hours**, so a
+  notice that arrives while the cron is down is never seen again.
 - **Nobody has yet measured whether the widget converts.** It became the only
   entry point on 78 live sites the day it was switched on. If a conversation
   opens and no one answers, the visitor is lost and no alert fires.

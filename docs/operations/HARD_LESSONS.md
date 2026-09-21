@@ -222,6 +222,26 @@ seul canal d'alerte existant. Une contre-notification exige une déclaration sou
 serment qui révèle l'identité réelle du propriétaire.
 2026-06-26
 
+**27b.** **Un re-slug seul programme la notification suivante.** Retirer la
+marque de la méta et du titre **D'ABORD**, re-sluguer **ENSUITE**. Le re-slug
+restaure la visibilité ; il ne retire pas la cause, et la nouvelle URL porte
+exactement le contenu qui a déclenché la plainte.
+`liste-iptv.srl` a été re-sluguée le 2026-07-12 sur notification. Deux mois plus
+tard, le 2026-09-08, la NOUVELLE URL était réclamée à son tour : la méta
+annonçait toujours « calcio (Serie A, Champions, DAZN) ». Et ce n'était pas une
+page secondaire — c'était la page d'accueil, servie 200 pendant **13 jours**
+après l'avis. Mesure sur la page : Serie A 29×, Champions 29×, DAZN 25×.
+2026-09-21
+
+**27c.** **Une surveillance bornée à 24 h ne retrouve pas ce qu'elle a manqué.**
+`gmail-watch` tourne toutes les 3 h mais n'interroge que le dernier jour : un
+avis arrivé pendant une interruption du cron, ou classé par un filtre, n'est plus
+jamais revu. Balayer à **365 jours** sur le dossier « tous les messages »
+périodiquement, pas seulement quand on soupçonne quelque chose.
+19 notifications de droits d'auteur retrouvées en une passe, dont une non
+traitée depuis 13 jours ; aucune n'apparaissait dans les passes quotidiennes.
+2026-09-21
+
 **28.** Le risque DMCA ne se compte pas en mentions de marque : chercher le motif
 **marque-porte-marque** (« notre abonnement inclut X ») et trier par surface —
 URL, titre, méta d'abord.

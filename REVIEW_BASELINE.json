@@ -2,19 +2,19 @@
   "schema_version": 1,
   "generator": "tools/context/observe-external.mjs",
   "generated_note": "GENERATED FILE. Never hand-write or hand-edit it: --review asserts that the Brain was re-audited against a governed repository at a named commit, so writing this file by hand fabricates that audit. Regenerate with `make external-observe`.",
-  "generated_at": "2026-09-09T08:28:39.370Z",
-  "brain_head": "8dfc363e3c9583ed40e794fcdce0b007c8617cf1",
+  "generated_at": "2026-09-21T19:34:11.708Z",
+  "brain_head": "dc43bd009ddb2d289049f8e6a513f7086c0bb546",
   "observation_note": "Each row records what a READ-ONLY `git ls-remote` saw at observed_at, and nothing later. It is a fact about a moment, not a live answer: `make external-check` classifies whether that fact is still usable, offline. No governed repository is ever written to.",
   "repos": {
     "network": {
       "remote": "https://github.com/benasjad-hub/iptv-network.git",
       "branch": "main",
       "observation": "OBSERVED",
-      "observed_at": "2026-09-09T08:28:39.370Z",
+      "observed_at": "2026-09-21T19:34:11.708Z",
       "observation_method": "git ls-remote --heads (read-only)",
-      "observed_head": "5fe707b9a7a9ed67ee28553a6e62751ea57d0c4d",
-      "reviewed_sha": "5fe707b9a7a9ed67ee28553a6e62751ea57d0c4d",
-      "reviewed_at": "2026-09-09T08:28:39.370Z",
+      "observed_head": "b2e36208952e5887825adff35b4267e96b34d5e4",
+      "reviewed_sha": "b2e36208952e5887825adff35b4267e96b34d5e4",
+      "reviewed_at": "2026-09-21T19:34:11.708Z",
       "reviewed_note": "Moved by an explicit --review, which ASSERTS that the Brain's claims about this repository were re-audited against this commit. The tool cannot verify that assertion; a reader is entitled to hold the person who passed the flag to it."
     }
   }
