@@ -96,3 +96,9 @@ reported 30 pass / 4 warnings / 0 failures. verify-install FAILED on Windows:
 the manifest uses slash paths while detected paths use backslashes, classifying
 the same tooling as missing/unpinned. Full Brain gate is not green; no validator
 or manifest change was made in this documentation-only slice.
+
+## 2026-10-11 — Desktop dashboard implementation/deployment
+Owner reiterated Windows .exe delivery, with VPS execution/persistence; browser is a verification surface only. Owner has not used Gemini. AWS articles refer to existing IPTV Funey project, not forums; Google should generate article text/images once a supported connection is verified.
+Implemented: four-action home, real cross-site draft/task search, sites directory, article directory, latest-change history, collapsed legacy tools, French creation availability. Code commit 6e57babbdfba426c95122389e01eb8e1e1819cbf; isolated VPS release /home/iptv/daoudstudio/releases/6e57babb. Local production build and 14 tests pass; VPS build and service health pass. Login HTTPS 200; unauthenticated Studio/Articles 307. Existing Windows .exe 0.2.0 remains installed and installer available; it consumes the deployed UI without a shell rebuild. No native launch or owner CRUD acceptance claimed.
+Read-only AWS discovery: /home/iptv/iptv-network/data/funey-backlink-plan.{md,json}; profiles funey1 and listeiptv authenticated via STS, secret output suppressed. Third account and publishing permissions/adapters unverified. No AWS publication, Supabase migration, Google generation, site cutover or credentials reset.
+Next: owner login inside Desktop for actual CRUD/upload visual acceptance; inspect SYSTEM-LOCAL-LLM-VIDEO article inventory to locate third AWS account and source artifacts; add verified destination/AI adapter. UI data errors stay explicit. Main product is not complete.
