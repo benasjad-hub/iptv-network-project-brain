@@ -49,3 +49,50 @@ bytes/MIME, nosniff and invalid names. These tests were not rerun in this captur
 
 Next action: resume authenticated owner editor acceptance and remaining adapters
 after the separately authorized DaoudChat inbox mission. No secrets included.
+
+## Owner scope clarification and resumption — 2026-10-11
+
+The owner explicitly clarified that the unfinished product is DaoudStudio:
+one desktop workspace for existing website pages/articles, AWS-hosted articles
+and the external article workflow described as "funny", plus Google AI workers.
+The requested hosting destination for the websites is Cloudflare; the Studio
+editor, persistent content and worker orchestration remain on the VPS. This is
+the requested target architecture, not a claim that migration has completed.
+
+Code remains in benasjad-hub/iptv-network, branch codex/daoudstudio-dashboard,
+6a247021516359d4f4dfc8678e92ed95a35709b0. Git ls-remote verified that exact
+branch on origin. Studio panel and desktop wrapper share this code repository;
+each website keeps its own design folder. The separate canonical Brain repository
+is benasjad-hub/iptv-network-project-brain. Its September main orientation is
+stale; use this dated capture for the Studio work rather than treating old site
+counts or hosting totals as current measurements.
+
+Resumption checks: 14/14 local tests passed across Studio documents, media,
+runtime publication, durable task storage and desktop navigation policy.
+This does not establish owner UI acceptance, real AI execution or live website
+cutover. No code, hosting, environment or production setting changed in this
+resumption audit.
+
+AWS article source/deployment evidence exists separately in SYSTEM-LOCAL-LLM-VIDEO
+docs/VPS_ARTICLE_INVENTORY_2026-10-09.md. AWS and "funny" integration in Studio
+is NOT VERIFIED. Gmail/Search Console accounts must not be treated as verified
+Google AI workers; a supported AI provider connection and per-account capability
+verification are still required.
+
+Preserve one resumable task/checkpoint history across workers and accounts.
+Content edits can avoid site builds only on verified runtime-connected surfaces;
+native app changes and new design/code changes still require a build. Retain
+existing Vercel serving deployments until each Cloudflare candidate passes
+content, design, routes, widget, metadata and environment compatibility checks.
+
+Exact next action: inspect the owner editor flow and establish a per-site and
+per-article-host adapter matrix (website / AWS / external destination) before
+implementing the missing connectors. Capture tested/deployed/remaining state
+after every meaningful slice; never claim the whole product is complete from
+unit tests alone.
+
+Brain verification for this clarification: git diff --check passed; context-check
+reported 30 pass / 4 warnings / 0 failures. verify-install FAILED on Windows:
+the manifest uses slash paths while detected paths use backslashes, classifying
+the same tooling as missing/unpinned. Full Brain gate is not green; no validator
+or manifest change was made in this documentation-only slice.
