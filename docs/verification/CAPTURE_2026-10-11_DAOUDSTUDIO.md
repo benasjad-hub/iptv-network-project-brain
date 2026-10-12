@@ -279,3 +279,37 @@ Found studio-previewHTML was anonymous/noindex; noindexisnotprivacy. Product3d45
 
 ## 2026-10-12 12:31 UTC — Task result draft import candidate
 Product task-document helper converts explicit reviewed article/page stage into private editable draft with validatedSEO/schema/body and optionally explicit same-task image. StableUUID/stagepath, repeated request returns latestowner-editeddraft/no duplicate or overwrite. Rejectrunning/duplicatestage/product/foreignimage.8focusedNode tests pass (2adapter+6document). NOTwiredtoAPI/UI/deployed/nativeaccepted; no actualprovider/taskcall/publication. Product/inlineimages separatepending. Live3d459ce8 unchanged; exactnext wire owner-authorized API/action and actualdesktop import/edit/save/reopen acceptance, preserve publicsite. OverallINCOMPLETE.
+
+## 2026-10-12 13:08 UTC — Owner-requested consolidated handoff: verified versus remaining
+Owner asked to save all progress and remaining work after asking specifically whether videos were finished. Overall **INCOMPLETE**. No automatic-video or full-clone completion claim is valid.
+
+### Current source / deployment
+- Product benasjad-hub/iptv-network, branch codex/daoudstudio-dashboard, committed HEAD1df69667. Live immutable Studio web3d459ce8, Windows exe0.2.0; later source/documentation commits are not automatically live.
+- Original broker645720dd, APIworkerab7095a9 and staged Google agent e457c6e9 unchanged at last verified receipts. No fresh service claim made by this documentation-only slice.
+- Interrupted13:00 work remains UNCOMMITTED locally: scripts/studio/documents.cjs, task-document.cjs, task-document.test.cjs, apps/panel/app/api/studio/task-documents/route.ts. API adds same-origin/owner/boundedJSON/revision gates and returns draft editor link. Exact path lookup removes latest100list dependence; regression with105newer drafts passes.8focusedNode tests and TypeScript passed before interruption. NOT deployed, UI button missing, no native import/API acceptance. Preserve these changes; never discard/reset.
+
+### Measured acceptance
+| Capability | Actual evidence | Limit |
+|---|---|---|
+| App consigne -> article/page/product/image | Native taskd72a3ef4-91ae-401f-83fd-cfdf136cf6dc, reviewrevision11/five receipts; actual Google JPEG and SEO/schema displayed | Bounded synthetic QA; full researched article/multiple inlineimages/catalog/publicSEO integration incomplete |
+| Independent workers | Native tasks75d240ac/f1350be1 on sataarbil/teacherbendaoud,121.665s/83.529s, unique markers/keywords/schema | Content jobs, NOT complete generated new websites |
+| Context / persistence | Prior original-provider cross-account continuation and busylock checks; appclose/gracefulworkerrestart retained receipts, no replay | Real quotaexhaustion, physicalPCoff, coldVPSreboot not proved |
+| Video | Assisted8s720p clip4bbe2471-c69b-45cf-90eb-248641fcc32b.mp4 generated/downloaded/nativeplayback/seek/hash accepted;1020->1008credits | Operator-assisted, pseudo-text quality defect; NOT automated app task |
+| Flow preparation | VPS screenshot caret/text/settings:Omni1.1Flash720p8s16:9x1/12credits;13Python checks; actual settled observation2.6s | No new generate/creditspend; no automatic queue/download/display or Flowaccountswitch |
+| SEO storage | Live342a0225 introduced optionalmetaTitle/metaDescription/focusKeyword/schema preservation;6documenttests/types including fileclose/reopen/save/reopen | Native save/publicSEO rendering still pending |
+| Task draft conversion | Committed helper1df69667, reviewedarticle/page + explicitly selected same-task image; retry preserves owneredit | API changes local/uncommitted, no deployed UI/actual import; product/inlineimages pending |
+| Clone draft | Native private126487e0-2908-46bc-9348-7cfa9cff6dfc randomsite-1377cunlyq4yj4b5irm4rkqgs survives brandchange/one row/revision1 | Draft only, no generatedwebsite/privateonlineclonepreview/widgetprovisioning |
+| Unsaved guard | Native11:31 warning on project switch/keep action; freshAX draft retained/guard dismissed | Synthetic unsaved QA text remains UI-only; no server mutation |
+| Private preview HTML | Live3d459ce8 ownergate; anonymousHTTP307toLogin/login200; noindex retained | Publicpublished/catalog/media API contracts unchanged; privateclone drafts must not use publicAPI |
+
+### Remaining acceptance, in working order
+1. Finish owner-gated task-to-editor API/UI, commit preserved local work, deploy, then actual exe import/edit/save/reopen/retry with SEO + same-task image; full article/page/product and multipleGoogleimages/SEO quality review.
+2. Integrate reliable Flow preparation/quote, durable single-submit/no-replay, generation/download/display from same app consigne. Verify final visual quality, actual elapsed time/cost. Manual browser or successful login is never automatic acceptance.
+3. Native busy/quota eligible-account switch preserving checkpoint/artifacts/no replay, including separate Flow sessions; no fabricated quota-exhaustion proof.
+4. PCoff-independent job proof and restart continuation. Distinguish already-tested appclosed/gracefulagentrestart from physicalPCoff/coldVPSreboot; never shut owner PC down without explicit consent.
+5. Existing website and AWS visual edit/save/online/rollback in controlled owner-authorized scope; retain originals and rollback proof. Earlier reserved noindex copies in2AWSaccounts are not native original-site acceptance.
+6. ThirdAWS account: onlyfuney1/listeiptv observed; owner nickname/location question pending. No keys/password requested or logged.
+7. Migrate sites independently fromVercel toCloudflare/VPS preserving variables/data/domains/routing; no unsupported hostingcutover/completion claim. Mac access/acceptance unverified.
+8. Complete eBay design/organization clone for OWNcontent, NOTmarketplace. Referenceebay.com confirmed; productionkeyword/language unresolved (Frenchdefault only, syntheticQA not ownerdecision). Real referenceanalysis/generation/visualcomparison/privateauthenticatedunindexedpreview, late brand/domain/CTA/address/DaoudChatwidget and edits retained on rename. Randomtemporarynames until chosen brand; never publicpublish/index without explicit authorization.
+
+Heartbeat suivi-daoudstudio-et-clone-priv remains the continuing checklist. No accounts/secrets copied, paidAPI/purchase/publicsiteindexing/unrelatedproduction change or workstationshutdown in this save operation. Exact next: finish the preserved taskimport API/UI and nativeacceptance, then durable automaticFlow; do not restart accepted QA or mark checklistcomplete from helpertests.
