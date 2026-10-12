@@ -159,3 +159,5 @@ establish complete app-task OAuth integration, Flow generation, site migration
 or Mac acceptance. Continue with `IPTV-T-011`; preserve the network state lines.
 
 2026-10-12 update: live Studio web e457c6e9; product docs068d13ae. Ordinary private VPS Chrome Flow login and actual .exe HTTPSrelay launch accepted; visible bendaoud.fst3@gmail.com/PRO/1020credit snapshot.95 cumulative deterministic checks plus original provider acceptance; staged-worker service remainsOFF. Automatic Flow generation/switch and native restart remain pending. Detailed evidence in the capture linked above; governed network state unchanged.
+
+2026-10-12 05:22UTC update: liveStudio1a729fcd,docsfd236c54; stagedGoogleworker ON with real private article→busy-switch→image/context/reopen acceptance. AssistedFlow8sec720p generated;1020→1008credits. Actual exe playback/seek/download exacthash passed, anonymous404. AutomaticFlow task/switch and visual no-pseudo-text quality remain pending.98cumulative checks; full boundaries in capture.

@@ -160,7 +160,7 @@ Evidence and tested/untested boundaries:
 [DaoudStudio capture](docs/verification/CAPTURE_2026-10-11_DAOUDSTUDIO.md).
 Exact next: wire the bounded OAuth worker to the installed app queue, run a full
 article/page/product job from the app, verify image ingestion/context/error
-handoff, then Flow clip cost/download/quality. Finish targeted native AWS/site
+handoff, then automated Flow task routing/switch/context and clip prompt fidelity (assisted clip cost/download/native playback now verified). Finish targeted native AWS/site
 publication, third AWS account, migration preservation and Mac acceptance.
 Current product acceptance matrix at `82d29838` gives the detailed order;
 provider capability tests alone cannot close this task.
