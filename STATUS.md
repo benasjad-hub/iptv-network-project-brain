@@ -145,3 +145,15 @@ are recorded because the corrections are the useful part:
 `TASKS.md`. `IPTV-T-002` is **two thirds done**: the owner answered what the
 network is for. Two questions remain, both his — what the site status `draft` is
 meant to gate, and which image generator is intended.
+
+## DaoudStudio — owner work, verified2026-10-12
+
+**Overall readiness: INCOMPLETE.** Owner explicitly authorized this separate
+workstation/VPS application and its records. Current evidence is in
+[DaoudStudio capture](docs/verification/CAPTURE_2026-10-11_DAOUDSTUDIO.md).
+Consolidated acceptance matrix and ordered remaining checks were pushed to
+product commit `82d29838`, branch `codex/daoudstudio-dashboard`,
+[docs/STUDIO_ACCEPTANCE.md](https://github.com/benasjad-hub/iptv-network/blob/82d29838/docs/STUDIO_ACCEPTANCE.md).
+82 deterministic tests and real Google text/image/context acceptance do not
+establish complete app-task OAuth integration, Flow generation, site migration
+or Mac acceptance. Continue with `IPTV-T-011`; preserve the network state lines.

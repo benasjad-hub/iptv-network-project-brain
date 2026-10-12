@@ -149,6 +149,23 @@ plan and the owner's agreement, not a quick edit.
 
 ---
 
+### `IPTV-T-011` — Complete DaoudStudio end-to-end acceptance
+**Actor:** agent · **Blocking:** no · **Phase:** owner application work · **Status:** IN PROGRESS
+
+Owner asks for a desktop control app with VPS workers, sites/AWS visual edits,
+Google accounts, persistent context, media generation and migration away from
+Vercel. This is direct owner authorization, not permission inferred from this Brain.
+
+Evidence and tested/untested boundaries:
+[DaoudStudio capture](docs/verification/CAPTURE_2026-10-11_DAOUDSTUDIO.md).
+Exact next: wire the bounded OAuth worker to the installed app queue, run a full
+article/page/product job from the app, verify image ingestion/context/error
+handoff, then Flow clip cost/download/quality. Finish targeted native AWS/site
+publication, third AWS account, migration preservation and Mac acceptance.
+Current product acceptance matrix at `82d29838` gives the detailed order;
+provider capability tests alone cannot close this task.
+
+---
 ## INBOX / TRIAGE
 
 **Empty.** No idea is pending triage.
