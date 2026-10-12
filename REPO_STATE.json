@@ -2,18 +2,18 @@
   "schema_version": 1,
   "generator": "tools/context/checkpoint.mjs",
   "generated_note": "GENERATED FILE. Never hand-write or hand-edit it: `--adopt` asserts that the canonical docs were re-audited against this tree, so writing this file by hand fabricates an audit. Regenerate with `make context-checkpoint`.",
-  "generated_at": "2026-10-12T05:25:24.978Z",
+  "generated_at": "2026-10-12T19:26:46.761Z",
   "branch": "brain/capture-20261011-daoudstudio",
-  "head": "a9aedf5e23bc5cbb916eba8ba6e3569147e91118",
-  "tree_status": "dirty",
-  "repo_sync_state": "DIRTY",
+  "head": "f95ef4d126d117241da0fc24c0df74499935bfb3",
+  "tree_status": "clean",
+  "repo_sync_state": "SYNCED",
   "repo_sync_vocabulary": "SYNCED | LOCAL_AHEAD | REMOTE_AHEAD | DIRTY | DIVERGED | UNKNOWN",
   "repo_sync_upstream": "origin/brain/capture-20261011-daoudstudio",
   "repo_sync_ahead": 0,
   "repo_sync_behind": 0,
   "repo_sync_basis": "remote-tracking ref origin/brain/capture-20261011-daoudstudio as of the last fetch — NOT a live remote read",
   "repo_sync_note": "THIS FIELD IS THE LAST GENERATED CHECKPOINT of \"had this history reached the canonical remote?\" — answered for the branch and head recorded above, at generated_at, and for no later commit. It classified the working copy against its remote-tracking ref AS OF THE LAST FETCH; this tooling performs no network operation, so a stale ref yielded a stale answer. THE CURRENT LIVE ANSWER IS NOT IN THIS FILE: run `make context-check` in a verification-ready checkout after a read-only `git fetch`. Only SYNCED is promotable; UNKNOWN fails closed and is never \"probably fine\". This is NOT an automation runtime session-start reconciliation.",
-  "promotable_snapshot_source": false,
+  "promotable_snapshot_source": true,
   "promotable_snapshot_source_note": "Whether this tree would be eligible as a snapshot source — clean, SYNCED, structurally valid and with a resolvable audit base. It is a PRECONDITION, not an authorization: nothing consumes this field today.",
   "code_review_base": "44683c7a583a915afb3f16533c7c13eff410eabb",
   "code_review_base_note": "The commit the Project Brain content was audited against. It is NOT required to equal HEAD; context:check reports what changed since.",
@@ -45,8 +45,5 @@
   "freshness_vocabulary": "CURRENT | DOCS-ONLY ADVANCE | SUBSYSTEM STALE | UNKNOWN",
   "freshness_note": "CURRENT = nothing but checkpoint bookkeeping moved. DOCS-ONLY ADVANCE = docs moved, no code, so claims about the tooling still describe this tree. SUBSYSTEM STALE = code moved; re-verify detail claims. UNKNOWN = code_review_base is not a commit reachable from HEAD, so the question was never answered — it never means CURRENT.",
   "possibly_stale_docs": [],
-  "warnings": [
-    "working tree is dirty",
-    "repository sync is DIRTY — not promotable as a snapshot source"
-  ]
+  "warnings": []
 }
