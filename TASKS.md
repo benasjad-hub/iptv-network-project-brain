@@ -158,10 +158,7 @@ Vercel. This is direct owner authorization, not permission inferred from this Br
 
 Evidence and tested/untested boundaries:
 [DaoudStudio capture](docs/verification/CAPTURE_2026-10-11_DAOUDSTUDIO.md).
-Exact next: wire the bounded OAuth worker to the installed app queue, run a full
-article/page/product job from the app, verify image ingestion/context/error
-handoff, then automated Flow task routing/switch/context and clip prompt fidelity (assisted clip cost/download/native playback now verified). Finish targeted native AWS/site
-publication, third AWS account, migration preservation and Mac acceptance.
+Actual native app article/page/product/image job accepted at live2c694541; app-close, graceful worker restart and reopening retained results. Exact next: bounded reference clone analysis/generation/preview for owner-selected ebay.com design with own content (not marketplace); automated Flow task routing/switch/context and clip fidelity; actual PCoff/reboot persistence; targeted native AWS/site publication, third AWS account, migration preservation and Mac acceptance.
 Current product acceptance matrix at `82d29838` gives the detailed order;
 provider capability tests alone cannot close this task.
 
