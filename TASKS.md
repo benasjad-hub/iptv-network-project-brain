@@ -159,7 +159,7 @@ Vercel. This is direct owner authorization, not permission inferred from this Br
 Evidence and tested/untested boundaries:
 [DaoudStudio capture](docs/verification/CAPTURE_2026-10-11_DAOUDSTUDIO.md).
 Actual native app article/page/product/image job accepted at live2c694541; app-close, graceful worker restart and reopening retained results. Exact next: bounded reference clone analysis/generation/preview for owner-selected ebay.com design with own content (not marketplace); automated Flow task routing/switch/context and clip fidelity; actual PCoff/reboot persistence; targeted native AWS/site publication, third AWS account, migration preservation and Mac acceptance.
-Latest native acceptance: live2d3c0f6a, article privateimport/edit/preview/save/actualappclose-reopen/retry with same editedID, Google image rendered and exactSEO retained. Next nativepage/restore/dirty-navigationfeedback, then durableautomaticFlow/fullclone; other remainingchecks above stay IN PROGRESS. Product receipt65e8b24c linked in capture.
+Latest native acceptance: live2d3c0f6a, article privateimport/edit/preview/save/actualappclose-reopen/retry with same editedID, Google image rendered and exactSEO retained. Nativepageimport/edit/save/private restorev2 accepted15:31; sourceimports paginationrepair deployedac3e5ed4 with7checks. Next durableautomaticFlow/fullclone/dirty-navigationfeedback; other remainingchecks above stay IN PROGRESS. Product receipt65e8b24c linked in capture.
 Current product acceptance matrix at `82d29838` gives the detailed order;
 provider capability tests alone cannot close this task.
 
@@ -188,4 +188,5 @@ permission slip. None of the following is authorized by this Brain:
 - Treating installation as approval of anything.
 - Reaching the Supabase project `stefvhralisxnhhdhkvj`, or the volume named
   KODAK, for any reason at all.
+
 
