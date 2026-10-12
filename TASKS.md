@@ -160,6 +160,7 @@ Evidence and tested/untested boundaries:
 [DaoudStudio capture](docs/verification/CAPTURE_2026-10-11_DAOUDSTUDIO.md).
 Actual native app article/page/product/image job accepted at live2c694541; app-close, graceful worker restart and reopening retained results. Exact next: bounded reference clone analysis/generation/preview for owner-selected ebay.com design with own content (not marketplace); automated Flow task routing/switch/context and clip fidelity; actual PCoff/reboot persistence; targeted native AWS/site publication, third AWS account, migration preservation and Mac acceptance.
 Latest native acceptance: live2d3c0f6a, article privateimport/edit/preview/save/actualappclose-reopen/retry with same editedID, Google image rendered and exactSEO retained. Nativepageimport/edit/save/private restorev2 accepted15:31; sourceimports paginationrepair deployedac3e5ed4 with7checks. Next durableautomaticFlow/fullclone/dirty-navigationfeedback; other remainingchecks above stay IN PROGRESS. Product receipt65e8b24c linked in capture.
+Owner accepted external clone appearance on2026-10-12 as satisfactory;12pages actualsigned-in CSS/images verified. Staticreview only; interactive clone/editor/automaticFlow/AWS/migration/Mac still INPROGRESS. Preserve approved appearance as baseline; exactorderedremainingchecklist recorded in capture.
 Current product acceptance matrix at `82d29838` gives the detailed order;
 provider capability tests alone cannot close this task.
 
