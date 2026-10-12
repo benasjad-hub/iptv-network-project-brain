@@ -157,3 +157,5 @@ product commit `82d29838`, branch `codex/daoudstudio-dashboard`,
 82 deterministic tests and real Google text/image/context acceptance do not
 establish complete app-task OAuth integration, Flow generation, site migration
 or Mac acceptance. Continue with `IPTV-T-011`; preserve the network state lines.
+
+2026-10-12 update: live Studio web e457c6e9; product docs068d13ae. Ordinary private VPS Chrome Flow login and actual .exe HTTPSrelay launch accepted; visible bendaoud.fst3@gmail.com/PRO/1020credit snapshot.95 cumulative deterministic checks plus original provider acceptance; staged-worker service remainsOFF. Automatic Flow generation/switch and native restart remain pending. Detailed evidence in the capture linked above; governed network state unchanged.
