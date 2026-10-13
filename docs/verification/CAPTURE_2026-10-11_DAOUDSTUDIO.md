@@ -666,3 +666,75 @@ ACTUAL WINDOWS.exe explicit publication—not mock: docd22972dd-fe53-4280-9ed3-e
 Native restorev12/newv14 ->explicitPublish rollback ACK/publicoriginalbyte proof. Harder actualreuse: restoreimagev13/newv15 ->explicitPublish10:13:45UTC, then deliberatelyPublish SAMEv15 again undercurrentimageHTMLetag. Both ACKs succeeded; verifies cachedGoogleoldsource receipt authorized acrossknownpublicationetags and existing-key conditionalfailure/readback path, no overwrite/newgeneration. Finalrestoreoriginalv14/newv16 ->explicitPublish finalrollback LastModified10:17:10UTC.
 Finalrealverification: priv/pubv16/changes{}/allversions0..16 retained; publicGET200 EXACToriginalbytes/SHA d4e35c76043bdf61a0db04879cc58979d083c2f27cd74e1aa7023a12f6a37586; sameoriginalheaders/ACL/tags/liveETag/privateimmutableoriginalEtag; imagecontentkeylastmodifiedSTILL09:51:00(prior toallreuse), no overwrite; latestimage taskSTILL60b66... updated_at1791872133193unchanged; lockabsent. Browserreloadoriginalhero complete1280x720/src../media/guides/abonnement-code-iptv-france.jpg; screenshot.aws-real-public-original-restored.png. NativeunsentAIinstruction restored/no submit. Verifier's publicPublicationByThisTest:false appliesonlyreadonlyverifiers; UI DIDactualexplicitS3 publications/rollbacks above. No deletes/bucketpolicy/ACLchanges/newsites/indexation requests/credits purchases. PublicJPEGcontent-key object retainedforlegitimate reuse, originalprivateimage+history retained.
 Measured acceptance scope: one existing authorized AWSarticle/profilefuney1; nativepublication/save/history/reuse/rollback REAL. This does NOTcertifyall732AWSrecords, secondprofile/thirdaccount, Mac, Flowautomatic, everymanualfield orwebsitepublication. GoalStreamF1privatehistory earlierrealbrowserv4/publicoriginal; websitevisualpublisherstillunconnected. Next priority existingwebsite/publicruntime structuredprojection preservingoriginaltheme/CTAs/inlineimages, then Home/Pages/Products parity and remainingacceptance matrix. CloneCLOSED/acceptedoutput untouched.
+
+
+## 2026-10-13T11:10:38.574143+00:00 — Existing website projection reviewed and tested
+
+Original authenticated Google/Sata proposals61(297.741s),62(256.325s),63(272.171s)
+implement complete Article projection from captured source-offset fields. Codex
+reviewed/materialized exact output, supplied independent QA and bounded mechanical
+JSON escape repairs only (62: eight invalid JSON backslashes; product logic unchanged).
+Files: scripts/studio/visual-article-project.cjs and its test; architecture note
+docs/STUDIO_VISUAL_SITE_PUBLICATION.md. Live remains e90e5125, no rollout or public write.
+
+61 actual Ubuntu gates20/2: incorrect ambiguous fixture and legitimate parentheses
+rejected in real GoalStream intro. 62 fixes paragraph punctuation, rich links to
+absolute HTTPS for actual linkify renderer, source/media controls/backslashes,
+same-origin Next optimizer, duplicate optimizer queries and hidden-child guards.
+62 gates29/2: added optimizer tests used nonexistent dummy field, caught by existing
+field validation before intended check. 63 fixes exact tests and rejects encoded
+private media paths. No weakening of checks. Final35/0 Ubuntu, exit0, 503.286519ms:
+26 original-worker fixture tests +6 real captured GoalStream model/DOM tests +3
+independent rich-renderer/security tests. Actual linkify.tsx bundled and rendered
+with ReactDOMserver; not a mocked link renderer. Source fixture came from real
+private doc e4a0e594-1840-46d3-bb81-e1ee967a1541/v4 and exact repository Article.
+H1/H2/intro/Next cover/alt/FAQ changes preserve all unrelated fields and two CTAs.
+These are local source tests, NOT native/live website publication acceptance.
+
+Actual blocker discovered: configured STUDIO_SOURCE_CATALOG references
+/home/iptv/daoudstudio/releases/ac3e5ed4/source-catalog; goalstream.json absent.
+No env/config/data change was made. Must restore/verify a current full catalogue,
+then connect an authenticated revisioned public projection to existing opt-in
+runtime with original model fingerprint checks; test privately before live use.
+Avoid markdown flattening or raw HTML patches overwritten by React hydration.
+
+Read-only public checks in this slice confirm existing GoalStream F1 v4 changes{}
+and exact original public bytes; AWS doc d22972dd-fe53-4280-9ed3-e5d8d60a1702
+private/publicv16 exact original SHA/metadata/ACL/tags, same generated asset and
+same Google task, no lock. Prior actual native AWS publish/reuse/rollback accepted
+separately. Clone CLOSED/dirty changes preserved and unshipped. No credentials,
+profiles, billing, Supabase schema, unrelated apps/sites/services changed.
+Source HEAD before this evidence: 2ac7f768; committed source SHA recorded next.
+
+
+## 2026-10-13T11:16:56.625322+00:00 — Current source catalogue restored and actual UI search verified
+
+Pushed source d22f1545 on codex/daoudstudio-dashboard: exact Google61+62+63
+visual-article-project.cjs/test plus STATE/JOURNAL/SOLUTIONS and publication note.
+No closed-clone files staged, no UI/runtime rollout of the pure projector.
+
+Reused EXISTING scripts/studio/export-source-catalog.ts under Ubuntu/tsx, not a
+new invented exporter:78 catalogues,3184 full Article objects,1 existing Home.
+Every Article validates/deep-copies through the accepted pure model gate; Home
+through canonical content validator. Exact GoalStream F1 original model matches
+captured fixture, including CTAs. Public-source data only, no env/secrets/drafts.
+SHA-verified archive restored privately at
+/home/iptv/daoudstudio/state/source-catalogues/d22f1545 (iptv, files0600/dirs0750).
+Bounded app-only correction overridezzzzzzzzzzzz-reviewed-source-catalog.conf
+(12z) changes ONLY STUDIO_SOURCE_CATALOG. Actual env verified afterrestart;
+WorkingDirectory remains e90e5125/apps/panel, PID4121785, loginHTTP200.
+Rollback remove ONLY this new override; old missing source path would return.
+No public-site writes, other services/accounts/workers/auth or schema changes.
+
+ACTUAL authenticated background UI tab44 /studio/sites/goalstream now shows
+73 existing source articles with pagination. Typed Baku and singleEnter searched
+withoutTab/button/mouse; URL?q=Baku and exactly1 matching original F1 article.
+No import/save/publication or Google generation fromthisUItest. Screenshot retained
+.studio-local/catalogue-restored-enter-baku.png. This is realbrowser evidence,
+not a new .exe acceptance claim. Native prior AWS publication remainsvalid.
+
+Catalogue gap CLOSED. Exact next: owner/revision/model-fingerprint-bound public
+Article projection store/transport +existing opt-in runtime, preserving original
+Article CTAs/images/theme. Private integration QA before actual sitepublish/rollback;
+Home/Pages/Products parity and broader Flow/SEO/switch/persistence/AWS3/migration/Mac
+remainINCOMPLETE. No activecodeworker after63; never revive closedclone.
