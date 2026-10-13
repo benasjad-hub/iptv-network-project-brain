@@ -767,3 +767,31 @@ Fresh read-only capture after catalogue correction confirms sourcefileExists=tru
 same GoalStreamdocv4/179982HTMLbytes/currentcompleteArticle. Live panel e90e5125
 with catalogue12z correction, cataloguePID4121785; AWS publicoriginalv16 andsitev4
 remain unchanged. Closedclone preserved. Broader acceptance stillINCOMPLETE.
+
+
+## 2026-10-13T11:40:47.900530+00:00 — Teacher65 ERROR; bounded Sata66 continuation
+
+Teacher65 officialCLI exit0 but result.statusERROR after525.497s; deniedActionCount0,
+responseLength46872. No productcode65 accepted/materialized/published. Status and
+workspace preserved; old harness did not retain ERROR response body, so exact
+provider cause unavailable—do not infer exhausted quota, tool denial or success.
+Original Sata66 newly dispatched with complete64code/current5failure contexts and
+same scoped corrective instruction, code-only replacements capped12000characters.
+This is controller-directed codeproposal handoff, NOT proof of appautomaticbusy/
+quota switching or nativeconversationcontinuity. Preserve both original homes.
+New66harness retains an ERRORresponse privately for diagnosis if needed; no permissions
+weakened, repeated65dispatch, credential/auth changes or credit purchase.
+
+Extra meaningful OWN64regressions reproduce actual3getterreads before rejection,
+legacyHTTPcover moved to intro accepted erroneously, new article.owner metadata
+accepted erroneously. Current64 totals9pass5fail/14groups; quarantined. Existing
+3184model fingerprints and4realenvelope/source positive groups stillpass. Correct66
+must pass getterscounter0/contextualURL/non-editor metadata +prior guards before
+product materialization. Workerstatus status-visual-editor-site66-plan.json;
+reports visual-editor-site66-plan-report.txt/error-response.txt under existing
+google-worker-visual-inspector-20261013 root; read safe summaries only.
+
+Live remains e90e5125 plus private stable catalogue12z correction; only accepted
+projector d22f1545 is pushed source (unused runtime). Brain/STATE source evidence
+pushed5058e844/bb31704 beforethisentry. Cloneclosed, publicarticlesoriginal, broad
+acceptanceINCOMPLETE. Continue66 review ratherthan oldclone or emptySUCCESS.
