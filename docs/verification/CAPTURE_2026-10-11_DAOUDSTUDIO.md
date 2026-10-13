@@ -738,3 +738,32 @@ Article projection store/transport +existing opt-in runtime, preserving original
 Article CTAs/images/theme. Private integration QA before actual sitepublish/rollback;
 Home/Pages/Products parity and broader Flow/SEO/switch/persistence/AWS3/migration/Mac
 remainINCOMPLETE. No activecodeworker after63; never revive closedclone.
+
+
+## 2026-10-13T11:29:08.423673+00:00 — Public envelope64 reviewed; corrective65 active
+
+Original authenticated Teacher64 pure proposal291.993s, response43291characters,
+no denied actions. Full Article fingerprint/envelope foundation remains quarantined:
+actual Ubuntu9pass2fail (11groups). Own4 pass include actual captured GoalStream
+projector->envelope->apply, wrongsite/path/stalecompleteoriginal rejection, structural
+mutation/private top-level field rejection, and all3184 fresh catalogue fingerprints.
+NOT actual website publication/native acceptance or runtime wiring.
+
+Critical review: canonical JSON validation ran AFTER existing model clone, allowing
+cycles/getters to recurse/execute too early; canonical array branch used map before
+checking descriptors. Optional require caught missing helper and weakened validation.
+Global original URL whitelist could relocate legacyHTTP to another edited slot.
+NewHTTP negative fixture accidentally changed paragraphcount, so wrong gate fired.
+Original Teacher65 ACTIVE pure read-only replacements request for those fixes, exact
+metadata preservation, descriptor/getter/array/cycle/URL regressions. No64code
+materialized into tracked product/rollout; only .studio-local reviewed64-candidate.
+Do not replay64; inspect65receipt/diff, test and review before acceptance.
+
+Original worker path/status:
+/home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/
+status-visual-editor-site65-plan.json and visual-editor-site65-plan-report.txt.
+Local harness .studio-local/site65-worker.py and source prompt; no auth-profile copy.
+Fresh read-only capture after catalogue correction confirms sourcefileExists=true,
+same GoalStreamdocv4/179982HTMLbytes/currentcompleteArticle. Live panel e90e5125
+with catalogue12z correction, cataloguePID4121785; AWS publicoriginalv16 andsitev4
+remain unchanged. Closedclone preserved. Broader acceptance stillINCOMPLETE.
