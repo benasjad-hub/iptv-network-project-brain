@@ -795,3 +795,47 @@ Live remains e90e5125 plus private stable catalogue12z correction; only accepted
 projector d22f1545 is pushed source (unused runtime). Brain/STATE source evidence
 pushed5058e844/bb31704 beforethisentry. Cloneclosed, publicarticlesoriginal, broad
 acceptanceINCOMPLETE. Continue66 review ratherthan oldclone or emptySUCCESS.
+
+
+## 2026-10-13T12:13:58.340319+00:00 — Full Article envelope foundation accepted after corrections
+
+Original Google Teacher64 +Sata66/67/68 reviewed. Teacher65 ERROR/noacceptedcode
+525.497s retained as a rejected attempt; root cause unavailable. Sata66 SUCCESS
+56.158s fixed canonical-before-access, strict arrays/descriptors/getters/cycles,
+mandatory projector, contextual legacyHTTP URLs and top-level immutable metadata.
+Malformed generated BEFORE strings prevented exact materialization. All original
+AFTER product code remained unchanged: three exact preimages (one trailing-space
+normalization), then TypeScript AST addressed the explicitly reviewed contiguous
+collectOriginalUrls/validateUrlSafety/makeArticleEnvelope/applyArticleEnvelope
+function group in preserved64artifact; AFTER only valid function declarations.
+No unrelated source or product logic invented; partial candidates quarantined.
+
+Sata67 SUCCESS206.886s adds selected inline src/alt support plus exact nested
+non-editor metadata preservation on sections/FAQ/cover/bodyImages. Only uniquely
+matching snippets applied; explicit short aliases envelope.cjs/test.cjs mapped
+to the two supplied paths. Sata68 SUCCESS193.757s corrected section-ID guard's
+new error expectation and credential fixture's unintended paragraph-count change.
+Own QA corrected remaining width-error EXPECTATION only to actual earlier immutable
+width guard; exception assertion retained. No product CJS changes by Codex.
+
+Final Ubuntu17/0/exit0,1847.071631ms:8 original-worker fixture groups +9 independent
+captured-source/renderer/security groups. Real captured GoalStream model -> existing
+scoped projector -> envelope -> apply preserves full Article; stale model/site/path
+and unsupported structures reject. All3184 fresh catalogue models fingerprint
+successfully. Getter counters stay0, no relocated legacyHTTP, no new owner/nested
+worker metadata, inline images preserve dimensions/placement/original metadata.
+Original projection35/0 earlier separate. Total52 acceptance groups for these
+PURE FOUNDATIONS, not real native/public website publication. No runtime wiring,
+transport, projection store or public writes yet; do not label website editing ready.
+
+Files exactly materialized: scripts/studio/visual-article-envelope.cjs/.test.cjs;
+existing visual-article-project source unchanged. Code owns deterministic full JSON
+fingerprint +curated site/path/revision/baseHash/article envelope, fail-closed shape,
+public URL and unchanged-structure boundaries. It is NOT owner authentication or
+revision-store/publication proof; authenticated caller/runtime integration stillnext.
+
+Live e90e5125 and private catalogue12z correction remain; source/sourcepublication
+unchanged; acceptedclone closed. No active codeworkers after68. Exactnext implement
+owner-gated CAS projection store +curated read transport/runtime, private complete
+renderer integration QA, then actual existing-site publication and rollback; no
+unrelated production, newpublicsites, indexing, billing/auth/profile/schema changes.
