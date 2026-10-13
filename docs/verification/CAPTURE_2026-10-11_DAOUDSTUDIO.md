@@ -839,3 +839,45 @@ unchanged; acceptedclone closed. No active codeworkers after68. Exactnext implem
 owner-gated CAS projection store +curated read transport/runtime, private complete
 renderer integration QA, then actual existing-site publication and rollback; no
 unrelated production, newpublicsites, indexing, billing/auth/profile/schema changes.
+
+
+## 2026-10-13T12:40:12.769519+00:00 — Publication store69 review; corrective70 active
+
+Accepted pure envelope source e734a984 pushed codex/daoudstudio-dashboard (files
+visual-article-envelope.cjs/test plus lifecycle docs); Brain ecc83cf pushed. Pure
+projector35 +envelope17 =52passinggroups, includes3184source model fingerprints.
+Live code remains e90e5125 and source-catalogue12z correction. No new UI/API/runtime
+or public-site code deployment. Native existing AWS/publicoriginalv16 unchanged.
+
+Original authenticated Sata69 SUCCESS195.844s/code+test23035characters, denied0,
+proposes explicit private SQLite publication store, pertargetCAS/idempotency/history.
+Code69 QUARANTINED/untracked candidate, no productionDB created. Actual existing
+GoalStream source/catalogue/projector/envelope with REAL TEMP SQLite record/reopen/
+newdocument under sameowner/base/currentversion and oldoperation replay initially
+passed own test. This is real SQLite/local source data, NOT owner-auth/public/native
+website publication. Original tests used /articles/test-article and /articles/stress-test,
+invalid current codec paths; own mainfixture canonicalblog correction surfaced stress
+fixture stillinvalid. No codec path guard weakened.
+
+Two meaningful new own regressions FAIL: identicalprojectedJSON keys reordered
+conflicts sameop (payloadhash wrongly rawJSON.stringify order); tampered persisted
+envelope extra ownerId is returned by readPublished ratherthan rejected. Current
+69 adjustedfixture run10pass4fail/14groups inclaggregate suite/stressinvalidpath.
+Review also flags existsSync/openSync('w') creationrace cantruncate a concurrent
+new database; this is code-review finding, not yet realrace acceptance proof.
+
+Original Sata70 ACTIVE code/test exact corrections: canonical projected fingerprint
+in retry context; strict curated read verification using private original_json and
+actualcodec; rejectcorrupt/privatefields; exclusivewx/catchONLYEEXIST creation;
+correct main/stressfixture canonicalpath with stressdifferent site; no production
+schema migration/defaultenv paths. Check status-visual-editor-site70-plan.json and
+visual-editor-site70-plan-report.txt under existing originalGoogleworker root.
+Local .studio-local/prepare-site70.py, extract-site69.py/reviewed-site69-candidate,
+test-real-article-publications.cjs document exact reproduction; preserve candidates.
+
+EXACT NEXT inspect70nonemptyreceipt/diff, materialize bounded output, run original
+and own tempSQLite regressions, then integrate owner-gated actualvisualrevision
+server action +curated public read +opt-in website runtime/private renderer proof.
+No worker can independently publish/complete owner tasks. OverallINCOMPLETE;
+cloneclosed, broaderFlow/SEO/persistence/migration/AWS3/Mac pending. No credentials,
+profiles, secrets, auth/billing/indexation/unrelatedsites/services changed.
