@@ -962,3 +962,29 @@ curatedAPI/middlewareallowlist +stableop UI; private Next/native acceptance then
 existingGoalStream publish/reopen/rollback. No oldclone/newpublicsite/credits/authcopy.
 
 Product source3289938a +state/retry-contract78abc5be PUSHED codex/daoudstudio-dashboard. Sata80 active readonlyfactory/publicwrapper/API/middleware exactallowlist; inspect pendingreceipt. Stillno deployment, owneraction/UI/native liveproof pending.
+
+
+## 2026-10-13T13:38:00.528140+00:00 — Read-only API accepted; owner action83 corrective pending
+Original Sata80 SUCCESS128.286s/19060chars readOnlystore/wrapper/API/exactmiddleware
+allowlist. RealtempSQLite36/0, readonlymissing/empty/foreign files unchanged, valid
+readOnly reads and recordthrows, header/journal unchanged. Actualroute/NextResponse
+ownQA PASS50.067ms: disabled404, enabledmissing200empty/noDBcreated, curatedonly
+200fullmodel, noowner/doc/op IDs, noStore/noindex; corruption503generic; invalid404.
+No Supabase requests/authprofilecopy inQA; server-only marker shim only. ScopedTS
+initial1diagnostic SQLpathnullable; original Teacher82 SUCCESS45.449s/984chars adds
+explicit typeofrow.path stringguard (noascast). Final API/helper/middleware graph
+0diagnostics +36/0storage+actualroutePASS. Materialized5files only, no deployment.
+Supabase skill consulted; official changelog/getUser docs read, existing server
+getUser ownerauth preserved; no SDK/schema change.
+
+Original Sata81 SUCCESS200.407s/27319chars ownerbinding/action REJECTED: invented
+store.curated/version/recordarity adapters; readOwnedVersion wrongargumentorder;
+legacylookup failures swallowed; sitebranch regex slash JSONescapes corrupted.
+Receipt-only81 independenttempVisualStore4/0 passes AWSdedup, olddirtydocretained,
+newbinding/publicversion newUUID, source-onlyreceipt ownership/revision/immutable
+capture/history.81 receipt/sourcehelper stillUNTRACKED/unshipped.
+Original Sata83 ACTIVE exact ABI/failclosed/sourceURLlineonly correction; fullactual
+store source supplied(no inventedfallback). Own source/type/action integration +
+native/live proof pending. ActualAWSoriginalv16/GoalStreamoriginalv4 unchanged.
+
+Product a9eef7f9 PUSHED codex/daoudstudio-dashboard: readonlyfactory/test, publicwrapper/API, exactmiddlewareprefix/lifecycle docs. Current actualprotectedVPS/panel unchanged.83codeproposal pending, source81rejected.
