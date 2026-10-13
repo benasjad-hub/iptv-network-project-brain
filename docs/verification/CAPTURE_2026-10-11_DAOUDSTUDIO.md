@@ -881,3 +881,27 @@ server action +curated public read +opt-in website runtime/private renderer proo
 No worker can independently publish/complete owner tasks. OverallINCOMPLETE;
 cloneclosed, broaderFlow/SEO/persistence/migration/AWS3/Mac pending. No credentials,
 profiles, secrets, auth/billing/indexation/unrelatedsites/services changed.
+
+
+## 2026-10-13T12:58:40.262124+00:00 — Reviewed publication store materialized; no runtime rollout
+Original Sata72 SUCCESS205.755s/5899chars corrected initialization BEFORE WAL/DDL,
+rejects foreign/partial expected schemas, closes failedhandle, bounds storedoriginalJSON.
+72 firstreview11pass10fail due undefined MAX_ORIGINAL_BYTES; rejected. Original
+Sata74 SUCCESS14.289s/386chars exact correction uses existing MAX_ENVELOPE_BYTES.
+Final actual source+TEMP SQLite QA21/0; portable3own guards added to workerfixture
+tests, final24/0 executions (3same guards rerun in captured-source suite). Candidate
+source exactGoogle70+72+74; only BEFORE trailingwhitespace normalization, no own
+productlogic. Tests own imports/errorregex corrected; no assertionremoved.
+Materialized scripts/studio/visual-article-publications.cjs/test.cjs ONLY. No DB onVPS
+created/no deployment/no website publication. Canonicalretry, privatefieldcorruption,
+sourcecodec/CAS/history/reopen, foreignDBbytehash/journal/tableidentity, deterministic
+wxcreationrace sentinelpreservation, preparseoriginalJSONbound accepted.
+Teacher73 SUCCESS59.282s/23144chars pure docbinding proposal; originalUTF8 andtest
+pathaliases reviewed. Initial5/6; actualprivateimageguardthrows, testFrenchmojibake
+regex wrong. Sata75 ACTIVE strictcanonicalURL/noexplicit443/whitespace/backslash,
+strictslug/requiredchanges +errorencoding. Binding notmaterialized/accepted yet.
+Next integrate bound capturedrevision/owner +publicationtransport/opt-in original
+renderer in private environment before actualapp/public existing-site acceptance.
+Livee90e5125 unchanged; AWSv16original/GoalStreamv4original/closedclone preserved.
+
+Product source commit1e5cb31d PUSHED branchcodex/daoudstudio-dashboard; files publication CJS/test+STATE/JOURNAL/SOLUTIONS. No rollout.
