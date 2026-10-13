@@ -1,0 +1,7 @@
+# Responsive picture replacement — isolated proof
+
+These are Codex-authored independent regressions using the actual candidate visual-html engine and actual studio-visual-image-sync TypeScript compiled in headless Chromium. Auth/database/provider/public transport are absent; images use intercepted one-pixel PNG fixtures. This proves DOM/source behavior only, never native .exe/AWS/public acceptance.
+
+Set STUDIO_API_CANDIDATE to the product/candidate root and NODE_PATH to a QA runtime with parse5/typescript/playwright; run node --test picture-browser.test.cjs. The initial5 tests reproduce original responsive overrides (2PASS3FAIL). To measure baseline only use --test-name-pattern='picture engine|picture actual Chromium'. All9 tests include4 additional hostile metadata/cache association cases; candidate158 fixes5 initial cases but FAILS all4 additional. Its own11 test suite also contains1 invalid assertion using unsupported engine.apply third argument; do not expand product API to satisfy it. Worker159 correction requested; accepted outcome must be recorded later, not inferred from this directory.
+
+Evidence:158Teacher206.805seconds,26522responsechars,0deniedactions;6patch preimages unique, isolated only. Candidate original+independent20tests:15PASS5FAIL. New9 fixture thresholds wait50ms for DOM/image selection; not a network/server deadline. No production changes/reload/clone edits. Owner visible manual text checkpoint is private/ignored and deliberately NOT in Brain.
