@@ -924,3 +924,41 @@ open-sourcebinding/action+transport then private originalrenderer/native accepta
 Never use rawHTML replacement/markdownflatten/replay newGoogle generation.
 
 Product55b89a3b PUSHED codex/daoudstudio-dashboard bindingCJS/test+STATE/JOURNAL/SOLUTIONS. Original Sata76 active scoped historical read+curated listing; Teacher77 active singlefetch opt-in fullArticle runtime (separate STUDIO_VISUAL_RUNTIME_SITES) and legacycontent-conflict preservation. No deployments.
+
+
+## 2026-10-13T13:18:48.921331+00:00 — Published transport foundations + actual private renderer roundtrip
+Original Sata76 SUCCESS294.224s/21322chars adds bounded curatedcatalogue+owner-scoped
+historicalread, no schema change.76 initial26pass4fail inclaggregate: fixturepaths
+wrongslugs/oversized1.8MiBArticle fails1MiBcodec before8MiBcatalogueguard. Original
+Teacher79 SUCCESS115.178s/5738chars canonicalsite/pathguards+correctfixturepaths/
+900KiBx10catalogue. OwnQA SQLfixture doublequoteempty ->correctsinglequoteSQL in
+doublequoteJS(noassertremoved). Final30/0 Ubuntu executions inclactualsource/tempDB.
+Historicalread/currentcodec corruption/foreignowner failclosed; SAMEolderoperation
+replay returnsolderreceipt withnewcurrent unchanged. Catalogue1000rows/8MiB bounded,
+noowner/original/document/historyfields. All3184existing source slug lengths <=76.
+
+Original Teacher77 SUCCESS52.672s/21310chars creates one-fetch opt-in fullArticle
+runtime +extends studio-articles.ts preserving legacyconflicts. 77test lackednode:test
+import(QAcorrected) and oversizestreamfixturealreadyclosed(cancelassertfailed).
+Original Sata78 SUCCESS197.245s/38482chars corrects JSONcontenttype/realstreamonly
+(no unboundedtextfallback) +keepsoversizestreamopenforcancelproof. Original one suite
+with10initialcases+newCT/nonstream cases PASS. Mechanical77JSONinvalidbackslash
+repair1;78preimagetrimmingtrailingwhitespaceonly. Strict curatedrows/pristinehash/
+unknownslug/duplicates/basepath/8MiB/1000rows failclosed, optout0fetch, no credentials.
+Separate STUDIO_VISUAL_RUNTIME_SITES defaultsOFF; legacy STUDIO_RUNTIME_SITES unchanged.
+
+ACTUAL PRIVATE integration PASS: real TEMP SQLite +ordinary loopbackHTTP +reviewed
+fetch runtime +ORIGINAL GoalStream React BlogPostPage/NextImage/Link/CTA/SEO source.
+ScopedH1 from actual captured179982byteHTML ->binding/envelope ->recordv1 ->render
+editedheadline, preserved CTA labels/inlineimages/date. Recordoriginalv2 ->render
+EXACTsameHTML asbaseline; replayolderop returnsv1 leavescurrentv2/restoredHTML. Four
+HTTPfetches,203.884ms measuredtest. QA-only requestcache identity +server-only marker
+shim because plainNodeReact18cache unavailable; NO businessdata/renderer mocked.
+This isNOT actualNext app/native/public-site publication. No auth gate tested here.
+Scoped TS/sourcegraph0diagnostics after harness Reactcanary realpathfix; full production
+Next build/not performed. Source changes materialized, no deployment/publicDBcreated.
+EXACT NEXT originalGoogle implements owner-gated open binding +savedpublication action,
+curatedAPI/middlewareallowlist +stableop UI; private Next/native acceptance then scoped
+existingGoalStream publish/reopen/rollback. No oldclone/newpublicsite/credits/authcopy.
+
+Product source3289938a +state/retry-contract78abc5be PUSHED codex/daoudstudio-dashboard. Sata80 active readonlyfactory/publicwrapper/API/middleware exactallowlist; inspect pendingreceipt. Stillno deployment, owneraction/UI/native liveproof pending.
