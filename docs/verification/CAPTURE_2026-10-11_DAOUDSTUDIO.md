@@ -905,3 +905,22 @@ renderer in private environment before actualapp/public existing-site acceptance
 Livee90e5125 unchanged; AWSv16original/GoalStreamv4original/closedclone preserved.
 
 Product source commit1e5cb31d PUSHED branchcodex/daoudstudio-dashboard; files publication CJS/test+STATE/JOURNAL/SOLUTIONS. No rollout.
+
+
+## 2026-10-13T13:01:41.018511+00:00 — Bound saved article source accepted, still pure/nondeployed
+Original Teacher73(59.282s) +Sata75(89.491s) pure binding code reviewed/materialized.
+7/0 Ubuntu groups: six worker fixtures+one actualcapturedGoalStream fullDOM/model;
+owner/document savedrevision, exactregisteredURL/domain/path, pristinehash and
+captured effectivepublishedhash/version; preserve previouspublication edits/CTA/
+inlineassets; privateimagesreject; explicit443/noncanonicalURL/missingchangesreject.
+Publicationstore1e5cb31d alreadyPUSHED; Brainbee43ef. New binding CJS/test only.
+Worker test importaliases and wrongFrench mojibakeerrorregex corrected(noassertion
+removed). MaterializationUTF8 explicit; one BEFORE errorstring encoding mechanically
+recovered twice toexactoriginal beforeapplyingGoogleAFTER; noownproductlogic.
+NoUI/backendruntime/publicationdeployment/nativeacceptance ofnewsiteadapter.
+Exactnext: store scopedhistorical-envelope read permits SAMEoperation replay despite
+newerpublicversion; curated boundedsite listing forsinglefetchruntime; owner-gated
+open-sourcebinding/action+transport then private originalrenderer/native acceptance.
+Never use rawHTML replacement/markdownflatten/replay newGoogle generation.
+
+Product55b89a3b PUSHED codex/daoudstudio-dashboard bindingCJS/test+STATE/JOURNAL/SOLUTIONS. Original Sata76 active scoped historical read+curated listing; Teacher77 active singlefetch opt-in fullArticle runtime (separate STUDIO_VISUAL_RUNTIME_SITES) and legacycontent-conflict preservation. No deployments.
