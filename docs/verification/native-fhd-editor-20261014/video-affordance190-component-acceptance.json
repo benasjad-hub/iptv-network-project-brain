@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-10-14T06:55:53.060Z",
+  "scope": "actual React component/Chromium + compiled actual CSS; explicit mocked API/auth/storage/Google/Flow",
+  "worker189": {
+    "elapsedSeconds": 196.649,
+    "denied": 0,
+    "patches": 2,
+    "initialSuite": "11 pass; later disposal and 22px target failures"
+  },
+  "worker190": {
+    "elapsedSeconds": 382.785,
+    "denied": 0,
+    "patches": 4,
+    "fullSuite": "16 pass / 0 fail",
+    "durationMs": 7311.112278,
+    "importedTypeScriptDiagnostics": 0
+  },
+  "worker191": {
+    "elapsedSeconds": 18.375,
+    "denied": 1,
+    "responseLength": 0,
+    "accepted": false,
+    "reason": "Premature nested-source failure assumption was corrected: canonical engine already maps nested SOURCE onto parent VIDEO; actual test passes. Empty SUCCESS rejected, no changes applied/replay."
+  },
+  "native": {
+    "currentObservedDocument": "24abfc8e-f828-4d9f-a011-791f5edea37e",
+    "savedRevision": 4,
+    "publicOriginalRestored": true,
+    "publicationReceipts": "previous real verified AWS receipts retained; no new public write"
+  },
+  "knownSource": {
+    "goalstreamDocument": "e4a0e594-1840-46d3-bb81-e1ee967a1541",
+    "nativeVideoElements": 0,
+    "awsDocumentNativeVideoElements": 0,
+    "playIconIsImage": true
+  },
+  "build": "not yet run for this source",
+  "rollout": "not yet applied; live72516fc7",
+  "nativeVideoAcceptance": false
+}
