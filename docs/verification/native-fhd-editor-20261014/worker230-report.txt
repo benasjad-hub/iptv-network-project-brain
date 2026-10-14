@@ -1,0 +1,14 @@
+{
+  "patches": [
+    {
+      "path": "antigravity-acceptance.py",
+      "old": "def run(cli, home, work, prompt, extra=(), timeout=100):\n    args = [str(cli), '--sandbox', '--mode', 'plan', '--model', 'gemini-3.1-pro-high',",
+      "new": "def run(cli, home, work, prompt, extra=(), timeout=100, model='gemini-3.1-pro-high'):\n    if model not in ('gemini-3.1-pro-high', 'gemini-3.8-flash-medium'):\n        raise ValueError('Invalid model')\n    args = [str(cli), '--sandbox', '--mode', 'plan', '--model', model,"
+    },
+    {
+      "path": "flow-observation.py",
+      "old": "        result = original.run(self.cli, self.home, self.work, prompt, timeout=timeout)",
+      "new": "        result = original.run(self.cli, self.home, self.work, prompt, timeout=timeout, model='gemini-3.8-flash-medium')"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "patches": [
+    {
+      "path": "flow-display.py",
+      "old": "        'result-download-original-720': (680, 210, 878, 265),",
+      "new": "        'result-download-original-720': (680, 210, 878, 265),\n        'result-address-focus': (200, 50, 900, 93),"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"patches":[{"path":"antigravity-acceptance.py","old":"    if model not in ('gemini-3.1-pro-high', 'gemini-3.8-flash-medium'):","new":"    if type(model) is not str or model not in ('gemini-3.1-pro-high', 'gemini-3.8-flash-medium'):"}]}
