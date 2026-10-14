@@ -1,0 +1,45 @@
+### 1. `home-publications.cjs` SQL Literal Corrections
+
+#### Global Replacement 1: `FROM history`
+* **Occurrence count:** 8 occurrences across `findOperationRows`, `validateAuditRow`, `publishHome`, and `homePublicationStatus`.
+
+**BEFORE:**
+```sql
+FROM history
+```
+
+**AFTER:**
+```sql
+FROM document_revisions
+```
+
+---
+
+#### Global Replacement 2: `INSERT INTO history`
+* **Occurrence count:** 1 occurrence in `publishHome`.
+
+**BEFORE:**
+```sql
+INSERT INTO history
+```
+
+**AFTER:**
+```sql
+INSERT INTO document_revisions
+```
+
+---
+
+### 2. `documents.cjs` History Query & Exposure Patch
+
+Exact unique replacement in `openDocuments` history method to query full internal revision rows for validation while exposing only the sanitised public properties (`revision`, `action`, `actor`, `at`):
+
+**BEFORE:**
+```javascript
+    history: (site, id) => read(site, id) ? db.prepare('SELECT revision,action,actor,at FROM document_revisions WHERE document_id=? ORDER BY revision DESC LIMIT 50').all(id).map(row => ({ ...row, action: row.action.startsWith('studio.home.publish.v1/') ? 'published' : row.action })) : [],
+```
+
+**AFTER:**
+```javascript
+    history: (site, id) => read(site, id) ? db.prepare('SELECT document_id,revision,content,action,actor,at FROM document_revisions WHERE document_id=? ORDER BY revision DESC LIMIT 50').all(id).map(row => ({ revision: row.revision, action: home.normalizeHomeHistoryAction(row), actor: row.actor, at: row.at })) : [],
+```

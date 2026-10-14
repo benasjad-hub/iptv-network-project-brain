@@ -1,0 +1,477 @@
+### `scripts/studio/home-publications.cjs`
+
+```js
+'use strict';
+const { createHash } = require('node:crypto');
+
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+const HASH64_REGEX = /^[0-9a-f]{64}$/;
+const EDITABLE_FIELDS = ['title', 'description', 'body', 'image', 'buttonLabel', 'buttonUrl'];
+const REQUIRED_PARAM_KEYS = [
+  'ownerId',
+  'operationId',
+  'documentId',
+  'expectedRevision',
+  'expectedPublishedRevision',
+  'expectedPublishedHash',
+  'field',
+  'expectedValue',
+  'value'
+];
+
+function canonicalJson(val) {
+  if (val === null || typeof val !== 'object') {
+    return JSON.stringify(val);
+  }
+  if (Array.isArray(val)) {
+    return '[' + val.map(canonicalJson).join(',') + ']';
+  }
+  const keys = Object.keys(val).sort();
+  return '{' + keys.map(k => JSON.stringify(k) + ':' + canonicalJson(val[k])).join(',') + '}';
+}
+
+function homeContentHash(content) {
+  if (!content || typeof content !== 'object' || Array.isArray(content)) {
+    throw new Error('Contenu invalide');
+  }
+  const proto = Object.getPrototypeOf(content);
+  if (proto !== null && proto !== Object.prototype) {
+    throw new Error('Prototype ou type de contenu non supporté');
+  }
+  let raw;
+  try {
+    raw = JSON.stringify(content);
+  } catch {
+    throw new Error('Sérialisation du contenu impossible');
+  }
+  if (!raw || raw.length > 200000) {
+    throw new Error('Contenu trop volumineux');
+  }
+
+  const { validate } = require('./content.cjs');
+  const validated = validate(content);
+  const canonical = canonicalJson(validated);
+  return createHash('sha256').update(canonical, 'utf8').digest('hex');
+}
+
+function computeRequestHash(params) {
+  const payload = {
+    documentId: params.documentId,
+    expectedPublishedHash: params.expectedPublishedHash,
+    expectedPublishedRevision: params.expectedPublishedRevision,
+    expectedRevision: params.expectedRevision,
+    expectedValue: params.expectedValue,
+    field: params.field,
+    operationId: params.operationId,
+    ownerId: params.ownerId,
+    value: params.value
+  };
+  return createHash('sha256').update(canonicalJson(payload), 'utf8').digest('hex');
+}
+
+function attachHomePublications(arg1, arg2, arg3) {
+  let db, read, validateFn, target = null;
+  if (arg1 && typeof arg1.prepare === 'function') {
+    db = arg1;
+    read = arg2;
+    validateFn = arg3;
+  } else if (arg1 && typeof arg1 === 'object' && arg2 && typeof arg2.prepare === 'function') {
+    target = arg1;
+    db = arg2;
+    read = arg3;
+    validateFn = arguments[3];
+  } else {
+    throw new Error('Paramètres invalides pour attachHomePublications');
+  }
+
+  function publishHome(params) {
+    if (!params || typeof params !== 'object' || Array.isArray(params)) {
+      throw new Error('Paramètres invalides');
+    }
+    const keys = Object.keys(params);
+    if (keys.length !== REQUIRED_PARAM_KEYS.length) {
+      throw new Error('Clés de paramètres invalides');
+    }
+    for (const key of REQUIRED_PARAM_KEYS) {
+      if (!Object.prototype.hasOwnProperty.call(params, key)) {
+        throw new Error(`Paramètre manquant : ${key}`);
+      }
+    }
+
+    const {
+      ownerId,
+      operationId,
+      documentId,
+      expectedRevision,
+      expectedPublishedRevision,
+      expectedPublishedHash,
+      field,
+      expectedValue,
+      value
+    } = params;
+
+    if (!UUID_REGEX.test(ownerId) || !UUID_REGEX.test(operationId) || !UUID_REGEX.test(documentId)) {
+      throw new Error('Identifiant UUID canonique invalide');
+    }
+    if (typeof expectedRevision !== 'number' || !Number.isSafeInteger(expectedRevision) || expectedRevision < 0) {
+      throw new Error('Révision attendue invalide');
+    }
+    if (typeof expectedPublishedRevision !== 'number' || !Number.isSafeInteger(expectedPublishedRevision) || expectedPublishedRevision < 0) {
+      throw new Error('Révision publiée attendue invalide');
+    }
+    if (typeof expectedPublishedHash !== 'string' || !HASH64_REGEX.test(expectedPublishedHash)) {
+      throw new Error('Empreinte publiée attendue invalide');
+    }
+    if (typeof field !== 'string' || !EDITABLE_FIELDS.includes(field)) {
+      throw new Error(`Champ non modifiable : ${field}`);
+    }
+    if (typeof expectedValue !== 'string' || typeof value !== 'string') {
+      throw new Error('Les valeurs doivent être des chaînes de caractères');
+    }
+
+    // Owner check before replay
+    const doc = db.prepare("SELECT * FROM documents WHERE id=? AND site='goalstream' AND path='' AND kind='page'").get(documentId);
+    if (!doc) {
+      throw new Error('Document GoalStream introuvable');
+    }
+    const rev0 = db.prepare('SELECT actor FROM document_revisions WHERE document_id=? AND revision=0').get(documentId);
+    if (!rev0 || rev0.actor !== ownerId) {
+      throw new Error('Propriétaire non autorisé');
+    }
+
+    const requestHash = computeRequestHash(params);
+
+    // Operation replay and deduplication check
+    const opMatches = db.prepare(
+      "SELECT * FROM document_revisions WHERE action LIKE 'studio.home.publish.v1/' || ? || '%'"
+    ).all(operationId);
+
+    if (opMatches.length > 1) {
+      throw new Error("Conflit ou corruption de l'identifiant d'opération");
+    }
+    if (opMatches.length === 1) {
+      const match = opMatches[0];
+      const prefix = 'studio.home.publish.v1/' + operationId + '/';
+      if (!match.action.startsWith(prefix)) {
+        throw new Error("Format d'action protocolaire corrompu");
+      }
+      let storedReceipt;
+      try {
+        storedReceipt = JSON.parse(match.action.slice(prefix.length));
+      } catch {
+        throw new Error("Reçu d'audit illisible");
+      }
+      if (!storedReceipt || typeof storedReceipt !== 'object' || storedReceipt.schema !== 1) {
+        throw new Error("Reçu d'audit invalide");
+      }
+
+      if (
+        storedReceipt.ownerId === ownerId &&
+        storedReceipt.documentId === documentId &&
+        storedReceipt.requestHash === requestHash
+      ) {
+        if (
+          match.document_id !== documentId ||
+          match.actor !== ownerId ||
+          match.revision !== storedReceipt.revision ||
+          homeContentHash(JSON.parse(match.content)) !== storedReceipt.publishedHash
+        ) {
+          throw new Error("Le reçu d'audit ne correspond pas à la révision historique");
+        }
+        return storedReceipt;
+      }
+      throw new Error("Opération existante avec propriétaire ou charge utile différente");
+    }
+
+    // Preconditions for new publication
+    if (doc.revision !== expectedRevision) {
+      throw new Error('Révision actuelle non concordante');
+    }
+    if (doc.published_revision !== expectedPublishedRevision) {
+      throw new Error('Révision publiée non concordante');
+    }
+    if (!doc.published) {
+      throw new Error('Le document GoalStream doit être déjà publié');
+    }
+
+    const currentPublished = JSON.parse(doc.published);
+    const currentPublishedHash = homeContentHash(currentPublished);
+    if (currentPublishedHash !== expectedPublishedHash) {
+      throw new Error('Empreinte du contenu publié non concordante');
+    }
+    if (currentPublished[field] !== expectedValue) {
+      throw new Error('Valeur source non concordante');
+    }
+
+    const currentDraft = JSON.parse(doc.draft);
+    if (
+      homeContentHash(currentDraft) !== currentPublishedHash ||
+      canonicalJson(currentDraft) !== canonicalJson(currentPublished)
+    ) {
+      throw new Error('Un brouillon non publié est en attente');
+    }
+
+    const candidate = { ...currentPublished, [field]: value };
+    const validatedNewContent = validateFn(candidate);
+    const newPublishedHash = homeContentHash(validatedNewContent);
+
+    const nextRevision = expectedRevision + 1;
+    const updatedAt = new Date().toISOString();
+    const sourceValueHash = createHash('sha256').update(expectedValue, 'utf8').digest('hex');
+
+    const receipt = {
+      schema: 1,
+      ownerId,
+      operationId,
+      documentId,
+      site: 'goalstream',
+      path: '',
+      sourceRevision: expectedRevision,
+      revision: nextRevision,
+      field,
+      sourceHash: expectedPublishedHash,
+      sourceValueHash,
+      requestHash,
+      publishedHash: newPublishedHash,
+      updatedAt
+    };
+
+    const actionText = 'studio.home.publish.v1/' + operationId + '/' + JSON.stringify(receipt);
+    const serializedContent = JSON.stringify(validatedNewContent);
+
+    db.exec('BEGIN IMMEDIATE');
+    try {
+      const inTxDoc = db.prepare("SELECT * FROM documents WHERE id=? AND site='goalstream'").get(documentId);
+      if (!inTxDoc || inTxDoc.revision !== expectedRevision || inTxDoc.published_revision !== expectedPublishedRevision) {
+        throw new Error('Modification concurrente détectée');
+      }
+
+      const conflictOp = db.prepare(
+        "SELECT 1 FROM document_revisions WHERE action LIKE 'studio.home.publish.v1/' || ? || '%' LIMIT 1"
+      ).get(operationId);
+      if (conflictOp) {
+        throw new Error("Opération concurrente déjà enregistrée");
+      }
+
+      const updateRes = db.prepare(
+        `UPDATE documents SET draft=?, revision=?, published=?, published_revision=?, updated_at=?
+         WHERE id=? AND site='goalstream' AND revision=?`
+      ).run(serializedContent, nextRevision, serializedContent, nextRevision, updatedAt, documentId, expectedRevision);
+
+      if (updateRes.changes !== 1) {
+        throw new Error('Échec de la mise à jour atomique du document');
+      }
+
+      db.prepare(
+        `INSERT INTO document_revisions(document_id, revision, content, action, actor, at)
+         VALUES(?,?,?,?,?,?)`
+      ).run(documentId, nextRevision, serializedContent, actionText, ownerId, updatedAt);
+
+      db.exec('COMMIT');
+      return receipt;
+    } catch (err) {
+      db.exec('ROLLBACK');
+      throw err;
+    }
+  }
+
+  function homePublicationStatus(ownerId, operationId) {
+    if (typeof ownerId !== 'string' || !UUID_REGEX.test(ownerId)) {
+      throw new Error('Identifiant propriétaire invalide');
+    }
+    if (typeof operationId !== 'string' || !UUID_REGEX.test(operationId)) {
+      throw new Error("Identifiant d'opération invalide");
+    }
+
+    const opMatches = db.prepare(
+      "SELECT * FROM document_revisions WHERE action LIKE 'studio.home.publish.v1/' || ? || '%'"
+    ).all(operationId);
+
+    if (opMatches.length === 0) {
+      return null;
+    }
+    if (opMatches.length > 1) {
+      throw new Error("Corruption : plusieurs révisions partagent le même identifiant d'opération");
+    }
+
+    const match = opMatches[0];
+    const prefix = 'studio.home.publish.v1/' + operationId + '/';
+    if (!match.action.startsWith(prefix)) {
+      throw new Error("Action d'audit malformée");
+    }
+
+    let receipt;
+    try {
+      receipt = JSON.parse(match.action.slice(prefix.length));
+    } catch {
+      throw new Error("Reçu d'audit non décodable");
+    }
+
+    if (!receipt || typeof receipt !== 'object' || receipt.schema !== 1) {
+      throw new Error("Structure de reçu d'audit non conforme");
+    }
+
+    // Strictly protect other owners' data and legacy histories
+    if (receipt.ownerId !== ownerId || match.actor !== ownerId) {
+      return null;
+    }
+
+    const doc = db.prepare("SELECT * FROM documents WHERE id=? AND site='goalstream' AND path='' AND kind='page'").get(receipt.documentId);
+    if (!doc) {
+      return null;
+    }
+    const rev0 = db.prepare('SELECT actor FROM document_revisions WHERE document_id=? AND revision=0').get(receipt.documentId);
+    if (!rev0 || rev0.actor !== ownerId) {
+      return null;
+    }
+
+    if (
+      match.document_id !== receipt.documentId ||
+      match.revision !== receipt.revision ||
+      homeContentHash(JSON.parse(match.content)) !== receipt.publishedHash
+    ) {
+      throw new Error("Incohérence détectée entre le reçu d'audit et la révision historique");
+    }
+
+    return receipt;
+  }
+
+  const methods = { publishHome, homePublicationStatus };
+  if (target) {
+    Object.assign(target, methods);
+  }
+  return methods;
+}
+
+module.exports = {
+  attachHomePublications,
+  homeContentHash
+};
+```
+
+---
+
+### Exact Patch for `scripts/studio/documents.cjs`
+
+```diff
+--- scripts/studio/documents.cjs
++++ scripts/studio/documents.cjs
+@@ -5,6 +5,7 @@
+ const { randomUUID } = require('node:crypto');
+ 
+ const { validate } = require('./content.cjs');
++const { attachHomePublications } = require('./home-publications.cjs');
+ 
+ function openDocuments(filename) {
+   if (filename !== ':memory:') mkdirSync(dirname(filename), { recursive: true, mode: 0o700 });
+@@ -54,12 +55,14 @@
+     // Restore creates a new draft, never silently rolls the live website back.
+     return save(site, id, expectedRevision, JSON.parse(revision.content), actor, false);
+   }
++  const home = attachHomePublications(db, read, validate);
+   return { create, read, save, restore,
++    publishHome: home.publishHome,
++    homePublicationStatus: home.homePublicationStatus,
+     readPath: (site, path) => {
+       const row = db.prepare('SELECT id FROM documents WHERE site=? AND path=?').get(site, path);
+       return row ? read(site, row.id) : null;
+     },
+     list: site => db.prepare('SELECT id,path,kind,revision,published_revision,updated_at,json_extract(draft,\'$.title\') AS title FROM documents WHERE site=? ORDER BY updated_at DESC LIMIT 100').all(site).map(row => ({ ...row })),
+-    history: (site, id) => read(site, id) ? db.prepare('SELECT revision,action,actor,at FROM document_revisions WHERE document_id=? ORDER BY revision DESC LIMIT 50').all(id).map(row => ({ ...row })) : [],
++    history: (site, id) => read(site, id) ? db.prepare('SELECT revision,action,actor,at FROM document_revisions WHERE document_id=? ORDER BY revision DESC LIMIT 50').all(id).map(row => ({ ...row, action: row.action.startsWith('studio.home.publish.v1/') ? 'published' : row.action })) : [],
+     publicPage: (site, path) => {
+```
+
+---
+
+### Complete Patched `scripts/studio/documents.cjs`
+
+```js
+'use strict';
+const { DatabaseSync } = require('node:sqlite');
+const { mkdirSync } = require('node:fs');
+const { dirname } = require('node:path');
+const { randomUUID } = require('node:crypto');
+
+const { validate } = require('./content.cjs');
+const { attachHomePublications } = require('./home-publications.cjs');
+
+function openDocuments(filename) {
+  if (filename !== ':memory:') mkdirSync(dirname(filename), { recursive: true, mode: 0o700 });
+  const db = new DatabaseSync(filename);
+  db.exec(`PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;
+    CREATE TABLE IF NOT EXISTS documents (
+      id TEXT PRIMARY KEY, site TEXT NOT NULL, path TEXT NOT NULL, kind TEXT NOT NULL,
+      draft TEXT NOT NULL, published TEXT, revision INTEGER NOT NULL DEFAULT 0,
+      published_revision INTEGER, updated_at TEXT NOT NULL, UNIQUE(site,path)
+    );
+    CREATE TABLE IF NOT EXISTS document_revisions (
+      document_id TEXT NOT NULL, revision INTEGER NOT NULL, content TEXT NOT NULL,
+      action TEXT NOT NULL, actor TEXT NOT NULL, at TEXT NOT NULL,
+      PRIMARY KEY(document_id, revision)
+    );`);
+  const tx = callback => {
+    db.exec('BEGIN IMMEDIATE');
+    try { const result = callback(); db.exec('COMMIT'); return result; }
+    catch (error) { db.exec('ROLLBACK'); throw error; }
+  };
+  const read = (site, id) => {
+    const row = db.prepare('SELECT * FROM documents WHERE site=? AND id=?').get(site, id);
+    return row ? { ...row, draft: JSON.parse(row.draft), published: row.published ? JSON.parse(row.published) : null } : null;
+  };
+  function record(id, revision, content, action, actor) {
+    if (typeof actor !== 'string' || !actor) throw new Error('Identité requise');
+    db.prepare('INSERT INTO document_revisions(document_id,revision,content,action,actor,at) VALUES(?,?,?,?,?,?)')
+      .run(id, revision, JSON.stringify(content), action, actor, new Date().toISOString());
+  }
+  function create(site, path, kind, document, actor) {
+    if (!/^[a-z0-9][a-z0-9-]{0,79}$/.test(site) || !/^(?:[a-z0-9-]+\/)*[a-z0-9-]*$/.test(path) || path.length > 200 || !['page', 'article'].includes(kind)) throw new Error('Site ou adresse invalide');
+    const content = validate(document); const id = randomUUID();
+    return tx(() => {
+      db.prepare('INSERT INTO documents(id,site,path,kind,draft,updated_at) VALUES(?,?,?,?,?,?)')
+        .run(id, site, path, kind, JSON.stringify(content), new Date().toISOString());
+      record(id, 0, content, 'created', actor); return read(site, id);
+    });
+  }
+  function save(site, id, revision, document, actor, publish = false) {
+    const content = validate(document);
+    return tx(() => {
+      const current = read(site, id);
+      if (!current) throw new Error('Page introuvable pour ce site');
+      if (current.revision !== revision) throw new Error('Une autre modification a été enregistrée. Rechargez la page avant de publier.');
+      const next = revision + 1;
+      db.prepare('UPDATE documents SET draft=?,revision=?,published=?,published_revision=?,updated_at=? WHERE id=? AND site=?')
+        .run(JSON.stringify(content), next, publish ? JSON.stringify(content) : current.published ? JSON.stringify(current.published) : null,
+          publish ? next : current.published_revision, new Date().toISOString(), id, site);
+      record(id, next, content, publish ? 'published' : 'draft_saved', actor); return read(site, id);
+    });
+  }
+  function restore(site, id, expectedRevision, restoreRevision, actor) {
+    const current = read(site, id);
+    if (!current) throw new Error('Page introuvable');
+    const revision = db.prepare('SELECT content FROM document_revisions WHERE document_id=? AND revision=?').get(id, restoreRevision);
+    if (!revision) throw new Error('Version introuvable');
+    // Restore creates a new draft, never silently rolls the live website back.
+    return save(site, id, expectedRevision, JSON.parse(revision.content), actor, false);
+  }
+  const home = attachHomePublications(db, read, validate);
+  return { create, read, save, restore,
+    publishHome: home.publishHome,
+    homePublicationStatus: home.homePublicationStatus,
+    readPath: (site, path) => {
+      const row = db.prepare('SELECT id FROM documents WHERE site=? AND path=?').get(site, path);
+      return row ? read(site, row.id) : null;
+    },
+    list: site => db.prepare('SELECT id,path,kind,revision,published_revision,updated_at,json_extract(draft,\'$.title\') AS title FROM documents WHERE site=? ORDER BY updated_at DESC LIMIT 100').all(site).map(row => ({ ...row })),
+    history: (site, id) => read(site, id) ? db.prepare('SELECT revision,action,actor,at FROM document_revisions WHERE document_id=? ORDER BY revision DESC LIMIT 50').all(id).map(row => ({ ...row, action: row.action.startsWith('studio.home.publish.v1/') ? 'published' : row.action })) : [],
+    publicPage: (site, path) => {
+      const row = db.prepare('SELECT published FROM documents WHERE site=? AND path=? AND published IS NOT NULL').get(site, path);
+      return row ? JSON.parse(row.published) : null;
+    },
+    hasPublishedImage: url => !!db.prepare("SELECT 1 FROM documents WHERE published IS NOT NULL AND json_extract(published,'$.image')=? LIMIT 1").get(url),
+    publicArticles: site => db.prepare("SELECT path,published,updated_at FROM documents WHERE site=? AND kind='article' AND published IS NOT NULL ORDER BY updated_at DESC LIMIT 1000")
+      .all(site).map(row => ({ path: row.path, content: JSON.parse(row.published), updatedAt: row.updated_at })),
+    close: () => db.close() };
+}
+module.exports = { openDocuments, validate };
+```

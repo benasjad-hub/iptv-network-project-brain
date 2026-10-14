@@ -1,0 +1,52 @@
+BEFORE:
+```js
+  if (Array.isArray(val)) {
+    if (Object.getPrototypeOf(val) !== Array.prototype) {
+      throw new Error('Type de tableau non standard');
+    }
+    if (Object.getOwnPropertySymbols(val).length > 0) {
+      throw new Error('Symboles interdits sur tableau');
+    }
+    const propNames = Object.getOwnPropertyNames(val);
+    for (const k of propNames) {
+      if (k === 'length') continue;
+      const desc = Object.getOwnPropertyDescriptor(val, k);
+      if (!desc.enumerable || desc.get || desc.set) {
+        throw new Error('Propriété non standard sur tableau');
+      }
+    }
+    for (let i = 0; i < val.length; i++) {
+      assertPureJsonValue(val[i], seen, depth + 1);
+    }
+    return;
+  }
+```
+
+AFTER:
+```js
+  if (Array.isArray(val)) {
+    if (Object.getPrototypeOf(val) !== Array.prototype) {
+      throw new Error('Type de tableau non standard');
+    }
+    if (Object.getOwnPropertySymbols(val).length > 0) {
+      throw new Error('Symboles interdits sur tableau');
+    }
+    if (val.length > 100000) {
+      throw new Error('Longueur de tableau excessive');
+    }
+    const propNames = Object.getOwnPropertyNames(val);
+    if (propNames.length !== val.length + 1) {
+      throw new Error('Propriété non standard sur tableau');
+    }
+    for (let i = 0; i < val.length; i++) {
+      const desc = Object.getOwnPropertyDescriptor(val, i);
+      if (!desc || !desc.enumerable || desc.get || desc.set) {
+        throw new Error('Propriété non standard sur tableau');
+      }
+    }
+    for (let i = 0; i < val.length; i++) {
+      assertPureJsonValue(val[i], seen, depth + 1);
+    }
+    return;
+  }
+```

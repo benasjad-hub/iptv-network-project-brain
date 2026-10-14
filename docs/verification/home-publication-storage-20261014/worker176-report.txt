@@ -1,0 +1,680 @@
+```js
+'use strict';
+const { createHash } = require('node:crypto');
+
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+const HASH64_REGEX = /^[0-9a-f]{64}$/;
+const EDITABLE_FIELDS = ['title', 'description', 'body', 'image', 'buttonLabel', 'buttonUrl'];
+const FIELD_BOUNDS = {
+  title: 200,
+  description: 1000,
+  body: 100000,
+  image: 2000,
+  buttonLabel: 1000,
+  buttonUrl: 2000
+};
+const REQUIRED_PARAM_KEYS = [
+  'documentId',
+  'expectedPublishedHash',
+  'expectedPublishedRevision',
+  'expectedRevision',
+  'expectedValue',
+  'field',
+  'operationId',
+  'ownerId',
+  'value'
+];
+const EXPECTED_RECEIPT_KEYS = [
+  'documentId',
+  'field',
+  'operationId',
+  'ownerId',
+  'path',
+  'publishedHash',
+  'requestHash',
+  'revision',
+  'schema',
+  'site',
+  'sourceHash',
+  'sourceRevision',
+  'sourceValueHash',
+  'updatedAt'
+];
+
+function canonicalJson(val) {
+  if (val === null || typeof val !== 'object') {
+    return JSON.stringify(val);
+  }
+  if (Array.isArray(val)) {
+    return '[' + val.map(canonicalJson).join(',') + ']';
+  }
+  const keys = Object.keys(val).sort();
+  return '{' + keys.map(k => JSON.stringify(k) + ':' + canonicalJson(val[k])).join(',') + '}';
+}
+
+function assertPlainObject(obj, name = 'Paramètres') {
+  if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
+    throw new Error(`${name} invalides`);
+  }
+  const proto = Object.getPrototypeOf(obj);
+  if (proto !== Object.prototype && proto !== null) {
+    throw new Error(`Prototype de ${name.toLowerCase()} non supporté`);
+  }
+  if (Object.getOwnPropertySymbols(obj).length > 0) {
+    throw new Error(`Clés symboles interdites dans ${name.toLowerCase()}`);
+  }
+  const propNames = Object.getOwnPropertyNames(obj);
+  for (const key of propNames) {
+    const desc = Object.getOwnPropertyDescriptor(obj, key);
+    if (!desc.enumerable) {
+      throw new Error(`Propriété non énumérable interdite : ${key}`);
+    }
+    if (desc.get || desc.set) {
+      throw new Error(`Accesseur interdit : ${key}`);
+    }
+  }
+}
+
+function assertPureJsonValue(val, seen, depth = 0) {
+  if (depth > 100) {
+    throw new Error('Profondeur de structure excessive');
+  }
+  if (val === null) return;
+  const t = typeof val;
+  if (t === 'string' || t === 'boolean') return;
+  if (t === 'number') {
+    if (!Number.isFinite(val)) {
+      throw new Error('Nombre non fini interdit');
+    }
+    return;
+  }
+  if (t !== 'object') {
+    throw new Error(`Type JSON non supporté : ${t}`);
+  }
+  if (seen.has(val)) {
+    throw new Error('Référence circulaire détectée');
+  }
+  seen.add(val);
+
+  if (Array.isArray(val)) {
+    if (Object.getPrototypeOf(val) !== Array.prototype) {
+      throw new Error('Type de tableau non standard');
+    }
+    if (Object.getOwnPropertySymbols(val).length > 0) {
+      throw new Error('Symboles interdits sur tableau');
+    }
+    const propNames = Object.getOwnPropertyNames(val);
+    for (const k of propNames) {
+      if (k === 'length') continue;
+      const desc = Object.getOwnPropertyDescriptor(val, k);
+      if (!desc.enumerable || desc.get || desc.set) {
+        throw new Error('Propriété non standard sur tableau');
+      }
+    }
+    for (let i = 0; i < val.length; i++) {
+      assertPureJsonValue(val[i], seen, depth + 1);
+    }
+    return;
+  }
+
+  const proto = Object.getPrototypeOf(val);
+  if (proto !== Object.prototype && proto !== null) {
+    throw new Error('Objet exotique ou prototype non supporté');
+  }
+  if (Object.getOwnPropertySymbols(val).length > 0) {
+    throw new Error('Symboles interdits sur objet');
+  }
+  if ('toJSON' in val || typeof val.toJSON === 'function') {
+    throw new Error('Méthode toJSON interdite');
+  }
+  const propNames = Object.getOwnPropertyNames(val);
+  for (const key of propNames) {
+    const desc = Object.getOwnPropertyDescriptor(val, key);
+    if (!desc.enumerable) {
+      throw new Error(`Propriété non énumérable : ${key}`);
+    }
+    if (desc.get || desc.set) {
+      throw new Error(`Accesseur interdit : ${key}`);
+    }
+    if (typeof desc.value === 'function') {
+      throw new Error(`Fonction interdite : ${key}`);
+    }
+    assertPureJsonValue(desc.value, seen, depth + 1);
+  }
+}
+
+function homeContentHash(content, customValidate) {
+  if (!content || typeof content !== 'object' || Array.isArray(content)) {
+    throw new Error('Contenu invalide');
+  }
+  const seen = new Set();
+  assertPureJsonValue(content, seen, 0);
+
+  let raw;
+  try {
+    raw = JSON.stringify(content);
+  } catch {
+    throw new Error('Sérialisation du contenu impossible');
+  }
+  if (!raw || raw.length > 200000) {
+    throw new Error('Contenu trop volumineux');
+  }
+
+  const valFn = typeof customValidate === 'function' ? customValidate : require('./content.cjs').validate;
+  const validated = valFn(content);
+  const canonical = canonicalJson(validated);
+  return createHash('sha256').update(canonical, 'utf8').digest('hex');
+}
+
+function computeRequestHash(params) {
+  const payload = {
+    documentId: params.documentId,
+    expectedPublishedHash: params.expectedPublishedHash,
+    expectedPublishedRevision: params.expectedPublishedRevision,
+    expectedRevision: params.expectedRevision,
+    expectedValue: params.expectedValue,
+    field: params.field,
+    operationId: params.operationId,
+    ownerId: params.ownerId,
+    value: params.value
+  };
+  return createHash('sha256').update(canonicalJson(payload), 'utf8').digest('hex');
+}
+
+function findOperationRows(db, operationId) {
+  const prefix = 'studio.home.publish.v1/' + operationId + '/';
+  const prefixBound = 'studio.home.publish.v1/' + operationId + '0';
+  return db.prepare(
+    'SELECT document_id, revision, content, action, actor, at FROM history WHERE action >= ? AND action < ? LIMIT 2'
+  ).all(prefix, prefixBound);
+}
+
+function validateAuditRow(db, validateFn, row, expectedParams = null) {
+  if (!row || typeof row !== 'object') {
+    throw new Error('Ligne historique invalide');
+  }
+  if (typeof row.action !== 'string') {
+    throw new Error('Action historique invalide');
+  }
+  if (row.action.length > 300000) {
+    throw new Error('Action historique trop volumineuse');
+  }
+
+  const AUDIT_PREFIX = 'studio.home.publish.v1/';
+  if (!row.action.startsWith(AUDIT_PREFIX)) {
+    throw new Error("Préfixe d'action historique invalide");
+  }
+  const rest = row.action.slice(AUDIT_PREFIX.length);
+  const slashIdx = rest.indexOf('/');
+  if (slashIdx === -1) {
+    throw new Error("Format d'action corrompu : séparateur manquant");
+  }
+  const opId = rest.slice(0, slashIdx);
+  if (!UUID_REGEX.test(opId)) {
+    throw new Error("Identifiant d'opération corrompu dans l'action");
+  }
+  const jsonStr = rest.slice(slashIdx + 1);
+
+  let parsed;
+  try {
+    parsed = JSON.parse(jsonStr);
+  } catch {
+    throw new Error("JSON d'audit historique non décodable");
+  }
+
+  assertPlainObject(parsed, 'Audit');
+  const auditKeys = Object.keys(parsed).sort();
+  if (auditKeys.length !== 3 || auditKeys[0] !== 'receipt' || auditKeys[1] !== 'request' || auditKeys[2] !== 'schema') {
+    throw new Error("Clés de charge utile d'audit invalides");
+  }
+  if (parsed.schema !== 1) {
+    throw new Error("Version de schéma d'audit invalide");
+  }
+
+  const req = parsed.request;
+  assertPlainObject(req, 'Audit request');
+  const reqKeys = Object.keys(req).sort();
+  if (reqKeys.length !== REQUIRED_PARAM_KEYS.length) {
+    throw new Error("Nombre de clés de requête d'audit invalide");
+  }
+  for (let i = 0; i < REQUIRED_PARAM_KEYS.length; i++) {
+    if (reqKeys[i] !== REQUIRED_PARAM_KEYS[i]) {
+      throw new Error(`Clé de requête d'audit invalide : ${reqKeys[i]}`);
+    }
+  }
+
+  if (!UUID_REGEX.test(req.ownerId) || !UUID_REGEX.test(req.operationId) || !UUID_REGEX.test(req.documentId)) {
+    throw new Error("Identifiants UUID de requête d'audit invalides");
+  }
+  if (req.operationId !== opId) {
+    throw new Error("Discordance d'opération entre préfixe et charge utile");
+  }
+  if (typeof req.expectedRevision !== 'number' || !Number.isSafeInteger(req.expectedRevision) || req.expectedRevision < 0) {
+    throw new Error('Révision attendue invalide');
+  }
+  if (typeof req.expectedPublishedRevision !== 'number' || !Number.isSafeInteger(req.expectedPublishedRevision) || req.expectedPublishedRevision < 0) {
+    throw new Error('Révision publiée attendue invalide');
+  }
+  if (typeof req.expectedPublishedHash !== 'string' || !HASH64_REGEX.test(req.expectedPublishedHash)) {
+    throw new Error('Empreinte publiée attendue invalide');
+  }
+  if (typeof req.field !== 'string' || !EDITABLE_FIELDS.includes(req.field)) {
+    throw new Error(`Champ non modifiable : ${req.field}`);
+  }
+  const maxBound = FIELD_BOUNDS[req.field];
+  if (typeof req.expectedValue !== 'string' || req.expectedValue.length > maxBound) {
+    throw new Error('Valeur attendue invalide');
+  }
+  if (typeof req.value !== 'string' || req.value.length > maxBound) {
+    throw new Error('Valeur invalide');
+  }
+
+  const receipt = parsed.receipt;
+  assertPlainObject(receipt, 'Audit receipt');
+  const receiptKeys = Object.keys(receipt).sort();
+  if (receiptKeys.length !== EXPECTED_RECEIPT_KEYS.length) {
+    throw new Error("Nombre de clés de reçu d'audit invalide");
+  }
+  for (let i = 0; i < EXPECTED_RECEIPT_KEYS.length; i++) {
+    if (receiptKeys[i] !== EXPECTED_RECEIPT_KEYS[i]) {
+      throw new Error(`Clé de reçu d'audit inattendue : ${receiptKeys[i]}`);
+    }
+  }
+
+  if (receipt.schema !== 1) {
+    throw new Error("Schéma de reçu d'audit invalide");
+  }
+  if (receipt.site !== 'goalstream' || receipt.path !== '') {
+    throw new Error("Site ou chemin de reçu d'audit invalide");
+  }
+  if (receipt.ownerId !== req.ownerId) {
+    throw new Error('Propriétaire discordant dans le reçu');
+  }
+  if (receipt.operationId !== req.operationId) {
+    throw new Error('Opération discordante dans le reçu');
+  }
+  if (receipt.documentId !== req.documentId) {
+    throw new Error('Document discordant dans le reçu');
+  }
+  if (receipt.field !== req.field) {
+    throw new Error('Champ discordant dans le reçu');
+  }
+  if (receipt.sourceRevision !== req.expectedRevision) {
+    throw new Error('Révision source discordante dans le reçu');
+  }
+  if (receipt.revision !== receipt.sourceRevision + 1) {
+    throw new Error('Incohérence de révision dans le reçu (doit être sourceRevision + 1)');
+  }
+  if (receipt.sourceHash !== req.expectedPublishedHash) {
+    throw new Error('Empreinte source discordante dans le reçu');
+  }
+  const expectedSourceValHash = createHash('sha256').update(req.expectedValue, 'utf8').digest('hex');
+  if (receipt.sourceValueHash !== expectedSourceValHash) {
+    throw new Error('Empreinte de valeur source discordante dans le reçu');
+  }
+  if (!HASH64_REGEX.test(receipt.publishedHash) || !HASH64_REGEX.test(receipt.requestHash)) {
+    throw new Error('Format des empreintes de reçu invalide');
+  }
+  if (
+    typeof receipt.updatedAt !== 'string' ||
+    !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(receipt.updatedAt) ||
+    isNaN(Date.parse(receipt.updatedAt))
+  ) {
+    throw new Error('Format de date updatedAt invalide');
+  }
+
+  const computedReqHash = computeRequestHash(req);
+  if (computedReqHash !== receipt.requestHash) {
+    throw new Error('Empreinte de requête non concordante');
+  }
+
+  if (
+    row.document_id !== receipt.documentId ||
+    row.actor !== receipt.ownerId ||
+    row.revision !== receipt.revision ||
+    row.at !== receipt.updatedAt
+  ) {
+    throw new Error("Incohérence entre la ligne historique et le reçu d'audit");
+  }
+
+  const rev0 = db.prepare('SELECT actor FROM history WHERE document_id=? AND revision=0').get(receipt.documentId);
+  if (!rev0 || rev0.actor !== receipt.ownerId) {
+    throw new Error('Propriétaire créateur non autorisé');
+  }
+
+  const sourceRevRow = db.prepare(
+    'SELECT document_id, revision, content, action, actor, at FROM history WHERE document_id=? AND revision=?'
+  ).get(receipt.documentId, receipt.sourceRevision);
+  if (!sourceRevRow || sourceRevRow.actor !== receipt.ownerId) {
+    throw new Error('Révision historique source introuvable ou non autorisée');
+  }
+
+  let pubRevRow;
+  if (req.expectedPublishedRevision === receipt.sourceRevision) {
+    pubRevRow = sourceRevRow;
+  } else {
+    pubRevRow = db.prepare(
+      'SELECT document_id, revision, content, action, actor, at FROM history WHERE document_id=? AND revision=?'
+    ).get(receipt.documentId, req.expectedPublishedRevision);
+    if (!pubRevRow || pubRevRow.actor !== receipt.ownerId) {
+      throw new Error('Révision historique publiée attendue introuvable ou non autorisée');
+    }
+  }
+
+  let sourcePublishedContent;
+  try {
+    sourcePublishedContent = JSON.parse(pubRevRow.content);
+  } catch {
+    throw new Error('Contenu de révision publiée historique corrompu');
+  }
+  const sourcePubHash = homeContentHash(sourcePublishedContent, validateFn);
+  if (sourcePubHash !== req.expectedPublishedHash || sourcePubHash !== receipt.sourceHash) {
+    throw new Error('Empreinte du contenu publié source historique non concordante');
+  }
+
+  if (sourcePublishedContent[receipt.field] !== req.expectedValue) {
+    throw new Error('Valeur source historique non concordante');
+  }
+
+  const candidate = Object.assign({}, sourcePublishedContent, { [receipt.field]: req.value });
+  const projectedContent = validateFn(candidate);
+  const projectedHash = homeContentHash(projectedContent, validateFn);
+  if (projectedHash !== receipt.publishedHash) {
+    throw new Error('Empreinte du contenu projeté non concordante');
+  }
+
+  let historyContent;
+  try {
+    historyContent = JSON.parse(row.content);
+  } catch {
+    throw new Error('Contenu historique corrompu');
+  }
+  const historyContentHash = homeContentHash(historyContent, validateFn);
+  if (historyContentHash !== receipt.publishedHash) {
+    throw new Error('Empreinte du contenu historique discordante');
+  }
+  if (canonicalJson(projectedContent) !== canonicalJson(historyContent)) {
+    throw new Error('Contenu historique non identique au contenu projeté');
+  }
+
+  if (expectedParams) {
+    if (
+      receipt.ownerId !== expectedParams.ownerId ||
+      receipt.documentId !== expectedParams.documentId ||
+      receipt.operationId !== expectedParams.operationId ||
+      receipt.requestHash !== computeRequestHash(expectedParams)
+    ) {
+      throw new Error('Reçu existant non concordant avec la requête');
+    }
+  }
+
+  return receipt;
+}
+
+function attachHomePublications(db, read, validate) {
+  if (!db || typeof db.prepare !== 'function') {
+    throw new Error('Connexion de base de données requise');
+  }
+  const validateFn = typeof validate === 'function' ? validate : require('./content.cjs').validate;
+
+  function publishHome(params) {
+    assertPlainObject(params, 'Paramètres');
+    const paramKeys = Object.keys(params);
+    if (paramKeys.length !== REQUIRED_PARAM_KEYS.length) {
+      throw new Error('Clés de paramètres invalides');
+    }
+    for (const key of REQUIRED_PARAM_KEYS) {
+      if (!Object.prototype.hasOwnProperty.call(params, key)) {
+        throw new Error(`Paramètre manquant : ${key}`);
+      }
+    }
+
+    const {
+      ownerId,
+      operationId,
+      documentId,
+      expectedRevision,
+      expectedPublishedRevision,
+      expectedPublishedHash,
+      field,
+      expectedValue,
+      value
+    } = params;
+
+    if (!UUID_REGEX.test(ownerId) || !UUID_REGEX.test(operationId) || !UUID_REGEX.test(documentId)) {
+      throw new Error('Identifiant UUID canonique invalide');
+    }
+    if (typeof expectedRevision !== 'number' || !Number.isSafeInteger(expectedRevision) || expectedRevision < 0) {
+      throw new Error('Révision attendue invalide');
+    }
+    if (typeof expectedPublishedRevision !== 'number' || !Number.isSafeInteger(expectedPublishedRevision) || expectedPublishedRevision < 0) {
+      throw new Error('Révision publiée attendue invalide');
+    }
+    if (typeof expectedPublishedHash !== 'string' || !HASH64_REGEX.test(expectedPublishedHash)) {
+      throw new Error('Empreinte publiée attendue invalide');
+    }
+    if (typeof field !== 'string' || !EDITABLE_FIELDS.includes(field)) {
+      throw new Error(`Champ non modifiable : ${field}`);
+    }
+    const maxBound = FIELD_BOUNDS[field];
+    if (typeof expectedValue !== 'string' || expectedValue.length > maxBound) {
+      throw new Error('Valeur attendue invalide');
+    }
+    if (typeof value !== 'string' || value.length > maxBound) {
+      throw new Error('Valeur invalide');
+    }
+
+    db.exec('BEGIN IMMEDIATE');
+    try {
+      const opMatches = findOperationRows(db, operationId);
+      if (opMatches.length > 1) {
+        throw new Error("Conflit ou corruption de l'identifiant d'opération");
+      }
+      if (opMatches.length === 1) {
+        const match = opMatches[0];
+        const storedReceipt = validateAuditRow(db, validateFn, match, params);
+        db.exec('COMMIT');
+        return storedReceipt;
+      }
+
+      const doc = db.prepare("SELECT * FROM documents WHERE id=? AND site='goalstream' AND path='' AND kind='page'").get(documentId);
+      if (!doc) {
+        throw new Error('Document GoalStream introuvable');
+      }
+
+      const rev0 = db.prepare('SELECT actor FROM history WHERE document_id=? AND revision=0').get(documentId);
+      if (!rev0 || rev0.actor !== ownerId) {
+        throw new Error('Propriétaire non autorisé');
+      }
+
+      if (doc.revision !== expectedRevision) {
+        throw new Error('Révision actuelle non concordante');
+      }
+      if (doc.published_revision !== expectedPublishedRevision) {
+        throw new Error('Révision publiée non concordante');
+      }
+      if (!doc.published) {
+        throw new Error('Le document GoalStream doit être déjà publié');
+      }
+
+      const currentPublished = JSON.parse(doc.published);
+      const currentPublishedHash = homeContentHash(currentPublished, validateFn);
+      if (currentPublishedHash !== expectedPublishedHash) {
+        throw new Error('Empreinte du contenu publié non concordante');
+      }
+      if (currentPublished[field] !== expectedValue) {
+        throw new Error('Valeur source non concordante');
+      }
+
+      const currentDraft = JSON.parse(doc.draft);
+      if (
+        homeContentHash(currentDraft, validateFn) !== currentPublishedHash ||
+        canonicalJson(currentDraft) !== canonicalJson(currentPublished)
+      ) {
+        throw new Error('Un brouillon non publié est en attente');
+      }
+
+      const sourceRevRow = db.prepare(
+        'SELECT document_id, revision, content, action, actor, at FROM history WHERE document_id=? AND revision=?'
+      ).get(documentId, expectedRevision);
+      if (!sourceRevRow || sourceRevRow.actor !== ownerId) {
+        throw new Error('Révision source historique non autorisée');
+      }
+      if (expectedPublishedRevision !== expectedRevision) {
+        const pubRevRow = db.prepare(
+          'SELECT document_id, revision, content, action, actor, at FROM history WHERE document_id=? AND revision=?'
+        ).get(documentId, expectedPublishedRevision);
+        if (!pubRevRow || pubRevRow.actor !== ownerId) {
+          throw new Error('Révision publiée historique non autorisée');
+        }
+      }
+
+      const candidate = Object.assign({}, currentPublished, { [field]: value });
+      const validatedNewContent = validateFn(candidate);
+      const newPublishedHash = homeContentHash(validatedNewContent, validateFn);
+
+      const nextRevision = expectedRevision + 1;
+      const updatedAt = new Date().toISOString();
+      const sourceValueHash = createHash('sha256').update(expectedValue, 'utf8').digest('hex');
+      const requestHash = computeRequestHash(params);
+
+      const receipt = {
+        schema: 1,
+        ownerId,
+        operationId,
+        documentId,
+        site: 'goalstream',
+        path: '',
+        sourceRevision: expectedRevision,
+        revision: nextRevision,
+        field,
+        sourceHash: expectedPublishedHash,
+        sourceValueHash,
+        requestHash,
+        publishedHash: newPublishedHash,
+        updatedAt
+      };
+
+      const requestPayload = {
+        ownerId,
+        operationId,
+        documentId,
+        expectedRevision,
+        expectedPublishedRevision,
+        expectedPublishedHash,
+        field,
+        expectedValue,
+        value
+      };
+
+      const auditPayload = {
+        schema: 1,
+        request: requestPayload,
+        receipt
+      };
+
+      const actionText = 'studio.home.publish.v1/' + operationId + '/' + JSON.stringify(auditPayload);
+      if (actionText.length > 300000) {
+        throw new Error("Action d'audit trop volumineuse");
+      }
+
+      const serializedContent = JSON.stringify(validatedNewContent);
+
+      const updateRes = db.prepare(
+        `UPDATE documents SET draft=?, revision=?, published=?, published_revision=?, updated_at=?
+         WHERE id=? AND site='goalstream' AND revision=?`
+      ).run(serializedContent, nextRevision, serializedContent, nextRevision, updatedAt, documentId, expectedRevision);
+
+      if (updateRes.changes !== 1) {
+        throw new Error('Échec de la mise à jour atomique du document');
+      }
+
+      db.prepare(
+        `INSERT INTO history(document_id, revision, content, action, actor, at)
+         VALUES(?,?,?,?,?,?)`
+      ).run(documentId, nextRevision, serializedContent, actionText, ownerId, updatedAt);
+
+      db.exec('COMMIT');
+      return receipt;
+    } catch (err) {
+      db.exec('ROLLBACK');
+      throw err;
+    }
+  }
+
+  function homePublicationStatus(ownerId, operationId) {
+    if (typeof ownerId !== 'string' || !UUID_REGEX.test(ownerId)) {
+      throw new Error('Identifiant propriétaire invalide');
+    }
+    if (typeof operationId !== 'string' || !UUID_REGEX.test(operationId)) {
+      throw new Error("Identifiant d'opération invalide");
+    }
+
+    db.exec('BEGIN');
+    try {
+      const opMatches = findOperationRows(db, operationId);
+      if (opMatches.length === 0) {
+        db.exec('COMMIT');
+        return null;
+      }
+      if (opMatches.length > 1) {
+        throw new Error("Conflit ou corruption : plusieurs révisions partagent le même identifiant d'opération");
+      }
+
+      const match = opMatches[0];
+      if (match.actor !== ownerId) {
+        db.exec('COMMIT');
+        return null;
+      }
+
+      const rev0 = db.prepare('SELECT actor FROM history WHERE document_id=? AND revision=0').get(match.document_id);
+      if (!rev0 || rev0.actor !== ownerId) {
+        db.exec('COMMIT');
+        return null;
+      }
+
+      const receipt = validateAuditRow(db, validateFn, match, null);
+      if (receipt.ownerId !== ownerId) {
+        db.exec('COMMIT');
+        return null;
+      }
+
+      db.exec('COMMIT');
+      return receipt;
+    } catch (err) {
+      db.exec('ROLLBACK');
+      throw err;
+    }
+  }
+
+  function normalizeHomeHistoryAction(row) {
+    if (!row || typeof row !== 'object' || typeof row.action !== 'string') {
+      return row && typeof row === 'object' ? row.action : undefined;
+    }
+    const action = row.action;
+    if (!action.startsWith('studio.home.')) {
+      return action;
+    }
+    if (action.startsWith('studio.home.publish.v1/')) {
+      try {
+        validateAuditRow(db, validateFn, row, null);
+        return 'published';
+      } catch {
+        return 'studio_home_unverified';
+      }
+    }
+    return 'studio_home_unverified';
+  }
+
+  return {
+    publishHome,
+    homePublicationStatus,
+    normalizeHomeHistoryAction
+  };
+}
+
+module.exports = {
+  attachHomePublications,
+  homeContentHash
+};
+```

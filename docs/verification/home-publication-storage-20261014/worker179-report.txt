@@ -1,0 +1,188 @@
+An exact set of minimal BEFORE/AFTER patches addressing all three review failures:
+
+### 1. Import `types` from `node:util`
+
+<<<<
+```js
+'use strict';
+const { createHash } = require('node:crypto');
+
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+```
+====
+```js
+'use strict';
+const { createHash } = require('node:crypto');
+const { types } = require('node:util');
+
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+```
+>>>>
+
+### 2. Reject `types.isProxy` in `assertPlainObject` before reflection/reads
+
+<<<<
+```js
+function assertPlainObject(obj, name = 'Paramètres') {
+  if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
+    throw new Error(`${name} invalides`);
+  }
+  const proto = Object.getPrototypeOf(obj);
+```
+====
+```js
+function assertPlainObject(obj, name = 'Paramètres') {
+  if (obj === null || typeof obj !== 'object') {
+    throw new Error(`${name} invalides`);
+  }
+  if (types.isProxy(obj)) {
+    throw new Error('Proxy interdit');
+  }
+  if (Array.isArray(obj)) {
+    throw new Error(`${name} invalides`);
+  }
+  const proto = Object.getPrototypeOf(obj);
+```
+>>>>
+
+### 3. Reject `types.isProxy` in `assertPureJsonValue` before reflection/reads
+
+<<<<
+```js
+  if (t !== 'object') {
+    throw new Error(`Type JSON non supporté : ${t}`);
+  }
+  if (seen.has(val)) {
+```
+====
+```js
+  if (types.isProxy(val)) {
+    throw new Error('Proxy interdit');
+  }
+  if (t !== 'object') {
+    throw new Error(`Type JSON non supporté : ${t}`);
+  }
+  if (seen.has(val)) {
+```
+>>>>
+
+### 4. Guard request IDs in `validateAuditRow` with `typeof 'string'` before regex
+
+<<<<
+```js
+  if (!UUID_REGEX.test(req.ownerId) || !UUID_REGEX.test(req.operationId) || !UUID_REGEX.test(req.documentId)) {
+    throw new Error("Identifiants UUID de requête d'audit invalides");
+  }
+```
+====
+```js
+  if (
+    typeof req.ownerId !== 'string' || !UUID_REGEX.test(req.ownerId) ||
+    typeof req.operationId !== 'string' || !UUID_REGEX.test(req.operationId) ||
+    typeof req.documentId !== 'string' || !UUID_REGEX.test(req.documentId)
+  ) {
+    throw new Error("Identifiants UUID de requête d'audit invalides");
+  }
+```
+>>>>
+
+### 5. Verify actual `documents` row target in shared `validateAuditRow`
+
+<<<<
+```js
+  const rev0 = db.prepare('SELECT actor FROM document_revisions WHERE document_id=? AND revision=0').get(receipt.documentId);
+  if (!rev0 || rev0.actor !== receipt.ownerId) {
+    throw new Error('Propriétaire créateur non autorisé');
+  }
+```
+====
+```js
+  const doc = db.prepare("SELECT * FROM documents WHERE id=? AND site='goalstream' AND path='' AND kind='page'").get(receipt.documentId);
+  if (!doc) {
+    throw new Error('Document GoalStream introuvable');
+  }
+
+  const rev0 = db.prepare('SELECT actor FROM document_revisions WHERE document_id=? AND revision=0').get(receipt.documentId);
+  if (!rev0 || rev0.actor !== receipt.ownerId) {
+    throw new Error('Propriétaire créateur non autorisé');
+  }
+```
+>>>>
+
+### 6. Guard each of the 3 canonical UUIDs in `publishHome` with `typeof 'string'` before regex
+
+<<<<
+```js
+    if (!UUID_REGEX.test(ownerId) || !UUID_REGEX.test(operationId) || !UUID_REGEX.test(documentId)) {
+      throw new Error('Identifiant UUID canonique invalide');
+    }
+```
+====
+```js
+    if (
+      typeof ownerId !== 'string' || !UUID_REGEX.test(ownerId) ||
+      typeof operationId !== 'string' || !UUID_REGEX.test(operationId) ||
+      typeof documentId !== 'string' || !UUID_REGEX.test(documentId)
+    ) {
+      throw new Error('Identifiant UUID canonique invalide');
+    }
+```
+>>>>
+
+### 7. Move doc and creator owner checks before `findOperationRows` and remove old duplicate block in `publishHome`
+
+<<<<
+```js
+    db.exec('BEGIN IMMEDIATE');
+    try {
+      const opMatches = findOperationRows(db, operationId);
+      if (opMatches.length > 1) {
+        throw new Error("Conflit ou corruption de l'identifiant d'opération");
+      }
+      if (opMatches.length === 1) {
+        const match = opMatches[0];
+        const storedReceipt = validateAuditRow(db, validateFn, match, params);
+        db.exec('COMMIT');
+        return storedReceipt;
+      }
+
+      const doc = db.prepare("SELECT * FROM documents WHERE id=? AND site='goalstream' AND path='' AND kind='page'").get(documentId);
+      if (!doc) {
+        throw new Error('Document GoalStream introuvable');
+      }
+
+      const rev0 = db.prepare('SELECT actor FROM document_revisions WHERE document_id=? AND revision=0').get(documentId);
+      if (!rev0 || rev0.actor !== ownerId) {
+        throw new Error('Propriétaire non autorisé');
+      }
+
+      if (doc.revision !== expectedRevision) {
+```
+====
+```js
+    db.exec('BEGIN IMMEDIATE');
+    try {
+      const doc = db.prepare("SELECT * FROM documents WHERE id=? AND site='goalstream' AND path='' AND kind='page'").get(documentId);
+      if (!doc) {
+        throw new Error('Document GoalStream introuvable');
+      }
+
+      const rev0 = db.prepare('SELECT actor FROM document_revisions WHERE document_id=? AND revision=0').get(documentId);
+      if (!rev0 || rev0.actor !== ownerId) {
+        throw new Error('Propriétaire non autorisé');
+      }
+
+      const opMatches = findOperationRows(db, operationId);
+      if (opMatches.length > 1) {
+        throw new Error("Conflit ou corruption de l'identifiant d'opération");
+      }
+      if (opMatches.length === 1) {
+        const match = opMatches[0];
+        const storedReceipt = validateAuditRow(db, validateFn, match, params);
+        db.exec('COMMIT');
+        return storedReceipt;
+      }
+
+      if (doc.revision !== expectedRevision) {
+```
+>>>>

@@ -1,0 +1,39 @@
+✔ SEO revision survives closing and reopening a file-backed database (56.325921ms)
+✔ generated SEO survives save, reopen, publication and draft rollback (0.984258ms)
+✔ invalid or oversized SEO metadata cannot silently enter saved documents (1.025285ms)
+✔ draft, publication and restore are distinct; another site cannot see or edit a document (0.726629ms)
+✔ links cannot execute scripts or access local files (0.356566ms)
+✔ document/history/summary rows are plain objects accepted by the Next server-to-client boundary (0.513034ms)
+✔ actual SQLite single-field publication and original audit receipt preserve all unrelated fields (52.030429ms)
+✔ reopen and same-operation retry retain historical receipt without second write (29.471067ms)
+✔ completed retry never overwrites newer owner draft or changes returned original receipt (30.382697ms)
+✔ same ID with different payload rejected without mutation (28.489831ms)
+✔ other owner cannot retry, query receipt or publish another owner document (26.572784ms)
+✔ source revision, published revision, hash and exact source value each reject stale write (24.510431ms)
+✔ unpublished draft is preserved and cannot become incidental public content (24.80006ms)
+✔ no Article, different site, different path or unpublished page fallback (44.260189ms)
+✔ protocol rejects extra params, prototype input, bad IDs/revisions and unsupported field (25.212162ms)
+✔ canonical content hashing is stable across nested/key ordering and binds SEO (0.610228ms)
+✔ bad media URL, empty title and oversize changed field rejected (25.805523ms)
+✔ transaction failure does not publish or invent a receipt (30.05209ms)
+✔ no new SQLite table/index/column or schema version caused by writer (28.456363ms)
+✔ missing operation status is null, not fabricated from current public page (26.165887ms)
+✔ two real Node processes cannot both publish from same source revision (86.065082ms)
+✔ parameter accessors cannot change identity/value between validation and request hash (22.432308ms)
+✔ receipt operation/site/field/source provenance cannot be tampered while historical content stays equal (178.896986ms)
+✔ malformed audit marker must not be presented as valid published history (30.939034ms)
+✔ operation cannot overflow the next source revision integer (26.453031ms)
+✔ unverified historical content cannot still establish a completed receipt (32.904231ms)
+✔ source proof is checked within the actual SQLite transaction (30.158713ms)
+✔ hashing must not execute an array custom toJSON hook or accept ignored array properties (0.244524ms)
+✔ proxy input cannot change the value between validation and receipt hash (22.994383ms)
+✔ non-string identity cannot execute coercion hooks (22.545752ms)
+✔ completed operation is not applicable after target document moves to another site (31.267085ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 970.995897

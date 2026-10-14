@@ -1,0 +1,1 @@
+Storage-only scoped acceptance. Actual temp SQLite and two Node processes31PASS; types0. No live/public/native/UI preparation acceptance. New audit provenance stored explicitly in existing history action TEXT; SQLschema unchanged. Original reports include rejected candidates; only final exact reviewed source accepted.
