@@ -1,0 +1,27 @@
+{
+  "patches": [
+    {
+      "file": "scripts/studio/flow-provider.cjs",
+      "old": "  if (req.kind !== 'video' || typeof req.instruction !== 'string' || req.instruction.length < 1 || req.instruction.length > 700000 || !/^[\\x20-\\x7e\\t\\r\\n]+$/.test(req.instruction)) throw Error('Invalid video context');\n  if (req.operationId !== `${req.taskId}:${req.stageId}` || req.contextHash !== createHash('sha256').update(req.instruction).digest('hex') || typeof req.recoverOnly !== 'boolean') throw Error('Video context changed');\n  let ctx;\n  try { ctx = JSON.parse(req.instruction); } catch { throw Error('Invalid video context'); }\n  if (!ctx || typeof ctx !== 'object' || ctx.publish !== false || !ctx.nextStage || ctx.nextStage.id !== req.stageId || ctx.nextStage.kind !== 'video' || ctx.nextStage.engine !== 'flow') throw Error('Invalid video context');",
+      "new": "  if (req.kind !== 'video' || typeof req.instruction !== 'string' || req.instruction.length < 1 || req.instruction.length > 700000 || /[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f\\x7f]/.test(req.instruction)) throw Error('Invalid video context');\n  if (req.operationId !== `${req.taskId}:${req.stageId}` || req.contextHash !== createHash('sha256').update(req.instruction).digest('hex') || typeof req.recoverOnly !== 'boolean') throw Error('Video context changed');\n  let ctx;\n  try { ctx = JSON.parse(req.instruction); } catch { throw Error('Invalid video context'); }\n  if (!ctx || typeof ctx !== 'object' || ctx.publish !== false || !ctx.nextStage || ctx.nextStage.id !== req.stageId || ctx.nextStage.kind !== 'video' || ctx.nextStage.engine !== 'flow' || typeof ctx.nextStage.instruction !== 'string' || ctx.nextStage.instruction.length < 1 || ctx.nextStage.instruction.length > 700000 || /[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f\\x7f]/.test(ctx.nextStage.instruction)) throw Error('Invalid video context');"
+    },
+    {
+      "file": "scripts/studio/flow-provider.cjs",
+      "old": "  let fd;\n  try { fd = fs.openSync(path.join(dir, 'flow-receipt.json'), fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW); }\n  catch (err) { if (err.code === 'ENOENT') return null; throw Error('Unreadable video receipt'); }\n  try {\n    const st = fs.fstatSync(fd);\n    if (!st.isFile() || st.size > 65536) throw Error('Unreadable video receipt');\n    const buf = Buffer.alloc(st.size);\n    fs.readSync(fd, buf, 0, st.size, 0);\n    const val = JSON.parse(buf.toString('utf8'));",
+      "new": "  const receiptPath = path.join(dir, 'flow-receipt.json');\n  let fd;\n  try { fd = fs.openSync(receiptPath, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW); }\n  catch (err) { if (err.code === 'ENOENT') return null; throw Error('Unreadable video receipt'); }\n  try {\n    const st = fs.fstatSync(fd);\n    const preSt = fs.lstatSync(receiptPath);\n    if (!st.isFile() || st.size > 65536 || preSt.isSymbolicLink() || preSt.dev !== st.dev || preSt.ino !== st.ino) throw Error('Unreadable video receipt');\n    const buf = Buffer.alloc(st.size);\n    if (fs.readSync(fd, buf, 0, st.size, 0) !== st.size) throw Error('Unreadable video receipt');\n    const postSt = fs.fstatSync(fd);\n    const postNameSt = fs.lstatSync(receiptPath);\n    if (postSt.size !== st.size || postSt.mtimeMs !== st.mtimeMs || postSt.dev !== st.dev || postSt.ino !== st.ino || postNameSt.isSymbolicLink() || postNameSt.dev !== st.dev || postNameSt.ino !== st.ino) throw Error('Unreadable video receipt');\n    const val = JSON.parse(buf.toString('utf8'));"
+    }
+  ],
+  "tests": [
+    "validateRequest accepts valid French accented characters in serialized instruction and nextStage.instruction",
+    "validateRequest accepts valid Arabic characters in serialized instruction and nextStage.instruction",
+    "validateRequest rejects actual C0 controls (e.g. \\x00, \\x08, \\x1f, \\x7f) in serialized instruction while allowing \\t, \\r, \\n",
+    "validateRequest validates bounded nonempty string for nextStage.instruction without excluding Unicode",
+    "validateRequest rejects non-string, empty, or oversized nextStage.instruction payloads",
+    "readLedger returns null on missing receipt (ENOENT) while rejecting unsafe directory and symlink paths",
+    "readLedger verifies fs.readSync returns exactly st.size bytes, rejecting truncated or partial reads",
+    "readLedger validates pre-read and post-read inode/name identity stability between file descriptor and receipt path",
+    "readLedger validates unchanged file size, mtimeMs, dev, and ino between pre-read and post-read fstat checks",
+    "flowProvider rejects uncertain ledger reads prior to spawning driver child process",
+    "All 11 adversarial tests pass with receipt and recovery guards intact"
+  ]
+}

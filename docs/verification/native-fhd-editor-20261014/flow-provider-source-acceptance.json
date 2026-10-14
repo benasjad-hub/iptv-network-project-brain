@@ -1,0 +1,24 @@
+{
+  "sourceOnly": true,
+  "productionEnabled": false,
+  "realTaskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+  "realTaskState": "review/waiting-for-tool",
+  "nativeGeneration": false,
+  "tests": {
+    "transport": 20,
+    "sqliteWorkerIntegration": 7,
+    "pass": 27,
+    "fail": 0,
+    "durationMs": 387.313837,
+    "limits": "Fake Python/ledger/header and mocked Google provider; no native video decode or download"
+  },
+  "originalWorkers": [
+    196,
+    197,
+    198,
+    199
+  ],
+  "rejectedInitialCases": 4,
+  "additionalUnicodeAndMandatoryIdentityFailuresCorrected": true,
+  "requiredNext": "Pinned native Flow runtime and ordinary download driver, actual verified ingest/app display"
+}

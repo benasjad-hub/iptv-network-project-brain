@@ -1,0 +1,12 @@
+```json
+{
+  "patches": [
+    {
+      "file": "scripts/studio/flow-provider.cjs",
+      "old": "  if ((result.operationId && result.operationId !== ledger.operationId) || (result.contextHash && result.contextHash !== ledger.contextHash)) throw Error('Video operation mismatch');",
+      "new": "  if (result.operationId !== ledger.operationId || result.contextHash !== ledger.contextHash) throw Error('Video operation mismatch');"
+    }
+  ],
+  "tests": []
+}
+```
