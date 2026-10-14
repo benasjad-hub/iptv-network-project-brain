@@ -1,0 +1,164 @@
+Here are the exact unique `BEFORE` / `AFTER` patches across the 3 files to resolve the three issues:
+
+---
+
+### 1. `scripts/studio/site-page-catalog.cjs`
+
+#### A. Reject multi-layer percent-encoded payloads exceeding limit in `hasForbiddenPath`
+
+**BEFORE:**
+```javascript
+    curr = decoded;
+  }
+
+  return false;
+}
+```
+
+**AFTER:**
+```javascript
+    curr = decoded;
+  }
+
+  if (curr.includes('%')) {
+    return true;
+  }
+
+  return false;
+}
+```
+
+#### B. Bound derived label to 200 characters in `deriveLabel`
+
+**BEFORE:**
+```javascript
+function deriveLabel(pathname, kind) {
+  if (kind === 'home' || pathname === '/') return 'Accueil';
+  const segments = pathname.split('/').filter(Boolean);
+  const last = segments[segments.length - 1] || '';
+  try {
+    const decoded = decodeURIComponent(last).replace(/[-_]+/g, ' ').trim();
+    if (decoded) return decoded.charAt(0).toUpperCase() + decoded.slice(1);
+  } catch {
+    // fallback to clean unescaped
+  }
+  const clean = last.replace(/[-_]+/g, ' ').trim();
+  return clean ? clean.charAt(0).toUpperCase() + clean.slice(1) : pathname;
+}
+```
+
+**AFTER:**
+```javascript
+function deriveLabel(pathname, kind) {
+  if (kind === 'home' || pathname === '/') return 'Accueil';
+  const segments = pathname.split('/').filter(Boolean);
+  const last = segments[segments.length - 1] || '';
+  let label = '';
+  try {
+    const decoded = decodeURIComponent(last).replace(/[-_]+/g, ' ').trim();
+    if (decoded) label = decoded.charAt(0).toUpperCase() + decoded.slice(1);
+  } catch {
+    // fallback to clean unescaped
+  }
+  if (!label) {
+    const clean = last.replace(/[-_]+/g, ' ').trim();
+    label = clean ? clean.charAt(0).toUpperCase() + clean.slice(1) : pathname;
+  }
+  return label.slice(0, 200);
+}
+```
+
+---
+
+### 2. `apps/panel/components/StudioSitePageCards.tsx`
+
+#### Remove duplicate clear button by setting `type="text"` and `role="searchbox"`
+
+**BEFORE:**
+```tsx
+            <input
+              id="site-page-search"
+              ref={searchInputRef}
+              type="search"
+              maxLength={200}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') e.preventDefault();
+              }}
+              placeholder="Rechercher par titre, chemin ou URL…"
+              className="w-full rounded-xl border border-line-strong bg-canvas py-2.5 pl-10 pr-9 text-sm text-ink placeholder:text-ink-faint focus:border-indigo focus:bg-surface focus:outline-none focus:ring-2 focus:ring-indigo/20"
+            />
+```
+
+**AFTER:**
+```tsx
+            <input
+              id="site-page-search"
+              ref={searchInputRef}
+              type="text"
+              role="searchbox"
+              maxLength={200}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') e.preventDefault();
+              }}
+              placeholder="Rechercher par titre, chemin ou URL…"
+              className="w-full rounded-xl border border-line-strong bg-canvas py-2.5 pl-10 pr-9 text-sm text-ink placeholder:text-ink-faint focus:border-indigo focus:bg-surface focus:outline-none focus:ring-2 focus:ring-indigo/20"
+            />
+```
+
+---
+
+### 3. `apps/panel/app/(app)/sites/[slug]/pages/page.tsx`
+
+#### Move `role="alert"` from canonical `Card` to inner DOM wrapper
+
+**BEFORE:**
+```tsx
+  if (!result.success) {
+    return (
+      <Card
+        role="alert"
+        className="p-5 text-sm text-ink-soft flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+      >
+        <span>
+          Le sitemap en ligne est actuellement indisponible sur{' '}
+          <span className="font-mono text-ink">https://{site.domain}/sitemap.xml</span>.
+        </span>
+        <a
+          href={`/sites/${site.slug}/pages`}
+          className="btn btn-secondary btn-sm shrink-0"
+        >
+          Réessayer
+        </a>
+      </Card>
+    );
+  }
+```
+
+**AFTER:**
+```tsx
+  if (!result.success) {
+    return (
+      <Card className="p-5 text-sm text-ink-soft">
+        <div
+          role="alert"
+          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+        >
+          <span>
+            Le sitemap en ligne est actuellement indisponible sur{' '}
+            <span className="font-mono text-ink">https://{site.domain}/sitemap.xml</span>.
+          </span>
+          <a
+            href={`/sites/${site.slug}/pages`}
+            className="btn btn-secondary btn-sm shrink-0"
+          >
+            Réessayer
+          </a>
+        </div>
+      </Card>
+    );
+  }
+```
