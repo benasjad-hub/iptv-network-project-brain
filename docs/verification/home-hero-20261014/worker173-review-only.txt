@@ -1,0 +1,252 @@
+# Architecture and Programming Review: GoalStream Home Six-Field Legacy Runtime
+
+> **Scope & Status**: Read-only source analysis of the GoalStream Home legacy runtime. No tools, no file modifications, and no deployments executed. The clone repository remains strictly closed and untouched. Visual publication adapters for ordinary Home/Page/Product remain open. This document represents pre-implementation architectural verification, not an acceptance claim or readiness certification.
+
+---
+
+## 1. Architectural Finding: Existing APIs vs. Authorized Design Change
+
+### Question
+*Do existing APIs truly allow a durable atomic writer/receipt for the six-field Home runtime, or is an authorized design change required?*
+
+### Assessment
+**An authorized design change is required to achieve a true, durable atomic writer receipt.** Under the current APIs and database schema, a caller cannot obtain an atomic receipt—it can only perform a post-hoc **state observation**. Claiming observation as receipt is architecturally false.
+
+```mermaid
+flowchart TD
+    subgraph Client["Writer Client"]
+        Op["Mutation Request\n(operationId, element, sourceHash)"]
+    end
+
+    subgraph CurrentSystem["Current System (Observation Only)"]
+        Gate["operationGate\n(In-memory busy flag)"] --> Save["documents.cjs: save()"]
+        Save --> CAS{"current.revision\n=== revision?"}
+        CAS -- Yes --> WriteDB["UPDATE documents\nINSERT document_revisions"]
+        CAS -- No --> ThrowErr["409 Error\n'Une autre modification...'"]
+        WriteDB --> ReadBack["read(site, id)\n(Returns state snapshot)"]
+    end
+
+    Op -.-> Gate
+    ReadBack -.->|"Observation (NOT Receipt)\nNo operationId / No element / No hash"| Op
+```
+
+### Technical Evidence in Supplied Source
+
+1. **Absence of Operation Identity & Receipt Storage in [`documents.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/documents.cjs)**:
+   - `documents` schema: `(id, site, path, kind, draft, published, revision, published_revision, updated_at)`.
+   - `document_revisions` schema: `(document_id, revision, content, action, actor, at)`.
+   - Neither table stores `operation_id`, `element_id`, `source_revision`, or `source_value_hash`.
+   - `save()` returns `read(site, id)`: this returns only the current document row with parsed JSON draft and published objects. It confirms *what* is in the table at that instant, not *which* operation produced it.
+
+2. **Whitelisting & Field Discard in [`content.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/content.cjs)**:
+   - [`validate(document)`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/content.cjs#L2-L28) strips all fields other than the 6 core keys (`title`, `description`, `body`, `image`, `buttonLabel`, `buttonUrl`) and optional SEO/schema keys.
+   - Any client metadata, operation tokens, or cryptographic receipt payloads passed into `document` are discarded prior to serialization.
+
+3. **In-Memory Concurrency Gate in [`operation.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/operation.cjs)**:
+   - [`operationGate`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/operation.cjs#L3-L11) is an ephemeral in-process boolean (`let busy = false`). It does not persist across process restarts, cannot coordinate across multiple node/worker instances, and maintains no ledger of past operations.
+
+4. **Ambiguity on Unknown Writes**:
+   - If an HTTP request or connection drops after `db.exec('COMMIT')` but before the response reaches the client, the client faces an **unknown write**.
+   - Because there is no operation ledger or transaction hash in `document_revisions`, a subsequent readback can only observe that revision incremented; it cannot cryptographically prove whether the increment was caused by this client's `operationId` or an interleaving writer with identical content.
+
+---
+
+## 2. Exact Contracts Against Supplied Files
+
+| File | Role | Exact Contract / Constraints |
+| :--- | :--- | :--- |
+| [`scripts/studio/documents.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/documents.cjs) | Storage & Document CAS Engine | <ul><li>`site`: `/^[a-z0-9][a-z0-9-]{0,79}$/` (matches `'goalstream'`).</li><li>`path`: `/^(?:[a-z0-9-]+\/)*[a-z0-9-]*$/` (matches `""` for Home).</li><li>`kind`: must be `'page'` (NEVER `'article'`).</li><li>`save()`: enforces CAS via `if (current.revision !== revision) throw ...`.</li><li>`restore()`: reverts draft only to an existing revision; never silently rolls back `published`.</li><li>`publicPage('goalstream', '')`: serves published content directly.</li></ul> |
+| [`scripts/studio/content.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/content.cjs) | Content Validation & Normalization | <ul><li>Enforces exactly 6 fields: `title` (1–200 trimmed), `description` ($\le 1000$), `body` ($\le 100000$), `image` ($\le 2000$), `buttonLabel` ($\le 1000$), `buttonUrl` ($\le 2000$).</li><li>Relative URLs must match `/^\/(?!\/)/`; absolute URLs must be HTTPS with no userinfo.</li><li>Silently drops all unapproved fields.</li></ul> |
+| [`apps/sites/lib/studio-runtime.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/apps/sites/lib/studio-runtime.cjs) | Server Transport Layer | <ul><li>`readStudioPage(site, path)`: requires `site` in `STUDIO_RUNTIME_SITES` and a valid `STUDIO_CONTENT_ORIGIN`.</li><li>Constructs `/api/studio/published/goalstream` (when path is `""`).</li><li>Validates returned content against [`content.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/content.cjs).</li><li>Outages fail closed to `null`.</li></ul> |
+| [`apps/sites/lib/studio-pages.ts`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/apps/sites/lib/studio-pages.ts) | React Server Component Cache | <ul><li>Exports `StudioPageContent` interface matching the 6 fields.</li><li>Wraps `readStudioPage` with React `cache()`.</li></ul> |
+| [`apps/panel/lib/studio-visual-site.ts`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/apps/panel/lib/studio-visual-site.ts) | Visual Article Binding (Inapplicable to Home) | <ul><li>Rejects non-article paths: `if (!isBlog && !isGuides) return undefined;`.</li><li>Home path `""` is strictly rejected; visual publication adapters for Home remain OPEN.</li></ul> |
+| [`scripts/studio/operation.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/operation.cjs) | Mutation Gate | <ul><li>[`operationGate(onBusy)`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/operation.cjs#L3-L11): Single-entry gate returning `false` synchronously if busy.</li><li>Keeps `busy = true` across the entire Promise execution.</li></ul> |
+| [`apps/panel/lib/studio-visual-publications.ts`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/apps/panel/lib/studio-visual-publications.ts) | Visual Publications Store (Inapplicable to Home) | <ul><li>Interacts exclusively with `visual-article-publications.sqlite`.</li><li>Must not be used for GoalStream Home six-field runtime.</li></ul> |
+
+---
+
+## 3. Explicit Enumeration of Unsupported Fields and Sites
+
+### Unsupported Fields for GoalStream Home
+- **Whole-page Replacements**: `wholeHTML`, `rawHtml`, `markup`, or arbitrary templates.
+- **Visual Block Trees**: Nested block grids, container nodes, widget hierarchies, section arrays.
+- **Article Metadata**: `author`, `slug`, `readingTime`, `category`, `tags`, `publishedAt`, `excerpt`.
+- **Relabeled Schemas**: Schema type `Article` (strictly disallowed for Home), `NewsArticle`, `BlogPosting`.
+- **Product-Specific Fields**: `price`, `sku`, `currency`, `inventory`, `variants`.
+- **Operational / Protocol Metadata**: `operationId`, `clientMutationId`, `elementId`, `sourceHash`, `receiptSignature` (all stripped by [`content.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/content.cjs)).
+- **Inline Scripts & Event Attributes**: `onClick`, `<script>`, `onload`, style objects.
+
+### Unsupported Sites
+- Any site other than `goalstream` (including unlisted sites or staging subdomains).
+- Fallback / generic aliases (`DEFAULT_SITE` bypass is explicitly prohibited).
+- Any site string failing `/^[a-z0-9][a-z0-9-]{0,79}$/` or absent from `STUDIO_RUNTIME_SITES`.
+
+---
+
+## 4. Smallest Next Implementation Slice (No Database Schema Changes)
+
+Without altering the SQLite schema, the maximum consistency guarantees achievable combine **pre-write binding verification**, **in-process serialization**, **strict CAS**, **status-only ambiguous write handling**, and **conditional rollback**.
+
+### Binding Tuple Specification
+Prior to mutation, the application layer binds:
+$$\text{Binding} = \langle \text{actor}, \text{documentId}, \text{element}, \text{sourceRevision}, \text{sourceValueHash}, \text{operationId} \rangle$$
+- `actor`: Authenticated owner identity (`requireOwner()`).
+- `documentId`: UUID of `goalstream` Home (`path = ''`, `kind = 'page'`).
+- `element`: Target field name $\in \{ \text{'title'}, \text{'description'}, \text{'body'}, \text{'image'}, \text{'buttonLabel'}, \text{'buttonUrl'} \}$.
+- `sourceRevision`: Integer revision from immediate pre-read.
+- `sourceValueHash`: SHA-256 digest of the element's existing draft content.
+- `operationId`: Ephemeral UUID generated per client write intent.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as Writer Client
+    participant H as Panel Handler (Next Slice)
+    participant G as operationGate
+    participant DB as SQLite (documents.cjs)
+
+    C->>H: Submit Mutation (operationId, element, sourceRevision, sourceValueHash, newValue)
+    H->>G: run(work)
+    alt Gate Busy
+        G-->>H: false
+        H-->>C: 409 Conflict (Mutation In-Flight)
+    else Gate Free
+        H->>DB: readPath('goalstream', '')
+        DB-->>H: current document snapshot
+        Note over H: Persist & Readback Identity Check:<br/>Verify current.revision == sourceRevision<br/>Verify hash(current[element]) == sourceValueHash
+        alt Check Fails
+            H-->>C: 409 Conflict (Source Mismatch / Stale Element)
+        else Check Passes
+            H->>DB: save('goalstream', id, sourceRevision, updatedDoc, actor, publish)
+            alt CAS Success
+                DB-->>H: updated snapshot (revision + 1)
+                H-->>C: 200 OK (Observation Result, Marked Uncertified)
+            else CAS Error (Revision advanced in DB)
+                DB-->>H: Error ('Une autre modification...')
+                H-->>C: 409 Conflict (CAS Violation)
+            end
+        end
+    end
+
+    Note over C,H: In Case of Network Drop / Unknown Write Status:
+    C->>H: Status Query (Check Identity / Revision)
+    H->>DB: readPath('goalstream', '')
+    DB-->>H: current document snapshot
+    H-->>C: Status-Only Report (NO Automatic Replay)
+```
+
+### Protocol Steps
+
+1. **Persist + Readback Identity Check**:
+   - Panel handler fetches the document via [`readPath('goalstream', '')`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/documents.cjs#L60-L63). If non-existent, initialize via `create('goalstream', '', 'page', defaultContent, actor)`.
+   - Readback confirms: `current.id === documentId`, `current.kind === 'page'`, `current.revision === sourceRevision`.
+   - Element verification: Compute SHA-256 of `current.draft[element]`. If digest $\neq$ `sourceValueHash`, abort with `409 Precondition Failed`.
+
+2. **Concurrency Serialization**:
+   - Wrap mutation in [`operationGate`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/operation.cjs#L3-L11). If gate returns `false`, immediately return `409 Conflict (Operation in Progress)`; never queue silently.
+
+3. **Atomic CAS Mutation**:
+   - Invoke [`save('goalstream', id, sourceRevision, nextContent, actor, publish)`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/documents.cjs#L43-L54).
+   - If SQLite encounters `current.revision !== revision`, transaction rolls back and throws `'Une autre modification a été enregistrée...'`.
+
+4. **Handling Unknown Writes (Status-Only, No Replay)**:
+   - If an error or transport timeout occurs during `save`, the client receives `504 Gateway Timeout` or `500 Unknown Status`.
+   - The client is prohibited from automatically re-sending the write.
+   - The client invokes a status-only inspection endpoint: `readPath('goalstream', '')`.
+   - If `current.revision === sourceRevision + 1` and `current.draft[element] === newValue`, report state as observed. This is marked explicitly as an *inferred observation*, not an authoritative receipt.
+
+5. **Conditional Rollback**:
+   - If a multi-field or post-validation task fails after draft saving, invoke [`restore('goalstream', id, expectedRevision, restoreRevision, actor)`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/documents.cjs#L55-L60).
+   - Reverts the draft safely by creating revision $R+1$ with historical content, leaving `published` untouched.
+
+---
+
+## 5. Concrete Adversarial Test Scenarios
+
+The following automated adversarial tests verify boundary integrity and fault isolation:
+
+### Test 1: Stale CAS Write Collision (Race Condition)
+- **Setup**: GoalStream Home document at revision `4`.
+- **Execution**:
+  - Process A reads revision `4`.
+  - Process B reads revision `4`.
+  - Process A executes `save('goalstream', id, 4, docA, 'actor-A')` $\to$ commits revision `5`.
+  - Process B executes `save('goalstream', id, 4, docB, 'actor-B')`.
+- **Expected Outcome**: Process B throws `'Une autre modification a été enregistrée. Rechargez la page avant de publier.'`. Database remains at revision `5` with `docA`.
+
+### Test 2: Unknown Write Replay Prevention
+- **Setup**: GoalStream Home at revision `2`.
+- **Execution**:
+  - Client initiates mutation with `operationId: "op-uuid-1"` to set `title = "New Title"`.
+  - Network connection is forcefully terminated immediately after SQLite commits.
+  - Client runner attempts automatic replay with the same payload and cached revision `2`.
+- **Expected Outcome**: Client-side contract catches the unknown write status and forces status inspection instead of replaying. If client blindly replays `save()` with revision `2`, CAS rejects it with `409`.
+
+### Test 3: Unapproved Field & `wholeHTML` Injection
+- **Setup**: Caller submits payload with valid 6 fields plus malicious extensions:
+  ```json
+  {
+    "title": "Legitimate Title",
+    "description": "Valid",
+    "body": "Valid body",
+    "image": "/images/valid.jpg",
+    "buttonLabel": "Click",
+    "buttonUrl": "/go",
+    "wholeHTML": "<html><script>steal()</script></html>",
+    "operationId": "op-spoof-99"
+  }
+  ```
+- **Execution**: Pass payload through [`validate()`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/content.cjs#L2) and persist via `save()`.
+- **Expected Outcome**: The output object strictly contains the 6 keys; `wholeHTML` and `operationId` are stripped. `readPath('goalstream', '')` confirms database has no trace of unauthorized fields.
+
+### Test 4: Relabeling Home as Article Rejection
+- **Setup**: GoalStream Home exists at `path = ''` with `kind = 'page'`.
+- **Execution**:
+  - Attempt to invoke [`prepareVisualSiteBinding`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/apps/panel/lib/studio-visual-site.ts#L10) with destination `path: ''` or `'/'`.
+  - Attempt to call `create('goalstream', '', 'article', ...)`.
+- **Expected Outcome**:
+  - `prepareVisualSiteBinding` returns `undefined` (because path is neither `blog/` nor `guides/`).
+  - Home remains strictly `kind: 'page'`.
+  - `publicArticles('goalstream')` returns empty array, proving Home is never mixed into article feeds.
+
+### Test 5: Re-entrant Lock Rejection via `operationGate`
+- **Setup**: An active async write holds the gate.
+- **Execution**:
+  ```js
+  const gate = operationGate(onBusy);
+  const p1 = gate(() => new Promise(resolve => setTimeout(resolve, 100)));
+  const p2 = gate(() => Promise.resolve());
+  ```
+- **Expected Outcome**: `p2` immediately returns `false` synchronously. Concurrent mutations are refused before touching the database.
+
+### Test 6: Site Regex and `DEFAULT_SITE` Bypass Attempt
+- **Setup**: Invocations with invalid site identifiers: `""`, `"DEFAULT_SITE"`, `"goalstream/../"`, `"goalstream;drop"`.
+- **Execution**: Pass into `create()` / `save()` in [`documents.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/documents.cjs) and `readStudioPage()` in [`studio-runtime.cjs`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/apps/sites/lib/studio-runtime.cjs).
+- **Expected Outcome**:
+  - `documents.cjs` throws `'Site ou adresse invalide'`.
+  - `studio-runtime.cjs` returns `null`.
+  - No fallback to a default site is executed.
+
+### Test 7: Element Hash Desynchronization Pre-Flight Failure
+- **Setup**: GoalStream Home `title` was changed by Actor A from `"Alpha"` to `"Beta"`, incrementing revision to `8`.
+- **Execution**: Actor B submits a mutation assuming `title` was `"Alpha"` (hash $H_{\text{Alpha}}$) targeting revision `7`.
+- **Expected Outcome**: Pre-flight assertion `hash(current.draft.title) === expectedHash` detects the divergence prior to `save()` invocation and aborts.
+
+---
+
+## 6. Actionable Implementation Plan (Smallest Next Slice)
+
+1. **Step 1: Formalize Panel Handler Pre-flight Validation**
+   - Bind `(actor, documentId, element, sourceRevision, sourceValueHash, operationId)` in memory at the entrypoint of the GoalStream Home editor endpoint.
+   - Enforce check against [`readPath('goalstream', '')`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/documents.cjs#L60-L63) before opening the gate.
+
+2. **Step 2: Wrap Write in `operationGate` & CAS Execution**
+   - Execute `save('goalstream', id, sourceRevision, validatedDoc, actor, publish)` inside [`operationGate`](file:///home/iptv/daoudstudio/state/agent-acceptance/google-worker-visual-inspector-20261013/workspace/scripts/studio/operation.cjs).
+   - If busy, return `409` immediately.
+
+3. **Step 3: Protocol Return Contract**
+   - Explicitly label response payload as an **unattested state observation** (`{ status: 'observed', revision: next, content: current.draft }`).
+   - Do not issue an operation receipt token until an authorized database schema change provides a durable transaction log.
+
+4. **Step 4: Status-Only Ambiguous Write Endpoint**
+   - Provide a read-only endpoint that verifies whether a given `(sourceRevision + 1, expectedValue)` was reached, disallowing client replay loops.
