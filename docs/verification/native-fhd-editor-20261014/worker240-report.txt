@@ -1,0 +1,22 @@
+{
+  "patches": [
+    {
+      "path": "scripts/studio/flow-runtime.py",
+      "old": "    def replace_prompt(self, *a, **kw):\n        check_cancel(self._cfg)\n        return self._raw.replace_prompt(*a, **kw)\n    def __getattr__(self, name):",
+      "new": "    def replace_prompt(self, *a, **kw):\n        check_cancel(self._cfg)\n        return self._raw.replace_prompt(*a, **kw)\n    def open_project(self, *a, **kw):\n        check_cancel(self._cfg)\n        return self._raw.open_project(*a, **kw)\n    def __getattr__(self, name):"
+    },
+    {
+      "path": "scripts/studio/flow-runtime.py",
+      "old": "                obs_mod = deps.get('observation_module') or load_sibling('flow_observation', 'flow-observation.py')\n                disp_mod = deps.get('display_module') or load_sibling('flow_display', 'flow-display.py')\n                ctrl_mod = deps.get('controller_module') or load_sibling('flow_controller', 'flow-controller.py')\n                if anchor is None:\n                    anchor, _ = obs_mod.capture_anchor(work_root)\n                check_cancel(cfg)\n                obs = ObserverWrapper(obs_mod.Observer(work_root, cli, home, anchor), cfg)\n                raw_factory = getattr(disp_mod, 'FlowDisplay', None) or getattr(disp_mod, 'Display', None) or getattr(disp_mod, 'display_factory', None)\n                if not raw_factory:\n                    raise ValueError('FlowDisplay export required')\n                disp = DisplayFactoryWrapper(raw_factory, cfg)",
+      "new": "                obs_mod = deps.get('observation_module') or load_sibling('flow_observation', 'flow-observation.py')\n                disp_mod = deps.get('display_module') or load_sibling('flow_display', 'flow-display.py')\n                ctrl_mod = deps.get('controller_module') or load_sibling('flow_controller', 'flow-controller.py')\n                raw_factory = getattr(disp_mod, 'FlowDisplay', None)\n                if not raw_factory:\n                    raise ValueError('FlowDisplay export required')\n                disp = DisplayFactoryWrapper(raw_factory, cfg)\n                with disp() as d:\n                    d.open_project(project)\n                time.sleep(0.5)\n                check_cancel(cfg)\n                anchor, _ = obs_mod.capture_anchor(work_root)\n                check_cancel(cfg)\n                obs = ObserverWrapper(obs_mod.Observer(work_root, cli, home, anchor), cfg)"
+    }
+  ],
+  "tests": [
+    "Verify that on absent-operation fresh preparation, open_project(project) is called on FlowDisplay before capture_anchor and Observer creation.",
+    "Verify that when anchor_path is passed in cfg, fresh preparation discards/replaces the supplied anchor with a newly captured anchor post-navigation.",
+    "Verify that starting from a historical /edit/<id> screen navigates to canonical project root first, preventing misidentification of detail OK button as profile.",
+    "Verify strict FlowDisplay ABI export requirement raises ValueError when display_module lacks FlowDisplay without attempting fallback names.",
+    "Verify cancellation checks in DisplayWrapper.open_project abort navigation immediately if cancel_callback returns True.",
+    "Verify existing ledger states (prepared, submission-attempted, completed) and recoverOnly requests bypass open_project and do not perform navigation."
+  ]
+}
