@@ -12,10 +12,12 @@ class Cases(unittest.TestCase):
   self.cli=self.root/'agy';self.cli.write_text('# unused fake CLI file');self.cli.chmod(0o700)
   self.anchor=self.root/'work'/'anchor.png';self.anchor.write_bytes(b'fixture anchor; no real PNG/native observation')
   self.cfg={'operation_root':self.root/'ops','media_root':self.root/'media','work_root':self.root/'work','anchor_path':self.anchor,'cli_path':REAL_META['cli'],'home_path':REAL_META['home'],'browser_lock':str(self.root/'browser.lock'),'project':PROJECT,'email':'qa@example.com','cancel_callback':lambda:False}
-  calls=self.calls
+  calls=self.calls;anchor=self.anchor
   class Obs:
    def __init__(self,*args):calls.append('observer')
-   def capture(self):calls.append('capture');return self.anchor,time.time()
+   def capture(self):calls.append('capture');return anchor,time.time()
+   def observe(self,file,captured,question,fields,**kwargs):
+    calls.append('observe');return {'frameHash':hashlib.sha256(file.read_bytes()).hexdigest(),'capturedAt':captured,'observation':{k:True for k in fields}}
   class Display:
    def __enter__(self):calls.append('display');return self
    def __exit__(self,*args):pass
@@ -24,7 +26,10 @@ class Cases(unittest.TestCase):
    with display() as d:d.click('close-profile',1007,146)
    r=op.prepare(project,email,{'model':'Omni 1.1 Flash','cost':12,'seconds':8,'height':720,'results':1,'balance':1050},time.time())
    return {'state':r['state'],'operationId':r['operationId'],'contextHash':r['contextHash'],'quotedCredits':12,'expiresAt':time.time()+180}
-  self.deps={'operation_module':opmod,'observation_module':types.SimpleNamespace(Observer=Obs),'display_module':types.SimpleNamespace(FlowDisplay=Display),'controller_module':types.SimpleNamespace(prepare=prepare)}
+  def fresh(record,digest):
+   if record['frameHash']!=digest or not 0<=time.time()-record['capturedAt']<=180:raise ValueError('Fixture record not fresh/matching')
+   return record['observation']
+  self.deps={'operation_module':opmod,'observation_module':types.SimpleNamespace(Observer=Obs,fresh_record=fresh),'display_module':types.SimpleNamespace(FlowDisplay=Display),'controller_module':types.SimpleNamespace(prepare=prepare)}
  def tearDown(self):self.tmp.cleanup()
  def req(self,extra=False,engine='flow'):
   ctx={'site':'fixture','originalInstruction':'one clip','completed':[],'nextStage':{'id':0,'kind':'video','engine':engine,'instruction':'one bounded video'},'publish':False}
