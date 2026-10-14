@@ -1,0 +1,13 @@
+{
+  "patches": [
+    {
+      "file": "apps/panel/components/StudioVisualEditor.tsx",
+      "old": "<p className=\"font-semibold\">Génération vidéo par flux privé</p>\n                          <p className=\"mt-0.5 text-[11px] leading-relaxed text-ink-soft\">\n                            La génération et le téléchargement via Flow s’exécutent de façon privée sur le serveur. Le résultat nécessite une revue approuvée avant toute application ou publication.\n                          </p>",
+      "new": "<p className=\"font-semibold\">Génération vidéo par flux privé</p>\n                          <p className=\"mt-0.5 text-[11px] leading-relaxed text-ink-soft\">\n                            Le worker vérifie la préparation du compte et de Flow ; une connexion absente affiche une mise en attente. Seul un résultat Google/Flow finalisé avec reçu vérifié peut être revu et appliqué, sans publication publique automatique.\n                          </p>"
+    }
+  ],
+  "tests": [
+    "pnpm --filter panel typecheck",
+    "pnpm --filter panel test"
+  ]
+}

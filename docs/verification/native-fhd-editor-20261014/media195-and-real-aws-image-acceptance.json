@@ -1,0 +1,56 @@
+{
+  "recordedAt": "2026-10-14T07:37:00.377Z",
+  "sourceScope": "Only StudioVisualEditor plus QA and UX/docs; original source/engine/proposal guards/queue/server auth untouched",
+  "worker192": {
+    "elapsedSeconds": 111.197,
+    "denied": 0,
+    "patches": 2
+  },
+  "worker193": {
+    "elapsedSeconds": 140.019,
+    "denied": 0,
+    "patches": 2
+  },
+  "worker194": {
+    "elapsedSeconds": 108.052,
+    "denied": 0,
+    "patches": 4,
+    "transport": "Unescaped JSX quotes repaired mechanically in JSON only; code old/new literals retained, four unique preimage checks. Initial dependent QA setup did not execute before repair."
+  },
+  "worker195": {
+    "elapsedSeconds": 38.503,
+    "denied": 0,
+    "patches": 1,
+    "copy": "Conditional readiness wording; unproven Flow readiness never promised"
+  },
+  "actualReactChromiumCases": {
+    "pass": 21,
+    "fail": 0,
+    "durationMs": 8335.56154,
+    "boundaries": "explicit mocked server/API/storage/auth/provider"
+  },
+  "importedTypeScriptDiagnostics": 0,
+  "flowApplyGuardSuites": {
+    "files": 2,
+    "fail": 0,
+    "adversarialMutations": 18,
+    "nativeProof": false
+  },
+  "realAwsImage": {
+    "taskId": "ee25302d-f133-405c-a47b-f58229bbeb7c",
+    "fieldId": "a26309",
+    "generationRevision": 4,
+    "savedRevision": 5,
+    "generationSeconds": 96.35,
+    "publishOperation": "fce49265-45f6-4cb0-8ac4-12360af73082",
+    "publishSeconds": 11.042,
+    "rollbackOperation": "e3592156-a2c0-4995-9bf9-c6987db08860",
+    "rollbackRevision": 6,
+    "rollbackSeconds": 5.1,
+    "currentPublicByteIdenticalOriginal": true,
+    "retainedPrivateImageRevision": 5,
+    "assetRetained": true
+  },
+  "nativeVideoDocumentsFound": 0,
+  "wholeAppReady": false
+}

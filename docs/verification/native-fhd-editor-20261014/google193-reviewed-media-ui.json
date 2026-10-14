@@ -1,0 +1,18 @@
+{
+  "patches": [
+    {
+      "file": "apps/panel/components/StudioVisualEditor.tsx",
+      "old": "    for (const { el, isVideo } of mediaItems) {\n      const fieldId = el.dataset.studioField;\n      if (!fieldId) continue;\n\n      const btn = doc.createElement('button');",
+      "new": "    for (const { el, isVideo } of mediaItems) {\n      const fieldId = el.dataset.studioField;\n      if (!fieldId) continue;\n      const field = pageRef.current?.fields.find((f) => f.id === fieldId);\n      if (!field || field.kind !== (isVideo ? 'video' : 'image')) continue;\n\n      const btn = doc.createElement('button');"
+    },
+    {
+      "file": "apps/panel/components/StudioVisualEditor.tsx",
+      "old": "                          <button\n                            type=\"button\"\n                            className=\"btn btn-primary btn-sm mt-2.5 h-auto max-w-full gap-1.5 whitespace-normal py-1.5 text-center\"\n                            disabled={pending || isVisualMutationBlocked}\n                            onClick={save}\n                          >\n                            {pending ? <Loader2 size={13} className=\"animate-spin shrink-0\" /> : <Save size={13} className=\"shrink-0\" />}\n                            <span>Enregistrer le brouillon d’abord</span>\n                          </button>",
+      "new": "                          <button\n                            type=\"button\"\n                            className=\"btn btn-primary btn-sm mt-2.5 h-auto w-full min-w-0 max-w-full gap-1.5 whitespace-normal py-1.5 text-center\"\n                            disabled={pending || isVisualMutationBlocked}\n                            onClick={save}\n                          >\n                            {pending ? <Loader2 size={13} className=\"animate-spin shrink-0\" /> : <Save size={13} className=\"shrink-0\" />}\n                            <span className=\"min-w-0 whitespace-normal\">Enregistrer le brouillon d’abord</span>\n                          </button>"
+    }
+  ],
+  "tests": [
+    "pnpm --filter panel test",
+    "pnpm test"
+  ]
+}
