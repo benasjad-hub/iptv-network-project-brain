@@ -1,0 +1,19 @@
+{
+  "patches": [
+    {
+      "path": "antigravity-acceptance.py",
+      "old": "def run(cli, home, work, prompt, extra=(), timeout=100, model='gemini-3.1-pro-high'):\n    if type(model) is not str or model not in ('gemini-3.1-pro-high', 'gemini-3.8-flash-medium'):\n        raise ValueError('Invalid model')",
+      "new": "def run(cli, home, work, prompt, extra=(), timeout=100, model='gemini-3.1-pro-high', print_timeout=None):\n    if type(model) is not str or model not in ('gemini-3.1-pro-high', 'gemini-3.8-flash-medium', 'gemini-3.8-flash-low'):\n        raise ValueError('Invalid model')\n    if print_timeout is not None and (type(print_timeout) is not int or type(print_timeout) is bool or print_timeout != 0):\n        raise ValueError('Invalid print timeout')\n    print_limit = str(timeout - 10) + 's' if print_timeout is None else '0'"
+    },
+    {
+      "path": "antigravity-acceptance.py",
+      "old": "            '--print-timeout', str(timeout - 10) + 's', *extra]",
+      "new": "            '--print-timeout', print_limit, *extra]"
+    },
+    {
+      "path": "flow-observation.py",
+      "old": "        result = original.run(self.cli, self.home, self.work, prompt, timeout=timeout, model='gemini-3.8-flash-medium')",
+      "new": "        result = original.run(self.cli, self.home, self.work, prompt, timeout=timeout, model='gemini-3.8-flash-low', print_timeout=0)"
+    }
+  ]
+}

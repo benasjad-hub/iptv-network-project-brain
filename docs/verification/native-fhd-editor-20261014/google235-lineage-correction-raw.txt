@@ -1,0 +1,14 @@
+{
+  "patches": [
+    {
+      "path": "scripts/studio/flow-lineage.py",
+      "old": "    for d in (inst_obj, ns):\n        if 'kind' in d and d['kind'] != 'video':\n            raise ValueError('kind must be video')\n        if 'engine' in d and d['engine'] != 'flow':\n            raise ValueError('engine must be flow')\n        stg = d.get('stageId', d.get('stage'))\n        if stg is not None and stg != getattr(op, 'stage_id', None):\n            raise ValueError('stageId mismatch')\n        if 'publish' in d and (d['publish'] is not False or type(d['publish']) is not bool):\n            raise ValueError('publish must be False')\n    k = inst_obj.get('kind', ns.get('kind'))\n    eng = inst_obj.get('engine', ns.get('engine'))\n    stg = inst_obj.get('stageId', inst_obj.get('stage', ns.get('stageId', ns.get('stage'))))\n    pub = inst_obj.get('publish', ns.get('publish'))\n    if k != 'video' or eng != 'flow' or stg != getattr(op, 'stage_id', None) or pub is not False or type(pub) is not bool:\n        raise ValueError('Instruction contract violated')",
+      "new": "    stage_id = getattr(op, 'stage_id', None)\n    if (\n        not isinstance(next_inst, str)\n        or not next_inst\n        or inst_obj.get('publish') is not False\n        or type(inst_obj.get('publish')) is not bool\n        or ns.get('kind') != 'video'\n        or ns.get('engine') != 'flow'\n        or type(ns.get('id')) is not int\n        or type(ns.get('id')) is bool\n        or type(stage_id) is not int\n        or type(stage_id) is bool\n        or ns.get('id') != stage_id\n    ):\n        raise ValueError('Instruction contract violated')"
+    },
+    {
+      "path": "scripts/studio/flow-lineage.py",
+      "old": "    if not os.path.lexists(p):\n        alt = p.parent / 'flow-lineage.json'\n        if os.path.lexists(alt):\n            p = alt\n        else:\n            return None",
+      "new": "    if not os.path.lexists(p):\n        return None"
+    }
+  ]
+}
