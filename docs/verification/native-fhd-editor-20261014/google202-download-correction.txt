@@ -1,0 +1,19 @@
+```json
+{
+  "patches": [
+    {
+      "file": "scripts/studio/flow-download.py",
+      "old": "    if sub.get('accountId') != account_id:\n        raise ValueError('Account mismatch')",
+      "new": "    if cur.get('accountId') != account_id or sub.get('accountId') != account_id:\n        raise ValueError('Account mismatch')"
+    },
+    {
+      "file": "scripts/studio/flow-download.py",
+      "old": "        data = res.get('data')\n        if not isinstance(data, dict) or data.get('url') != f\"/studio-media/{sub['assetName']}\":\n            raise ValueError('Invalid media URL in receipt')\n        return op.recover()",
+      "new": "        data = res.get('data')\n        if not isinstance(data, dict) or data.get('url') != f\"/studio-media/{sub['assetName']}\":\n            raise ValueError('Invalid media URL in receipt')\n        if data.get('provider') != 'google-flow' or data.get('verified') is not True:\n            raise ValueError('Receipt verification mismatch')\n        v_func = _get_verify_video()\n        verified = v_func(str(m_path), f\"/studio-media/{sub['assetName']}\", not_before=cur['submittedAt'])\n        if not isinstance(verified, dict):\n            raise ValueError('Invalid verification result')\n        for k in ('url', 'hash', 'bytes', 'dimensions', 'seconds', 'provider', 'verified'):\n            if k not in verified:\n                raise ValueError('Receipt metadata mismatch')\n            v_val, d_val = verified[k], data.get(k)\n            if k == 'dimensions' and isinstance(v_val, (list, tuple)) and isinstance(d_val, (list, tuple)):\n                if list(v_val) != list(d_val):\n                    raise ValueError('Receipt metadata mismatch')\n            elif v_val != d_val:\n                raise ValueError('Receipt metadata mismatch')\n        return op.recover()"
+    }
+  ],
+  "tests": [
+    "pytest"
+  ]
+}
+```

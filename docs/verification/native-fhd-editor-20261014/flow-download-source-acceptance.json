@@ -1,0 +1,24 @@
+{
+  "sourceOnly": true,
+  "nativeGeneration": false,
+  "nativeChromeDownload": false,
+  "productionEnabled": false,
+  "tests": {
+    "count": 20,
+    "pass": 20,
+    "fail": 0,
+    "seconds": 4.763,
+    "actualFfprobeFfmpeg": true,
+    "source": "synthetic8s1280x720MP4",
+    "actualGoogle": false
+  },
+  "originalWorkers": [
+    200,
+    201,
+    202,
+    203
+  ],
+  "durableReopenKeepsSameAsset": true,
+  "coreOperationUnchanged": true,
+  "remaining": "native runtime driver/browser download witness then existing app task acceptance"
+}

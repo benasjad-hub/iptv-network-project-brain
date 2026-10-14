@@ -1,0 +1,27 @@
+{
+  "privateOnly": true,
+  "productionEnabled": false,
+  "worker": 200,
+  "elapsedSeconds": 204.554,
+  "deniedActions": 0,
+  "tests": {
+    "count": 16,
+    "pass": 13,
+    "fail": 3,
+    "seconds": 3.006,
+    "realSyntheticMp4Decode": true,
+    "actualGoogleGeneration": false
+  },
+  "failures": [
+    "corrupt ledger assetName wrote outside media before error (inside isolated temp fixture only)",
+    "invalid download timestamp accepted",
+    "completed recovery ignored changed account"
+  ],
+  "reviewRejection": [
+    "duplicated immutable Operation and verify_video instead of importing original",
+    "unchecked single os.write and missing directory fsync/source-copy hash binding"
+  ],
+  "correctionWorker": 201,
+  "correctionState": "building",
+  "realTaskUnchanged": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745"
+}

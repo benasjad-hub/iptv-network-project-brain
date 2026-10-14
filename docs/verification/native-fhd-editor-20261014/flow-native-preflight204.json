@@ -1,0 +1,22 @@
+{
+  "originalWorker": 204,
+  "elapsedSeconds": 93.849,
+  "nativeProject": "93a089fa-6105-47ce-bf4c-42c5561b3b41",
+  "nativeAccountEmail": "bendaoud.fst3@gmail.com",
+  "explicitVisibleCredits": 1050,
+  "accountSnapshotUnix": 1791970528,
+  "generationExecuted": false,
+  "newProject": false,
+  "accountSwitched": false,
+  "purchase": false,
+  "operatorPreflightOnly": true,
+  "automatedTaskAccepted": false,
+  "modelQuoteStillUnverified": true,
+  "transportTests": {
+    "new": 3,
+    "related": 5,
+    "allPass": true
+  },
+  "actualTaskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+  "actualTaskResumed": false
+}

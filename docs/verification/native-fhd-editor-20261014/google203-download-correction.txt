@@ -1,0 +1,14 @@
+```json
+{
+  "patches": [
+    {
+      "file": "scripts/studio/flow-download.py",
+      "old": "        for k in ('url', 'hash', 'bytes', 'dimensions', 'seconds', 'provider', 'verified'):",
+      "new": "        for k in ('provider', 'verified', 'url', 'sha256', 'bytes', 'width', 'height', 'seconds'):"
+    }
+  ],
+  "tests": [
+    "pytest"
+  ]
+}
+```

@@ -1,0 +1,96 @@
+{
+  "patches": [
+    {
+      "file": "scripts/studio/flow-display.py",
+      "old": "import os\nimport pathlib",
+      "new": "import os\nimport pathlib\nimport uuid"
+    },
+    {
+      "file": "scripts/studio/flow-display.py",
+      "old": "    REGIONS = {\n        'profile': (970, 110, 1030, 170),\n        'close-profile': (970, 120, 1040, 175),\n        'prompt': (265, 730, 850, 815),\n        'video-settings': (645, 815, 815, 870),\n        'generate': (805, 805, 870, 880),\n    }",
+      "new": "    REGIONS = {\n        'profile': (970, 110, 1030, 170),\n        'close-profile': (970, 120, 1040, 175),\n        'prompt': (265, 730, 850, 815),\n        'video-settings': (645, 815, 815, 870),\n        'generate': (805, 805, 870, 880),\n        'translate-close': (920, 98, 963, 130),\n        'restore-banner-close': (1004, 103, 1043, 135),\n    }"
+    },
+    {
+      "file": "scripts/studio/flow-display.py",
+      "old": "            self.socket.sendall(struct.pack('>BBHI', 4, 1, 0, keysym))\n            time.sleep(0.01)\n            self.socket.sendall(struct.pack('>BBHI', 4, 0, 0, keysym))\n            time.sleep(0.02)\n\n    def close(self):",
+      "new": "            self.socket.sendall(struct.pack('>BBHI', 4, 1, 0, keysym))\n            time.sleep(0.01)\n            self.socket.sendall(struct.pack('>BBHI', 4, 0, 0, keysym))\n            time.sleep(0.02)\n\n    def open_project(self, project):\n        if not isinstance(project, str):\n            raise ValueError('Canonical lowercase project UUID required')\n        try:\n            parsed = uuid.UUID(project)\n        except (ValueError, AttributeError, TypeError):\n            raise ValueError('Canonical lowercase project UUID required')\n        if str(parsed) != project:\n            raise ValueError('Canonical lowercase project UUID required')\n        url = f'https://flow.google.com/project/{project}'\n        self.socket.sendall(b''.join(struct.pack('>BBHI', 4, int(down), 0, key) for key, down in [(0xffe3, True), (ord('l'), True), (ord('l'), False), (0xffe3, False)]))\n        time.sleep(0.1)\n        for character in url:\n            point = ord(character)\n            keysym = point if point <= 255 else 0x01000000 | point\n            self.socket.sendall(struct.pack('>BBHI', 4, 1, 0, keysym))\n            time.sleep(0.01)\n            self.socket.sendall(struct.pack('>BBHI', 4, 0, 0, keysym))\n            time.sleep(0.02)\n        self.socket.sendall(struct.pack('>BBHI', 4, 1, 0, 0xff0d))\n        time.sleep(0.01)\n        self.socket.sendall(struct.pack('>BBHI', 4, 0, 0, 0xff0d))\n        time.sleep(0.2)\n\n    def close(self):"
+    }
+  ],
+  "tests": [
+    {
+      "name": "test_preflight_ordinary_ui_controls_bounds",
+      "description": "Verifies translate-close (920..963 x 98..130) and restore-banner-close (1004..1043 x 103..135) bounding boxes and boundary guards.",
+      "cases": [
+        {"role": "translate-close", "x": 945, "y": 113, "expect": "valid"},
+        {"role": "translate-close", "x": 920, "y": 98, "expect": "valid"},
+        {"role": "translate-close", "x": 963, "y": 130, "expect": "valid"},
+        {"role": "translate-close", "x": 919, "y": 113, "expect": "ValueError"},
+        {"role": "translate-close", "x": 964, "y": 113, "expect": "ValueError"},
+        {"role": "translate-close", "x": 945, "y": 97, "expect": "ValueError"},
+        {"role": "translate-close", "x": 945, "y": 131, "expect": "ValueError"},
+        {"role": "restore-banner-close", "x": 1026, "y": 120, "expect": "valid"},
+        {"role": "restore-banner-close", "x": 1004, "y": 103, "expect": "valid"},
+        {"role": "restore-banner-close", "x": 1043, "y": 135, "expect": "valid"},
+        {"role": "restore-banner-close", "x": 1003, "y": 120, "expect": "ValueError"},
+        {"role": "restore-banner-close", "x": 1044, "y": 120, "expect": "ValueError"},
+        {"role": "restore-banner-close", "x": 1026, "y": 102, "expect": "ValueError"},
+        {"role": "restore-banner-close", "x": 1026, "y": 136, "expect": "ValueError"},
+        {"role": "generate", "action": "click", "expect": "ValueError('Use the durable quoted generation gate')"}
+      ]
+    },
+    {
+      "name": "test_adversarial_uuid_and_injection_refusal",
+      "description": "Ensures open_project rejects non-string inputs, uppercase/braced/urn UUIDs, full URLs, paths, queries, fragments, commands, and arbitrary text.",
+      "cases": [
+        {"input": None, "expect": "ValueError"},
+        {"input": 12345678, "expect": "ValueError"},
+        {"input": "", "expect": "ValueError"},
+        {"input": "a0b1c2d3-e4f5-6789-abcd-ef0123456789".upper(), "expect": "ValueError"},
+        {"input": "{a0b1c2d3-e4f5-6789-abcd-ef0123456789}", "expect": "ValueError"},
+        {"input": "urn:uuid:a0b1c2d3-e4f5-6789-abcd-ef0123456789", "expect": "ValueError"},
+        {"input": "a0b1c2d3e4f56789abcdef0123456789", "expect": "ValueError"},
+        {"input": "a0b1c2d3-e4f5-6789-abcd-ef012345678", "expect": "ValueError"},
+        {"input": "a0b1c2d3-e4f5-6789-abcd-ef01234567890", "expect": "ValueError"},
+        {"input": "https://flow.google.com/project/a0b1c2d3-e4f5-6789-abcd-ef0123456789", "expect": "ValueError"},
+        {"input": "http://evil.com/a0b1c2d3-e4f5-6789-abcd-ef0123456789", "expect": "ValueError"},
+        {"input": "a0b1c2d3-e4f5-6789-abcd-ef0123456789?debug=1", "expect": "ValueError"},
+        {"input": "a0b1c2d3-e4f5-6789-abcd-ef0123456789#hash", "expect": "ValueError"},
+        {"input": "a0b1c2d3-e4f5-6789-abcd-ef0123456789\n", "expect": "ValueError"},
+        {"input": "a0b1c2d3-e4f5-6789-abcd-ef0123456789;rm -rf /", "expect": "ValueError"},
+        {"input": "../../etc/passwd", "expect": "ValueError"},
+        {"input": "javascript:alert(1)", "expect": "ValueError"}
+      ]
+    },
+    {
+      "name": "test_exact_fixed_https_key_sequence",
+      "description": "Verifies that open_project emits strictly: Ctrl+L focus, paced Unicode characters for https://flow.google.com/project/<uuid>, and exactly one Return (0xff0d).",
+      "cases": [
+        {
+          "project": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "constructed_url": "https://flow.google.com/project/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "initial_key_sequence": [
+            {"keysym": 65507, "keysym_hex": "0xffe3", "down": 1, "description": "Ctrl_L down"},
+            {"keysym": 108, "keysym_hex": "0x006c", "down": 1, "description": "'l' down"},
+            {"keysym": 108, "keysym_hex": "0x006c", "down": 0, "description": "'l' up"},
+            {"keysym": 65507, "keysym_hex": "0xffe3", "down": 0, "description": "Ctrl_L up"}
+          ],
+          "body_key_sequence": "paced character pairs (down=1, up=0) matching exact ord(c) for all 68 characters in 'https://flow.google.com/project/3fa85f64-5717-4562-b3fc-2c963f66afa6'",
+          "terminal_key_sequence": [
+            {"keysym": 65293, "keysym_hex": "0xff0d", "down": 1, "description": "Return down"},
+            {"keysym": 65293, "keysym_hex": "0xff0d", "down": 0, "description": "Return up"}
+          ],
+          "disallowed_keys_guarantee": "No arbitrary shortcuts, tabs, alt keys, functional keys, or non-Return controls permitted."
+        }
+      ]
+    },
+    {
+      "name": "test_no_authorization_claim_from_transport",
+      "description": "Confirms open_project has no generation authorization side-effects, does not create GenerationPermit, and does not claim proof of project ownership without fresh observation.",
+      "assertions": [
+        "open_project only sends RFB keyboard events to address bar; returns None.",
+        "generate_once requires an explicit, fresh (<180s) GenerationPermit and unlinked absolute attempt_file.",
+        "Caller must observe Flow home preflight controls, navigate, observe post-navigation frame, and generate new pinned observer anchor; old anchor never reused."
+      ]
+    }
+  ]
+}
