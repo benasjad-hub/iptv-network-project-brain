@@ -1,0 +1,42 @@
+An exact, minimal BEFORE/AFTER patch to [`Hero.tsx`](file:///apps/sites/designs/goalstream/components/home/Hero.tsx) that addresses only this side effect:
+
+### Patch to `apps/sites/designs/goalstream/components/home/Hero.tsx`
+
+```tsx
+<<<< BEFORE
+import type { MatchDuJour } from '../../lib/fixtures';
+import type { StudioPageContent } from '../../../../lib/studio-pages';
+
+export function Hero({
+==== AFTER
+import type { MatchDuJour } from '../../lib/fixtures';
+import type { StudioPageContent } from '../../../../lib/studio-pages';
+
+const DEFAULT_HEADING_TEXT = 'Abonnement IPTV premium : tout le sport en 4K, sans coupure';
+const normalizeHeading = (s: string) => s.replace(/[\s\u00a0]+/g, ' ').trim();
+
+export function Hero({
+>>>>
+```
+
+```tsx
+<<<< BEFORE
+          <h1 className="font-display text-4xl leading-tight md:text-6xl">
+            {content ? content.title : <>Abonnement IPTV premium&nbsp;: tout le sport en 4K,{' '}
+            <span className="text-neon">sans coupure</span></>}
+          </h1>
+==== AFTER
+          <h1 className="font-display text-4xl leading-tight md:text-6xl">
+            {content?.title &&
+            normalizeHeading(content.title) !== normalizeHeading(DEFAULT_HEADING_TEXT)
+              ? content.title
+              : <>Abonnement IPTV premium&nbsp;: tout le sport en 4K,{' '}
+            <span className="text-neon">sans coupure</span></>}
+          </h1>
+>>>>
+```
+
+### Key Details
+- **Preserved Default Fragment**: When `content` is absent or `content.title` is semantically equivalent to the original default heading (normalizing runs of spaces and `\u00a0` via `replace(/[\s\u00a0]+/g, ' ').trim()`, keeping case and punctuation intact), the byte-identical original decorated JSX fragment containing `<span className="text-neon">sans coupure</span>` is returned.
+- **Custom Titles**: Explicitly altered titles evaluate the condition to `true`, rendering plain escaped text within the same `<h1>` typography.
+- **Scope & API**: Props, component signatures, downstream layout elements (countdown, video, WhatsApp CTA, match list, etc.), and all other site components remain unchanged.

@@ -1,0 +1,1 @@
+Original Google172 exact two-patch acceptance. Actual SSR baseline2/2, final6/0; Next imported graph0. Explicit mocks; no native/public acceptance. Run product test with STUDIO_QA_ESBUILD and STUDIO_QA_PANEL_MODULES pointing to installed locked esbuild/React dependency roots. No server started. No rollout.
