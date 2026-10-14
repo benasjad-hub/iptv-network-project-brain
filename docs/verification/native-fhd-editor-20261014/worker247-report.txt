@@ -1,0 +1,1 @@
+{"patches":[{"path":"scripts/studio/flow-display.py","old":"        'existing-result-preview': (260, 170, 401, 425),\n        'result-download-control': (675, 120, 705, 150),","new":"        'existing-result-preview': (260, 170, 401, 425),\n        'existing-result-secondary-preview': (415, 170, 555, 425),\n        'result-download-control': (675, 120, 705, 150),"}]}
