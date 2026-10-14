@@ -1,0 +1,239 @@
+### 1. `scripts/studio/site-page-catalog.cjs`
+
+*Preserved unchanged: foundation guards, publication/auth guards, 2-argument strict exact-domain behavior, and `resolveTrustedHostAliases` (deriving candidate host aliases) remain intact.*
+
+```diff
+// scripts/studio/site-page-catalog.cjs
+// Unchanged: retains legitimate behavior, foundation guards, and resolveTrustedHostAliases deriving string[] hosts.
+```
+
+---
+
+### 2. `apps/panel/components/StudioSitePageCards.tsx`
+
+```tsx
+// BEFORE
+export interface StudioSitePageCardsProps {
+  site: Pick<Site, 'slug' | 'domain' | 'name'>;
+  pages: SitePageEntry[];
+  trustedAliases?: string[];
+}
+```
+
+```tsx
+// AFTER
+export interface StudioSitePageCardsProps {
+  site: Pick<Site, 'slug' | 'domain' | 'name'>;
+  pages: SitePageEntry[];
+  trustedAliases?: {
+    siteSlug: string;
+    domain: string;
+    hosts: string[];
+  };
+}
+```
+
+```tsx
+// BEFORE
+  const safePages = useMemo(() => {
+    if (!hasDomain || !site.domain) return [];
+    const list = Array.isArray(pages) ? pages : [];
+    const clientValidatedAliases = validateHostAliases(site.domain, trustedAliases);
+    return list.filter((p) =>
+      isCanonicalSitePageEntry(p, site.domain, clientValidatedAliases)
+    );
+  }, [pages, site.domain, hasDomain, trustedAliases]);
+```
+
+```tsx
+// AFTER
+  const safePages = useMemo(() => {
+    if (!hasDomain || !site.domain) return [];
+    const list = Array.isArray(pages) ? pages : [];
+
+    let matchedHosts: string[] = [];
+    if (
+      trustedAliases &&
+      typeof trustedAliases === 'object' &&
+      !Array.isArray(trustedAliases) &&
+      typeof trustedAliases.siteSlug === 'string' &&
+      typeof trustedAliases.domain === 'string' &&
+      Array.isArray(trustedAliases.hosts) &&
+      trustedAliases.siteSlug === site.slug &&
+      trustedAliases.domain === site.domain
+    ) {
+      matchedHosts = trustedAliases.hosts;
+    }
+
+    const clientValidatedAliases = validateHostAliases(site.domain, matchedHosts);
+    return list.filter((p) =>
+      isCanonicalSitePageEntry(p, site.domain, clientValidatedAliases)
+    );
+  }, [pages, site.domain, site.slug, hasDomain, trustedAliases]);
+```
+
+---
+
+### 3. `apps/panel/app/(app)/sites/[slug]/pages/page.tsx`
+
+```tsx
+// BEFORE
+  const trustedAliases = resolveTrustedHostAliases(
+    site.domain,
+    site.slug,
+    HOST_TO_SITE
+  );
+  const result = await fetchLiveSitemapPages(site.domain, trustedAliases);
+
+  if (!result.success) {
+// ...
+        <StudioSitePageCards
+          site={{
+            slug: site.slug,
+            domain: site.domain,
+            name: site.name,
+          }}
+          pages={pages}
+          trustedAliases={trustedAliases}
+        />
+```
+
+```tsx
+// AFTER
+  const trustedHosts = resolveTrustedHostAliases(
+    site.domain,
+    site.slug,
+    HOST_TO_SITE
+  );
+  const result = await fetchLiveSitemapPages(site.domain, trustedHosts);
+
+  if (!result.success) {
+// ...
+        <StudioSitePageCards
+          site={{
+            slug: site.slug,
+            domain: site.domain,
+            name: site.name,
+          }}
+          pages={pages}
+          trustedAliases={{
+            siteSlug: site.slug,
+            domain: site.domain,
+            hosts: trustedHosts,
+          }}
+        />
+```
+
+---
+
+### 4. `tests/site-page-catalog-aliases.test.cjs` (Corrected Test Blocks)
+
+#### Case 1: Lexicographical sort with path-based lookup
+
+```javascript
+// BEFORE
+  test('1. actual registered www alias accepted', () => {
+    const domain = 'vikingiptv.tv';
+    const siteSlug = 'vikingiptvtv';
+    const resolvedAliases = resolveTrustedHostAliases(domain, siteSlug, MOCK_HOST_TO_SITE);
+    assert.deepEqual(resolvedAliases, ['www.vikingiptv.tv']);
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <loc>https://www.vikingiptv.tv/</loc>
+  <loc>https://www.vikingiptv.tv/tarifs</loc>
+  <loc>https://www.vikingiptv.tv/guides/installation</loc>
+</urlset>`;
+
+    const pages = normalizeSitemapUrls(xml, domain, resolvedAliases);
+    assert.equal(pages.length, 3);
+    assert.equal(pages[0].url, 'https://www.vikingiptv.tv/');
+    assert.equal(pages[0].path, '/');
+    assert.equal(pages[0].kind, 'home');
+    assert.equal(pages[1].url, 'https://www.vikingiptv.tv/tarifs');
+    assert.equal(pages[1].path, '/tarifs');
+    assert.equal(pages[2].url, 'https://www.vikingiptv.tv/guides/installation');
+    assert.equal(pages[2].path, '/guides/installation');
+    assert.equal(pages[2].kind, 'article');
+
+    for (const page of pages) {
+      assert.equal(isCanonicalSitePageEntry(page, domain, resolvedAliases), true);
+    }
+  });
+```
+
+```javascript
+// AFTER
+  test('1. actual registered www alias accepted', () => {
+    const domain = 'vikingiptv.tv';
+    const siteSlug = 'vikingiptvtv';
+    const resolvedAliases = resolveTrustedHostAliases(domain, siteSlug, MOCK_HOST_TO_SITE);
+    assert.deepEqual(resolvedAliases, ['www.vikingiptv.tv']);
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <loc>https://www.vikingiptv.tv/</loc>
+  <loc>https://www.vikingiptv.tv/tarifs</loc>
+  <loc>https://www.vikingiptv.tv/guides/installation</loc>
+</urlset>`;
+
+    const pages = normalizeSitemapUrls(xml, domain, resolvedAliases);
+    assert.equal(pages.length, 3);
+
+    const pagesByPath = new Map(pages.map((p) => [p.path, p]));
+
+    const home = pagesByPath.get('/');
+    assert.ok(home);
+    assert.equal(home.url, 'https://www.vikingiptv.tv/');
+    assert.equal(home.path, '/');
+    assert.equal(home.kind, 'home');
+
+    const tarifs = pagesByPath.get('/tarifs');
+    assert.ok(tarifs);
+    assert.equal(tarifs.url, 'https://www.vikingiptv.tv/tarifs');
+    assert.equal(tarifs.path, '/tarifs');
+    assert.equal(tarifs.kind, 'page');
+
+    const guide = pagesByPath.get('/guides/installation');
+    assert.ok(guide);
+    assert.equal(guide.url, 'https://www.vikingiptv.tv/guides/installation');
+    assert.equal(guide.path, '/guides/installation');
+    assert.equal(guide.kind, 'article');
+
+    for (const page of pages) {
+      assert.equal(isCanonicalSitePageEntry(page, domain, resolvedAliases), true);
+    }
+  });
+```
+
+#### Case 5: Correct `(entry, domain, allowedAliases)` argument order
+
+```javascript
+// BEFORE
+    const crossTenantEntry = {
+      url: 'https://polderiptv.nl/page',
+      path: '/page',
+      kind: 'page',
+      label: 'Page',
+    };
+    // Rejection at client gate
+    assert.equal(
+      isCanonicalSitePageEntry('vikingiptv.tv', crossTenantEntry, clientFiltered),
+      false
+    );
+```
+
+```javascript
+// AFTER
+    const crossTenantEntry = {
+      url: 'https://polderiptv.nl/page',
+      path: '/page',
+      kind: 'page',
+      label: 'Page',
+    };
+    // Rejection at client gate
+    assert.equal(
+      isCanonicalSitePageEntry(crossTenantEntry, 'vikingiptv.tv', clientFiltered),
+      false
+    );
+```

@@ -1,0 +1,852 @@
+### Programming Proposal: Server-Side Host Alias Resolution & Client Provenance Gate
+
+This proposal resolves the integration gap where sitemaps for domains such as `vikingiptv.tv` emit canonical `www.vikingiptv.tv` URLs. Host aliases are strictly bound server-side from `HOST_TO_SITE` using exact site slug identity, apex/www pairing on the same base host, and explicit client provenance checks. Legacy 2-argument helper invocations retain their strict single-domain behavior.
+
+---
+
+#### 1. Patch `scripts/studio/site-page-catalog.cjs`
+
+<<<<<<< BEFORE
+```javascript
+function isCanonicalSitePageEntry(entry, domain) {
+  if (!entry || typeof entry !== 'object') return false;
+  if (!domain || typeof domain !== 'string') return false;
+
+  let cleanDomain;
+  try {
+    cleanDomain = assertSiteDomain(domain);
+  } catch {
+    return false;
+  }
+
+  const { url, path, kind, label } = entry;
+  if (
+    typeof url !== 'string' ||
+    typeof path !== 'string' ||
+    typeof kind !== 'string' ||
+    typeof label !== 'string'
+  ) {
+    return false;
+  }
+
+  if (kind !== 'home' && kind !== 'page' && kind !== 'article') {
+    return false;
+  }
+
+  if (classifyKind(path) !== kind) {
+    return false;
+  }
+
+  if (hasForbiddenPath(path) || MEDIA_EXT_REGEX.test(path)) {
+    return false;
+  }
+
+  if (
+    path.startsWith('/api/') ||
+    path.startsWith('/_next/') ||
+    path.startsWith('/static/')
+  ) {
+    return false;
+  }
+
+  if (url !== `https://${cleanDomain}${path}`) {
+    return false;
+  }
+
+  let parsed;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return false;
+  }
+
+  if (
+    parsed.href !== url ||
+    parsed.protocol !== 'https:' ||
+    parsed.hostname !== cleanDomain ||
+    parsed.username ||
+    parsed.password ||
+    parsed.port ||
+    parsed.search ||
+    parsed.hash ||
+    parsed.pathname !== path
+  ) {
+    return false;
+  }
+
+  if (!label.trim() || label.length > 200) {
+    return false;
+  }
+
+  return true;
+}
+
+function normalizeSitemapUrls(xml, domain) {
+  if (xml === null || xml === undefined || typeof xml !== 'string') {
+    throw new TypeError('Sitemap XML must be a string');
+  }
+
+  const byteLength = Buffer.byteLength(xml, 'utf8');
+  if (byteLength > MAX_INPUT_BYTES) {
+    throw new Error(`Sitemap XML exceeds maximum size of 2MB (${byteLength} bytes)`);
+  }
+
+  const cleanDomain = assertSiteDomain(domain);
+
+  if (/<sitemapindex[\s>]/i.test(xml)) {
+    throw new Error('Sitemap index is not supported');
+  }
+
+  const locRegex = /<loc>([\s\S]*?)<\/loc>/gi;
+  const matches = [];
+  let match;
+  while ((match = locRegex.exec(xml)) !== null) {
+    matches.push(match[1]);
+  }
+
+  const seen = new Map();
+
+  for (const rawLoc of matches) {
+    const trimmed = rawLoc.trim();
+    if (!trimmed || trimmed.startsWith('//')) continue;
+
+    const decodedUrl = decodeXmlEntities(trimmed);
+    if (!decodedUrl) continue;
+
+    let parsed;
+    try {
+      parsed = new URL(decodedUrl);
+    } catch {
+      continue;
+    }
+
+    if (parsed.href !== decodedUrl) continue;
+    if (parsed.protocol !== 'https:') continue;
+    if (parsed.hostname !== cleanDomain) continue;
+    if (parsed.username || parsed.password || parsed.port) continue;
+    if (parsed.search || parsed.hash) continue;
+
+    const pathname = parsed.pathname;
+    if (hasForbiddenPath(pathname)) continue;
+    if (MEDIA_EXT_REGEX.test(pathname)) continue;
+    if (
+      pathname.startsWith('/api/') ||
+      pathname.startsWith('/_next/') ||
+      pathname.startsWith('/static/')
+    ) {
+      continue;
+    }
+
+    if (!seen.has(pathname)) {
+      if (seen.size >= MAX_RESULTS) {
+        throw new Error(`Sitemap exceeds maximum limit of ${MAX_RESULTS} unique URLs`);
+      }
+      const kind = classifyKind(pathname);
+      seen.set(pathname, {
+        url: `https://${cleanDomain}${pathname}`,
+        path: pathname,
+        kind,
+        label: deriveLabel(pathname, kind),
+      });
+    }
+  }
+
+  const entries = Array.from(seen.values());
+  entries.sort((a, b) => {
+    if (a.path === b.path) return 0;
+    if (a.path === '/') return -1;
+    if (b.path === '/') return 1;
+    return a.path < b.path ? -1 : 1;
+  });
+
+  return entries;
+}
+
+module.exports = {
+  assertSiteDomain,
+  isCanonicalSitePageEntry,
+  normalizeSitemapUrls,
+};
+```
+=======
+```javascript
+function validateHostAliases(cleanDomain, aliases) {
+  if (!aliases) return [];
+  const list = Array.isArray(aliases) ? aliases : [aliases];
+  const valid = [];
+  for (const alias of list) {
+    if (!alias || typeof alias !== 'string') continue;
+    let cleanAlias;
+    try {
+      cleanAlias = assertSiteDomain(alias);
+    } catch {
+      continue;
+    }
+    if (cleanAlias === cleanDomain) continue;
+    if (cleanAlias.endsWith('.workers.dev') || cleanAlias === 'workers.dev') {
+      continue;
+    }
+    const isPair =
+      cleanAlias === `www.${cleanDomain}` ||
+      cleanDomain === `www.${cleanAlias}`;
+    if (!isPair) {
+      continue;
+    }
+    if (!valid.includes(cleanAlias)) {
+      valid.push(cleanAlias);
+    }
+  }
+  return valid;
+}
+
+function resolveTrustedHostAliases(domain, siteSlug, hostToSiteMap) {
+  if (!domain || typeof domain !== 'string') return [];
+  if (!siteSlug || typeof siteSlug !== 'string') return [];
+  if (!hostToSiteMap || typeof hostToSiteMap !== 'object') return [];
+
+  let cleanDomain;
+  try {
+    cleanDomain = assertSiteDomain(domain);
+  } catch {
+    return [];
+  }
+
+  if (cleanDomain.endsWith('.workers.dev') || cleanDomain === 'workers.dev') {
+    return [];
+  }
+
+  if (
+    !Object.prototype.hasOwnProperty.call(hostToSiteMap, cleanDomain) ||
+    hostToSiteMap[cleanDomain] !== siteSlug
+  ) {
+    return [];
+  }
+
+  let candidate;
+  if (cleanDomain.startsWith('www.')) {
+    candidate = cleanDomain.slice(4);
+  } else {
+    candidate = `www.${cleanDomain}`;
+  }
+
+  try {
+    candidate = assertSiteDomain(candidate);
+  } catch {
+    return [];
+  }
+
+  if (candidate.endsWith('.workers.dev') || candidate === 'workers.dev') {
+    return [];
+  }
+
+  if (
+    !Object.prototype.hasOwnProperty.call(hostToSiteMap, candidate) ||
+    hostToSiteMap[candidate] !== siteSlug
+  ) {
+    return [];
+  }
+
+  return [candidate];
+}
+
+function isCanonicalSitePageEntry(entry, domain, allowedAliases) {
+  if (!entry || typeof entry !== 'object') return false;
+  if (!domain || typeof domain !== 'string') return false;
+
+  let cleanDomain;
+  try {
+    cleanDomain = assertSiteDomain(domain);
+  } catch {
+    return false;
+  }
+
+  const validAliases = validateHostAliases(cleanDomain, allowedAliases);
+  const allowedHosts = new Set([cleanDomain, ...validAliases]);
+
+  const { url, path, kind, label } = entry;
+  if (
+    typeof url !== 'string' ||
+    typeof path !== 'string' ||
+    typeof kind !== 'string' ||
+    typeof label !== 'string'
+  ) {
+    return false;
+  }
+
+  if (kind !== 'home' && kind !== 'page' && kind !== 'article') {
+    return false;
+  }
+
+  if (classifyKind(path) !== kind) {
+    return false;
+  }
+
+  if (hasForbiddenPath(path) || MEDIA_EXT_REGEX.test(path)) {
+    return false;
+  }
+
+  if (
+    path.startsWith('/api/') ||
+    path.startsWith('/_next/') ||
+    path.startsWith('/static/')
+  ) {
+    return false;
+  }
+
+  let parsed;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return false;
+  }
+
+  if (
+    parsed.href !== url ||
+    parsed.protocol !== 'https:' ||
+    !allowedHosts.has(parsed.hostname) ||
+    parsed.username ||
+    parsed.password ||
+    parsed.port ||
+    parsed.search ||
+    parsed.hash ||
+    parsed.pathname !== path
+  ) {
+    return false;
+  }
+
+  if (url !== `https://${parsed.hostname}${path}`) {
+    return false;
+  }
+
+  if (!label.trim() || label.length > 200) {
+    return false;
+  }
+
+  return true;
+}
+
+function normalizeSitemapUrls(xml, domain, allowedAliases) {
+  if (xml === null || xml === undefined || typeof xml !== 'string') {
+    throw new TypeError('Sitemap XML must be a string');
+  }
+
+  const byteLength = Buffer.byteLength(xml, 'utf8');
+  if (byteLength > MAX_INPUT_BYTES) {
+    throw new Error(`Sitemap XML exceeds maximum size of 2MB (${byteLength} bytes)`);
+  }
+
+  const cleanDomain = assertSiteDomain(domain);
+  const validAliases = validateHostAliases(cleanDomain, allowedAliases);
+  const allowedHosts = new Set([cleanDomain, ...validAliases]);
+
+  if (/<sitemapindex[\s>]/i.test(xml)) {
+    throw new Error('Sitemap index is not supported');
+  }
+
+  const locRegex = /<loc>([\s\S]*?)<\/loc>/gi;
+  const matches = [];
+  let match;
+  while ((match = locRegex.exec(xml)) !== null) {
+    matches.push(match[1]);
+  }
+
+  const seen = new Map();
+
+  for (const rawLoc of matches) {
+    const trimmed = rawLoc.trim();
+    if (!trimmed || trimmed.startsWith('//')) continue;
+
+    const decodedUrl = decodeXmlEntities(trimmed);
+    if (!decodedUrl) continue;
+
+    let parsed;
+    try {
+      parsed = new URL(decodedUrl);
+    } catch {
+      continue;
+    }
+
+    if (parsed.href !== decodedUrl) continue;
+    if (parsed.protocol !== 'https:') continue;
+    if (!allowedHosts.has(parsed.hostname)) continue;
+    if (parsed.username || parsed.password || parsed.port) continue;
+    if (parsed.search || parsed.hash) continue;
+
+    const pathname = parsed.pathname;
+    if (hasForbiddenPath(pathname)) continue;
+    if (MEDIA_EXT_REGEX.test(pathname)) continue;
+    if (
+      pathname.startsWith('/api/') ||
+      pathname.startsWith('/_next/') ||
+      pathname.startsWith('/static/')
+    ) {
+      continue;
+    }
+
+    if (!seen.has(pathname)) {
+      if (seen.size >= MAX_RESULTS) {
+        throw new Error(`Sitemap exceeds maximum limit of ${MAX_RESULTS} unique URLs`);
+      }
+      const kind = classifyKind(pathname);
+      seen.set(pathname, {
+        url: decodedUrl,
+        path: pathname,
+        kind,
+        label: deriveLabel(pathname, kind),
+      });
+    }
+  }
+
+  const entries = Array.from(seen.values());
+  entries.sort((a, b) => {
+    if (a.path === b.path) return 0;
+    if (a.path === '/') return -1;
+    if (b.path === '/') return 1;
+    return a.path < b.path ? -1 : 1;
+  });
+
+  return entries;
+}
+
+module.exports = {
+  assertSiteDomain,
+  isCanonicalSitePageEntry,
+  normalizeSitemapUrls,
+  resolveTrustedHostAliases,
+  validateHostAliases,
+};
+```
+>>>>>>> AFTER
+
+---
+
+#### 2. Patch `apps/panel/components/StudioSitePageCards.tsx`
+
+<<<<<<< BEFORE
+```typescript
+import { StudioVisualOpen } from '@/components/StudioVisualOpen';
+import { isCanonicalSitePageEntry } from '../../../scripts/studio/site-page-catalog.cjs';
+
+export interface SitePageEntry {
+  url: string;
+  path: string;
+  kind: 'home' | 'page' | 'article';
+  label: string;
+}
+
+export interface StudioSitePageCardsProps {
+  site: Pick<Site, 'slug' | 'domain' | 'name'>;
+  pages: SitePageEntry[];
+}
+```
+=======
+```typescript
+import { StudioVisualOpen } from '@/components/StudioVisualOpen';
+import {
+  isCanonicalSitePageEntry,
+  validateHostAliases,
+} from '../../../scripts/studio/site-page-catalog.cjs';
+
+export interface SitePageEntry {
+  url: string;
+  path: string;
+  kind: 'home' | 'page' | 'article';
+  label: string;
+}
+
+export interface StudioSitePageCardsProps {
+  site: Pick<Site, 'slug' | 'domain' | 'name'>;
+  pages: SitePageEntry[];
+  trustedAliases?: string[];
+}
+```
+>>>>>>> AFTER
+
+<<<<<<< SEARCH/REPLACE 2 in `apps/panel/components/StudioSitePageCards.tsx`:
+<<<<<<< BEFORE
+```typescript
+export function StudioSitePageCards({ site, pages }: StudioSitePageCardsProps) {
+  const [search, setSearch] = useState('');
+  const [kindFilter, setKindFilter] = useState('all');
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const hasDomain = Boolean(site.domain);
+
+  const safePages = useMemo(() => {
+    if (!hasDomain || !site.domain) return [];
+    const list = Array.isArray(pages) ? pages : [];
+    return list.filter((p) => isCanonicalSitePageEntry(p, site.domain));
+  }, [pages, site.domain, hasDomain]);
+```
+=======
+```typescript
+export function StudioSitePageCards({
+  site,
+  pages,
+  trustedAliases,
+}: StudioSitePageCardsProps) {
+  const [search, setSearch] = useState('');
+  const [kindFilter, setKindFilter] = useState('all');
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const hasDomain = Boolean(site.domain);
+
+  const safePages = useMemo(() => {
+    if (!hasDomain || !site.domain) return [];
+    const list = Array.isArray(pages) ? pages : [];
+    const clientValidatedAliases = validateHostAliases(site.domain, trustedAliases);
+    return list.filter((p) =>
+      isCanonicalSitePageEntry(p, site.domain, clientValidatedAliases)
+    );
+  }, [pages, site.domain, hasDomain, trustedAliases]);
+```
+>>>>>>> AFTER
+
+---
+
+#### 3. Patch `apps/panel/app/(app)/sites/[slug]/pages/page.tsx`
+
+<<<<<<< BEFORE
+```typescript
+import {
+  StudioSitePageCards,
+  type SitePageEntry,
+} from '@/components/StudioSitePageCards';
+import {
+  assertSiteDomain,
+  normalizeSitemapUrls,
+} from '../../../../../../../scripts/studio/site-page-catalog.cjs';
+
+export const dynamic = 'force-dynamic';
+
+const MAX_INPUT_BYTES = 2 * 1024 * 1024; // 2MB
+
+type SitemapResult =
+  | { success: true; pages: SitePageEntry[] }
+  | { success: false; unavailable: true };
+
+async function fetchLiveSitemapPages(domain: string): Promise<SitemapResult> {
+  let cleanDomain: string;
+  try {
+    cleanDomain = assertSiteDomain(domain);
+  } catch {
+    return { success: false, unavailable: true };
+  }
+```
+=======
+```typescript
+import {
+  StudioSitePageCards,
+  type SitePageEntry,
+} from '@/components/StudioSitePageCards';
+import { HOST_TO_SITE } from '../../../../../../sites/lib/hosts';
+import {
+  assertSiteDomain,
+  normalizeSitemapUrls,
+  resolveTrustedHostAliases,
+} from '../../../../../../../scripts/studio/site-page-catalog.cjs';
+
+export const dynamic = 'force-dynamic';
+
+const MAX_INPUT_BYTES = 2 * 1024 * 1024; // 2MB
+
+type SitemapResult =
+  | { success: true; pages: SitePageEntry[] }
+  | { success: false; unavailable: true };
+
+async function fetchLiveSitemapPages(
+  domain: string,
+  trustedAliases: string[] = []
+): Promise<SitemapResult> {
+  let cleanDomain: string;
+  try {
+    cleanDomain = assertSiteDomain(domain);
+  } catch {
+    return { success: false, unavailable: true };
+  }
+```
+>>>>>>> AFTER
+
+<<<<<<< SEARCH/REPLACE 2 in `apps/panel/app/(app)/sites/[slug]/pages/page.tsx`:
+<<<<<<< BEFORE
+```typescript
+    const decoder = new TextDecoder('utf-8', { fatal: true });
+    const xml = decoder.decode(combined);
+
+    const pages = normalizeSitemapUrls(xml, cleanDomain);
+    return { success: true, pages };
+  } catch {
+    return { success: false, unavailable: true };
+  }
+}
+
+export default async function SitePagesTab({ params }: { params: { slug: string } }) {
+  const site = await getSite(params.slug);
+  if (!site) notFound();
+
+  if (!site.domain || !isLive(site)) {
+    return (
+      <Card className="text-sm text-ink-soft">
+        Le site n&apos;est pas encore en ligne — les pages apparaîtront ici une fois déployé (S5).
+      </Card>
+    );
+  }
+
+  const result = await fetchLiveSitemapPages(site.domain);
+```
+=======
+```typescript
+    const decoder = new TextDecoder('utf-8', { fatal: true });
+    const xml = decoder.decode(combined);
+
+    const pages = normalizeSitemapUrls(xml, cleanDomain, trustedAliases);
+    return { success: true, pages };
+  } catch {
+    return { success: false, unavailable: true };
+  }
+}
+
+export default async function SitePagesTab({ params }: { params: { slug: string } }) {
+  const site = await getSite(params.slug);
+  if (!site) notFound();
+
+  if (!site.domain || !isLive(site)) {
+    return (
+      <Card className="text-sm text-ink-soft">
+        Le site n&apos;est pas encore en ligne — les pages apparaîtront ici une fois déployé (S5).
+      </Card>
+    );
+  }
+
+  const trustedAliases = resolveTrustedHostAliases(
+    site.domain,
+    site.slug,
+    HOST_TO_SITE
+  );
+  const result = await fetchLiveSitemapPages(site.domain, trustedAliases);
+```
+>>>>>>> AFTER
+
+<<<<<<< SEARCH/REPLACE 3 in `apps/panel/app/(app)/sites/[slug]/pages/page.tsx`:
+<<<<<<< BEFORE
+```typescript
+      {pages.length === 0 ? (
+        <Card className="text-sm text-ink-soft">
+          Sitemap introuvable ou vide sur https://{site.domain}/sitemap.xml.
+        </Card>
+      ) : (
+        <StudioSitePageCards
+          site={{
+            slug: site.slug,
+            domain: site.domain,
+            name: site.name,
+          }}
+          pages={pages}
+        />
+      )}
+```
+=======
+```typescript
+      {pages.length === 0 ? (
+        <Card className="text-sm text-ink-soft">
+          Sitemap introuvable ou vide sur https://{site.domain}/sitemap.xml.
+        </Card>
+      ) : (
+        <StudioSitePageCards
+          site={{
+            slug: site.slug,
+            domain: site.domain,
+            name: site.name,
+          }}
+          pages={pages}
+          trustedAliases={trustedAliases}
+        />
+      )}
+```
+>>>>>>> AFTER
+
+---
+
+#### 4. New Test Suite: `tests/site-page-catalog-aliases.test.cjs`
+
+```javascript
+'use strict';
+
+const { test, describe } = require('node:test');
+const assert = require('node:assert/strict');
+const {
+  isCanonicalSitePageEntry,
+  normalizeSitemapUrls,
+  resolveTrustedHostAliases,
+  validateHostAliases,
+} = require('../scripts/studio/site-page-catalog.cjs');
+
+const MOCK_HOST_TO_SITE = {
+  'vikingiptv.tv': 'vikingiptvtv',
+  'www.vikingiptv.tv': 'vikingiptvtv',
+  'vikingiptvtv-cf.bendaoud-fst.workers.dev': 'vikingiptvtv',
+  'vikingiptv.ca': 'vikingiptv',
+  'www.vikingiptv.ca': 'vikingiptv',
+  'polderiptv.nl': 'polderiptv',
+  'www.polderiptv.nl': 'polderiptv',
+};
+
+describe('site-page-catalog host aliases & client provenance gate', () => {
+  test('1. actual registered www alias accepted', () => {
+    const domain = 'vikingiptv.tv';
+    const siteSlug = 'vikingiptvtv';
+    const resolvedAliases = resolveTrustedHostAliases(domain, siteSlug, MOCK_HOST_TO_SITE);
+    assert.deepEqual(resolvedAliases, ['www.vikingiptv.tv']);
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <loc>https://www.vikingiptv.tv/</loc>
+  <loc>https://www.vikingiptv.tv/tarifs</loc>
+  <loc>https://www.vikingiptv.tv/guides/installation</loc>
+</urlset>`;
+
+    const pages = normalizeSitemapUrls(xml, domain, resolvedAliases);
+    assert.equal(pages.length, 3);
+    assert.equal(pages[0].url, 'https://www.vikingiptv.tv/');
+    assert.equal(pages[0].path, '/');
+    assert.equal(pages[0].kind, 'home');
+    assert.equal(pages[1].url, 'https://www.vikingiptv.tv/tarifs');
+    assert.equal(pages[1].path, '/tarifs');
+    assert.equal(pages[2].url, 'https://www.vikingiptv.tv/guides/installation');
+    assert.equal(pages[2].path, '/guides/installation');
+    assert.equal(pages[2].kind, 'article');
+
+    for (const page of pages) {
+      assert.equal(isCanonicalSitePageEntry(page, domain, resolvedAliases), true);
+    }
+  });
+
+  test('2. legacy strict preserved', () => {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <loc>https://www.vikingiptv.tv/tarifs</loc>
+  <loc>https://vikingiptv.tv/contact</loc>
+</urlset>`;
+
+    // Calling legacy 2-arg helper drops www URLs and accepts strictly exact-domain
+    const pages = normalizeSitemapUrls(xml, 'vikingiptv.tv');
+    assert.equal(pages.length, 1);
+    assert.equal(pages[0].url, 'https://vikingiptv.tv/contact');
+
+    const wwwEntry = {
+      url: 'https://www.vikingiptv.tv/tarifs',
+      path: '/tarifs',
+      kind: 'page',
+      label: 'Tarifs',
+    };
+    // 2-arg validation strictly rejects any alias
+    assert.equal(isCanonicalSitePageEntry(wwwEntry, 'vikingiptv.tv'), false);
+
+    const apexEntry = {
+      url: 'https://vikingiptv.tv/contact',
+      path: '/contact',
+      kind: 'page',
+      label: 'Contact',
+    };
+    assert.equal(isCanonicalSitePageEntry(apexEntry, 'vikingiptv.tv'), true);
+  });
+
+  test('3. crosssite/substr/workers.dev/unknown aliases rejected', () => {
+    const domain = 'vikingiptv.tv';
+    const siteSlug = 'vikingiptvtv';
+
+    // Must reject crosssite, prefix/substr, workers.dev and unknown domains
+    const maliciousAliases = [
+      'vikingiptv.ca',
+      'polderiptv.nl',
+      'notvikingiptv.tv',
+      'vikingiptv.tv.evil.com',
+      'sub.vikingiptv.tv',
+      'vikingiptvtv-cf.bendaoud-fst.workers.dev',
+      'randomunknown.com',
+      '127.0.0.1',
+      'localhost',
+    ];
+
+    const validated = validateHostAliases(domain, maliciousAliases);
+    assert.deepEqual(validated, []);
+
+    for (const alias of maliciousAliases) {
+      const entry = {
+        url: `https://${alias}/test`,
+        path: '/test',
+        kind: 'page',
+        label: 'Test',
+      };
+      assert.equal(isCanonicalSitePageEntry(entry, domain, [alias]), false);
+    }
+  });
+
+  test('4. samepath/trailingslash retained', () => {
+    const domain = 'vikingiptv.tv';
+    const aliases = ['www.vikingiptv.tv'];
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <loc>https://www.vikingiptv.tv/guides/smart-tv/</loc>
+</urlset>`;
+
+    const pages = normalizeSitemapUrls(xml, domain, aliases);
+    assert.equal(pages.length, 1);
+    assert.equal(pages[0].url, 'https://www.vikingiptv.tv/guides/smart-tv/');
+    assert.equal(pages[0].path, '/guides/smart-tv/');
+    assert.equal(pages[0].path.endsWith('/'), true);
+    assert.equal(isCanonicalSitePageEntry(pages[0], domain, aliases), true);
+  });
+
+  test('5. wrongsite/provenance client gate rejected', () => {
+    // Server-side mapping mismatch: wrong site slug supplied
+    const wrongSlugAliases = resolveTrustedHostAliases(
+      'vikingiptv.tv',
+      'wrong-tenant-slug',
+      MOCK_HOST_TO_SITE
+    );
+    assert.deepEqual(wrongSlugAliases, []);
+
+    // Client trust gate validation rejects alias belonging to another tenant
+    const crossTenantAlias = 'polderiptv.nl';
+    const clientFiltered = validateHostAliases('vikingiptv.tv', [crossTenantAlias]);
+    assert.deepEqual(clientFiltered, []);
+
+    const crossTenantEntry = {
+      url: 'https://polderiptv.nl/page',
+      path: '/page',
+      kind: 'page',
+      label: 'Page',
+    };
+    // Rejection at client gate
+    assert.equal(
+      isCanonicalSitePageEntry('vikingiptv.tv', crossTenantEntry, clientFiltered),
+      false
+    );
+  });
+
+  test('6. ordinary exact fallback', () => {
+    const unmappedDomain = 'anotherexample.org';
+    const resolved = resolveTrustedHostAliases(
+      unmappedDomain,
+      'anotherexample',
+      MOCK_HOST_TO_SITE
+    );
+    assert.deepEqual(resolved, []);
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <loc>https://anotherexample.org/accueil</loc>
+  <loc>https://www.anotherexample.org/accueil</loc>
+</urlset>`;
+
+    // Ordinary exact fallback retains standard exact-domain matching without error
+    const pages = normalizeSitemapUrls(xml, unmappedDomain, resolved);
+    assert.equal(pages.length, 1);
+    assert.equal(pages[0].url, 'https://anotherexample.org/accueil');
+    assert.equal(pages[0].path, '/accueil');
+  });
+});
+```
