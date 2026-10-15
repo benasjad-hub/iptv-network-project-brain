@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "source": "bec3690ac925cd2f981455c3094d80252d067d98",
+  "originalWorker": 320,
+  "status": "SUCCESS",
+  "durationSeconds": 140.015698011,
+  "launcherSeconds": 148.323,
+  "exactCodeSha256": "90762ca0fe65acb8dfab6b5caed7fb819fb483a53b9874f2147a06b2317556dc",
+  "qaFirst": {
+    "pass": 12,
+    "fail": 0,
+    "seconds": 8.285
+  },
+  "qaFinal": {
+    "pass": 16,
+    "fail": 0,
+    "seconds": 5.055
+  },
+  "scope": "SOURCE ONLY, no runtime or native activation",
+  "sceneCaptureProvider": "MOCK",
+  "authorityWrites": 0,
+  "verdict": "REJECTED",
+  "qaExtended": {
+    "pass": 16,
+    "fail": 1,
+    "seconds": 5.024
+  },
+  "failure": "provider admission ignores monotonic invocation remainder;170s elapsed still observes",
+  "productMaterialization": "premature historical bec3690a; removed subsequently without history rewrite",
+  "runtimeActivation": false,
+  "withdrawalCommit": "3f37ccb4c0c0cf9066e0476212bfa3bd38a20a53"
+}
