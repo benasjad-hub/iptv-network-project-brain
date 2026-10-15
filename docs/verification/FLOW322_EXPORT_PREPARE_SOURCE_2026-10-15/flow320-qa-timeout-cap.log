@@ -1,0 +1,58 @@
+test320_capture_owner_loss (__main__.Prepare.test320_capture_owner_loss) ... ok
+test320_exact_completed_id (__main__.Prepare.test320_exact_completed_id) ... ok
+test320_export_presence_refuses_before_factory (__main__.Prepare.test320_export_presence_refuses_before_factory) ... ok
+test320_final_deadline (__main__.Prepare.test320_final_deadline) ... ok
+test320_final_export_binding_refuses (__main__.Prepare.test320_final_export_binding_refuses) ... ok
+test320_final_instruction_change_refuses (__main__.Prepare.test320_final_instruction_change_refuses) ... ok
+test320_final_owner_loss (__main__.Prepare.test320_final_owner_loss) ... ok
+test320_missing_completed_before_factory (__main__.Prepare.test320_missing_completed_before_factory) ... ok
+test320_monotonic_budget_before_observe (__main__.Prepare.test320_monotonic_budget_before_observe) ... FAIL
+test320_monotonic_remaining_caps_timeout (__main__.Prepare.test320_monotonic_remaining_caps_timeout) ... FAIL
+test320_no_provider_retry (__main__.Prepare.test320_no_provider_retry) ... ok
+test320_observer_anchor_mismatch_before_observe (__main__.Prepare.test320_observer_anchor_mismatch_before_observe) ... ok
+test320_observer_module_boundary_budget_refuses (__main__.Prepare.test320_observer_module_boundary_budget_refuses) ... FAIL
+test320_old_authority_age_allowed (__main__.Prepare.test320_old_authority_age_allowed) ... ok
+test320_png_restored_mtime (__main__.Prepare.test320_png_restored_mtime) ... ok
+test320_positive_new_only_no_binding (__main__.Prepare.test320_positive_new_only_no_binding) ... ok
+test320_record_custody (__main__.Prepare.test320_record_custody) ... ok
+test320_strict_booleans (__main__.Prepare.test320_strict_booleans) ... ok
+test320_terminal_cancel_refuses (__main__.Prepare.test320_terminal_cancel_refuses) ... ok
+
+======================================================================
+FAIL: test320_monotonic_budget_before_observe (__main__.Prepare.test320_monotonic_budget_before_observe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow320-qa.py", line 117, in test320_monotonic_budget_before_observe
+    with self.assertRaises(ValueError):self.collect()
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test320_monotonic_remaining_caps_timeout (__main__.Prepare.test320_monotonic_remaining_caps_timeout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow320-qa.py", line 145, in test320_monotonic_remaining_caps_timeout
+    with patch.object(time,'monotonic',side_effect=lambda:mono[0]),patch.object(m,'_read_frame',side_effect=read):self.assertEqual(self.collect()['resultId'],f.NEW)
+                                                                                                                                   ^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow320-qa.py", line 14, in collect
+    with patch.object(m,'_load_canonical',side_effect=lambda n,file:self.mods[file]):return m.collect_export_prepare_witness(self.op,self.lease,self.work,'unused','unused',cancel)
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow320-candidate/flow-export-prepare-observation.py", line 317, in collect_export_prepare_witness
+    record = observer.observe(p_frame, captured_at, question, obs_fields, timeout=timeout, role="default")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow320-qa.py", line 141, in bounded
+    self.assertGreaterEqual(kw['timeout'],15);self.assertLessEqual(kw['timeout'],20);return observe(*a,**kw)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 100 not less than or equal to 20
+
+======================================================================
+FAIL: test320_observer_module_boundary_budget_refuses (__main__.Prepare.test320_observer_module_boundary_budget_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow320-qa.py", line 128, in test320_observer_module_boundary_budget_refuses
+    with self.assertRaises(ValueError):self.collect()
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.980s
+
+FAILED (failures=3)
