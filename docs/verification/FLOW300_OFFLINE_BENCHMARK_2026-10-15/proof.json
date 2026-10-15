@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "c0f32558a9296ea86a7dc1a4e87e2e00ff064d8e",
+  "diagnosticSourceCommit": "8d92d1a9",
+  "coreRuntimeCommit": "6e51d1676c1bce6a466f112245d9c441315d047f",
+  "original299": {
+    "status": "SUCCESS",
+    "receiptSeconds": 174.987295919,
+    "denied": 0,
+    "literalPatchCount": 6,
+    "decodedPatchedSourceSha256": "62f7c49e0c6c15df35c3057859a2163ceb17368ed9aa4b6b5f1736c1a6047fee"
+  },
+  "benchmarkOnly": true,
+  "acceptanceAuthority": false,
+  "calls": [
+    {
+      "index": 0,
+      "role": "initial-root",
+      "model": "gemini-3.8-flash-low",
+      "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+      "attempted": true,
+      "status": "SUCCESS",
+      "originalStatus": "SUCCESS",
+      "measuredElapsed": 37.65096396487206,
+      "observation": {
+        "noPending": true,
+        "noUnsavedComposer": true,
+        "profileButtonAtPoint": true,
+        "profileClosed": true,
+        "projectMatches": true,
+        "rootMatches": true
+      },
+      "agreesWithLabel": true
+    },
+    {
+      "index": 1,
+      "role": "initial-root",
+      "model": "gemini-3.8-flash-medium",
+      "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+      "attempted": true,
+      "status": "SUCCESS",
+      "originalStatus": "SUCCESS",
+      "measuredElapsed": 76.31100072804838,
+      "observation": {
+        "noPending": true,
+        "noUnsavedComposer": true,
+        "profileButtonAtPoint": true,
+        "profileClosed": true,
+        "projectMatches": true,
+        "rootMatches": true
+      },
+      "agreesWithLabel": true
+    },
+    {
+      "index": 2,
+      "role": "focused-uuid",
+      "model": "gemini-3.8-flash-low",
+      "frameHash": "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee",
+      "attempted": true,
+      "status": "SUCCESS",
+      "originalStatus": "SUCCESS",
+      "measuredElapsed": 14.483019425533712,
+      "observation": {
+        "addressFocused": true,
+        "detailVisible": true,
+        "projectMatches": true,
+        "resultId": "b01cf30e-60f2-4d1f-9d8e-8cbf42fcb9ba"
+      },
+      "agreesWithLabel": true
+    },
+    {
+      "index": 3,
+      "role": "focused-uuid",
+      "model": "gemini-3.8-flash-medium",
+      "frameHash": "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee",
+      "attempted": true,
+      "status": "SUCCESS",
+      "originalStatus": "SUCCESS",
+      "measuredElapsed": 21.742323640733957,
+      "observation": {
+        "addressFocused": true,
+        "detailVisible": true,
+        "projectMatches": true,
+        "resultId": "b01cf30e-60f2-4d1f-9d8e-8cbf42fcb9ba"
+      },
+      "agreesWithLabel": true
+    }
+  ],
+  "nativeInputExecuted": false,
+  "taskMutation": false,
+  "baselineBound": false,
+  "generationExecuted": false,
+  "limits": "Two historical frames, one sample per model/role. Labels are previous model observations, not groundtruth/current authority. No accuracy rate/tail latency/full180s/native acceptance or production routing proof."
+}

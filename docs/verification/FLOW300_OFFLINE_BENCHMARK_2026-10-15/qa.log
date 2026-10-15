@@ -1,0 +1,17 @@
+test_attempt_marker_durable_before_each_model_call (__main__.Cases.test_attempt_marker_durable_before_each_model_call) ... ok
+test_bool_exit_is_not_integer_zero (__main__.Cases.test_bool_exit_is_not_integer_zero) ... ok
+test_busy_home_prevents_any_calls_or_journal (__main__.Cases.test_busy_home_prevents_any_calls_or_journal) ... ok
+test_existing_journal_prevents_all_calls (__main__.Cases.test_existing_journal_prevents_all_calls) ... ok
+test_missing_exit_is_rejected_without_next_call (__main__.Cases.test_missing_exit_is_rejected_without_next_call) ... ok
+test_mutated_private_copy_refuses_before_next_call (__main__.Cases.test_mutated_private_copy_refuses_before_next_call) ... ok
+test_normal_private_png_supported (__main__.Cases.test_normal_private_png_supported) ... ok
+test_original_samebytes_inode_replacement_during_call_refused (__main__.Cases.test_original_samebytes_inode_replacement_during_call_refused) ... ok
+test_private_samebytes_inode_replacement_during_call_refused (__main__.Cases.test_private_samebytes_inode_replacement_during_call_refused) ... ok
+test_prompt_has_image_schema_and_preserves_json_braces (__main__.Cases.test_prompt_has_image_schema_and_preserves_json_braces) ... ok
+test_provider_failure_stops_after_first_call (__main__.Cases.test_provider_failure_stops_after_first_call) ... ok
+test_unknown_provider_exception_preserves_no_replay_journal (__main__.Cases.test_unknown_provider_exception_preserves_no_replay_journal) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 8.188s
+
+OK
