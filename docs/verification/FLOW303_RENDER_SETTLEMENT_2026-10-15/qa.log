@@ -1,0 +1,14 @@
+test_profile_wait_cancel_blocks_fresh_observation (__main__.PF.test_profile_wait_cancel_blocks_fresh_observation) ... ok
+test_profile_wait_deadline_blocks_fresh_observation (__main__.PF.test_profile_wait_deadline_blocks_fresh_observation) ... ok
+test_close_wait_owner_change_blocks_gallery_capture (__main__.PF.test_close_wait_owner_change_blocks_gallery_capture) ... ok
+test_sent_click_exception_never_sleeps_or_replays (__main__.PF.test_sent_click_exception_never_sleeps_or_replays) ... ok
+test_two_waits_keep_return_identity_and_fresh_semantics (__main__.PF.test_two_waits_keep_return_identity_and_fresh_semantics) ... ok
+test_preview_wait_cancel_blocks_detail_capture (__main__.GF.test_preview_wait_cancel_blocks_detail_capture) ... ok
+test_preview_wait_deadline_blocks_detail_capture (__main__.GF.test_preview_wait_deadline_blocks_detail_capture) ... ok
+test_back_wait_owner_change_prevents_secondary_and_final_capture (__main__.GF.test_back_wait_owner_change_prevents_secondary_and_final_capture) ... ok
+test_each_preview_back_waits_once_no_extra_input (__main__.GF.test_each_preview_back_waits_once_no_extra_input) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.487s
+
+OK

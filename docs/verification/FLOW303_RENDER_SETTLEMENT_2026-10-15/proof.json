@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "ff05422bbadaa4ad633399f3cd1d81c6f43e3233",
+  "original303": {
+    "receiptSeconds": 45.812248485,
+    "launcherSeconds": 55.522,
+    "literalPatches": 4,
+    "denied": 0,
+    "status": "SUCCESS"
+  },
+  "qa": {
+    "cases": 9,
+    "visualDisplayAndSleepMocked": true,
+    "passed": 9,
+    "actualCanonicalTempAuthority": true,
+    "seconds": 0.487,
+    "failed": 0
+  },
+  "sourceHashes": {
+    "preflight": "1b82162508fe315801421e1e46102357a68946c75fa7cb08563bace1d7524ee5",
+    "gallery": "a2126df11057a79eeded79aedfd0caf867cb746f736f1a8ea218910794fcf3b4"
+  },
+  "nativeMeasurementOf303": false,
+  "baselineAccepted": false,
+  "generationExecuted": false,
+  "limits": "Fixed1s waits do not prove renderer completion or latency improvement. Same total180s/semantic/custody authority required; no native retry/service/provider/task rollout."
+}
