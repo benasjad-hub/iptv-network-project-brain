@@ -1,0 +1,14 @@
+{
+  "windowsCheckoutGate": "FAILED: validator uses POSIX pinned paths and raw LF digests; Windows paths/CRLF differ",
+  "finalContextCheck": "FAIL: 29 pass / 3 warn / 1 fail",
+  "validatorManifestAndRegressionChecks": "PASS in isolated Linux checkout before context check",
+  "productionChange": false,
+  "proofLimit": "Structural gate did not pass; no claim that Brain or automatic Flow is accepted",
+  "isolatedLinuxCheckout": "Exact committed tree checked with LF, no validator or manifest changes",
+  "ownFlow259And260Evidence": "source SHA and explicit Limits added; absent from final failure list",
+  "checkpointAdopted": false,
+  "date": "2026-10-15",
+  "remainingFailure": "Pre-existing evidence directories outside this capture have missing README or date/source/limits metadata",
+  "checkedBrainCommit": "149891d",
+  "nativeObserver": "actual root observed; no input"
+}

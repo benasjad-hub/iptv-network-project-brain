@@ -9,3 +9,5 @@ No trusted baseline was collected: gallery completeness, exact historical UUID i
 Next: guarded exact-operation/account/session preparation and the accepted native gallery collector, then the remaining result/export/MP4/recovery/runtime pipeline. A screen observation cannot substitute for that chain.
 
 Source implementation commit: 7d72abc21d9fd92aa5d5b81062e1478e4082ca78 (unchanged). Evidence captured in Brain commit add68d5. Limits: observation only, not a native baseline, navigation causality, account verification, generated clip or app completion.
+
+Structural verification: [structural-check.json](structural-check.json). The full Brain gate remains FAIL on pre-existing evidence metadata outside these two Flow captures. Windows raw CRLF/path behavior was separated from an exact LF Linux-checkout check; no validator, pinned manifest or generated checkpoint was changed to conceal it.
