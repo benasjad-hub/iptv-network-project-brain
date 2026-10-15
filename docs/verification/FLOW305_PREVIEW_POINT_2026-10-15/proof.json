@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "dd8597be",
+  "implementationCommit": "ff05422bbadaa4ad633399f3cd1d81c6f43e3233",
+  "return304": {
+    "date": "2026-10-15",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "uid": 1001,
+    "inputAttempted": true,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "startedAt": 1792051228.3218558,
+    "state": "root-verified",
+    "approvedFrameHash": "301041983c89b4dda303f702773232ba43002c200d667b3c5b64f3cde3a48ed9",
+    "approvedCapturedAt": 1792051228.599005,
+    "rootVerified": true,
+    "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+    "capturedAt": 1792051317.1503801,
+    "elapsedSeconds": 109.666
+  },
+  "native305": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792051388.8866818,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 64.857
+  },
+  "observations305": [
+    {
+      "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+      "capturedAt": 1792051389.1795344,
+      "observedAt": 1792051424.9103794,
+      "elapsedSeconds": 35.597,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "profileButtonAtPoint": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6"
+      ]
+    },
+    {
+      "frameHash": "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280",
+      "capturedAt": 1792051426.9545703,
+      "observedAt": 1792051444.5314753,
+      "elapsedSeconds": 17.446,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": true,
+        "accountMatches": true,
+        "closeAtPoint": true
+      },
+      "frameHashes": [
+        "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792051446.0512412,
+      "observedAt": 1792051453.7112334,
+      "elapsedSeconds": 7.493,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "noUnsavedComposer": true,
+        "noPending": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "videoCount": 2,
+        "primaryAtPoint": false,
+        "secondaryAtPoint": false
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    }
+  ],
+  "nativeBaselineAccepted": false,
+  "operationFiles": [
+    ".flow.lock"
+  ],
+  "limits": "305false previewpoints retained. Screenshot inspection does not override. No preview/baseline/core/attempt/Generate/task/service change; semantic clarification307 proposal only."
+}
