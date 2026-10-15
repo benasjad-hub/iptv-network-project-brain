@@ -1,0 +1,8 @@
+test_root_refusals_no_input (q.Cases.test_root_refusals_no_input) ... ok
+test_cancel_after_observe_prevents_click (q.Cases.test_cancel_after_observe_prevents_click) ... ok
+test_frame_tamper_after_observe_refused (q.Cases.test_frame_tamper_after_observe_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.161s
+
+OK

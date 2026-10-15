@@ -1,0 +1,11 @@
+# Flow coordinate semantics — 2026-10-15
+
+Source: product e0b91c0e23084edeae6e6059b643c6fbf32731a7, branch codex/daoudstudio-dashboard. [Safe proof](proof.json), [focused QA](qa.log).
+
+Original Google288/289 SUCCESS each supplied one literal prompt-text patch, reviewed and materialized exactly after JSON decode and line-ending normalization. Coordinates, schemas, models, time bounds, strict authority and input gates unchanged. Compilation and3 relevant mandatory-negative/cancel/frame-tamper cases pass; native scene/observer/display remain mocked in these QA cases.
+
+Actual service-user native290 reused SAME saved operation/session/browser/HOME authority and current ROOT; strict profileButtonAtPoint=false refused7.885s before any native input. Other five root fields true, original observer7.515s. Current frame hash equals earlier286/287 root. Read-only287 returned bounding box978,126,1020,173/containsPoint=true/cursorOverAvatar=false, but that historical contradictory result does not override290 or authorize input. The text clarification is not a demonstrated native fix. Actual op directory only.flow.lock, no baseline/core/attempt.
+
+Prior this turn: source280 detail/URL read settlement was accepted with53 relevant QA cases; actual282 freshly witnessed one ordinary Back and subsequent root31.862s. Native283 refused initial point12.591s; exact original285 prompt clarification source00af3ef0 retained, three QA cases pass; native286 still refused6.825s before input. Those refusals are retained, not relabelled success. No Generate, prompt, download, task mutation, provider, service/UI rollout or authentication copy.
+
+Limits: no accepted native baseline/account/gallery for290, no generated clip/export/MP4/app display, no claim about cause of observer disagreement or prior navigation latency. No old frame/UUID substitution, no unchanged retry, no forced positive or weakened gate. Full automatic Flow remains open; current fresh root requires no Back. Remaining pending/completion/export/MP4/recovery/release/runtime integration required. Earlier unrelated Brain structural metadata failure remains unresolved; no full-gate-pass claim. Closed clone and owner editor/emulator input preserved.

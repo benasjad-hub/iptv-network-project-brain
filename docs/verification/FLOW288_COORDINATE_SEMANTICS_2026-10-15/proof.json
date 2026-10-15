@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "e0b91c0e23084edeae6e6059b643c6fbf32731a7",
+  "nativeBaselineAccepted": false,
+  "generationExecuted": false,
+  "limits": "Source clarification and fail-closed native observation only; no baseline, clip, task resume, input or live rollout.",
+  "native290": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792041457.2907364,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 7.885
+  },
+  "observation290": {
+    "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+    "capturedAt": 1792041457.5331464,
+    "observedAt": 1792041465.1678274,
+    "elapsedSeconds": 7.515,
+    "observation": {
+      "rootMatches": true,
+      "projectMatches": true,
+      "profileClosed": true,
+      "profileButtonAtPoint": false,
+      "noUnsavedComposer": true,
+      "noPending": true
+    },
+    "frameHashes": [
+      "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6"
+    ]
+  },
+  "workers": {
+    "288": {
+      "status": "SUCCESS",
+      "durationSeconds": 34.569322208,
+      "deniedActionCount": 0,
+      "proposal": {
+        "patches": [
+          {
+            "file": "flow-native-preflight.py",
+            "old": "        f\"profileButtonAtPoint is True if point (999,135) is inside clickable area of Google Flow's own circular in-app account avatar in far-right application header below browser toolbar \"\n        f\"(distinguished from Chrome/browser toolbar profile control, adjacent PRO/upgrade buttons, and exact icon-center interpretation; no assumed letter/avatar image/account identity, no requirement point must be exact center; require False if uncertain or occluded), \"",
+            "new": "        f\"profileButtonAtPoint is True if geometric point (999,135) on original 1280x900 image canvas (origin (0,0) top-left including browser toolbar and right black margin) is inside clickable area of Google Flow's own circular in-app account avatar in far-right application header below browser toolbar \"\n        f\"(distinguished from Chrome/browser toolbar profile control, adjacent PRO/upgrade buttons, and exact icon-center interpretation; ignore current mouse cursor location/hover/focus/tooltip for this field: cursor can be elsewhere and does not need to be over avatar; no assumed letter/avatar image/account identity, no requirement point must be exact center; require False if uncertain or occluded), \""
+          }
+        ],
+        "limits": "Bounded strictly to clarifying geometric canvas coordinate evaluation versus cursor hover in initial root question text. Preserves all schema fields, coordinate target (999,135), single-shot capture, strict True validation, and refuse-on-False logic without introducing overrides, manual bounds, or workflow changes."
+      }
+    },
+    "289": {
+      "status": "SUCCESS",
+      "durationSeconds": 54.939503041,
+      "deniedActionCount": 0,
+      "proposal": {
+        "patches": [
+          {
+            "file": "flow-observation.py",
+            "old": "'Never infer obscured characters or filenames, balances/accounts/settings. '+question)",
+            "new": "'Never infer obscured characters or filenames, balances/accounts/settings. Native images use original 1280x900 canvas with top-left (0,0), including browser toolbar and right black margin. For explicitly specified coordinates and AtPoint fields (profileButtonAtPoint, addressAtPoint, closeAtPoint, backAtPoint, primaryAtPoint, secondaryAtPoint), check geometric point inside visible actual target clickable area. Do not confuse this with actual mouse cursor location, hover highlight, focus ring, or exact icon center. Cursor can be elsewhere; ignore it for point-in-target unless question explicitly asks actual mouse position (e.g. cursorOverAvatar remains independent). Do not assume target presence from coords or known layout; false if occluded or uncertain. Respect frame roles and cursor questions specified by each actual question without imposing first frame on all calls. '+question)"
+          }
+        ],
+        "limits": "Strictly read-only prompt semantic clarification for 1280x900 canvas and point-in-target semantics. No tool executions, file edits, native inputs, permissions, clicks, retries, cropping, extra frames, coordinate inference, forced True, or modifications to signatures, schemas, calls, models, accounts, args, frames, timeouts, logic, guards, or return values."
+      }
+    }
+  }
+}
