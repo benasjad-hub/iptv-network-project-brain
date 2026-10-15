@@ -1,0 +1,8 @@
+test_actual_three_module_zero_gallery_reuses_one_scene_record (__main__.Integrated.test_actual_three_module_zero_gallery_reuses_one_scene_record) ... ok
+test_real_handoff_rejects_changed_project_without_new_capture (__main__.Integrated.test_real_handoff_rejects_changed_project_without_new_capture) ... ok
+test_real_handoff_rejects_same_content_replaced_inode (__main__.Integrated.test_real_handoff_rejects_same_content_replaced_inode) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.192s
+
+OK

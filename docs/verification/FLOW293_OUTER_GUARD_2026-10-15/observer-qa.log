@@ -1,0 +1,8 @@
+test_false_preserved_single_primary_call (__main__.Cases.test_false_preserved_single_primary_call) ... ok
+test_malformed_or_missing_field_has_no_fallback (__main__.Cases.test_malformed_or_missing_field_has_no_fallback) ... ok
+test_provider_error_has_no_fallback_or_saved_approval (__main__.Cases.test_provider_error_has_no_fallback_or_saved_approval) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK

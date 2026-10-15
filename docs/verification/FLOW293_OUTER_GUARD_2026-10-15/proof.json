@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "6e51d1676c1bce6a466f112245d9c441315d047f",
+  "nativeBaselineAccepted": false,
+  "limits": "Single primary model and stricter guard source; native292 failed. No baseline/generation/task resume/live rollout. Post-Back root unproven.",
+  "native292": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792042280.7974393,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 325.156
+  },
+  "observations292": [
+    {
+      "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+      "capturedAt": 1792042281.034931,
+      "observedAt": 1792042308.804627,
+      "elapsedSeconds": 27.655,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "profileButtonAtPoint": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6"
+      ]
+    },
+    {
+      "frameHash": "3d8b35c938d7e3d5b29c2bb03931cc09b18cef98eff5cd0bcb7c6eb8c38afbe6",
+      "capturedAt": 1792042309.6194031,
+      "observedAt": 1792042324.3929553,
+      "elapsedSeconds": 14.67,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": false,
+        "accountMatches": false,
+        "closeAtPoint": false
+      },
+      "frameHashes": [
+        "3d8b35c938d7e3d5b29c2bb03931cc09b18cef98eff5cd0bcb7c6eb8c38afbe6"
+      ]
+    },
+    {
+      "frameHash": "e42feacf5953457f514a709ebd0db119887007853b64694be512f287ff5f205e",
+      "capturedAt": 1792042324.678846,
+      "observedAt": 1792042379.6010566,
+      "elapsedSeconds": 54.794,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": true,
+        "accountMatches": true,
+        "closeAtPoint": true
+      },
+      "frameHashes": [
+        "e42feacf5953457f514a709ebd0db119887007853b64694be512f287ff5f205e"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792042380.0262358,
+      "observedAt": 1792042409.5459204,
+      "elapsedSeconds": 29.358,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "noUnsavedComposer": true,
+        "noPending": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "videoCount": 2,
+        "primaryAtPoint": true,
+        "secondaryAtPoint": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "2b63bf07566e81b42502cb4a3cdde71490822111783af37881f1624fb2a170ce",
+      "capturedAt": 1792042410.959031,
+      "observedAt": 1792042446.7880201,
+      "elapsedSeconds": 35.722,
+      "observation": {
+        "projectMatches": true,
+        "rootMatches": false,
+        "detailVisible": true,
+        "addressAtPoint": true
+      },
+      "frameHashes": [
+        "2b63bf07566e81b42502cb4a3cdde71490822111783af37881f1624fb2a170ce"
+      ]
+    },
+    {
+      "frameHash": "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee",
+      "capturedAt": 1792042449.0179965,
+      "observedAt": 1792042465.629921,
+      "elapsedSeconds": 16.492,
+      "observation": {
+        "projectMatches": true,
+        "detailVisible": true,
+        "addressFocused": true,
+        "resultId": "b01cf30e-60f2-4d1f-9d8e-8cbf42fcb9ba"
+      },
+      "frameHashes": [
+        "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee"
+      ]
+    },
+    {
+      "frameHash": "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee",
+      "capturedAt": 1792042465.955181,
+      "observedAt": 1792042504.9093325,
+      "elapsedSeconds": 38.852,
+      "observation": {
+        "projectMatches": true,
+        "backAtPoint": true
+      },
+      "frameHashes": [
+        "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee"
+      ]
+    }
+  ],
+  "operationFiles": [
+    ".flow.lock"
+  ],
+  "workers": {
+    "291": {
+      "status": "SUCCESS",
+      "durationSeconds": 14.496376256,
+      "deniedActionCount": 0,
+      "proposal": {
+        "patches": [
+          {
+            "file": "flow-observation.py",
+            "old": "        result = original.run(self.cli, self.home, self.work, prompt, timeout=timeout, model='gemini-3.8-flash-low', print_timeout=0)",
+            "new": "        result = original.run(self.cli, self.home, self.work, prompt, timeout=timeout, model='gemini-3.8-flash-medium', print_timeout=0)"
+          }
+        ],
+        "limits": "Single primary model selection of existing allowlisted gemini-3.8-flash-medium in Observer.observe's single original.run call; no fallback, voting, retry, prompt workaround, bbox authority substitution, or native generation; preserves 180s budget, owned-frame custody, and strict schema validation; actual latency and native acceptance must be measured fresh before any success claim."
+      }
+    },
+    "293": {
+      "status": "SUCCESS",
+      "durationSeconds": 89.525568607,
+      "deniedActionCount": 0,
+      "proposal": {
+        "patches": [
+          {
+            "file": "flow-native-preflight.py",
+            "old": "    baseline = native_mod.collect_native_baseline(op, lease, work, cli, home, cancelled, seed=seed)",
+            "new": "    def local_cancelled():\n        check_guard()\n        return False\n\n    baseline = native_mod.collect_native_baseline(op, lease, work, cli, home, local_cancelled, seed=seed)"
+          }
+        ],
+        "limits": "Preserve full outer 180s preflight duration limit and first-captured-to-now interval enforced within delegate before input/capture/observation steps without weakening or timeout reset; check_guard calls original captured cancelled parameter without recursion; preserve outer check_guard before and after delegation, exact seed object, arguments order, and return baseline with unhandled failure propagation."
+      }
+    }
+  }
+}

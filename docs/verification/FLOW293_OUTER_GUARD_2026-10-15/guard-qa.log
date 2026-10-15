@@ -1,0 +1,13 @@
+test_same_authority_exact_return_without_recursion (__main__.Cases.test_same_authority_exact_return_without_recursion) ... ok
+test_exact180_boundary_not_relaxed_or_shortened (__main__.Cases.test_exact180_boundary_not_relaxed_or_shortened) ... ok
+test_expired_outer_budget_blocks_delegated_action (__main__.Cases.test_expired_outer_budget_blocks_delegated_action) ... ok
+test_clock_reversal_blocks_delegated_action (__main__.Cases.test_clock_reversal_blocks_delegated_action) ... ok
+test_cancel_blocks_delegated_action (__main__.Cases.test_cancel_blocks_delegated_action) ... ok
+test_owner_change_blocks_delegated_action (__main__.Cases.test_owner_change_blocks_delegated_action) ... ok
+test_prompt_change_blocks_delegated_action (__main__.Cases.test_prompt_change_blocks_delegated_action) ... ok
+test_attempt_marker_blocks_delegated_action (__main__.Cases.test_attempt_marker_blocks_delegated_action) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.440s
+
+OK
