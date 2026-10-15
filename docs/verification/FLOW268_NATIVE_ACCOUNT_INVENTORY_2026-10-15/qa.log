@@ -1,0 +1,47 @@
+test_exact_baseline_identity_only_profile_pair_no_core_write (old.Cases.test_exact_baseline_identity_only_profile_pair_no_core_write) ... ok
+test_cancel_before_no_factory (old.Cases.test_cancel_before_no_factory) ... ok
+test_nonbool_cancellation_no_factory (old.Cases.test_nonbool_cancellation_no_factory) ... ok
+test_root_refusals_no_input (old.Cases.test_root_refusals_no_input) ... ok
+test_account_mismatch_does_not_blind_close (old.Cases.test_account_mismatch_does_not_blind_close) ... ok
+test_close_point_mismatch_does_not_blind_close (old.Cases.test_close_point_mismatch_does_not_blind_close) ... ok
+test_cancel_after_observe_prevents_click (old.Cases.test_cancel_after_observe_prevents_click) ... ok
+test_owner_email_changed_after_observe_prevents_click (old.Cases.test_owner_email_changed_after_observe_prevents_click) ... ok
+test_owner_reservation_changed_after_observe_prevents_click (old.Cases.test_owner_reservation_changed_after_observe_prevents_click) ... ok
+test_prompt_changed_after_observe_prevents_click (old.Cases.test_prompt_changed_after_observe_prevents_click) ... ok
+test_frame_tamper_after_observe_refused (old.Cases.test_frame_tamper_after_observe_refused) ... ok
+test_nonprivate_frame_refused (old.Cases.test_nonprivate_frame_refused) ... ok
+test_future_capture_refused (old.Cases.test_future_capture_refused) ... ok
+test_attempted_operation_never_observes_or_inputs (old.Cases.test_attempted_operation_never_observes_or_inputs) ... ok
+test_generation_marker_never_observes_or_inputs (old.Cases.test_generation_marker_never_observes_or_inputs) ... ok
+test_cancel_during_native_prevents_return (old.Cases.test_cancel_during_native_prevents_return) ... ok
+test_owner_changed_during_native_prevents_return (old.Cases.test_owner_changed_during_native_prevents_return) ... ok
+test_late_observation_181s_prevents_first_click (old.Cases.test_late_observation_181s_prevents_first_click) ... ok
+test_whole_history_not_refreshed_by_later_frames (old.Cases.test_whole_history_not_refreshed_by_later_frames) ... ok
+test_late_native_collector_prevents_return (old.Cases.test_late_native_collector_prevents_return) ... ok
+test_native_failure_propagates_without_core_write (old.Cases.test_native_failure_propagates_without_core_write) ... ok
+test_sent_click_error_is_never_replayed (old.Cases.test_sent_click_error_is_never_replayed) ... ok
+test_bad_account_closes_transport_but_never_blind_ui_cleanup (old.Cases.test_bad_account_closes_transport_but_never_blind_ui_cleanup) ... ok
+test_wrong_root_does_not_construct_display (old.Cases.test_wrong_root_does_not_construct_display) ... ok
+test_noncallable_cancel_before_factory (old.Cases.test_noncallable_cancel_before_factory) ... ok
+test_invalid_initial_clock_refused_before_factory (old.Cases.test_invalid_initial_clock_refused_before_factory) ... ok
+test_invalid_final_clock_cannot_return_baseline (old.Cases.test_invalid_final_clock_cannot_return_baseline) ... ok
+test_clock_backwards_during_native_refused (old.Cases.test_clock_backwards_during_native_refused) ... ok
+test_identical_bytes_replaced_inode_refused (old.Cases.test_identical_bytes_replaced_inode_refused) ... ok
+test_cancel_function_exception_not_suppressed (old.Cases.test_cancel_function_exception_not_suppressed) ... ok
+test_second_fresh_open_sample_without_input_replay (__main__.Settlement.test_second_fresh_open_sample_without_input_replay) ... ok
+test_third_fresh_open_sample_without_input_replay (__main__.Settlement.test_third_fresh_open_sample_without_input_replay) ... ok
+test_open_exhaustion_stops_at_three_without_close (__main__.Settlement.test_open_exhaustion_stops_at_three_without_close) ... ok
+test_second_fresh_close_sample_no_reclick (__main__.Settlement.test_second_fresh_close_sample_no_reclick) ... ok
+test_close_exhaustion_stops_without_delegate (__main__.Settlement.test_close_exhaustion_stops_without_delegate) ... ok
+test_visible_wrong_account_is_not_polled_away (__main__.Settlement.test_visible_wrong_account_is_not_polled_away) ... ok
+test_wrong_close_point_is_not_polled_away (__main__.Settlement.test_wrong_close_point_is_not_polled_away) ... ok
+test_project_mismatch_on_open_false_is_immediate (__main__.Settlement.test_project_mismatch_on_open_false_is_immediate) ... ok
+test_pending_during_close_is_immediate (__main__.Settlement.test_pending_during_close_is_immediate) ... ok
+test_provider_error_is_not_retried (__main__.Settlement.test_provider_error_is_not_retried) ... ok
+test_cancel_during_unsettled_open_prevents_second_sample (__main__.Settlement.test_cancel_during_unsettled_open_prevents_second_sample) ... ok
+test_owner_change_during_unsettled_open_prevents_second_sample (__main__.Settlement.test_owner_change_during_unsettled_open_prevents_second_sample) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 1.547s
+
+OK

@@ -1,0 +1,15 @@
+# Native account and historical inventory — 2026-10-15
+
+Source commit: 86e21ced0bf6a95f70293314c1c25f9e1735c599. Preflight SHA256: 64040e9fba3bc24fa6197afe99a06745b428d8d3ed4ddfc8fbca2e8839a3ef61. Product STATE follow-up:36b89cee.
+
+[Exact safe proof and original observation records](proof.json), [42 changed-module tests](qa.log).
+
+Actual266 invoked accepted native preflight as the real service useriptv, uid1001, under the exact original saved request/context, canonical operation and actual session/browser/registeredHOME leases. Immediate post-click capture retained the old root, so strict profile gate refused. Separate read-only267 observed the actual expected account open. This did not establish socket-close causality or exact input latency. No blind click replay occurred.
+
+Original authenticated Google268 returned ONE literal patch (90.799s, SUCCESS, denied0) adding max3 fresh semantic reads per profile transition. Wrong account/project/point/type/cancel/context/error immediately refuses; only strict transitional false permits another read. One input per action; original180s and file/authority checks retained. Exact JSON decode/literal patch, no implementation adaptation. Python syntax and42 tests pass (1.547s):30 relevant changed-module safety regressions and12 new settlement cases, real temp authority/files/parser with mocked native visual/display/collector collaborators. These tests alone are not native proof.
+
+Fresh close269 refused its initial semantic authority BEFORE input. Fresh precise270 confirmed the exact visible close target and expected current account; ONE close and independent profileClosed/root observation succeeded in17.632s. Then actual native271 used reviewed268 under the same real authority: profile first read false/second read true, one close, account confirmed; collector measured both existing historical UUIDs, complete/unfiltered/noPending/count2 and final unchanged root. Current account and historical inventory are actual native observations. Neither historical clip is an output of the app task.
+
+Limits: combined preparation took190.295s and the unchanged strict outer180s guard refused BEFORE binding. One original visual observation took50.140s. No baseline sidecar, core receipt or generation-attempt exists; operation directory has only its lock. No prompt, Generate, ordinary download, app result, task mutation, provider activation or service rollout. Saved task remains exactly one a58, review/rev4/waiting-for-tool/stage0Flowvideo/completed[]/inFlightfalse. Real active session is retained for this same context. Final root is observed; no owner editor/emulator input touched. Full Flow/whole-app acceptance remains OPEN.
+
+Next: review original272 narrowly sharing the exact trusted fresh post-close initial-root scene/record with gallery validation, avoiding one redundant native observation without weakening180s or any identity/file/semantic guard. No new native retry before review/tests. Remaining pending/completion/export/MP4/recovery/release/runtime still required before Generate. Older unrelated Brain structural metadata failure is not claimed fixed.

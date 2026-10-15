@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "86e21ced0bf6a95f70293314c1c25f9e1735c599",
+  "sourceSha256": "64040e9fba3bc24fa6197afe99a06745b428d8d3ed4ddfc8fbca2e8839a3ef61",
+  "native266": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792036841.0945644,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": false,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 22.846
+  },
+  "native267ReadOnly": {
+    "date": "2026-10-15",
+    "uid": 1001,
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "frameHash": "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280",
+    "capturedAt": 1792036969.2578478,
+    "observation": {
+      "projectMatches": true,
+      "rootMatches": true,
+      "profileOpen": true,
+      "accountMatches": true,
+      "unsavedComposerVisible": false,
+      "pendingGenerationVisible": false
+    },
+    "inputExecuted": false,
+    "generationExecuted": false,
+    "elapsedSeconds": 6.827
+  },
+  "native270VerifiedClose": {
+    "date": "2026-10-15",
+    "uid": 1001,
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "profileCloseInputs": 1,
+    "freshReadsAfterClick": 1,
+    "profileClosedVerified": true,
+    "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+    "capturedAt": 1792037307.0850635,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "elapsedSeconds": 17.632
+  },
+  "native271": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792037366.515477,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 190.295
+  },
+  "observations271": [
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792037366.7582862,
+      "observedAt": 1792037372.2607815,
+      "elapsedSeconds": 5.389,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "profileButtonAtPoint": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "b2d4038e1cc4f4e6fa06760090ee1fc17d0c90505fcc4a693b32fa2d562c6686",
+      "capturedAt": 1792037373.125357,
+      "observedAt": 1792037378.909653,
+      "elapsedSeconds": 5.69,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": false,
+        "accountMatches": false,
+        "closeAtPoint": false
+      },
+      "frameHashes": [
+        "b2d4038e1cc4f4e6fa06760090ee1fc17d0c90505fcc4a693b32fa2d562c6686"
+      ]
+    },
+    {
+      "frameHash": "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280",
+      "capturedAt": 1792037379.1308208,
+      "observedAt": 1792037392.9818008,
+      "elapsedSeconds": 13.746,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": true,
+        "accountMatches": true,
+        "closeAtPoint": true
+      },
+      "frameHashes": [
+        "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792037393.404724,
+      "observedAt": 1792037399.2224593,
+      "elapsedSeconds": 5.715,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792037399.452379,
+      "observedAt": 1792037413.6847668,
+      "elapsedSeconds": 14.132,
+      "observation": {
+        "rootMatches": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "noPending": true,
+        "videoCount": 2,
+        "primaryAtPoint": true,
+        "secondaryAtPoint": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "2d25eff115aae5e8a7a6acf171de5a64c8f141b8993a44f2e9e5207ded232826",
+      "capturedAt": 1792037414.4834604,
+      "observedAt": 1792037435.251425,
+      "elapsedSeconds": 20.653,
+      "observation": {
+        "projectMatches": true,
+        "addressAtPoint": true
+      },
+      "frameHashes": [
+        "2d25eff115aae5e8a7a6acf171de5a64c8f141b8993a44f2e9e5207ded232826"
+      ]
+    },
+    {
+      "frameHash": "8a0b29b94c5f8685d99c299b70077870684c7c71575d28fdb513b94440773646",
+      "capturedAt": 1792037437.4813905,
+      "observedAt": 1792037456.1715927,
+      "elapsedSeconds": 18.585,
+      "observation": {
+        "resultId": "b01cf30e-60f2-4d1f-9d8e-8cbf42fcb9ba",
+        "projectMatches": true
+      },
+      "frameHashes": [
+        "8a0b29b94c5f8685d99c299b70077870684c7c71575d28fdb513b94440773646",
+        "2d25eff115aae5e8a7a6acf171de5a64c8f141b8993a44f2e9e5207ded232826"
+      ]
+    },
+    {
+      "frameHash": "b258cd3d69207f4bf03b77bb9843190de598ae11314c249797cf05dbe4f87d4d",
+      "capturedAt": 1792037456.4949899,
+      "observedAt": 1792037462.73755,
+      "elapsedSeconds": 6.136,
+      "observation": {
+        "projectMatches": true,
+        "backAtPoint": true
+      },
+      "frameHashes": [
+        "b258cd3d69207f4bf03b77bb9843190de598ae11314c249797cf05dbe4f87d4d"
+      ]
+    },
+    {
+      "frameHash": "88962dfbd836860533667e76a4e897375ab013ebbe09b95bd031392d3bf48c00",
+      "capturedAt": 1792037463.174066,
+      "observedAt": 1792037513.4345026,
+      "elapsedSeconds": 50.14,
+      "observation": {
+        "rootMatches": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "noPending": true,
+        "videoCount": 2,
+        "galleryUnchanged": true,
+        "secondaryAtPoint": true
+      },
+      "frameHashes": [
+        "88962dfbd836860533667e76a4e897375ab013ebbe09b95bd031392d3bf48c00",
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "cdfea4c001ab46074009a6fb91e66afd3daa99845ec3d62a477a1c7de5f7e12d",
+      "capturedAt": 1792037513.8613632,
+      "observedAt": 1792037524.976287,
+      "elapsedSeconds": 11.012,
+      "observation": {
+        "projectMatches": true,
+        "addressAtPoint": true
+      },
+      "frameHashes": [
+        "cdfea4c001ab46074009a6fb91e66afd3daa99845ec3d62a477a1c7de5f7e12d"
+      ]
+    },
+    {
+      "frameHash": "3f6332dbdeedaac65bd0703d9371e30e6bde8af6d8c886bee6490b51b2df2f05",
+      "capturedAt": 1792037527.202681,
+      "observedAt": 1792037534.4058008,
+      "elapsedSeconds": 7.085,
+      "observation": {
+        "resultId": "3c738340-6084-4b52-b384-01d7b246c6fb",
+        "projectMatches": true
+      },
+      "frameHashes": [
+        "3f6332dbdeedaac65bd0703d9371e30e6bde8af6d8c886bee6490b51b2df2f05",
+        "cdfea4c001ab46074009a6fb91e66afd3daa99845ec3d62a477a1c7de5f7e12d"
+      ]
+    },
+    {
+      "frameHash": "d8a44c57eb556c60accf756107ff2e308592065535d449ceb2af1c344a206f1e",
+      "capturedAt": 1792037534.7327862,
+      "observedAt": 1792037548.834539,
+      "elapsedSeconds": 13.995,
+      "observation": {
+        "projectMatches": true,
+        "backAtPoint": true
+      },
+      "frameHashes": [
+        "d8a44c57eb556c60accf756107ff2e308592065535d449ceb2af1c344a206f1e"
+      ]
+    },
+    {
+      "frameHash": "4ad26e5940b875b05632140c41be481ca010a07a5abd26a1959aa65a2ba757b7",
+      "capturedAt": 1792037549.258901,
+      "observedAt": 1792037556.7988546,
+      "elapsedSeconds": 7.433,
+      "observation": {
+        "rootMatches": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "noPending": true,
+        "videoCount": 2,
+        "galleryUnchanged": true
+      },
+      "frameHashes": [
+        "4ad26e5940b875b05632140c41be481ca010a07a5abd26a1959aa65a2ba757b7",
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    }
+  ],
+  "worker268": {
+    "status": "SUCCESS",
+    "seconds": 90.799,
+    "denied": 0,
+    "provider": "Original authenticated Google"
+  },
+  "baselineBound": false,
+  "coreReceiptExists": false,
+  "generationAttemptExists": false,
+  "limits": "Actual current account and complete historical inventory observed, but combined180s preflight refused at190.295s BEFORE durable binding. Not generation/download/app display/automatic completion. No provider or service activation. No latency or socket causal claim."
+}
