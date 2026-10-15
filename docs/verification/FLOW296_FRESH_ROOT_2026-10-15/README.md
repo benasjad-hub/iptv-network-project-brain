@@ -1,0 +1,11 @@
+# Flow fresh root and latency review — 2026-10-15
+
+Source: product documentation0bfbbabdcf1bd7b7584b7d3635484e5de9390c0b; implementation6e51d1676c1bce6a466f112245d9c441315d047f unchanged. [Safe original evidence](proof.json).
+
+Readonly294 failed its first native capture10s before provider/input. No failed screenshot was adopted. Existing Xvfb98 and bounded xdpyinfo responded; no cause claim, restart, authentication or service change. Separate readonly296 under same actual service uid1001/a58:0/hash/browser/HOME/session freshly confirmed ROOT/project true, detail false, profile closed, no visible unsaved composer/pending. Original medium observation16.995s; capture1792044133.426407, exact SHA in proof. No input/navigation, task/baseline/prompt/Generate/download.
+
+Original Google295 review SUCCESS59.972s/denied0 recommends private historical benchmark before phase-based primary routing. Review is not accepted implementation: inconsistent unknown-role default-versus-reject instructions and dynamic enum class identity must be resolved before any ABI change. Current primary medium remains. Inputs invalidate previous point authority; historical positive/UUID cannot replace current failed evidence. Strict cumulative180s and no fallback/voting stay.
+
+Original297 PRIVATE OFFLINE diagnostic coding proposal active when recorded. Exactly2 historical cases and4fixed model calls maximum, no browser/capture/native/task/baseline APIs or acceptance authority. Exact original source must be reviewed and adversarial mocked-provider/custody/journal tested before private execution. Never relaunch existing job or enable routing from this review.
+
+Limits:296 proves current root only, not actual account, complete inventory, baseline, generation, ordinary export, verified MP4 or app display. No cause or timing attributed to earlier Back, no latency guarantee; do not reuse296 as later fresh authority. No new product code/tests needed for documentation-only advance. Prior native292 baseline remains failed/open; real reservation retained. Owner editor/emulator/closed-clone work untouched. Older unrelated Brain structural metadata failure persists; no full gate-pass/checker/manifest/checkpoint claim. Routine observation/review alone does not warrant owner notification.

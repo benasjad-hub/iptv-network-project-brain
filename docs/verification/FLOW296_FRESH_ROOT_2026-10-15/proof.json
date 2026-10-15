@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "0bfbbabdcf1bd7b7584b7d3635484e5de9390c0b",
+  "implementationCommit": "6e51d1676c1bce6a466f112245d9c441315d047f",
+  "native296": {
+    "date": "2026-10-15",
+    "uid": 1001,
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+    "capturedAt": 1792044133.426407,
+    "observation": {
+      "projectMatches": true,
+      "rootMatches": true,
+      "detailVisible": false,
+      "profileClosed": true,
+      "noUnsavedComposer": true,
+      "noPending": true
+    },
+    "inputExecuted": false,
+    "generationExecuted": false,
+    "elapsedSeconds": 16.995
+  },
+  "capture294": {
+    "state": "capture-timeout",
+    "seconds": 10,
+    "providerCalled": false,
+    "inputExecuted": false,
+    "frameAdopted": false
+  },
+  "review295": {
+    "status": "SUCCESS",
+    "durationSeconds": 59.97226473,
+    "deniedActionCount": 0,
+    "proposal": {
+      "assessment": "Evaluation of flow-native-preflight.py, flow-native-baseline.py, flow-gallery.py, and flow-observation.py confirms that the pipeline requires 10 to 13 sequential visual CLI observations during preflight. In run 292 (all gemini-3.8-flash-medium), total elapsed time reached 325.156s (individual calls: 27.655s initial root point, 14.670s post-profile transition, 54.794s account match, 29.358s close root/gallery, 35.722s detail entry, 16.492s focused UUID, 38.852s restored back, followed by provider timeout), violating the strict 180s preflight ceiling. In run 271 (low primary), latency reached 190.295s with a 50.140s single-call outlier; low successfully extracted UUID inventory but repeatedly failed initial profile avatar point detection (profileButtonAtPoint=False despite geometric bbox True), preventing baseline full acceptance. Safe call reduction is physically bounded: intervening user inputs (clicks on previews, address bar focus, URL exposition, view restore, back click) mutate DOM and canvas state, strictly invalidating prior frames and requiring fresh visual proof before subsequent actions. Phase-based model routing (medium for high-spatial point checks, low for structured text/state extraction) is conceptually sound, but currently lacks empirical accuracy and tail-latency data per phase to guarantee execution within 180s without regression.",
+      "recommendedChange": "Do not roll out untracked model routing directly into production preflight. Instead, implement a bounded internal typed enum ABI (ObservationRole) in flow-observation.py that maps explicitly defined phase roles to model configurations, defaulting safely and failing closed to gemini-3.8-flash-medium on any unmapped, legacy, or invalid role. In preflight and gallery modules, pass explicit ObservationRole members at each call site rather than inferring roles from prompts or schemas. Before deploying role-based switching to native execution, run a private read-only offline benchmark suite on existing recorded historical frames to measure empirical accuracy and latency per role on low versus medium. For semantic call reduction, preserve existing seed reuse between close-profile and baseline entry, but strictly forbid cross-action frame reuse across intervening clicks, maintaining fail-closed aborts whenever the 180s cumulative preflight deadline expires.",
+      "invariants": [
+        "Strict 180s preflight wall-clock bound: cumulative duration from start_time and first_captured_at is non-negotiable; check_guard must abort execution immediately upon expiration without budget extension or reset.",
+        "Intervening input invalidation: any physical display action (click, keypress, URL expose, view restore) invalidates previous frame custody; verification of post-action state requires fresh capture with full inode, permissions, and SHA-256 validation.",
+        "Explicit internal role ABI: observation role must be a typed internal Python enum passed directly by trusted callers, never inferred from question text, requested fields, untrusted payload, or environment variables.",
+        "Fail-closed role routing: unmapped, unrecognized, or None roles must default strictly to gemini-3.8-flash-medium; invalid types must raise ValueError immediately.",
+        "Zero fallback and zero voting: no model switching triggered by verification failure, no speculative multi-model voting, and no parallel browser or visual sessions.",
+        "Strict schema and custody: result UUID must be canonical lowercase RFC 4122 or null; null cannot be coerced; frame regular files must remain 0o600 mode owned by geteuid() with matching pre- and post-observation SHA-256 hashes.",
+        "Context matching: exact project, email, operationId, and contextHash must match journal context on every guard check; baseline witness must not be created if any guard fails."
+      ],
+      "boundedImplementationPlan": [
+        "Define a trusted internal Enum ObservationRole in flow-observation.py with explicit members (INITIAL_ROOT_POINT, PROFILE_ACCOUNT, GALLERY_SEED, SUBSEQUENT_ROOT, DETAIL_TRANSITION, ADDRESS_FOCUS_UUID, RESTORED_BACK, FINAL_ROOT, DEFAULT_MEDIUM).",
+        "Update Observer.observe() signature to accept an explicit keyword-only argument 'role: ObservationRole = ObservationRole.DEFAULT_MEDIUM'; validate that role is an instance of ObservationRole, map it via a private static dictionary to model names, and raise ValueError for invalid or unknown values.",
+        "Update flow-native-preflight.py and flow-gallery.py observation call sites to pass the designated ObservationRole constant explicitly at each step.",
+        "Build a standalone private read-only benchmark tool (flow-benchmark-roles.py) that evaluates saved historical frame artifacts against each ObservationRole under both gemini-3.8-flash-low and gemini-3.8-flash-medium without dispatching native input, measuring precision, recall, and execution latency.",
+        "Retain the existing seed tuple optimization ((file, cap, obs), record, stat_identity) between Step 3 close-profile and Step 4 gallery baseline collection to avoid duplicate initial root observation.",
+        "Maintain strict capture_scene() and observe_scene() calls after every display.click, display.expose_current_result_url, and display.restore_result_view call to prevent stale image reuse."
+      ],
+      "tests": [
+        "Role enforcement unit test: pass invalid role objects, strings, integer values, and None to Observer.observe(); assert ValueError is raised or safe default medium is strictly applied without exception.",
+        "Role prompt tampering test: inject role-override hints or attacker-supplied strings into the observation question and fields parameters; assert model selection remains strictly governed by the internal caller-provided ObservationRole enum.",
+        "Intervening input stale frame rejection test: simulate an attempt to reuse a pre-focus detail frame to verify restoredBacktarget after restore_result_view; assert guard checks fail due to stat_identity mismatch or missing fresh capture.",
+        "Preflight strict 180s deadline test: simulate observation latency delays pushing cumulative time past 180s; verify check_guard immediately raises ValueError before any baseline witness or native attempt can be recorded.",
+        "Result UUID null/canonical parsing test: supply non-canonical, truncated, uppercase, and malformed UUID strings in address focus observation records; assert validation strictly rejects non-canonical representations and preserves strict nulls.",
+        "Stat identity tampering test: modify inode, mtime, size, or SHA-256 hash of a seeded PNG frame; verify collect_baseline rejects the seed with ValueError prior to observation.",
+        "Read-only benchmark isolation test: execute the role benchmark harness and confirm through audit hooks that no subprocess calls /usr/bin/ffmpeg with :98, no X11 displays are manipulated, and no file modifications occur outside work directories."
+      ],
+      "limits": "Role-based model routing reduces per-call latency on non-spatial phases but cannot eliminate visual provider latency variance or prevent network/provider tail outliers (e.g. single calls exceeding 50s as observed in run 271). Across 10 to 13 mandatory visual steps, total execution time may still exceed 180s under adverse provider conditions. In such cases, safe preflight failure without native baseline binding or generation attempt is the correct and expected system behavior; 180s completion cannot be guaranteed without compromising visual verification integrity."
+    },
+    "routingAccepted": false
+  },
+  "limits": "Fresh root observation only; no account/inventory/baseline/clip/latency guarantee. Routing not implemented; benchmark297 proposal not execution. No native inputs/service rollout."
+}
