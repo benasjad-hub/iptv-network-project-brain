@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "2aac143094445e11915032f6c833413264554ea6",
+  "original315": {"status": "ERROR", "durationSeconds": 310.841507757, "deniedActions": 0, "completeLiteralPatches": 2},
+  "privateCandidateSha256": "4b1f0dfbc623cbd5253951b3cc8e6aa99bce6c6d3bd909e6bf32c0085826f55d",
+  "decision": "rejected",
+  "qa": {"cases": 15, "passed": 12, "failed": 3, "errors": 0, "seconds": 1.025, "visual": "MOCK", "temporaryCanonicalAuthority": true},
+  "nextOriginalProposal": 316,
+  "materialized": false,
+  "limits": "No actual pending UI, native capture/provider/input, live authority creation, binding, generation or runtime activation. ERROR provenance retained."
+}

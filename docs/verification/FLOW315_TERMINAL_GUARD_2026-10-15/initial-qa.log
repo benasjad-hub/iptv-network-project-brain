@@ -1,0 +1,26 @@
+test314_changed_png_restored_mtime_refused (__main__.Pending.test314_changed_png_restored_mtime_refused) ... ok
+test314_missing_core_no_factory (__main__.Pending.test314_missing_core_no_factory) ... ok
+test314_mutated_authority_during_capture_blocks_provider (__main__.Pending.test314_mutated_authority_during_capture_blocks_provider) ... ok
+test314_new_bound_pending_during_capture_refused (__main__.Pending.test314_new_bound_pending_during_capture_refused) ... ok
+test314_positive_mock_only (__main__.Pending.test314_positive_mock_only) ... ok
+test314_reader_mode_race_refused (__main__.Pending.test314_reader_mode_race_refused) ... ok
+test315_cancel_after_capture_no_provider (__main__.Pending.test315_cancel_after_capture_no_provider) ... ok
+test315_created_time_unknown_refused (__main__.Pending.test315_created_time_unknown_refused) ... ok
+test315_extra_record_field_refused (__main__.Pending.test315_extra_record_field_refused) ... ok
+test315_false_same_item_refused (__main__.Pending.test315_false_same_item_refused) ... ok
+test315_final_file_verification_cannot_outlast_deadline (__main__.Pending.test315_final_file_verification_cannot_outlast_deadline) ... FAIL
+test315_historical_uuid_refused (__main__.Pending.test315_historical_uuid_refused) ... ok
+test315_operation_stage_changed_before_provider (__main__.Pending.test315_operation_stage_changed_before_provider) ... ok
+
+======================================================================
+FAIL: test315_final_file_verification_cannot_outlast_deadline (__main__.Pending.test315_final_file_verification_cannot_outlast_deadline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow315-qa.py", line 52, in test315_final_file_verification_cannot_outlast_deadline
+    with self.assertRaises(ValueError):self.collect()
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.705s
+
+FAILED (failures=1)
