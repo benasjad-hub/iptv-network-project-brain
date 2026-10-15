@@ -48,5 +48,15 @@
   "defaultGate": "OFF",
   "date": "2026-10-15",
   "sourceEqualityVerified": true,
-  "providerEnabled": false
+  "providerEnabled": false,
+  "structuralCheck": {
+    "reason": "Existing unrelated evidence metadata failure retained",
+    "checkedBrainCommit": "34caf617eda3bae8febdcd2a6a93d2d40457dd55",
+    "newEvidenceAbsentFromFailureList": true,
+    "pass": 29,
+    "warn": 3,
+    "fail": 1,
+    "fullGatePass": false,
+    "host": "isolated exact LF Linux clone"
+  }
 }
