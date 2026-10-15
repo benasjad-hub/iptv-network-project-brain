@@ -1,0 +1,9 @@
+# Offline benchmark proposal rejected — 2026-10-15
+
+Source: product documentation2f4b0c68; implementation6e51d1676c1bce6a466f112245d9c441315d047f unchanged. [Safe proof](proof.json), [actual adversarial QA](qa.log).
+
+Original authenticated Google298 pure-text SUCCESS131.429s/launcher137.500s/denied0 returned nonempty JSON/code after297 empty denied-tool rejection. Exact JSON-decoded source remained private and Python-compiles. Five NEW tests with real temp files, actual canonical parser and MOCK provider yielded2PASS/2FAIL/1ERROR: ordinary3429-byte PNG falsely rejected by30M lowerbound; missing provider exit implicitly accepted as0/all4calls; copied PNG mutation accepted/all4calls. Existing-journal refusal and provider-failure stop passed. Additional review found helper alias/sys.modules fallback and missing explicit schema/@image marker in prompt. Source rejected, no actual benchmark/provider calls or product code accepted.
+
+Original299 bounded pure-text literal correction proposal ACTIVE when recorded. No tools/permissions relaxation, replay or local implementation adaptation. Proposed fixes must be original exact unique patches, reviewed with new boundary/exit/PNG-copy-and-original-custody/durable-journal/HOMEbusy/no-replay checks BEFORE private execution. Existing raw receipts/reports and private failed candidate unchanged; no success relabelling. Private benchmark cannot grant acceptance authority or vote on current screenshots.
+
+Limits: no actual offline model timing/accuracy results, routing/ABI implementation, native baseline/account/inventory/clip or ordinary download. No new native inputs/full retry/task/provider/service/UI/flag changes. Current native296 ROOT was measured separately and cannot substitute for later fresh authority. Existing task/reservation, owner editor/emulator/closed-clone/AWS history preserved. Older unrelated Brain metadata structural failure remains; no full gate-pass/checker/manifest/checkpoint claim.

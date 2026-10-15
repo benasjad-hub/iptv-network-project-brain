@@ -1,0 +1,40 @@
+test_existing_journal_prevents_all_calls (__main__.Cases.test_existing_journal_prevents_all_calls) ... ok
+test_missing_exit_is_rejected_without_next_call (__main__.Cases.test_missing_exit_is_rejected_without_next_call) ... FAIL
+test_mutated_private_copy_refuses_before_next_call (__main__.Cases.test_mutated_private_copy_refuses_before_next_call) ... FAIL
+test_normal_private_png_supported (__main__.Cases.test_normal_private_png_supported) ... ERROR
+test_provider_failure_stops_after_first_call (__main__.Cases.test_provider_failure_stops_after_first_call) ... ok
+
+======================================================================
+ERROR: test_normal_private_png_supported (__main__.Cases.test_normal_private_png_supported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow298-qa.py", line 29, in test_normal_private_png_supported
+    r=self.go(self.cases());self.assertEqual(len(self.calls),4);self.assertFalse(r['acceptanceAuthority'])
+      ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow298-qa.py", line 27, in go
+    def go(self,c):return m.benchmark_pair(c,self.work,self.cli,self.home,R/'flow272-candidate')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow298-offline-benchmark.py", line 259, in benchmark_pair
+    raise ValueError(f"Frame size must be between 30M and 50M bytes, got {st.st_size}")
+ValueError: Frame size must be between 30M and 50M bytes, got 3429
+
+======================================================================
+FAIL: test_missing_exit_is_rejected_without_next_call (__main__.Cases.test_missing_exit_is_rejected_without_next_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow298-qa.py", line 32, in test_missing_exit_is_rejected_without_next_call
+    with self.assertRaises(Exception):self.go(self.cases(True))
+AssertionError: Exception not raised
+
+======================================================================
+FAIL: test_mutated_private_copy_refuses_before_next_call (__main__.Cases.test_mutated_private_copy_refuses_before_next_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow298-qa.py", line 36, in test_mutated_private_copy_refuses_before_next_call
+    with self.assertRaises(Exception):self.go(self.cases(True))
+AssertionError: Exception not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.863s
+
+FAILED (failures=2, errors=1)

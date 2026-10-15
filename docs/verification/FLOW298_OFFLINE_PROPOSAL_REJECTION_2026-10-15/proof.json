@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "2f4b0c684ecf7ee442f61a72523a18461fafbdf7",
+  "implementationCommit": "6e51d1676c1bce6a466f112245d9c441315d047f",
+  "original298": {
+    "receiptSeconds": 131.429014461,
+    "accepted": false,
+    "decodedCodeSha256": "7b9172d6ee79da2f65b144bb3283df5407f39e4f5fd1800133f22bbdb8267da5",
+    "denied": 0,
+    "launcherSeconds": 137.5,
+    "rawResponseCharacters": 20306,
+    "status": "SUCCESS"
+  },
+  "qa": {
+    "errors": 1,
+    "failed": 2,
+    "providerMocked": true,
+    "seconds": 2.863,
+    "tests": 5,
+    "realTempFilesAndCanonicalParser": true,
+    "passed": 2
+  },
+  "actualBenchmarkExecuted": false,
+  "productImplementationChanged": false,
+  "nativeInputExecuted": false,
+  "generationExecuted": false,
+  "limits": "Rejected private diagnostic proposal only. No accepted benchmark or model routing, baseline, generation, provider/service rollout. Original299 bounded correction proposal active."
+}

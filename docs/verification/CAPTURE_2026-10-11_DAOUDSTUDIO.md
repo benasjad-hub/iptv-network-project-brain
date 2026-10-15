@@ -1487,3 +1487,5 @@ NEXT original authenticated Google280 read-only programming proposal ACTIVE in s
 2026-10-15 readonly296 freshly confirms same actualROOT without input after294capturetimeout. Original295review not implementation/accepted routing; private offline benchmark297 programming proposal active, no execution. Productdocs0bfbbabd; FLOW296_FRESH_ROOT_2026-10-15 proof/README retain exact limits. Native baseline still open; no generation/task/service mutation.
 
 Flow297 emptySUCCESS/deniedRunCommand rejected; no benchmark/code. Original298 bounded pure-text programming proposal active, no tool permission relaxation. FLOW296 README records correction to earlier active297 status.
+
+Flow298 SUCCESSnonempty proposal rejected after5privateQA cases2PASS2FAIL1ERROR; no benchmark/product materialization. Productdocs2f4b0c68; FLOW298_OFFLINE_PROPOSAL_REJECTION_2026-10-15 safeproof/qa. Original299 bounded corrections active; no tools/permissions relaxation/native task/service changes.
