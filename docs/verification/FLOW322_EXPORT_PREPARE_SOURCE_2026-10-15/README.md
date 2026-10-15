@@ -9,3 +9,5 @@ Materialized scripts/studio/flow-export-prepare-observation.py SOURCE ONLY. Call
 Proof limits: all visual/provider outcomes in these QA logs are MOCK. No actual Flow generation, export affordance, download, decoder or app-display acceptance. No whole-app completion or full Brain gate pass.
 
 Product source/STATE commit: a1d156dbb819d889bb8fa5153a5f8860e358104a (pushed).
+
+Original322 launcher elapsed410.195s; original receipt duration401.741731623s, one turn. Exact-LF detached gate at ca50ced2facc1fcf4507e83bb286896b20c2e56a: 29PASS/3WARN/1FAIL, older unrelated verification metadata only; this new record absent from failure list. Sync UNKNOWN because detached. No full gate pass, checker/manifest/main/checkpoint adoption.
