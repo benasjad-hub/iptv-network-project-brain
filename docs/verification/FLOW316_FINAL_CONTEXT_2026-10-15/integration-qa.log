@@ -1,0 +1,24 @@
+test316_final_pending_binding_refused (__main__.Boundary.test316_final_pending_binding_refused) ... FAIL
+test316_final_browser_owner_loss_refused (__main__.Boundary.test316_final_browser_owner_loss_refused) ... FAIL
+test316_actual_scene_protocol_and_validate (__main__.Scene.test316_actual_scene_protocol_and_validate) ... ok
+
+======================================================================
+FAIL: test316_final_pending_binding_refused (__main__.Boundary.test316_final_pending_binding_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow316-integration-qa.py", line 16, in test316_final_pending_binding_refused
+    with self.assertRaises(ValueError):self.collect()
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test316_final_browser_owner_loss_refused (__main__.Boundary.test316_final_browser_owner_loss_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow316-integration-qa.py", line 24, in test316_final_browser_owner_loss_refused
+    with self.assertRaises(ValueError):self.collect()
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.250s
+
+FAILED (failures=2)

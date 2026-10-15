@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "2aac143094445e11915032f6c833413264554ea6",
+  "original316": {"status": "SUCCESS", "durationSeconds": 245.293692022, "launcherSeconds": 254.101, "deniedActions": 0, "literalPatches": 1},
+  "decision": "rejected-after-integration",
+  "primaryQa": {"cases": 18, "passed": 18, "failed": 0, "seconds": 2.843},
+  "additionalIntegration": {"cases": 3, "passed": 1, "failed": 2, "errors": 0, "seconds": 0.250},
+  "nextOriginalProposal": 317,
+  "materialized": false,
+  "limits": "Temporary canonical authority only; capture/address/visual mocked. No actual pending/native/provider/generation/rollout acceptance. Original315 ERROR remains ERROR."
+}
