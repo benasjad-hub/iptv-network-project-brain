@@ -1,0 +1,43 @@
+test314_changed_png_restored_mtime_refused (__main__.Pending.test314_changed_png_restored_mtime_refused) ... FAIL
+test314_missing_core_no_factory (__main__.Pending.test314_missing_core_no_factory) ... ok
+test314_mutated_authority_during_capture_blocks_provider (__main__.Pending.test314_mutated_authority_during_capture_blocks_provider) ... FAIL
+test314_new_bound_pending_during_capture_refused (__main__.Pending.test314_new_bound_pending_during_capture_refused) ... FAIL
+test314_positive_mock_only (__main__.Pending.test314_positive_mock_only) ... ok
+test314_reader_mode_race_refused (__main__.Pending.test314_reader_mode_race_refused) ... FAIL
+
+======================================================================
+FAIL: test314_changed_png_restored_mtime_refused (__main__.Pending.test314_changed_png_restored_mtime_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow314-qa.py", line 49, in test314_changed_png_restored_mtime_refused
+    with self.assertRaises(ValueError):self.collect()
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test314_mutated_authority_during_capture_blocks_provider (__main__.Pending.test314_mutated_authority_during_capture_blocks_provider)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow314-qa.py", line 39, in test314_mutated_authority_during_capture_blocks_provider
+    self.assertEqual(self.calls,0,'Provider must not run after capture changed authority')
+AssertionError: 1 != 0 : Provider must not run after capture changed authority
+
+======================================================================
+FAIL: test314_new_bound_pending_during_capture_refused (__main__.Pending.test314_new_bound_pending_during_capture_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow314-qa.py", line 52, in test314_new_bound_pending_during_capture_refused
+    with self.assertRaises(ValueError):self.collect()
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test314_reader_mode_race_refused (__main__.Pending.test314_reader_mode_race_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow314-qa.py", line 62, in test314_reader_mode_race_refused
+    with self.assertRaises(ValueError):p._read_secure(self.marker,16384,check_ownership=True)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.980s
+
+FAILED (failures=4)

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "2aac143094445e11915032f6c833413264554ea6",
+  "originalReceipt": {"status": "SUCCESS", "durationSeconds": 136.018490354, "deniedActions": 0},
+  "candidateSha256": "1194999407be9c66783ef0169d82456e70a2b869f2cf3950426b337f1936473f",
+  "decision": "rejected",
+  "qa": {"cases": 6, "passed": 2, "failed": 4, "errors": 0, "seconds": 5.980, "visualProvider": "MOCK", "canonicalTemporaryAuthority": true},
+  "materialized": false,
+  "nativeInput": false,
+  "actualProviderCalls": 0,
+  "nextOriginalProposal": 315,
+  "limits": "No native pending observation, baseline acceptance, generated clip, binding, runtime rollout or task resume. Existing production and live authority unchanged."
+}
