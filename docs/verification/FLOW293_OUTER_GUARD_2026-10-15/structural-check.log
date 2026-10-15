@@ -1,0 +1,38 @@
+WARN  repository sync UNKNOWN — detached HEAD — no branch to compare. UNKNOWN is not "probably fine"
+WARN  PROJECT.yaml active_branch is "main" but the checkout is on "HEAD"
+WARN  governed repository network: STALE_OBSERVATION — last observed 23 days ago (policy allows 7) — the repository may have moved since, and this record cannot say
+FAIL  verification evidence: docs/verification/aws-journal-20261013/README.md: records no commit SHA; docs/verification/aws-journal-20261013/README.md: records no ISO date; docs/verification/aws-journal-20261013/README.md: states no limits — evidence that claims no boundary will be read as proving everything; editor-qa-20261014/: no README.md — a verification directory without a record is not evidence; docs/verification/home-hero-20261014/README.md: records no commit SHA; docs/verification/home-hero-20261014/README.md: records no ISO date; docs/verification/home-hero-20261014/README.md: states no limits — evidence that claims no boundary will be read as proving everything; docs/verification/home-publication-storage-20261014/README.md: records no commit SHA; docs/verification/home-publication-storage-20261014/README.md: records no ISO date; docs/verification/home-publication-storage-20261014/README.md: states no limits — evidence that claims no boundary will be read as proving everything; native-fhd-editor-20261014/: no README.md — a verification directory without a record is not evidence; docs/verification/pages-aliases-20261014/README.md: states no limits — evidence that claims no boundary will be read as proving everything; pages-catalogue-20261014/: no README.md — a verification directory without a record is not evidence; docs/verification/picture-media-20261013/README.md: records no commit SHA; docs/verification/picture-media-20261013/README.md: records no ISO date; docs/verification/picture-media-20261013/README.md: states no limits — evidence that claims no boundary will be read as proving everything; docs/verification/srcset-only-20261013/README.md: records no ISO date; docs/verification/srcset-only-20261013/README.md: states no limits — evidence that claims no boundary will be read as proving everything
+PASS  every one of the 64 paths this run guards resolves inside this repository, none is reached through a link at ANY component, and each is the kind of entry it is read as
+PASS  no unfilled placeholder tokens in any canonical file
+PASS  all 13 required canonical root files present (dated docs under docs/ are checked in step 4)
+PASS  PROJECT.yaml parses
+PASS  FEATURE_MATRIX.yaml parses
+PASS  ACCESS_MAP.yaml parses
+PASS  HARDWARE.yaml parses
+PASS  ARTIFACTS.yaml parses
+PASS  SERVICES.yaml parses
+PASS  REPO_STATE.json parses
+PASS  REPO_STATE.json carries its generator stamp, well-formed fields and commits reachable from HEAD (detection, not proof)
+PASS  all 11 dated docs present, every one carrying a reviewed-against commit
+PASS  every reviewed-against commit resolves to a commit reachable from HEAD
+PASS  all 6 canonical YAML files carry a reviewed_against commit reachable from HEAD
+PASS  every referenced repo path resolves inside the repository
+PASS  branch HEAD @ b3ab88e
+PASS  freshness DOCS-ONLY ADVANCE — 260 file(s) changed since 44683c7, none under tools/ — claims about the tooling still describe this tree
+PASS  no duplicate canonical-source declarations
+PASS  feature matrix: 10 features across 3 surfaces, every state in vocabulary, every evidence path resolves
+PASS  release ledger: 10 tasks, 1 blocking (0 agent / 1 owner / 0 external), 6 gates
+PASS  service registry: 19 service(s), every entry carries status, login_identity and secret_ref
+PASS  vault state consistent: configured=false, product UNKNOWN (naming one proves nothing), 0 resolving secret_ref(s)
+PASS  EXTERNAL_REPOS.yaml: 1 governed repository, every entry carrying remote, branch, role, governs and authority
+PASS  REVIEW_BASELINE.json carries its generator stamp and well-formed rows (detection, not proof)
+PASS  secret hygiene: 20 file(s) — the canonical set plus what the CORE pack inlines — every line scanned for 9 credential shapes and value-bearing keys, none found (that set only — NOT a repository-wide clearance)
+PASS  provenance: 3 classifications, 0 owner determination(s) pinned
+PASS  open-question consistency: 1 answered, 2 open, no contradiction
+PASS  live-state rule: 0 planning doc(s) point to STATUS.md, TASKS.md, FEATURE_MATRIX.yaml and own no live progress
+PASS  size targets checked
+
+FRESHNESS: DOCS-ONLY ADVANCE
+REPOSITORY SYNC: UNKNOWN
+FAIL — 29 pass, 3 warn, 1 fail
+STRUCTURAL RESULT ONLY. It says nothing about whether a status, decision or verification claim is honest.
