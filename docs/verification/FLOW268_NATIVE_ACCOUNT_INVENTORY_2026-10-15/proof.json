@@ -281,5 +281,14 @@
   "baselineBound": false,
   "coreReceiptExists": false,
   "generationAttemptExists": false,
-  "limits": "Actual current account and complete historical inventory observed, but combined180s preflight refused at190.295s BEFORE durable binding. Not generation/download/app display/automatic completion. No provider or service activation. No latency or socket causal claim."
+  "limits": "Actual current account and complete historical inventory observed, but combined180s preflight refused at190.295s BEFORE durable binding. Not generation/download/app display/automatic completion. No provider or service activation. No latency or socket causal claim.",
+  "structuralCheck": {
+    "host": "isolated exact LF Linux clone",
+    "checkedBrainCommit": "fd84922",
+    "fullGatePass": false,
+    "newEvidenceAbsentFromFailureList": true,
+    "fail": 1,
+    "pass": 29,
+    "warn": 3
+  }
 }
