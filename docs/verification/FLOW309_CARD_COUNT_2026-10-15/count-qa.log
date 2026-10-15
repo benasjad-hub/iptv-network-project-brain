@@ -1,0 +1,11 @@
+test_primary_false_count2_remains_mandatory_refusal (__main__.PF.test_primary_false_count2_remains_mandatory_refusal) ... ok
+test_secondary_false_count2_remains_mandatory_refusal (__main__.PF.test_secondary_false_count2_remains_mandatory_refusal) ... ok
+test_both_false_count2_remain_refusal_without_extra_reads (__main__.PF.test_both_false_count2_remain_refusal_without_extra_reads) ... ok
+test_actual_count_above_two_refuses_without_capping (__main__.PF.test_actual_count_above_two_refuses_without_capping) ... ok
+test_gallery_actual_count_above_two_refuses_before_input (__main__.GF.test_gallery_actual_count_above_two_refuses_before_input) ... ok
+test_current_subsequent_point_false_never_uses_reference_positive (__main__.GF.test_current_subsequent_point_false_never_uses_reference_positive) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.570s
+
+OK

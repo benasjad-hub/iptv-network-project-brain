@@ -1,0 +1,9 @@
+test_primary_false_count2_remains_mandatory_refusal (__main__.PF.test_primary_false_count2_remains_mandatory_refusal) ... ok
+test_secondary_false_count2_remains_mandatory_refusal (__main__.PF.test_secondary_false_count2_remains_mandatory_refusal) ... ok
+test_both_false_count2_remain_refusal_without_extra_reads (__main__.PF.test_both_false_count2_remain_refusal_without_extra_reads) ... ok
+test_current_subsequent_point_false_never_uses_reference_positive (__main__.GF.test_current_subsequent_point_false_never_uses_reference_positive) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.906s
+
+OK

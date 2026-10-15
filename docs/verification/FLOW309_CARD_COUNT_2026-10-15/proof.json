@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "01ba2d0253bb14b5dc100f2b9940d9e72513a5ab",
+  "implementationCommit": "2aac143094445e11915032f6c833413264554ea6",
+  "workers": {
+    "307": {
+      "status": "SUCCESS",
+      "receiptSeconds": 218.404135555,
+      "denied": 0,
+      "literalPatchCount": 3
+    },
+    "309": {
+      "status": "SUCCESS",
+      "receiptSeconds": 97.789252323,
+      "denied": 0,
+      "literalPatchCount": 2
+    }
+  },
+  "native310": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792053332.1301517,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 51.91
+  },
+  "observations310": [
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792053332.4885597,
+      "observedAt": 1792053363.0996308,
+      "elapsedSeconds": 30.484,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "profileButtonAtPoint": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280",
+      "capturedAt": 1792053365.3693712,
+      "observedAt": 1792053374.3607137,
+      "elapsedSeconds": 8.821,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": true,
+        "accountMatches": true,
+        "closeAtPoint": true
+      },
+      "frameHashes": [
+        "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792053375.8018277,
+      "observedAt": 1792053384.0287952,
+      "elapsedSeconds": 8.105,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "noUnsavedComposer": true,
+        "noPending": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "videoCount": 2,
+        "primaryAtPoint": false,
+        "secondaryAtPoint": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    }
+  ],
+  "diagnostic311": {
+    "date": "2026-10-15",
+    "uid": 1001,
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+    "capturedAt": 1792053484.5466619,
+    "observation": {
+      "projectMatches": true,
+      "rootMatches": true,
+      "completeCount": 2,
+      "primaryLeft": 206,
+      "primaryTop": 192,
+      "primaryRight": 348,
+      "primaryBottom": 468,
+      "secondaryLeft": 364,
+      "secondaryTop": 192,
+      "secondaryRight": 506,
+      "secondaryBottom": 468,
+      "primaryContainsPoint": true,
+      "secondaryContainsPoint": true
+    },
+    "inputExecuted": false,
+    "generationExecuted": false,
+    "elapsedSeconds": 44.954
+  },
+  "nativeBaselineAccepted": false,
+  "operationFiles": [
+    ".flow.lock"
+  ],
+  "limits": "Prompt clarification has not solved native authority.311numericbounds disagree with inspected pixels; neither rawpositive nor derivedgeometry mayoverride310false. No baseline/core/attempt/generation/task/service rollout. Independent312sourceplan only."
+}
