@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "78e7c725",
+  "sourceSha256": "dcf1253005911bc77ecd20c459a840b3bc1a144ed0bc192fff3ba720361b62ac",
+  "original317": {"status": "SUCCESS", "durationSeconds": 61.932530675, "launcherSeconds": 71.145, "deniedActions": 0, "literalPatches": 1},
+  "sourceChain": {"baseOriginal": 314, "original315Patches": 2, "original316Patches": 1, "original317Patches": 1, "exactReconstructionChecked": true, "localImplementationAdaptation": false, "original315ReceiptStatus": "ERROR"},
+  "qa": {"cases": 18, "passed": 18, "failed": 0, "seconds": 2.068},
+  "integration": {"cases": 3, "passed": 3, "failed": 0, "seconds": 0.200, "actualSceneProtocol": true, "captureAddressVisual": "MOCK"},
+  "materialized": true,
+  "activated": false,
+  "nextOriginalProposal": 318,
+  "limits": "Source acceptance only. No native pending UI/provider/input/binding/generation/task resume/rollout; actual baseline and automatic Flow remain open."
+}

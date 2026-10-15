@@ -1,0 +1,8 @@
+test316_final_pending_binding_refused (__main__.Boundary.test316_final_pending_binding_refused) ... ok
+test316_final_browser_owner_loss_refused (__main__.Boundary.test316_final_browser_owner_loss_refused) ... ok
+test316_actual_scene_protocol_and_validate (__main__.Scene.test316_actual_scene_protocol_and_validate) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.200s
+
+OK
