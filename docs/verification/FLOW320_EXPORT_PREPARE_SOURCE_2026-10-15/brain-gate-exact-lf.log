@@ -1,0 +1,180 @@
+== git diff --check ==
+node tools/install/verify-manifest.mjs
+PASS  verify-install: 11 pinned file(s) match their digests; nothing under tools/ is unpinned
+      installed from benasjad-hub/iptv-network @ 044ea1f8fc45 on 2026-09-09T08:06:57.803Z
+      DETECTION, NOT A SIGNATURE. It catches an accidental edit, a partial copy or
+      a half-applied upgrade — not an adversary who can edit the manifest too.
+node --test tools/context/guards.test.mjs
+✔ parseYaml reads the supported subset (1.721131ms)
+✔ parseYaml keeps a # that is part of a token, and drops a real comment (0.101003ms)
+✔ parseYaml THROWS on a map inside a list item instead of truncating (0.216605ms)
+✔ parseYaml THROWS on a block scalar directly inside a list item (0.067797ms)
+✔ parseYaml THROWS on a tab and on a line with no colon (0.120383ms)
+✔ reviewedAgainst finds the header sha, and returns null when absent (0.277329ms)
+✔ a correctly wrapped planning doc passes (0.318906ms)
+✔ normative contract vocabulary is never forbidden inside the wrapper (0.125407ms)
+✔ the wrapper rejects live task status (0.226949ms)
+✔ the wrapper rejects live merge/review state (0.184654ms)
+✔ the wrapper rejects live implementation status (0.148618ms)
+✔ a missing wrapper is a problem, not a pass (0.112372ms)
+✔ a pointer that does not name every canonical surface is rejected (0.184844ms)
+✔ semantic header content may not escape below the wrapper (0.06102ms)
+✔ a horizontal rule and blank lines below the wrapper are allowed (0.046349ms)
+✔ auditRepoState accepts a well-formed state when commits are not checked (0.166129ms)
+✔ auditRepoState rejects a missing or wrong generator stamp (0.069137ms)
+✔ auditRepoState rejects a malformed timestamp, tree_status and sync state (0.137873ms)
+✔ auditRepoState rejects a non-object outright (0.095672ms)
+✔ auditRepoState ACCEPTS real reachable commits — the direction that was untested (722.795524ms)
+✔ auditRepoState rejects a freshness value outside the vocabulary (0.320922ms)
+✔ auditRepoState rejects a non-hexadecimal commit id as malformed, not merely absent (114.902208ms)
+✔ auditRepoState flags commits this repository does not contain (232.267772ms)
+✔ only SYNCED is promotable — UNKNOWN and every dirty/divergent state are not (0.149093ms)
+✔ isShaShaped accepts only a 7-40 character hex object name (0.076747ms)
+✔ isCommit refuses a revision git itself would accept, proving the shape gate runs first (571.122782ms)
+✔ changedSince returns null for an unresolvable base, and a list for a real one (1125.291931ms)
+✔ classifyDrift reports UNKNOWN — never CURRENT — when the base does not resolve (619.604386ms)
+✔ isInsideRepo accepts repo-relative destinations and refuses every escape (0.463503ms)
+✔ isInsideRepo is not defeated by a symlinked directory component (15.514915ms)
+✔ an absent, empty or malformed code_review_base is not a sha, so it cannot pass (0.162509ms)
+✔ SECRET_KEY_RE sees through a comment, blockquote or ANY list bullet (0.310398ms)
+✔ SECRET_KEY_RE does not fire on labels, prose, or emphasis (0.078774ms)
+✔ the value patterns are the nine shapes the policy enumerates, and they match (0.609387ms)
+✔ secretFindingForLine runs BOTH checks on every line, comment or not (0.262024ms)
+✔ secretFindingForLine allows the no-value placeholders, and never echoes a value (0.121565ms)
+✔ secretFindingForLine finds nothing in ordinary Brain prose (0.302751ms)
+✔ entryExists sees a DANGLING symlink where existsSync sees nothing (1.606696ms)
+✔ isShaShaped requires an actual string, not something that stringifies to one (0.089783ms)
+✔ isAncestorOfHead actually tests reachability, not merely commit existence (739.270677ms)
+✔ the credential-URL pattern is linear, not quadratic, on a long non-match (0.515044ms)
+✔ existsInRepo refuses a path that escapes, even when the target exists (0.299094ms)
+✔ the key half of the sweep fires on a commented line, not just the value half (0.072441ms)
+✔ writeDestinationProblem refuses every destination the scripts must refuse (2.389163ms)
+✔ read and readDirInRepo refuse a path that leaves the repository (0.303738ms)
+✔ uncontainedPaths flags a link and an escape, and passes ordinary files (2.799104ms)
+✔ a destination that is neither file nor directory is refused (2.751118ms)
+✔ the credential-URL shape is case-insensitive, as URI schemes are (0.095641ms)
+✔ the sk- shape is linear on a long non-matching line (9.96158ms)
+✔ the JWT shape is linear on a long non-matching line (29.792204ms)
+✔ EVERY credential shape is linear, not only the three that were measured (23.258468ms)
+✔ a real credential of each shape is still detected after the bounds (0.164715ms)
+✔ classifyRepoSync fails closed to UNKNOWN, and DIRTY outranks a clean comparison (133.741858ms)
+✔ classifyDrift reports SUBSYSTEM STALE when code moved, not just DOCS-ONLY ADVANCE (77.145619ms)
+✔ a base that is a real commit but unreachable from HEAD is UNKNOWN, never CURRENT (78.434011ms)
+✔ deleting the tracked state file is a DELETION, not a first run (75.349936ms)
+✔ check.mjs aborts on a canonical path that leaves the repository, and leaks nothing (284.26487ms)
+✔ check.mjs guards the PROJECT.yaml-supplied read paths, not only the canonical set (83.44185ms)
+✔ check.mjs FAILS a generated state that does not look generated (229.608926ms)
+✔ check.mjs FAILS, and reports UNKNOWN, for a base HEAD cannot reach (161.874963ms)
+✔ check.mjs FAILS on a credential planted in a canonical file (177.098284ms)
+✔ the secret sweep covers what the CORE pack inlines, not only the canonical set (122.583845ms)
+✔ the evidence DIRECTORY itself is guarded, not only the records under it (105.02645ms)
+✔ a configured pack section may not name, or RESOLVE TO, a credential file or anything under .git/ (3794.396964ms)
+✔ a configured pack section path is guarded by step 0, not only swept (60.460825ms)
+✔ a non-regular file at a read path is refused, not followed into a hang (82.637178ms)
+✔ checkpoint refuses a state file whose content is the literal null, by asking whether one exists (65.219082ms)
+✔ promotable_snapshot_source is false when the checker failed or the base is unresolvable (181.000718ms)
+✔ an absolute path is refused even when it points inside the repository (31.940188ms)
+✔ the JWT bounds are where the comment says they are (0.133954ms)
+✔ classifyRepoSync refuses when there is no repository at all (7.159434ms)
+✔ check.mjs FAILS a reviewed-against header HEAD cannot reach (136.121319ms)
+✔ a hostile brain.id_prefix is refused, not compiled (440.832769ms)
+✔ pack.mjs refuses every write destination that is not a gitignored plain file inside the repository (747.222335ms)
+✔ pack.mjs refuses to READ through a link, so out-of-repository text cannot reach the pack (145.870187ms)
+✔ check.mjs aborts on a symlinked evidence DIRECTORY, rather than skipping it (332.376551ms)
+✔ the credential KEY rule is case-insensitive, as YAML and Markdown keys are (0.180353ms)
+✔ auditRepoState rejects a state file with the wrong schema_version (4377.403412ms)
+✔ check.mjs FAILS on the remaining structural checks nothing else exercised (506.786003ms)
+✔ check.mjs FAILS a generated state that is null, or a dangling link (103.269655ms)
+✔ checkpoint.mjs refuses every unusable write destination and unusable prior base (359.822805ms)
+✔ checkpoint.mjs records the audited base it was given, not HEAD (1054.244922ms)
+✔ checkpoint.mjs and pack-audit.mjs refuse to read through a link (131.595483ms)
+✔ pack-audit.mjs exits non-zero when an orientation fact is missing (159.032786ms)
+✔ check.mjs FAILS a canonical YAML pinned to an unreachable commit, like a Markdown header (275.226974ms)
+✔ pack-audit.mjs actually inspects the pack, rather than asserting it passed (152.986978ms)
+✔ check.mjs FAILS when an answered question still reads as open (325.59582ms)
+ℹ tests 87
+ℹ suites 0
+ℹ pass 87
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19412.005642
+node --test tools/context/external.test.mjs
+✔ DRIFT is detected: the governed repository moved past the reviewed commit (1.174841ms)
+✔ A STALE observation is detected, and never reported as CURRENT (0.116226ms)
+✔ the staleness threshold comes from the registry, not from the classifier (0.110843ms)
+✔ a MISSING repository is detected and is fatal (0.263598ms)
+✔ the observer's own note is surfaced rather than replaced by a guess (0.187585ms)
+✔ a DIRTY observed worktree is detected (0.629449ms)
+✔ drift outranks dirtiness when both are true (0.139246ms)
+✔ an unreadable observation fails closed to UNKNOWN, never CURRENT (0.102241ms)
+✔ a malformed sha is UNKNOWN rather than a comparison (0.218499ms)
+✔ never observed, and observed but never reviewed, are both NO_BASELINE (0.170317ms)
+✔ CURRENT requires every condition at once (0.221433ms)
+✔ every state the classifier can return is in the declared vocabulary (0.192651ms)
+✔ a baseline row for an undeclared repository is UNREGISTERED and fatal (0.160417ms)
+✔ a declared repository with no baseline row still appears (0.458687ms)
+✔ rows are ordered deterministically (0.087655ms)
+✔ a well-formed registry parses with no problems (0.181136ms)
+✔ a credential-bearing or ssh remote is refused (0.186941ms)
+✔ every required registry field is required (0.225802ms)
+✔ an id that disagrees with its key is refused (0.072784ms)
+✔ a non-positive observation age policy is refused rather than coerced (0.075676ms)
+✔ a generated baseline reads clean (0.120047ms)
+✔ a hand-written baseline is detected by its missing generator stamp (0.085355ms)
+✔ an absent baseline is not a problem — it means never observed (0.09575ms)
+✔ a baseline whose entire content is null does not read as generated (0.091201ms)
+✔ an unknown observation vocabulary value is refused (0.070399ms)
+✔ a malformed observed_at is refused (0.035041ms)
+✔ summary verdicts: CURRENT, NEEDS ATTENTION, UNKNOWN, NONE DECLARED (0.178603ms)
+✔ one fatal row outranks any number of passing ones (0.071623ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 59.185452
+node tools/context/check.mjs
+WARN  repository sync UNKNOWN — detached HEAD — no branch to compare. UNKNOWN is not "probably fine"
+WARN  PROJECT.yaml active_branch is "main" but the checkout is on "HEAD"
+WARN  governed repository network: STALE_OBSERVATION — last observed 24 days ago (policy allows 7) — the repository may have moved since, and this record cannot say
+FAIL  verification evidence: docs/verification/FLOW296_FRESH_ROOT_2026-10-15/README.md: records no commit SHA; docs/verification/FLOW298_OFFLINE_PROPOSAL_REJECTION_2026-10-15/README.md: records no commit SHA; docs/verification/FLOW300_OFFLINE_BENCHMARK_2026-10-15/README.md: records no commit SHA; docs/verification/FLOW301_PHASE_PRIMARY_2026-10-15/README.md: records no commit SHA; docs/verification/FLOW301_PHASE_PRIMARY_2026-10-15/README.md: states no limits — evidence that claims no boundary will be read as proving everything; docs/verification/FLOW303_RENDER_SETTLEMENT_2026-10-15/README.md: records no commit SHA; docs/verification/FLOW305_PREVIEW_POINT_2026-10-15/README.md: records no commit SHA; docs/verification/FLOW312_PENDING_REVIEW_2026-10-15/README.md: records no commit SHA; docs/verification/aws-journal-20261013/README.md: records no commit SHA; docs/verification/aws-journal-20261013/README.md: records no ISO date; docs/verification/aws-journal-20261013/README.md: states no limits — evidence that claims no boundary will be read as proving everything; editor-qa-20261014/: no README.md — a verification directory without a record is not evidence; docs/verification/home-hero-20261014/README.md: records no commit SHA; docs/verification/home-hero-20261014/README.md: records no ISO date; docs/verification/home-hero-20261014/README.md: states no limits — evidence that claims no boundary will be read as proving everything; docs/verification/home-publication-storage-20261014/README.md: records no commit SHA; docs/verification/home-publication-storage-20261014/README.md: records no ISO date; docs/verification/home-publication-storage-20261014/README.md: states no limits — evidence that claims no boundary will be read as proving everything; native-fhd-editor-20261014/: no README.md — a verification directory without a record is not evidence; docs/verification/pages-aliases-20261014/README.md: states no limits — evidence that claims no boundary will be read as proving everything; pages-catalogue-20261014/: no README.md — a verification directory without a record is not evidence; docs/verification/picture-media-20261013/README.md: records no commit SHA; docs/verification/picture-media-20261013/README.md: records no ISO date; docs/verification/picture-media-20261013/README.md: states no limits — evidence that claims no boundary will be read as proving everything; docs/verification/srcset-only-20261013/README.md: records no ISO date; docs/verification/srcset-only-20261013/README.md: states no limits — evidence that claims no boundary will be read as proving everything
+PASS  every one of the 92 paths this run guards resolves inside this repository, none is reached through a link at ANY component, and each is the kind of entry it is read as
+PASS  no unfilled placeholder tokens in any canonical file
+PASS  all 13 required canonical root files present (dated docs under docs/ are checked in step 4)
+PASS  PROJECT.yaml parses
+PASS  FEATURE_MATRIX.yaml parses
+PASS  ACCESS_MAP.yaml parses
+PASS  HARDWARE.yaml parses
+PASS  ARTIFACTS.yaml parses
+PASS  SERVICES.yaml parses
+PASS  REPO_STATE.json parses
+PASS  REPO_STATE.json carries its generator stamp, well-formed fields and commits reachable from HEAD (detection, not proof)
+PASS  all 11 dated docs present, every one carrying a reviewed-against commit
+PASS  every reviewed-against commit resolves to a commit reachable from HEAD
+PASS  all 6 canonical YAML files carry a reviewed_against commit reachable from HEAD
+PASS  every referenced repo path resolves inside the repository
+PASS  branch HEAD @ b97db52
+PASS  freshness DOCS-ONLY ADVANCE — 311 file(s) changed since 44683c7, none under tools/ — claims about the tooling still describe this tree
+PASS  no duplicate canonical-source declarations
+PASS  feature matrix: 10 features across 3 surfaces, every state in vocabulary, every evidence path resolves
+PASS  release ledger: 10 tasks, 1 blocking (0 agent / 1 owner / 0 external), 6 gates
+PASS  service registry: 19 service(s), every entry carries status, login_identity and secret_ref
+PASS  vault state consistent: configured=false, product UNKNOWN (naming one proves nothing), 0 resolving secret_ref(s)
+PASS  EXTERNAL_REPOS.yaml: 1 governed repository, every entry carrying remote, branch, role, governs and authority
+PASS  REVIEW_BASELINE.json carries its generator stamp and well-formed rows (detection, not proof)
+PASS  secret hygiene: 20 file(s) — the canonical set plus what the CORE pack inlines — every line scanned for 9 credential shapes and value-bearing keys, none found (that set only — NOT a repository-wide clearance)
+PASS  provenance: 3 classifications, 0 owner determination(s) pinned
+PASS  open-question consistency: 1 answered, 2 open, no contradiction
+PASS  live-state rule: 0 planning doc(s) point to STATUS.md, TASKS.md, FEATURE_MATRIX.yaml and own no live progress
+PASS  size targets checked
+
+FRESHNESS: DOCS-ONLY ADVANCE
+REPOSITORY SYNC: UNKNOWN
+FAIL — 29 pass, 3 warn, 1 fail
+STRUCTURAL RESULT ONLY. It says nothing about whether a status, decision or verification claim is honest.
+make[1]: *** [Makefile:45: context-check] Error 1
+make: *** [Makefile:90: brain-gate] Error 2

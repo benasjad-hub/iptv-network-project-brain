@@ -16,3 +16,12 @@ No new worker launched; original320 never replayed. Existing source-only
 pending317/completed318 and baseline native point blocker remain unchanged.
 
 Withdrawal and STATE commit: 3f37ccb4c0c0cf9066e0476212bfa3bd38a20a53.
+
+## Structural gate limits
+Exact-LF detached checkout of b97db5260807a2c86b08746d3decacfd3cc7268a:
+29PASS/3WARN/1FAIL. This new record is absent from failure list; older unrelated
+verification metadata fails. Sync UNKNOWN because this QA checkout is detached.
+No full-gate-pass/checker/manifest/baseline/main adoption claim. Two earlier
+Windows working-tree runs hit CRLF diff/hash mismatches; their raw logs remain
+private. No files/manifest were rewritten to suppress those failures. Exact-LF
+QA checkout is separate from the owner working tree; no runtime service change.
