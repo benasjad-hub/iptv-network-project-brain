@@ -1,0 +1,18 @@
+test318_all_bool_types_strict (__main__.Completed.test318_all_bool_types_strict) ... ok
+test318_capture_owner_loss_before_provider (__main__.Completed.test318_capture_owner_loss_before_provider) ... ok
+test318_completed_cache_refuses (__main__.Completed.test318_completed_cache_refuses) ... ok
+test318_final_deadline (__main__.Completed.test318_final_deadline) ... ok
+test318_final_new_completed_binding (__main__.Completed.test318_final_new_completed_binding) ... ok
+test318_final_owner_loss (__main__.Completed.test318_final_owner_loss) ... ok
+test318_missing_authority_before_capture (__main__.Completed.test318_missing_authority_before_capture) ... ok
+test318_mutated_png_restored_mtime_refuses (__main__.Completed.test318_mutated_png_restored_mtime_refuses) ... ok
+test318_old_pending_not_rejected_for_age (__main__.Completed.test318_old_pending_not_rejected_for_age) ... ok
+test318_positive_no_binding (__main__.Completed.test318_positive_no_binding) ... ok
+test318_provider_failure_no_retry (__main__.Completed.test318_provider_failure_no_retry) ... ok
+test318_record_custody (__main__.Completed.test318_record_custody) ... ok
+test318_wrong_or_historical_ids_refuse (__main__.Completed.test318_wrong_or_historical_ids_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.559s
+
+OK

@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "a84c5701",
+  "sourceSha256": "7ec6c6cf681cebbd5f8c41f470b41d319d46aa408d541d12f819396fd50b83d8",
+  "original318": {"status": "SUCCESS", "durationSeconds": 137.720434537, "launcherSeconds": 152.075, "deniedActions": 0, "exactJsonCode": true},
+  "qa": {"cases": 13, "passed": 13, "failed": 0, "errors": 0, "seconds": 3.559, "authorityFiles": "actual temporary canonical", "sceneVisual": "MOCK"},
+  "materialized": true,
+  "activated": false,
+  "nextOriginalReview": 319,
+  "limits": "No actual native pending/completed UI, provider/input/binding/generation/export/task resume or runtime activation; full native Flow remains open."
+}
