@@ -1,0 +1,76 @@
+{
+  "worker262": {
+    "status": "SUCCESS",
+    "seconds": 152.25,
+    "review": "REJECTED until original263: Python SyntaxError at final standalone quote; two leftover API aliases",
+    "provider": "Original authenticated Google Teacher worker",
+    "denied": 0
+  },
+  "worker261": {
+    "tests": {
+      "pass": 18,
+      "fail": 1,
+      "error": 2,
+      "total": 21
+    },
+    "review": "REJECTED: unsupported string schema, unsafe input compatibility retry, no display closure, incomplete semantic identity",
+    "provider": "Original authenticated Google Teacher worker",
+    "status": "SUCCESS",
+    "denied": 0,
+    "seconds": 270.136
+  },
+  "sourceFile": "scripts/studio/flow-native-preflight.py",
+  "sourceCommit": "e3d04d10494c88284c73b109ce04583e65b2f73e",
+  "sourceSha256": "d986f38e5a29ff4aae174da3d58a0b3554d7f08882248986f77d929cf15b4386",
+  "date": "2026-10-15",
+  "qa": {
+    "seconds": 0.948,
+    "mocked": [
+      "fresh capture and Observer",
+      "display transport",
+      "native gallery collector"
+    ],
+    "pass": 30,
+    "fail": 0,
+    "errors": 0,
+    "total": 30,
+    "nativeAcceptance": false,
+    "actual": [
+      "temporary Operation/session/BrowserLock/files",
+      "canonical semantic parser and fresh-record validation"
+    ],
+    "covers": [
+      "exact baseline object identity",
+      "strict cancellation before factories and after observations/final collector",
+      "exact project/email/points pinned in semantic questions",
+      "only single profile/close pair",
+      "sent click then transport failure never replayed",
+      "display context closure without blind UI cleanup",
+      "current owner/reservation/prompt/core/attempt guards",
+      "private stable frame identity and replacement inode refusal",
+      "future/nonfinite/bool/backward clock and whole180s bounds"
+    ]
+  },
+  "worker263": {
+    "review": "Accepted exact literal corrections only",
+    "provider": "Original authenticated Google Teacher worker",
+    "status": "SUCCESS",
+    "patches": 3,
+    "denied": 0,
+    "seconds": 118.323
+  },
+  "sourceProvenance": "Exact JSON-decoded original262 plus precisely three original263 unique-preimage literal patches; no local implementation adaptation",
+  "next": "Review guarded same-operation native-preparation wiring, actual fresh account/gallery witnesses, then full pending/completion/export/MP4/recovery/release/runtime pipeline before any Generate/provider activation",
+  "live": {
+    "providerEnabled": false,
+    "sessionReserved": false,
+    "operationReceiptCreated": false,
+    "taskChanged": false,
+    "serviceRestart": false,
+    "generate": false,
+    "taskReplayed": false,
+    "download": false,
+    "ownerDesktopInputChanged": false
+  },
+  "limits": "Source-only preflight. No current account/native baseline/new Google clip/app display or whole-app completion established. Earlier root260 not reusable as fresh authority."
+}

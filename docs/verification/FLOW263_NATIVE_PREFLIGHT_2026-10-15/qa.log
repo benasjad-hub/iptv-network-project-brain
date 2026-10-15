@@ -1,0 +1,35 @@
+test_exact_baseline_identity_only_profile_pair_no_core_write (__main__.Cases.test_exact_baseline_identity_only_profile_pair_no_core_write) ... ok
+test_cancel_before_no_factory (__main__.Cases.test_cancel_before_no_factory) ... ok
+test_nonbool_cancellation_no_factory (__main__.Cases.test_nonbool_cancellation_no_factory) ... ok
+test_root_refusals_no_input (__main__.Cases.test_root_refusals_no_input) ... ok
+test_account_mismatch_does_not_blind_close (__main__.Cases.test_account_mismatch_does_not_blind_close) ... ok
+test_close_point_mismatch_does_not_blind_close (__main__.Cases.test_close_point_mismatch_does_not_blind_close) ... ok
+test_cancel_after_observe_prevents_click (__main__.Cases.test_cancel_after_observe_prevents_click) ... ok
+test_owner_email_changed_after_observe_prevents_click (__main__.Cases.test_owner_email_changed_after_observe_prevents_click) ... ok
+test_owner_reservation_changed_after_observe_prevents_click (__main__.Cases.test_owner_reservation_changed_after_observe_prevents_click) ... ok
+test_prompt_changed_after_observe_prevents_click (__main__.Cases.test_prompt_changed_after_observe_prevents_click) ... ok
+test_frame_tamper_after_observe_refused (__main__.Cases.test_frame_tamper_after_observe_refused) ... ok
+test_nonprivate_frame_refused (__main__.Cases.test_nonprivate_frame_refused) ... ok
+test_future_capture_refused (__main__.Cases.test_future_capture_refused) ... ok
+test_attempted_operation_never_observes_or_inputs (__main__.Cases.test_attempted_operation_never_observes_or_inputs) ... ok
+test_generation_marker_never_observes_or_inputs (__main__.Cases.test_generation_marker_never_observes_or_inputs) ... ok
+test_cancel_during_native_prevents_return (__main__.Cases.test_cancel_during_native_prevents_return) ... ok
+test_owner_changed_during_native_prevents_return (__main__.Cases.test_owner_changed_during_native_prevents_return) ... ok
+test_late_observation_181s_prevents_first_click (__main__.Cases.test_late_observation_181s_prevents_first_click) ... ok
+test_whole_history_not_refreshed_by_later_frames (__main__.Cases.test_whole_history_not_refreshed_by_later_frames) ... ok
+test_late_native_collector_prevents_return (__main__.Cases.test_late_native_collector_prevents_return) ... ok
+test_native_failure_propagates_without_core_write (__main__.Cases.test_native_failure_propagates_without_core_write) ... ok
+test_sent_click_error_is_never_replayed (__main__.Cases.test_sent_click_error_is_never_replayed) ... ok
+test_bad_account_closes_transport_but_never_blind_ui_cleanup (__main__.Cases.test_bad_account_closes_transport_but_never_blind_ui_cleanup) ... ok
+test_wrong_root_does_not_construct_display (__main__.Cases.test_wrong_root_does_not_construct_display) ... ok
+test_noncallable_cancel_before_factory (__main__.Cases.test_noncallable_cancel_before_factory) ... ok
+test_invalid_initial_clock_refused_before_factory (__main__.Cases.test_invalid_initial_clock_refused_before_factory) ... ok
+test_invalid_final_clock_cannot_return_baseline (__main__.Cases.test_invalid_final_clock_cannot_return_baseline) ... ok
+test_clock_backwards_during_native_refused (__main__.Cases.test_clock_backwards_during_native_refused) ... ok
+test_identical_bytes_replaced_inode_refused (__main__.Cases.test_identical_bytes_replaced_inode_refused) ... ok
+test_cancel_function_exception_not_suppressed (__main__.Cases.test_cancel_function_exception_not_suppressed) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.948s
+
+OK
