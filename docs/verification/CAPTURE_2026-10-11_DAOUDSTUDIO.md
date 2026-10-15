@@ -1485,3 +1485,5 @@ NEXT original authenticated Google280 read-only programming proposal ACTIVE in s
 2026-10-15 Flow291 primary observer and293 stricter outer guard exact originals accepted product6e51d167. Actual292 passed current account/first historical UUID but failed provider before root/baseline;325.156s, post-Back root unproven. No generation/task mutation. FLOW293_OUTER_GUARD_2026-10-15 retains safe proof, QA and limits.
 
 2026-10-15 readonly296 freshly confirms same actualROOT without input after294capturetimeout. Original295review not implementation/accepted routing; private offline benchmark297 programming proposal active, no execution. Productdocs0bfbbabd; FLOW296_FRESH_ROOT_2026-10-15 proof/README retain exact limits. Native baseline still open; no generation/task/service mutation.
+
+Flow297 emptySUCCESS/deniedRunCommand rejected; no benchmark/code. Original298 bounded pure-text programming proposal active, no tool permission relaxation. FLOW296 README records correction to earlier active297 status.
