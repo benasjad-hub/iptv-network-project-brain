@@ -7,3 +7,5 @@ The current project root is now visible. This is a fresh native observation, not
 No trusted baseline was collected: gallery completeness, exact historical UUID inventory and current profile/account were not measured here. No session reservation, operation receipt, Generate, download, provider activation, task replay or service rollout occurred. The previous physical Sony failure has not been retested; Viziona is recorded separately.
 
 Next: guarded exact-operation/account/session preparation and the accepted native gallery collector, then the remaining result/export/MP4/recovery/runtime pipeline. A screen observation cannot substitute for that chain.
+
+Source implementation commit: 7d72abc21d9fd92aa5d5b81062e1478e4082ca78 (unchanged). Evidence captured in Brain commit add68d5. Limits: observation only, not a native baseline, navigation causality, account verification, generated clip or app completion.
