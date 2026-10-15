@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "e989b0ce",
+  "implementationCommit": "2aac143094445e11915032f6c833413264554ea6",
+  "original312": {
+    "launcherSeconds": 38.049,
+    "denied": 0,
+    "status": "SUCCESS",
+    "rawReportSha256": "b03f8feb284b5a1f348e82ae29fec7b26bc19168de4a37f815955d66e6158f30",
+    "accepted": false,
+    "receiptSeconds": 30.031590758
+  },
+  "codeImplemented": false,
+  "nativePendingObservation": false,
+  "baselineAccepted": false,
+  "generationExecuted": false,
+  "limits": "Rejected source plan only; no invented UI points, weak same-item provenance, synthesized authority or namespace mutation accepted. Original313 corrected pure-text review active."
+}

@@ -1499,3 +1499,5 @@ Flow303 COMPLETE/accepted exact4guarded settlement patches productff05422b;9newQ
 Flow304 guardedoneBack/freshROOT109.666s; source303native305 refuses64.857s BEFOREpreview dueprimary/secondaryFalse despitecount2/accountROOT. No baseline/generation/task changes. Productdocsdd8597be; FLOW305_PREVIEW_POINT_2026-10-15 safeproof/limits. Original307 bounded questionclarification proposal active; no modelFalse override.
 
 Flow307+309 exact3+2question patches accepted2aac1430 after4/6focusedQA. Actual310primaryFalse refusal51.910s beforepreview persists; readonly311positivegeometry notauthority/numericboundsdisagreepixels. Productdocs01ba2d02; FLOW309_CARD_COUNT_2026-10-15 proof/limits. Original312 independentpending SOURCEPLAN active; no nativebaseline/generation/task/service changes.
+
+Original312 pendingSOURCEPLAN SUCCESSbutREJECTED beforecode(nativepoint/API/provenance/guardissues). Productdocse989b0ce; FLOW312_PENDING_REVIEW_2026-10-15 safeproof/limits. Original313 corrected pure-textreview active; realopstillonlylock, no pending/baseline/generation/task/service authoritycreated.
