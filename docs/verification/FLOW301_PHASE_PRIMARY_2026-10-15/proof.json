@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "5df01452ef62acbad3d5a2b7eade9bd790f89882",
+  "implementationCommit": "f7a4add0e3d5c17536acc2f5671ac16b607f670e",
+  "original301": {
+    "status": "SUCCESS",
+    "receiptSeconds": 142.972897396,
+    "denied": 0,
+    "literalPatchCount": 13
+  },
+  "native302": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792049696.5993712,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 187.972
+  },
+  "nativeBaselineAccepted": false,
+  "observations302": [
+    {
+      "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+      "capturedAt": 1792049697.6136944,
+      "observedAt": 1792049764.075526,
+      "elapsedSeconds": 66.32,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "profileButtonAtPoint": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6"
+      ]
+    },
+    {
+      "frameHash": "3234a0a753f8fce8bb10a501e858a51a9812579b702ab5af2931d85469f807bc",
+      "capturedAt": 1792049765.095083,
+      "observedAt": 1792049781.173672,
+      "elapsedSeconds": 15.937,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": false,
+        "accountMatches": false,
+        "closeAtPoint": false
+      },
+      "frameHashes": [
+        "3234a0a753f8fce8bb10a501e858a51a9812579b702ab5af2931d85469f807bc"
+      ]
+    },
+    {
+      "frameHash": "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280",
+      "capturedAt": 1792049781.456113,
+      "observedAt": 1792049790.3248482,
+      "elapsedSeconds": 8.751,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": true,
+        "accountMatches": true,
+        "closeAtPoint": true
+      },
+      "frameHashes": [
+        "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792049790.7514226,
+      "observedAt": 1792049807.6830049,
+      "elapsedSeconds": 16.826,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "noUnsavedComposer": true,
+        "noPending": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "videoCount": 2,
+        "primaryAtPoint": true,
+        "secondaryAtPoint": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "2d25eff115aae5e8a7a6acf171de5a64c8f141b8993a44f2e9e5207ded232826",
+      "capturedAt": 1792049808.829583,
+      "observedAt": 1792049825.3703291,
+      "elapsedSeconds": 16.409,
+      "observation": {
+        "projectMatches": true,
+        "rootMatches": true,
+        "detailVisible": false,
+        "addressAtPoint": true
+      },
+      "frameHashes": [
+        "2d25eff115aae5e8a7a6acf171de5a64c8f141b8993a44f2e9e5207ded232826"
+      ]
+    },
+    {
+      "frameHash": "a087f3830587c995f2d731df1f870ef2fce6e2280501618e71b8284db36f4d69",
+      "capturedAt": 1792049825.647426,
+      "observedAt": 1792049846.3056686,
+      "elapsedSeconds": 20.517,
+      "observation": {
+        "projectMatches": true,
+        "rootMatches": false,
+        "detailVisible": true,
+        "addressAtPoint": true
+      },
+      "frameHashes": [
+        "a087f3830587c995f2d731df1f870ef2fce6e2280501618e71b8284db36f4d69"
+      ]
+    },
+    {
+      "frameHash": "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee",
+      "capturedAt": 1792049848.5370293,
+      "observedAt": 1792049864.2366996,
+      "elapsedSeconds": 15.568,
+      "observation": {
+        "projectMatches": true,
+        "detailVisible": true,
+        "addressFocused": true,
+        "resultId": "b01cf30e-60f2-4d1f-9d8e-8cbf42fcb9ba"
+      },
+      "frameHashes": [
+        "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee"
+      ]
+    },
+    {
+      "frameHash": "301041983c89b4dda303f702773232ba43002c200d667b3c5b64f3cde3a48ed9",
+      "capturedAt": 1792049864.560646,
+      "observedAt": 1792049884.556865,
+      "elapsedSeconds": 19.895,
+      "observation": {
+        "projectMatches": true,
+        "backAtPoint": true
+      },
+      "frameHashes": [
+        "301041983c89b4dda303f702773232ba43002c200d667b3c5b64f3cde3a48ed9"
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "flow-observation.py": "84176dd3c511d2eaca881497f4f13693779e9a18ba67685e7d7b6e11cd6463d7",
+    "flow-native-preflight.py": "3b82248e2704b5ed87d8e9aae7d6b62ab91ffd9d04e24fd1bb69e61bf8188879",
+    "flow-gallery.py": "39134dbfb84f6aa5582ab6bbe96bd839d19bb1c8df1b2efb8d656d206e8d0d4d"
+  },
+  "operationFiles": [
+    ".flow.lock"
+  ],
+  "limits": "Source role policy and mocked checks not native acceptance.302 refused full180 budget before firstBack/binding, current detail needs new witness. No Generate/task/provider/service rollout."
+}

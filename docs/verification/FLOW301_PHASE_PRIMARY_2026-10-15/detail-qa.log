@@ -1,0 +1,25 @@
+test_detail_second_read_before_one_focus (__main__.Detail.test_detail_second_read_before_one_focus) ... ok
+test_detail_exhaustion_does_not_focus_or_reclick (__main__.Detail.test_detail_exhaustion_does_not_focus_or_reclick) ... ok
+test_wrong_detail_project_not_polled (__main__.Detail.test_wrong_detail_project_not_polled) ... ok
+test_inconsistent_detail_not_polled (__main__.Detail.test_inconsistent_detail_not_polled) ... ok
+test_unknown_detail_not_polled (__main__.Detail.test_unknown_detail_not_polled) ... ok
+test_detail_wrong_address_no_input (__main__.Detail.test_detail_wrong_address_no_input) ... ok
+test_detail_nonbool_refuses (__main__.Detail.test_detail_nonbool_refuses) ... ok
+test_detail_provider_error_not_retried (__main__.Detail.test_detail_provider_error_not_retried) ... ok
+test_detail_cancel_during_read_prevents_focus (__main__.Detail.test_detail_cancel_during_read_prevents_focus) ... ok
+test_null_focus_then_current_uuid_without_refocus (__main__.Detail.test_null_focus_then_current_uuid_without_refocus) ... ok
+test_unfocused_null_then_current_uuid_no_input_retry (__main__.Detail.test_unfocused_null_then_current_uuid_no_input_retry) ... ok
+test_null_focus_exhaustion_never_uses_known_history (__main__.Detail.test_null_focus_exhaustion_never_uses_known_history) ... ok
+test_unfocused_nonnull_is_immediate_refusal (__main__.Detail.test_unfocused_nonnull_is_immediate_refusal) ... ok
+test_focused_wrong_project_refuses (__main__.Detail.test_focused_wrong_project_refuses) ... ok
+test_focused_wrong_detail_refuses (__main__.Detail.test_focused_wrong_detail_refuses) ... ok
+test_focused_nonbool_refuses (__main__.Detail.test_focused_nonbool_refuses) ... ok
+test_focused_nonstring_uuid_refuses (__main__.Detail.test_focused_nonstring_uuid_refuses) ... ok
+test_focused_uppercase_uuid_refuses (__main__.Detail.test_focused_uppercase_uuid_refuses) ... ok
+test_focused_provider_error_not_retried (__main__.Detail.test_focused_provider_error_not_retried) ... ok
+test_focused_cancel_prevents_next_read (__main__.Detail.test_focused_cancel_prevents_next_read) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.093s
+
+OK

@@ -1491,3 +1491,5 @@ Flow297 emptySUCCESS/deniedRunCommand rejected; no benchmark/code. Original298 b
 Flow298 SUCCESSnonempty proposal rejected after5privateQA cases2PASS2FAIL1ERROR; no benchmark/product materialization. Productdocs2f4b0c68; FLOW298_OFFLINE_PROPOSAL_REJECTION_2026-10-15 safeproof/qa. Original299 bounded corrections active; no tools/permissions relaxation/native task/service changes.
 
 Flow299 exact6patches accepted diagnostic8d92d1a9 after12QA PASS; actualPRIVATEOFFLINE300 completed4calls only historical292 frames, no authority/current/native/baseline claim. Productdocsc0f32558; FLOW300_OFFLINE_BENCHMARK_2026-10-15 proof/QA/limits. No coding worker active, native runtime6e51d167/services/task unchanged.
+
+Flow301 exact13patches acceptedf7a4add0 after101relevantQA; native302 strict187.972s deadline refusal BEFOREfirstBack/baseline; native detail needsfreshwitness. Productdocs5df01452. FLOW301_PHASE_PRIMARY_2026-10-15 proof/QA/limits. Original303 bounded settlement candidate proposal active, no service/flag/Generate/taskmutation.

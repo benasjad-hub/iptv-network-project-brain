@@ -1,0 +1,11 @@
+test_attacker_prompt_does_not_override_internal_low_role (__main__.Cases.test_attacker_prompt_does_not_override_internal_low_role) ... ok
+test_each_closed_role_selects_exactly_one_fixed_primary (__main__.Cases.test_each_closed_role_selects_exactly_one_fixed_primary) ... ok
+test_invalid_role_types_and_unknown_refuse_before_provider (__main__.Cases.test_invalid_role_types_and_unknown_refuse_before_provider) ... ok
+test_legacy_omission_retains_medium_and_positional_extra_frames (__main__.Cases.test_legacy_omission_retains_medium_and_positional_extra_frames) ... ok
+test_malformed_semantics_never_trigger_fallback (__main__.Cases.test_malformed_semantics_never_trigger_fallback) ... ok
+test_provider_error_never_tries_second_model (__main__.Cases.test_provider_error_never_tries_second_model) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.021s
+
+OK
