@@ -1,0 +1,40 @@
+test_durable_readback_before_controller_no_navigation (__main__.Wiring.test_durable_readback_before_controller_no_navigation) ... ok
+test_bound_retry_after_controller_failure_never_replays (__main__.Wiring.test_bound_retry_after_controller_failure_never_replays) ... ok
+test_corrupt_bound_retry_refuses_no_input (__main__.Wiring.test_corrupt_bound_retry_refuses_no_input) ... ok
+test_wrong_native_identity_refuses_controller (__main__.Wiring.test_wrong_native_identity_refuses_controller) ... ok
+test_native_failure_does_not_prepare_or_bind (__main__.Wiring.test_native_failure_does_not_prepare_or_bind) ... ok
+test_cancel_after_native_prevents_sidecar_write (__main__.Wiring.test_cancel_after_native_prevents_sidecar_write) ... FAIL
+test_strict_gate (__main__.Wiring.test_strict_gate) ... ok
+test_submit_rejected_before_fresh_side_effect (__main__.Wiring.test_submit_rejected_before_fresh_side_effect) ... ok
+test_prepared_recovery_never_constructs_preflight (__main__.Wiring.test_prepared_recovery_never_constructs_preflight) ... ok
+test_prepared_recovery_preserved_with_submit_config (__main__.Wiring.test_prepared_recovery_preserved_with_submit_config) ... ERROR
+test_readback_tampering_stops_controller (__main__.Wiring.test_readback_tampering_stops_controller) ... ok
+test_existing_generation_marker_refuses_native (__main__.Wiring.test_existing_generation_marker_refuses_native) ... ok
+
+======================================================================
+ERROR: test_prepared_recovery_preserved_with_submit_config (__main__.Wiring.test_prepared_recovery_preserved_with_submit_config)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow264-wiring-qa.py", line 67, in test_prepared_recovery_preserved_with_submit_config
+    self.seed();self.cfg['submit_after_prepare']=True;self.assertEqual(self.run_native()['code'],'prepared');self.assertEqual(self.preflights,0)
+                                                                       ^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow264-wiring-qa.py", line 32, in run_native
+    def run_native(self):return f.m.prepare_request(self.req(),self.cfg,**self.deps)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow264-candidate/flow-runtime.py", line 179, in prepare_request
+    raise ValueError('Full connector still incomplete with submit_after_prepare')
+ValueError: Full connector still incomplete with submit_after_prepare
+
+======================================================================
+FAIL: test_cancel_after_native_prevents_sidecar_write (__main__.Wiring.test_cancel_after_native_prevents_sidecar_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow264-wiring-qa.py", line 54, in test_cancel_after_native_prevents_sidecar_write
+    self.mode='cancel';self.run_native();self.assertEqual(self.prepares,0);self.assertFalse(self.sidecar.exists())
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.686s
+
+FAILED (failures=1, errors=1)

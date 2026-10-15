@@ -1,0 +1,52 @@
+{
+  "limits": "Not native account/gallery/baseline, generated clip, ordinary download, app display or whole-app acceptance. Existing unrelated structural metadata failure remains open.",
+  "worker265": {
+    "provider": "Original authenticated Google Teacher",
+    "seconds": 141.024,
+    "denied": 0,
+    "literalPatches": 3,
+    "status": "SUCCESS"
+  },
+  "sourceCommit": "0fc0b6badd777bcf22d13dd2e21e0c5067aa3c74",
+  "worker264": {
+    "seconds": 127.341,
+    "status": "SUCCESS",
+    "tests": {
+      "total": 12,
+      "pass": 10,
+      "error": 1,
+      "fail": 1
+    },
+    "provider": "Original authenticated Google Teacher",
+    "denied": 0,
+    "review": "Rejected initial candidate: cancellation wrote sidecar; new configuration blocked immutable prepared recovery"
+  },
+  "qa": {
+    "errors": 0,
+    "real": [
+      "Temporary Operation/session/browser leases",
+      "canonical durable baseline writer/fsync/readback",
+      "private filesystem"
+    ],
+    "legacyCases": 13,
+    "mocked": [
+      "Native preflight/gallery witness",
+      "capture/visual observer",
+      "controller/display",
+      "CLI main configuration seam"
+    ],
+    "legacySeconds": 1.119,
+    "newCases": 21,
+    "newSeconds": 2.251,
+    "fail": 0
+  },
+  "savedTaskResumed": false,
+  "sourceSha256": "66afd19b9ecfb86d818a53636da27f160785966af25159953a55da3eb2911696",
+  "sourceFile": "scripts/studio/flow-runtime.py",
+  "serviceRollout": false,
+  "nativeActions": false,
+  "defaultGate": "OFF",
+  "date": "2026-10-15",
+  "sourceEqualityVerified": true,
+  "providerEnabled": false
+}

@@ -1,0 +1,18 @@
+test_fresh_supplied_anchor_replaced_after_navigation (__main__.Root.test_fresh_supplied_anchor_replaced_after_navigation) ... ok
+test_fresh_no_anchor_navigation_then_capture (__main__.Root.test_fresh_no_anchor_navigation_then_capture) ... ok
+test_prepared_no_navigation_or_recapture (__main__.Root.test_prepared_no_navigation_or_recapture) ... ok
+test_attempted_no_navigation_or_recapture (__main__.Root.test_attempted_no_navigation_or_recapture) ... ok
+test_recover_only_absent_no_navigation (__main__.Root.test_recover_only_absent_no_navigation) ... ok
+test_completed_no_navigation_or_recapture (__main__.Root.test_completed_no_navigation_or_recapture) ... ok
+test_cancel_before_navigation (__main__.Root.test_cancel_before_navigation) ... ok
+test_cancel_after_navigation_no_capture (__main__.Root.test_cancel_after_navigation_no_capture) ... ok
+test_cancel_after_anchor_no_observe (__main__.Root.test_cancel_after_anchor_no_observe) ... ok
+test_missing_named_display_no_fallback (__main__.Root.test_missing_named_display_no_fallback) ... ok
+test_missing_open_project_refused (__main__.Root.test_missing_open_project_refused) ... ok
+test_unfocused_address_never_enters (__main__.Root.test_unfocused_address_never_enters) ... ok
+test_wrong_typed_address_never_enters (__main__.Root.test_wrong_typed_address_never_enters) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.119s
+
+OK

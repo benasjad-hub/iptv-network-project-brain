@@ -1,0 +1,26 @@
+test_durable_readback_before_controller_no_navigation (__main__.Wiring.test_durable_readback_before_controller_no_navigation) ... ok
+test_bound_retry_after_controller_failure_never_replays (__main__.Wiring.test_bound_retry_after_controller_failure_never_replays) ... ok
+test_corrupt_bound_retry_refuses_no_input (__main__.Wiring.test_corrupt_bound_retry_refuses_no_input) ... ok
+test_wrong_native_identity_refuses_controller (__main__.Wiring.test_wrong_native_identity_refuses_controller) ... ok
+test_native_failure_does_not_prepare_or_bind (__main__.Wiring.test_native_failure_does_not_prepare_or_bind) ... ok
+test_cancel_after_native_prevents_sidecar_write (__main__.Wiring.test_cancel_after_native_prevents_sidecar_write) ... ok
+test_strict_gate (__main__.Wiring.test_strict_gate) ... ok
+test_submit_rejected_before_fresh_side_effect (__main__.Wiring.test_submit_rejected_before_fresh_side_effect) ... ok
+test_prepared_recovery_never_constructs_preflight (__main__.Wiring.test_prepared_recovery_never_constructs_preflight) ... ok
+test_prepared_recovery_preserved_with_submit_config (__main__.Wiring.test_prepared_recovery_preserved_with_submit_config) ... ok
+test_readback_tampering_stops_controller (__main__.Wiring.test_readback_tampering_stops_controller) ... ok
+test_existing_generation_marker_refuses_native (__main__.Wiring.test_existing_generation_marker_refuses_native) ... ok
+test_reservation_change_during_native_refuses_before_write (__main__.Wiring.test_reservation_change_during_native_refuses_before_write) ... ok
+test_marker_appearing_during_native_refuses_before_write (__main__.Wiring.test_marker_appearing_during_native_refuses_before_write) ... ok
+test_journal_change_during_binding_refuses_controller (__main__.Wiring.test_journal_change_during_binding_refuses_controller) ... ok
+test_cached_baseline_cancellation_returns_attention (__main__.Wiring.test_cached_baseline_cancellation_returns_attention) ... ok
+test_submitted_recovery_with_new_combo_is_readonly (__main__.Wiring.test_submitted_recovery_with_new_combo_is_readonly) ... ok
+test_cli_native_gate_default_off (__main__.Wiring.test_cli_native_gate_default_off) ... ok
+test_cli_native_gate_zero_off (__main__.Wiring.test_cli_native_gate_zero_off) ... ok
+test_cli_native_gate_one_trusted_config (__main__.Wiring.test_cli_native_gate_one_trusted_config) ... ok
+test_cli_native_gate_invalid_refuses (__main__.Wiring.test_cli_native_gate_invalid_refuses) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.251s
+
+OK

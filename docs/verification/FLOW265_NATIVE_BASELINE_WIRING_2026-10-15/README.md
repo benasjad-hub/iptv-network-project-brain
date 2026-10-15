@@ -1,0 +1,13 @@
+# Native baseline preparation wiring — 2026-10-15
+
+Source commit: 0fc0b6badd777bcf22d13dd2e21e0c5067aa3c74. Runtime source SHA256: 66afd19b9ecfb86d818a53636da27f160785966af25159953a55da3eb2911696.
+
+Original authenticated Google264 supplied three literal runtime patches. Actual12-case QA exposed cancellation-before-write and early-recovery regressions (10 pass,1 failure,1 error); the proposal was not materialized. Original265 supplied exactly three corrective literal patches, preserving full journal/reservation identity before binding and after readback. Mechanical JSON decoding, unique-preimage literal patches and Windows CRLF-to-LF normalization only; raw original reports remain private and unchanged.
+
+The exact reviewed runtime has a default-OFF trusted native preparation gate. Under the same held operation/browser/HOME/session it calls accepted native preflight, binds the original gallery witness with the canonical durable writer, reads back and validates it before existing controller preparation. The opted-in lane never navigates to a project. Existing bound-baseline retry stops without native re-collection or prompt replay. Immutable early prepared/attempted/completed recovery precedes the incompatibility guard; automatic submit is refused for the new fresh preparation lane.
+
+[Proof](proof.json), [21 new integration tests](wiring-qa.log), [13 changed-runtime legacy/recovery regressions](legacy-qa.log) and [initial rejected264 cases](rejected264-qa.log). Canonical temporary operations, session journals, browser locks, files and writer/fsync/readback are exercised; native preflight, observer/controller and CLI configuration seam are mocked. Both final suites pass. The CLI environment gate defaults OFF; no real configuration was enabled.
+
+Limits: SOURCE ONLY. No actual native account/gallery/baseline/composer acceptance, generation/download, verified Google clip, app display or whole-app completion. No provider/service rollout or saved-task resume occurred. No owner editor/Play emulator action; closed-clone dirty work and accepted AWS history retained. Existing unrelated Brain structural metadata failure remains open; this record does not claim a full gate pass.
+
+Next: guarded actual fresh account/gallery and durable baseline using the same saved a58 operation and real authority. Do not prompt/Generate until complete pending/completion/ordinary export/strict MP4/recovery/release/runtime chain review. Partial-baseline retry deliberately remains waiting instead of replaying UI.
