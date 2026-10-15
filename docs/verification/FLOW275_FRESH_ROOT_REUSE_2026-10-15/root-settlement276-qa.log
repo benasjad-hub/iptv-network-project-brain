@@ -1,0 +1,38 @@
+test_two_ids_return_valid_baseline_no_generate_or_core_write (base276.Gallery.test_two_ids_return_valid_baseline_no_generate_or_core_write) ... ok
+test_zero_gallery_has_no_input (base276.Gallery.test_zero_gallery_has_no_input) ... ok
+test_one_result_never_clicks_secondary (base276.Gallery.test_one_result_never_clicks_secondary) ... ok
+test_more_than_two_refuses_before_input (base276.Gallery.test_more_than_two_refuses_before_input) ... ok
+test_pending_incomplete_or_wrong_root_refuse_before_input (base276.Gallery.test_pending_incomplete_or_wrong_root_refuse_before_input) ... ok
+test_changed_gallery_refuses_after_bounded_inputs (base276.Gallery.test_changed_gallery_refuses_after_bounded_inputs) ... ok
+test_null_uuid_not_guessed_or_retried (base276.Gallery.test_null_uuid_not_guessed_or_retried) ... ok
+test_duplicate_uuid_refused (base276.Gallery.test_duplicate_uuid_refused) ... ok
+test_cancel_refuses_all_input (base276.Gallery.test_cancel_refuses_all_input) ... ok
+test_attempted_core_never_recollects_baseline (base276.Gallery.test_attempted_core_never_recollects_baseline) ... ok
+test_existing_generation_marker_blocks (base276.Gallery.test_existing_generation_marker_blocks) ... ok
+test_modified_context_blocks_before_input (base276.Gallery.test_modified_context_blocks_before_input) ... ok
+test_frame_changed_during_observe_refuses (base276.Gallery.test_frame_changed_during_observe_refuses) ... ok
+test_wrong_anchor_refused (base276.Gallery.test_wrong_anchor_refused) ... ok
+test_nonprivate_frame_refused (base276.Gallery.test_nonprivate_frame_refused) ... ok
+test_owner_email_changed_during_observation_refused (base276.Gallery.test_owner_email_changed_during_observation_refused) ... ok
+test_owner_reservation_changed_during_observation_refused (base276.Gallery.test_owner_reservation_changed_during_observation_refused) ... ok
+test_cancel_during_last_observation_refuses_return (base276.Gallery.test_cancel_during_last_observation_refuses_return) ... ok
+test_whole_history_age_includes_last_observation_time (base276.Gallery.test_whole_history_age_includes_last_observation_time) ... ok
+test_delayed_subsequent_root_read_only_then_single_secondary (__main__.Settlement.test_delayed_subsequent_root_read_only_then_single_secondary) ... ok
+test_subsequent_root_exhaustion_no_secondary_or_back_replay (__main__.Settlement.test_subsequent_root_exhaustion_no_secondary_or_back_replay) ... ok
+test_delayed_final_root_reads_without_back_replay (__main__.Settlement.test_delayed_final_root_reads_without_back_replay) ... ok
+test_final_root_exhaustion_never_returns_baseline (__main__.Settlement.test_final_root_exhaustion_never_returns_baseline) ... ok
+test_wrong_project_in_transition_refuses_immediately (__main__.Settlement.test_wrong_project_in_transition_refuses_immediately) ... ok
+test_inconsistent_root_and_detail_refuse (__main__.Settlement.test_inconsistent_root_and_detail_refuse) ... ok
+test_unknown_state_refuses_without_read_retry (__main__.Settlement.test_unknown_state_refuses_without_read_retry) ... ok
+test_ready_root_wrong_point_never_polled_into_acceptance (__main__.Settlement.test_ready_root_wrong_point_never_polled_into_acceptance) ... ok
+test_ready_root_bool_count_refused (__main__.Settlement.test_ready_root_bool_count_refused) ... ok
+test_provider_exception_no_sample_or_input_retry (__main__.Settlement.test_provider_exception_no_sample_or_input_retry) ... ok
+test_cancel_during_transition_prevents_next_sample (__main__.Settlement.test_cancel_during_transition_prevents_next_sample) ... ok
+test_nonbool_detail_refuses_immediately (__main__.Settlement.test_nonbool_detail_refuses_immediately) ... ok
+test_back_sent_then_error_never_replayed (__main__.Settlement.test_back_sent_then_error_never_replayed) ... ok
+test_seeded_two_gallery_root_settlement_no_duplicate_initial_query (__main__.Settlement.test_seeded_two_gallery_root_settlement_no_duplicate_initial_query) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.325s
+
+OK

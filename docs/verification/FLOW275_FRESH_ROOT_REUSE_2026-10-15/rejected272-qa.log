@@ -1,0 +1,73 @@
+test_valid_seed_returns_without_extra_root_scene (__main__.Seed.test_valid_seed_returns_without_extra_root_scene) ... ok
+test_wrong_project_in_seed_refused (__main__.Seed.test_wrong_project_in_seed_refused) ... FAIL
+test_open_profile_in_seed_refused (__main__.Seed.test_open_profile_in_seed_refused) ... FAIL
+test_unsaved_composer_seed_refused (__main__.Seed.test_unsaved_composer_seed_refused) ... FAIL
+test_missing_project_seed_refused (__main__.Seed.test_missing_project_seed_refused) ... FAIL
+test_replaced_seed_inode_same_bytes_refused (__main__.Seed.test_replaced_seed_inode_same_bytes_refused) ... FAIL
+test_adapter_rejects_foreign_work_before_delegate (__main__.Seed.test_adapter_rejects_foreign_work_before_delegate) ... FAIL
+test_adapter_preserves_legacy_no_keyword_call (__main__.Seed.test_adapter_preserves_legacy_no_keyword_call) ... ERROR
+
+======================================================================
+ERROR: test_adapter_preserves_legacy_no_keyword_call (__main__.Seed.test_adapter_preserves_legacy_no_keyword_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow272-seed-qa.py", line 34, in test_adapter_preserves_legacy_no_keyword_call
+    try:self.assertIs(a.collect_native_baseline(self.op,self.lease,'work','cli','home',lambda:False),expected)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/flow272-candidate/flow-native-baseline.py", line 41, in collect_native_baseline
+    record = collector(op, lease, scene_factory, display_factory, cancelled, seed=seed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Seed.test_adapter_preserves_legacy_no_keyword_call.<locals>.collector() got an unexpected keyword argument 'seed'
+
+======================================================================
+FAIL: test_wrong_project_in_seed_refused (__main__.Seed.test_wrong_project_in_seed_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow272-seed-qa.py", line 14, in test_wrong_project_in_seed_refused
+    with self.assertRaises(ValueError):self.seeded(seed)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_open_profile_in_seed_refused (__main__.Seed.test_open_profile_in_seed_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow272-seed-qa.py", line 17, in test_open_profile_in_seed_refused
+    with self.assertRaises(ValueError):self.seeded(seed)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unsaved_composer_seed_refused (__main__.Seed.test_unsaved_composer_seed_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow272-seed-qa.py", line 20, in test_unsaved_composer_seed_refused
+    with self.assertRaises(ValueError):self.seeded(seed)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_project_seed_refused (__main__.Seed.test_missing_project_seed_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow272-seed-qa.py", line 23, in test_missing_project_seed_refused
+    with self.assertRaises(ValueError):self.seeded(seed)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_replaced_seed_inode_same_bytes_refused (__main__.Seed.test_replaced_seed_inode_same_bytes_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow272-seed-qa.py", line 26, in test_replaced_seed_inode_same_bytes_refused
+    with self.assertRaises(ValueError):self.seeded(seed)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_adapter_rejects_foreign_work_before_delegate (__main__.Seed.test_adapter_rejects_foreign_work_before_delegate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/flow272-seed-qa.py", line 29, in test_adapter_rejects_foreign_work_before_delegate
+    with self.assertRaises(ValueError):a.collect_native_baseline(self.op,self.lease,other,cli,home,lambda:False,seed=seed)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.367s
+
+FAILED (failures=6, errors=1)

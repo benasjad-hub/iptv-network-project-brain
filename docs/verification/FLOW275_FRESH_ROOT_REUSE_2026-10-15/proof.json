@@ -1,0 +1,355 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "e97a1ea6b1270116be4b8e5761a2635059c4f98e",
+  "acceptedReuseCommit": "0fd07f1f3223ee5ba6dcabc9b6882a204ed0558a",
+  "sourceHashes": {
+    "flow-native-preflight.py": "d2f75ec1f563640f744766cb472ab10ac8bad6c281afe44af47555a556cf45ca",
+    "flow-native-baseline.py": "38537d2bd872af5f48cb6f0e5edfa4cf7409321dc83476c2a5e73205328ab895",
+    "flow-gallery.py": "19e36f90a9372e35e230f0ddd02e4d1c57bf11335888b74a81caf9b822d9805b"
+  },
+  "native274": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792039411.4337804,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 157.909
+  },
+  "native277Readonly": {
+    "date": "2026-10-15",
+    "uid": 1001,
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+    "capturedAt": 1792039763.0713954,
+    "observation": {
+      "projectMatches": true,
+      "rootMatches": true,
+      "profileOpen": false,
+      "accountMatches": false,
+      "unsavedComposerVisible": false,
+      "pendingGenerationVisible": false
+    },
+    "inputExecuted": false,
+    "generationExecuted": false,
+    "elapsedSeconds": 11.503
+  },
+  "observations274": [
+    {
+      "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+      "capturedAt": 1792039411.675123,
+      "observedAt": 1792039427.7419941,
+      "elapsedSeconds": 15.961,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "profileButtonAtPoint": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6"
+      ]
+    },
+    {
+      "frameHash": "3d8b35c938d7e3d5b29c2bb03931cc09b18cef98eff5cd0bcb7c6eb8c38afbe6",
+      "capturedAt": 1792039428.7564685,
+      "observedAt": 1792039439.7599616,
+      "elapsedSeconds": 10.905,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": false,
+        "accountMatches": false,
+        "closeAtPoint": false
+      },
+      "frameHashes": [
+        "3d8b35c938d7e3d5b29c2bb03931cc09b18cef98eff5cd0bcb7c6eb8c38afbe6"
+      ]
+    },
+    {
+      "frameHash": "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280",
+      "capturedAt": 1792039439.9810543,
+      "observedAt": 1792039446.2786527,
+      "elapsedSeconds": 6.181,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": true,
+        "accountMatches": true,
+        "closeAtPoint": true
+      },
+      "frameHashes": [
+        "9b78b4b36fe97aba80c17165d87d0cd29720ec2597a900a40e151a5342bd1280"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792039446.7049546,
+      "observedAt": 1792039453.1272678,
+      "elapsedSeconds": 6.309,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "noUnsavedComposer": true,
+        "noPending": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "videoCount": 2,
+        "primaryAtPoint": true,
+        "secondaryAtPoint": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "1a810b6b834d4125daecc3d708a4873eb2de7b28869e7c9a93790f4c4c91cd87",
+      "capturedAt": 1792039454.7685704,
+      "observedAt": 1792039461.1326218,
+      "elapsedSeconds": 6.26,
+      "observation": {
+        "projectMatches": true,
+        "addressAtPoint": true
+      },
+      "frameHashes": [
+        "1a810b6b834d4125daecc3d708a4873eb2de7b28869e7c9a93790f4c4c91cd87"
+      ]
+    },
+    {
+      "frameHash": "bd62a42198a24b8cdd897b2c14f360f0de243575df7916c58d51b5f172095a30",
+      "capturedAt": 1792039463.358574,
+      "observedAt": 1792039480.381675,
+      "elapsedSeconds": 16.92,
+      "observation": {
+        "resultId": "b01cf30e-60f2-4d1f-9d8e-8cbf42fcb9ba",
+        "projectMatches": true
+      },
+      "frameHashes": [
+        "bd62a42198a24b8cdd897b2c14f360f0de243575df7916c58d51b5f172095a30",
+        "1a810b6b834d4125daecc3d708a4873eb2de7b28869e7c9a93790f4c4c91cd87"
+      ]
+    },
+    {
+      "frameHash": "301041983c89b4dda303f702773232ba43002c200d667b3c5b64f3cde3a48ed9",
+      "capturedAt": 1792039480.710709,
+      "observedAt": 1792039497.630063,
+      "elapsedSeconds": 16.817,
+      "observation": {
+        "projectMatches": true,
+        "backAtPoint": true
+      },
+      "frameHashes": [
+        "301041983c89b4dda303f702773232ba43002c200d667b3c5b64f3cde3a48ed9"
+      ]
+    },
+    {
+      "frameHash": "c9188599821bc9364a8ff06959df24d048cb023278f61524c180e902abd59424",
+      "capturedAt": 1792039498.055101,
+      "observedAt": 1792039569.3319263,
+      "elapsedSeconds": 71.157,
+      "observation": {
+        "rootMatches": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "noPending": true,
+        "videoCount": 2,
+        "galleryUnchanged": true,
+        "secondaryAtPoint": false
+      },
+      "frameHashes": [
+        "c9188599821bc9364a8ff06959df24d048cb023278f61524c180e902abd59424",
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    }
+  ],
+  "warning": "274 last model rootMatches positive is NOT current-root proof: exact first image visually shows historical Clown detail. secondaryAtPointFalse correctly refused secondary input and binding. No root-failure relabelling, no uncertain back replay.",
+  "limits": "No generation/prompt/download/provider/service/task resume. Native279 result must be separately inspected.",
+  "native279": {
+    "taskId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745",
+    "operationId": "a58aaadb-fe5b-45e8-a1a4-cd7637f2c745:0",
+    "contextHash": "d3aa4858a4767db98c594c647a19851309061b02c73fe2e908b15194f179c85f",
+    "startedAt": 1792039932.3740127,
+    "uid": 1001,
+    "generationExecuted": false,
+    "promptEdited": false,
+    "downloadExecuted": false,
+    "taskMutation": false,
+    "providerEnabled": false,
+    "phase": "native-preflight",
+    "sessionReserved": true,
+    "reservationReused": true,
+    "state": "refused",
+    "errorClass": "ValueError",
+    "elapsedSeconds": 62.157
+  },
+  "observations279": [
+    {
+      "frameHash": "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6",
+      "capturedAt": 1792039932.6025803,
+      "observedAt": 1792039951.8606892,
+      "elapsedSeconds": 19.152,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "profileButtonAtPoint": true,
+        "noUnsavedComposer": true,
+        "noPending": true
+      },
+      "frameHashes": [
+        "663ddd56c002af4c87cf3a973e01a61aaedd446d75ce31b9ea6ba9a22a1549d6"
+      ]
+    },
+    {
+      "frameHash": "3d8b35c938d7e3d5b29c2bb03931cc09b18cef98eff5cd0bcb7c6eb8c38afbe6",
+      "capturedAt": 1792039952.6993196,
+      "observedAt": 1792039964.5388458,
+      "elapsedSeconds": 11.739,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": false,
+        "accountMatches": false,
+        "closeAtPoint": false
+      },
+      "frameHashes": [
+        "3d8b35c938d7e3d5b29c2bb03931cc09b18cef98eff5cd0bcb7c6eb8c38afbe6"
+      ]
+    },
+    {
+      "frameHash": "3ea48820976b5e301157ba6e49255b604d48d7a1f3eece17f907faccc38ced19",
+      "capturedAt": 1792039964.7604125,
+      "observedAt": 1792039970.8215137,
+      "elapsedSeconds": 5.937,
+      "observation": {
+        "projectMatches": true,
+        "profileOpen": true,
+        "accountMatches": true,
+        "closeAtPoint": true
+      },
+      "frameHashes": [
+        "3ea48820976b5e301157ba6e49255b604d48d7a1f3eece17f907faccc38ced19"
+      ]
+    },
+    {
+      "frameHash": "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505",
+      "capturedAt": 1792039971.2445834,
+      "observedAt": 1792039977.6112244,
+      "elapsedSeconds": 6.264,
+      "observation": {
+        "rootMatches": true,
+        "projectMatches": true,
+        "profileClosed": true,
+        "noUnsavedComposer": true,
+        "noPending": true,
+        "galleryComplete": true,
+        "noFilter": true,
+        "videoCount": 2,
+        "primaryAtPoint": true,
+        "secondaryAtPoint": true
+      },
+      "frameHashes": [
+        "4ca701cfd1c541ccead18fc11779e3dab09817af62bf2bf3b1bdeba1412b7505"
+      ]
+    },
+    {
+      "frameHash": "1a810b6b834d4125daecc3d708a4873eb2de7b28869e7c9a93790f4c4c91cd87",
+      "capturedAt": 1792039979.2572303,
+      "observedAt": 1792039984.9476957,
+      "elapsedSeconds": 5.548,
+      "observation": {
+        "projectMatches": true,
+        "addressAtPoint": true
+      },
+      "frameHashes": [
+        "1a810b6b834d4125daecc3d708a4873eb2de7b28869e7c9a93790f4c4c91cd87"
+      ]
+    },
+    {
+      "frameHash": "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee",
+      "capturedAt": 1792039987.177682,
+      "observedAt": 1792039994.417568,
+      "elapsedSeconds": 7.135,
+      "observation": {
+        "resultId": null,
+        "projectMatches": true
+      },
+      "frameHashes": [
+        "eaa6599c4351e9aa037a8b9731a60b90c75a7b963973cdc350487e8dbfee67ee",
+        "1a810b6b834d4125daecc3d708a4873eb2de7b28869e7c9a93790f4c4c91cd87"
+      ]
+    }
+  ],
+  "actualOperationFiles": [
+    ".flow.lock"
+  ],
+  "baselineBound": false,
+  "coreReceiptExists": false,
+  "generationAttemptExists": false,
+  "native279Limits": "Refused62.157s on resultIdnull. Immediate supposed detail image is ROOT, later focused CURRENT image shows detail/full UUID but modelnull staysnull; never substitute historicalknownID or infer baseline. No back dispatched in279. FinallyEscape is source recovery only, not current-root proof. Fresh current-state witness required before any new return.",
+  "originalWorkers": {
+    "worker273": {
+      "status": "ERROR",
+      "error": "The stream was interrupted. Please continue the task you were working on.",
+      "statusNotRelabelled": true,
+      "literalPatches": 4,
+      "receiptSeconds": 452.452457189,
+      "materializationOnlyAfterOriginal275Review": true,
+      "completeParseableJson": true
+    },
+    "worker272": {
+      "wallSeconds": 253.28,
+      "status": "SUCCESS",
+      "denied": 0,
+      "accepted": false,
+      "initialCases": {
+        "fail": 6,
+        "pass": 1,
+        "errors": 1
+      }
+    },
+    "worker276": {
+      "wallSeconds": 113.144,
+      "status": "SUCCESS",
+      "denied": 0,
+      "literalPatches": 2
+    },
+    "worker275": {
+      "wallSeconds": 32.729,
+      "receiptSeconds": 26.586399858,
+      "status": "SUCCESS",
+      "accepted": true,
+      "readOnlyReview": "original275-review.json"
+    }
+  },
+  "sourceQA": {
+    "after276": {
+      "fail": 0,
+      "newCases": 14,
+      "errors": 0,
+      "seconds": 2.325,
+      "changedGalleryCases": 33
+    },
+    "before276": {
+      "errors": 0,
+      "preflight": 42,
+      "total": 96,
+      "fail": 0,
+      "adapter": 9,
+      "seed": 23,
+      "threeModuleHandoff": 3,
+      "gallery": 19
+    },
+    "limits": "Real temporary authority/files/parser and exact source; native images/display/observer mocked. These are separate revision suites, not a claim of129unique cases."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "accepted": true,
+  "files": [
+    {
+      "file": "flow-native-preflight.py",
+      "sha256": "d2f75ec1f563640f744766cb472ab10ac8bad6c281afe44af47555a556cf45ca",
+      "verified": true
+    },
+    {
+      "file": "flow-native-baseline.py",
+      "sha256": "38537d2bd872af5f48cb6f0e5edfa4cf7409321dc83476c2a5e73205328ab895",
+      "verified": true
+    },
+    {
+      "file": "flow-gallery.py",
+      "sha256": "53c2858f484c0ff393b3e83bbb2f41b4a3aa86329158ca9aec9057e95a328ebc",
+      "verified": true
+    }
+  ],
+  "findings": [
+    "Internal in-process seed path uses strict keyword-only parameter '*, seed=None' across collector signatures; no positional None keyword leaks.",
+    "Exact 3-tuple structure ((f3, c3, o3), rec3, stat_identity) verified, preserving original frame, capture timestamp, and observer instance objects without payload wrapping.",
+    "Sender extracts strict 7-tuple stat identity (st_dev, st_ino, st_size, st_mtime_ns, st_uid, mode, st_nlink) from verified s3 observation; receiver validates stat identity against lstat BEFORE file adoption and re-validates AFTER record fresh_record verification, preventing same-bytes inode/mtime replacement.",
+    "Observer work directory and anchor consistency enforced: work path canonicalized, checked for non-symlink hierarchy, 0700 permissions, and current euid ownership; frame anchor verified.",
+    "Seed observation record strictly conforms to exact 6 canonical record keys (frameHash, capturedAt, observedAt, elapsedSeconds, observation, frameHashes) and exact 10 raw observation fields; frameHashes is single-element list matching expected frame hash; observedAt and elapsedSeconds verified finite and within bounds.",
+    "Root, profile settlement, and gallery transition checks enforce projectMatches, profileClosed, noUnsavedComposer, galleryComplete, noFilter, noPending, and videoCount bounded to 0..2 with strict point-boolean alignments.",
+    "Profile open and close transitions use max 3 fresh observation reads per settlement phase without replaying click inputs on observation retries.",
+    "Context preservation verified across operations: journal state, reservedAt, email, project, operationId, promptHash, and 180s cumulative timeout guards maintained intact.",
+    "Original baseline collector UUID lowercase parsing, duplicate UUID detection, detail view restore, and final root witness logic fully retained without drift."
+  ],
+  "limits": "Bounded read-only review of provided candidate sources against safety and invariant requirements; does not execute native platform actions, materialize changes, or assert native cloud verification."
+}

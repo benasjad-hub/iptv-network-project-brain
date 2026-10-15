@@ -1,0 +1,28 @@
+test_valid_seed_returns_without_extra_root_scene (__main__.Seed.test_valid_seed_returns_without_extra_root_scene) ... ok
+test_wrong_project_in_seed_refused (__main__.Seed.test_wrong_project_in_seed_refused) ... ok
+test_open_profile_in_seed_refused (__main__.Seed.test_open_profile_in_seed_refused) ... ok
+test_unsaved_composer_seed_refused (__main__.Seed.test_unsaved_composer_seed_refused) ... ok
+test_missing_project_seed_refused (__main__.Seed.test_missing_project_seed_refused) ... ok
+test_replaced_seed_inode_same_bytes_refused (__main__.Seed.test_replaced_seed_inode_same_bytes_refused) ... ok
+test_adapter_rejects_foreign_work_before_delegate (__main__.Seed.test_adapter_rejects_foreign_work_before_delegate) ... ok
+test_adapter_preserves_legacy_no_keyword_call (__main__.Seed.test_adapter_preserves_legacy_no_keyword_call) ... ok
+test_same_inode_changed_mtime_refused (__main__.Seed.test_same_inode_changed_mtime_refused) ... ok
+test_bad_stat_shapes_refused_without_capture (__main__.Seed.test_bad_stat_shapes_refused_without_capture) ... ok
+test_record_future_observed_at_refused (__main__.Seed.test_record_future_observed_at_refused) ... ok
+test_record_missing_key_refused (__main__.Seed.test_record_missing_key_refused) ... ok
+test_record_extra_key_refused (__main__.Seed.test_record_extra_key_refused) ... ok
+test_wrong_single_frame_hashes_refused (__main__.Seed.test_wrong_single_frame_hashes_refused) ... ok
+test_nonnumeric_elapsed_refused (__main__.Seed.test_nonnumeric_elapsed_refused) ... ok
+test_wrong_record_hash_refused (__main__.Seed.test_wrong_record_hash_refused) ... ok
+test_wrong_record_captured_at_refused (__main__.Seed.test_wrong_record_captured_at_refused) ... ok
+test_bad_observation_count_refused (__main__.Seed.test_bad_observation_count_refused) ... ok
+test_seed_old_frame_refuses_without_clock_reset (__main__.Seed.test_seed_old_frame_refuses_without_clock_reset) ... ok
+test_cancelled_seed_never_capture_or_input (__main__.Seed.test_cancelled_seed_never_capture_or_input) ... ok
+test_adapter_seed_preserves_scene_record_identity (__main__.Seed.test_adapter_seed_preserves_scene_record_identity) ... ok
+test_seed_positional_not_exposed (__main__.Seed.test_seed_positional_not_exposed) ... ok
+test_bad_seed_shape_has_no_fallback (__main__.Seed.test_bad_seed_shape_has_no_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.690s
+
+OK
