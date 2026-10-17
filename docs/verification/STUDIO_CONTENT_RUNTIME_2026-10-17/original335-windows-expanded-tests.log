@@ -1,0 +1,203 @@
+TAP version 13
+# Subtest: all actual 78 source catalogs produce source routes without changing inputs
+not ok 1 - all actual 78 source catalogs produce source routes without changing inputs
+  ---
+  duration_ms: 82.2986
+  location: 'C:\\Users\\pc\\Documents\\ChatGPT\\Daoudchat Saas\\studio-content-runtime-20261017\\.studio-local\\article-manifest-qa.cjs:16:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + [
+    +   {
+    +     reason: 'Spread element in routes array is not supported',
+    +     site: 'chaussureshomme'
+    +   },
+    +   {
+    +     reason: 'Spread element in routes array is not supported',
+    +     site: 'chaussuresinfo'
+    +   },
+    +   {
+    +     reason: 'Spread element in routes array is not supported',
+    +     site: 'chaussuresorthopedique'
+    +   },
+    +   {
+    +     reason: 'Spread element in routes array is not supported',
+    +     site: 'chaussuresserena'
+    +   },
+    +   {
+    +     reason: 'Spread element in routes array is not supported',
+    +     site: 'iptvnederlands'
+    +   },
+    +   {
+    +     reason: 'Spread element in routes array is not supported',
+    +     site: 'polderiptv'
+    +   },
+    +   {
+    +     reason: 'Spread element in routes array is not supported',
+    +     site: 'vike'
+    +   }
+    + ]
+    - []
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      site: 'chaussureshomme'
+      reason: 'Spread element in routes array is not supported'
+    1:
+      site: 'chaussuresinfo'
+      reason: 'Spread element in routes array is not supported'
+    2:
+      site: 'chaussuresorthopedique'
+      reason: 'Spread element in routes array is not supported'
+    3:
+      site: 'chaussuresserena'
+      reason: 'Spread element in routes array is not supported'
+    4:
+      site: 'iptvnederlands'
+      reason: 'Spread element in routes array is not supported'
+    5:
+      site: 'polderiptv'
+      reason: 'Spread element in routes array is not supported'
+    6:
+      site: 'vike'
+      reason: 'Spread element in routes array is not supported'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\pc\Documents\ChatGPT\Daoudchat Saas\studio-content-runtime-20261017\.studio-local\article-manifest-qa.cjs:42:9)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:527:18)
+    node:internal/test_runner/harness:255:12
+    node:internal/process/task_queues:140:7
+    AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+  ...
+# Subtest: known static wrapper preserves route path independently of its source slug
+ok 2 - known static wrapper preserves route path independently of its source slug
+  ---
+  duration_ms: 0.2941
+  ...
+# Subtest: invalid source syntax refuses
+ok 3 - invalid source syntax refuses
+  ---
+  duration_ms: 0.2934
+  ...
+# Subtest: client directive after a comment refuses
+ok 4 - client directive after a comment refuses
+  ---
+  duration_ms: 0.3482
+  ...
+# Subtest: design spread overriding the route collection refuses
+ok 5 - design spread overriding the route collection refuses
+  ---
+  duration_ms: 0.2021
+  ...
+# Subtest: only the two explicitly supported sites may use the static exclusion predicate
+ok 6 - only the two explicitly supported sites may use the static exclusion predicate
+  ---
+  duration_ms: 0.1975
+  ...
+# Subtest: static wrapper rejects noncanonical public paths instead of normalizing them
+ok 7 - static wrapper rejects noncanonical public paths instead of normalizing them
+  ---
+  duration_ms: 0.4409
+  ...
+# Subtest: ordinary hardcoded components never become article authority
+ok 8 - ordinary hardcoded components never become article authority
+  ---
+  duration_ms: 0.2329
+  ...
+# Subtest: wrapper with side effects refuses before producing a partial manifest
+ok 9 - wrapper with side effects refuses before producing a partial manifest
+  ---
+  duration_ms: 0.2227
+  ...
+# Subtest: current accented article source slugs retain their exact existing URL segments
+ok 10 - current accented article source slugs retain their exact existing URL segments
+  ---
+  duration_ms: 0.2671
+  ...
+# Subtest: duplicate authority properties refuse instead of using a guessed winner
+ok 11 - duplicate authority properties refuse instead of using a guessed winner
+  ---
+  duration_ms: 0.158
+  ...
+# Subtest: duplicate conflicting static routes refuse atomically
+ok 12 - duplicate conflicting static routes refuse atomically
+  ---
+  duration_ms: 0.224
+  ...
+# Subtest: article wrapper cannot authorize a source slug absent from the catalog
+ok 13 - article wrapper cannot authorize a source slug absent from the catalog
+  ---
+  duration_ms: 0.1619
+  ...
+# Subtest: invalid API dependency returns refusal instead of throwing or partial output
+ok 14 - invalid API dependency returns refusal instead of throwing or partial output
+  ---
+  duration_ms: 0.4113
+  ...
+# Subtest: duplicate path and component properties refuse ambiguous route objects
+not ok 15 - duplicate path and component properties refuse ambiguous route objects
+  ---
+  duration_ms: 0.276
+  location: 'C:\\Users\\pc\\Documents\\ChatGPT\\Daoudchat Saas\\studio-content-runtime-20261017\\.studio-local\\article-manifest-qa.cjs:85:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\pc\Documents\ChatGPT\Daoudchat Saas\studio-content-runtime-20261017\.studio-local\article-manifest-qa.cjs:87:10)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:527:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:527:7)
+  ...
+# Subtest: prototype-related single-segment paths refuse as canonical authority
+not ok 16 - prototype-related single-segment paths refuse as canonical authority
+  ---
+  duration_ms: 0.2422
+  location: 'C:\\Users\\pc\\Documents\\ChatGPT\\Daoudchat Saas\\studio-content-runtime-20261017\\.studio-local\\article-manifest-qa.cjs:90:1'
+  failureType: 'testCodeFailure'
+  error: 'constructor'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\pc\Documents\ChatGPT\Daoudchat Saas\studio-content-runtime-20261017\.studio-local\article-manifest-qa.cjs:91:52)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:527:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:527:7)
+  ...
+# Subtest: unknown route array spreads refuse atomically
+ok 17 - unknown route array spreads refuse atomically
+  ---
+  duration_ms: 0.2366
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 14
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 228.5851

@@ -1,0 +1,11 @@
+{
+  "originalStatus": "SUCCESS",
+  "durationSeconds": 20.526460925,
+  "turns": 1,
+  "sourceSHA256": "6e5c830918d6aab5e80dc0c08c229fc9cf5f1899cac3c962c25f41eeefdbddea",
+  "exactLiteralPatches": 1,
+  "implementationAdaptation": false,
+  "privateMetadataQA": "4PASS0",
+  "publicDeployment": false,
+  "scope": "Preserve exact original metadata when runtime returns original object; actual changed/new articles retain overrides"
+}

@@ -1,0 +1,21 @@
+{
+  "manifest333": {
+    "tests": "3PASS6FAIL on9tests; no materialization",
+    "durationSeconds": 287.935762154,
+    "decision": "REJECTED",
+    "originalStatus": "SUCCESS"
+  },
+  "publicDeployment": false,
+  "network": "Three bounded authorized SSH timeouts; public Studio HTTPS read timed out15s/code000 from workstation; cause/global outage unknown; no auth/network/service changes",
+  "manifest335": {
+    "decision": "REJECTED",
+    "vpsTests": "13PASS1FAIL (7 actual ordinary route spread shapes)",
+    "originalStatus": "SUCCESS",
+    "durationSeconds": 226.982733849,
+    "sourceSHA256": "d0b757eaca81167756122c77cf9da534c76961524d376104a43d86744372493e",
+    "windowsExpandedTests": "14PASS3FAIL on17tests: seven spread shapes, duplicate route authority keys, prototype path names"
+  },
+  "sourceOnly": true,
+  "sourceModels": "78 exported public catalogs on VPS; independent Windows AST inventory78arrays/3193literal source slugs",
+  "next336": "NOT LAUNCHED: SSH timed out during connection before remote execution; do not assume active worker"
+}

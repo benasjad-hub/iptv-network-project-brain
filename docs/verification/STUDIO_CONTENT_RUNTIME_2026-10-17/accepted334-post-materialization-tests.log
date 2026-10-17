@@ -1,0 +1,12 @@
+✔ original route without runtime hook retains the actual design metadata (32.277646ms)
+✔ runtime fallback retains every original design SEO field before any publication (15.731265ms)
+✔ actual runtime article publication updates the displayed SEO content (15.797963ms)
+✔ a newly published article absent from the original array gets its current metadata (10.820954ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 427.243414
