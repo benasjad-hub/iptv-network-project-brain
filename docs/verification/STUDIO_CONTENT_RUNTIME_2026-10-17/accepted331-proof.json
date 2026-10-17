@@ -1,0 +1,35 @@
+{
+  "sourceOnly": true,
+  "publicDeployment": false,
+  "implementationAdaptation": false,
+  "reconstruction": "exact original328 + five original330 literal patches + one original331 literal patch; wrapper exact330 file + same331 patch",
+  "jobs": {
+    "329": {
+      "originalStatus": "SUCCESS",
+      "durationSeconds": 279.085778748,
+      "elapsedSeconds": 285.33,
+      "turns": 1,
+      "decision": "REJECTED: patch4 literal preimage absent"
+    },
+    "330": {
+      "originalStatus": "SUCCESS",
+      "durationSeconds": 143.794102864,
+      "elapsedSeconds": 149.974,
+      "turns": 1,
+      "decision": "REJECTED: wrapper changes escaped/entity slug semantics"
+    },
+    "331": {
+      "originalStatus": "SUCCESS",
+      "durationSeconds": 128.939817574,
+      "elapsedSeconds": 137.269,
+      "turns": 1,
+      "decision": "ACCEPTED SOURCE after both suites"
+    }
+  },
+  "sourceHashes": {
+    "standard-article-runtime.cjs": "6919e34a8cdc62170ace28067ba6187b2a520912283b0feabf40df4d6bcd0c9c",
+    "article-wrapper-runtime.cjs": "f5204e925f014a0112ea305c968d509366e79ef634c17caa2bca624ff96feaaf"
+  },
+  "generatedFiles": 28,
+  "limits": "78 article models wired in source; publication validation supports only prior blog/guides until coordinated canonical-route work. No native/public acceptance, build, flag activation, owner input, schema or site migration."
+}

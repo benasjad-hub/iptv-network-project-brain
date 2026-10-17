@@ -1,0 +1,34 @@
+✔ actual standard designs acquire all three data consumers without mutating inputs or original theme JSX (410.374751ms)
+✔ applying the plan in memory is idempotent and all newly wired design sites validate unchanged (296.0477ms)
+✔ a client listing refuses the entire design with no partial index or post plan (11.017459ms)
+✔ an existing runtime hook for another site is never silently repaired or reused (10.344964ms)
+✔ comments, strings and visible JSX containing ARTICLES do not become runtime identifier references (18.493471ms)
+✔ local ARTICLES shadowing refuses instead of binding the wrong collection (16.1024ms)
+✔ a comment containing the expected hook cannot authorize an already-wired renderer calling another site (12.297999ms)
+✔ invalid site identity and missing source refuse without returning partial changes (7.145848ms)
+✔ an imported ARTICLES collection from a different module is not promoted to runtime content (8.892186ms)
+✔ a renderer intentionally reading another article is not rewritten as the current route slug (10.690361ms)
+✔ a string named ARTICLES cannot stand in for the imported article collection (13.673834ms)
+✔ a private non-exported renderer is not treated as the registered public page component (9.576566ms)
+✔ actual VeoTT article TSX renders the same theme on fallback and updated content from the runtime model (fixture dependencies) (190.712621ms)
+✔ actual iptvdanmark retains theme, canonical paths and idempotence (127.743192ms)
+✔ actual abonnementiptvfrance retains theme, canonical paths and idempotence (92.825312ms)
+✔ actual anbieteriptv retains theme, canonical paths and idempotence (35.960607ms)
+✔ actual kaufeniptv retains theme, canonical paths and idempotence (30.292074ms)
+✔ actual flixwatch retains theme, canonical paths and idempotence (12.771657ms)
+✔ actual iptvgermany retains theme, canonical paths and idempotence (7.38814ms)
+✔ actual iptvfreetrialca retains theme, canonical paths and idempotence (7.908316ms)
+✔ actual iptvnordic retains theme, canonical paths and idempotence (12.082859ms)
+✔ actual chaussuresinfo retains theme, canonical paths and idempotence (18.753718ms)
+✔ actual kanaalgids retains theme, canonical paths and idempotence (14.102215ms)
+✔ actual authored wrapper routes preserve their exact slug strings and return expressions (14.727367ms)
+✔ wrapper refuses children, spreads, dynamic slug, extra props and nested JSX (1.408031ms)
+✔ wrapper refuses JSX entity/backslash slugs instead of changing their runtime values (0.44137ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1486.203632

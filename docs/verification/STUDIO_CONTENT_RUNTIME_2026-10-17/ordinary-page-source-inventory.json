@@ -1,0 +1,5216 @@
+{
+  "kind": "source-inventory-only-no-native-proof",
+  "sites": 78,
+  "staticRouteExpressions": 934,
+  "literalPaths": 921,
+  "rows": [
+    {
+      "site": "abonnementiptvfrance",
+      "source": "apps/sites/designs/abonnementiptvfrance/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "meilleur-abonnement-iptv-france",
+          "pathExpression": "'meilleur-abonnement-iptv-france'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "8k-premium",
+          "pathExpression": "'8k-premium'",
+          "component": "PremiumPage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "a-propos",
+          "pathExpression": "'a-propos'",
+          "component": "AProposPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "refund_returns",
+          "pathExpression": "'refund_returns'",
+          "component": "RefundPage"
+        },
+        {
+          "pathLiteral": "category/iptv",
+          "pathExpression": "'category/iptv'",
+          "component": "GuidesPage"
+        },
+        {
+          "pathLiteral": "product/3-months-xtreamhd-iptv",
+          "pathExpression": "'product/3-months-xtreamhd-iptv'",
+          "component": "Product3MoisPage"
+        },
+        {
+          "pathLiteral": "product/12-months-xtreamhd-iptv",
+          "pathExpression": "'product/12-months-xtreamhd-iptv'",
+          "component": "Product12MoisPage"
+        },
+        {
+          "pathLiteral": "product/24-months-xtreamhd-iptv",
+          "pathExpression": "'product/24-months-xtreamhd-iptv'",
+          "component": "Product24MoisPage"
+        },
+        {
+          "pathLiteral": "product/subscription-iptv-viking",
+          "pathExpression": "'product/subscription-iptv-viking'",
+          "component": "ProductVikingPage"
+        },
+        {
+          "pathLiteral": "product/subscription-iptv-99",
+          "pathExpression": "'product/subscription-iptv-99'",
+          "component": "Product99Page"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-de-confidentialite",
+          "pathExpression": "'politique-de-confidentialite'",
+          "component": "PolitiqueConfidentialitePage"
+        },
+        {
+          "pathLiteral": "conditions-generales-de-vente",
+          "pathExpression": "'conditions-generales-de-vente'",
+          "component": "CgvPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "alfaiptv55",
+      "source": "apps/sites/designs/alfaiptv55/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "app",
+          "pathExpression": "'app'",
+          "component": "AppPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "anbieteriptv",
+      "source": "apps/sites/designs/anbieteriptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-anbieter-deutschland",
+          "pathExpression": "'iptv-anbieter-deutschland'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "anbieter-vergleich",
+          "pathExpression": "'anbieter-vergleich'",
+          "component": "VergleichPage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "iptv-senderliste",
+          "pathExpression": "'iptv-senderliste'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "testen",
+          "pathExpression": "'testen'",
+          "component": "TestenPage"
+        },
+        {
+          "pathLiteral": "iptv-haeufige-fragen",
+          "pathExpression": "'iptv-haeufige-fragen'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "ueber-anbieter-iptv",
+          "pathExpression": "'ueber-anbieter-iptv'",
+          "component": "UeberUnsPage"
+        },
+        {
+          "pathLiteral": "iptv-6-monate",
+          "pathExpression": "'iptv-6-monate'",
+          "component": "SixMonthsPage"
+        },
+        {
+          "pathLiteral": "tag/iptv-dienste",
+          "pathExpression": "'tag/iptv-dienste'",
+          "component": "TagDienstePage"
+        },
+        {
+          "pathLiteral": "tag/iptv-deutschland",
+          "pathExpression": "'tag/iptv-deutschland'",
+          "component": "TagDeutschlandPage"
+        },
+        {
+          "pathLiteral": "category/deutsch-iptv",
+          "pathExpression": "'category/deutsch-iptv'",
+          "component": "RatgeberPage"
+        },
+        {
+          "pathLiteral": "die-besten-deutsch-iptv-anbieter-2025-alles-was-sie-wissen-mussen",
+          "pathExpression": "'die-besten-deutsch-iptv-anbieter-2025-alles-was-sie-wissen-mussen'",
+          "component": "Article2025Page"
+        },
+        {
+          "pathLiteral": "iptv-anbieter-2026-was-kein-anderer-vergleich-ihnen-sagt",
+          "pathExpression": "'iptv-anbieter-2026-was-kein-anderer-vergleich-ihnen-sagt'",
+          "component": "Article2026Page"
+        },
+        {
+          "pathLiteral": "wm-2026-alle-spiele-per-iptv-schauen",
+          "pathExpression": "'wm-2026-alle-spiele-per-iptv-schauen'",
+          "component": "() => <BlogPostPage slug=\"wm-2026-alle-spiele-per-iptv-schauen\" />"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "apollogrouptv",
+      "source": "apps/sites/designs/apollogrouptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "blyxo",
+      "source": "apps/sites/designs/blyxo/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "bossiptv",
+      "source": "apps/sites/designs/bossiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "app",
+          "pathExpression": "'app'",
+          "component": "AppPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "british-iptv",
+      "source": "apps/sites/designs/british-iptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "british-iptv-uk",
+          "pathExpression": "'british-iptv-uk'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "subscriptions",
+          "pathExpression": "'subscriptions'",
+          "component": "SubscriptionsPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "GUIDE_SLUG",
+          "component": "GuidePage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "catchontv",
+      "source": "apps/sites/designs/catchontv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "app",
+          "pathExpression": "'app'",
+          "component": "AppPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "chaussureshomme",
+      "source": "apps/sites/designs/chaussureshomme/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "unknownExpression": "...PRODUCTS.map((product) => ({\n      path: `produit/${product.slug}`,\n      Component: () => ProductPage({ product }),\n      metadata: metadata.product(product.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "pathologies",
+          "pathExpression": "'pathologies'",
+          "component": "PathologiesIndexPage"
+        },
+        {
+          "unknownExpression": "...PATHOLOGIES.filter((p) => !p.href).map((pathology) => ({\n      path: `pathologies/${pathology.slug}`,\n      Component: () => PathologyPage({ pathology }),\n      metadata: metadata.pathology(pathology.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "a-propos",
+          "pathExpression": "'a-propos'",
+          "component": "AboutPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "panier",
+          "pathExpression": "'panier'",
+          "component": "CartPage"
+        },
+        {
+          "pathLiteral": "checkout",
+          "pathExpression": "'checkout'",
+          "component": "CheckoutPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-de-confidentialite",
+          "pathExpression": "'politique-de-confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "politique-de-retours",
+          "pathExpression": "'politique-de-retours'",
+          "component": "RetoursPage"
+        }
+      ],
+      "clientPageFiles": [
+        "cart.tsx",
+        "checkout.tsx"
+      ]
+    },
+    {
+      "site": "chaussuresinfo",
+      "source": "apps/sites/designs/chaussuresinfo/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "guides",
+          "pathExpression": "'guides'",
+          "component": "GuidesPage"
+        },
+        {
+          "pathLiteral": "pathologies-pieds-sensibles",
+          "pathExpression": "'pathologies-pieds-sensibles'",
+          "component": "PathologiesIndexPage"
+        },
+        {
+          "unknownExpression": "...PATHOLOGIES.map((pathology) => ({\n      path: `pathologies/${pathology.slug}`,\n      Component: () => <PathologyPage pathology={pathology} />,\n      metadata: metadata.pathology(pathology.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "boutiques",
+          "pathExpression": "'boutiques'",
+          "component": "BoutiquesPage"
+        },
+        {
+          "pathLiteral": "a-propos",
+          "pathExpression": "'a-propos'",
+          "component": "AboutPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-de-confidentialite",
+          "pathExpression": "'politique-de-confidentialite'",
+          "component": "ConfidentialitePage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "chaussuresorthopedique",
+      "source": "apps/sites/designs/chaussuresorthopedique/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "femme",
+          "pathExpression": "'femme'",
+          "component": "() => CategoryPage({ genre: 'femme', label: 'femme' })"
+        },
+        {
+          "pathLiteral": "homme",
+          "pathExpression": "'homme'",
+          "component": "() => CategoryPage({ genre: 'homme', label: 'homme' })"
+        },
+        {
+          "unknownExpression": "...PRODUCTS.map((product) => ({\n      path: `produit/${product.slug}`,\n      Component: () => ProductPage({ product }),\n      metadata: metadata.product(product.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "pathologies",
+          "pathExpression": "'pathologies'",
+          "component": "PathologiesIndexPage"
+        },
+        {
+          "unknownExpression": "...PATHOLOGIES.map((pathology) => ({\n      path: `pathologies/${pathology.slug}`,\n      Component: () => PathologyPage({ pathology }),\n      metadata: metadata.pathology(pathology.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "a-propos",
+          "pathExpression": "'a-propos'",
+          "component": "AboutPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "panier",
+          "pathExpression": "'panier'",
+          "component": "CartPage"
+        },
+        {
+          "pathLiteral": "checkout",
+          "pathExpression": "'checkout'",
+          "component": "CheckoutPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-de-confidentialite",
+          "pathExpression": "'politique-de-confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "politique-de-retours",
+          "pathExpression": "'politique-de-retours'",
+          "component": "RetoursPage"
+        }
+      ],
+      "clientPageFiles": [
+        "cart.tsx",
+        "checkout.tsx"
+      ]
+    },
+    {
+      "site": "chaussuresserena",
+      "source": "apps/sites/designs/chaussuresserena/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "unknownExpression": "...PRODUCTS.map((product) => ({\n      path: `produit/${product.slug}`,\n      Component: () => ProductPage({ product }),\n      metadata: metadata.product(product.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "pathologies",
+          "pathExpression": "'pathologies'",
+          "component": "PathologiesIndexPage"
+        },
+        {
+          "unknownExpression": "...PATHOLOGIES.map((pathology) => ({\n      path: `pathologies/${pathology.slug}`,\n      Component: () => PathologyPage({ pathology }),\n      metadata: metadata.pathology(pathology.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "a-propos-chaussures-serena",
+          "pathExpression": "'a-propos-chaussures-serena'",
+          "component": "AboutPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "panier",
+          "pathExpression": "'panier'",
+          "component": "CartPage"
+        },
+        {
+          "pathLiteral": "checkout",
+          "pathExpression": "'checkout'",
+          "component": "CheckoutPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-de-confidentialite",
+          "pathExpression": "'politique-de-confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "politique-de-retours",
+          "pathExpression": "'politique-de-retours'",
+          "component": "RetoursPage"
+        }
+      ],
+      "clientPageFiles": [
+        "cart.tsx",
+        "checkout.tsx"
+      ]
+    },
+    {
+      "site": "cieloflux",
+      "source": "apps/sites/designs/cieloflux/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnementen",
+          "pathExpression": "'abonnementen'",
+          "component": "AbonnementenPage"
+        },
+        {
+          "pathLiteral": "zenders",
+          "pathExpression": "'zenders'",
+          "component": "ZendersPage"
+        },
+        {
+          "pathLiteral": "tv-box-kopen",
+          "pathExpression": "'tv-box-kopen'",
+          "component": "TvBoxKopenPage"
+        },
+        {
+          "pathLiteral": "beste-iptv",
+          "pathExpression": "'beste-iptv'",
+          "component": "BesteIptvPage"
+        },
+        {
+          "pathLiteral": "apparaten",
+          "pathExpression": "'apparaten'",
+          "component": "ApparatenPage"
+        },
+        {
+          "pathLiteral": "wederverkoper",
+          "pathExpression": "'wederverkoper'",
+          "component": "WederverkoperPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "cookiebeleid",
+          "pathExpression": "'cookiebeleid'",
+          "component": "CookiePage"
+        },
+        {
+          "pathLiteral": "voorwaarden",
+          "pathExpression": "'voorwaarden'",
+          "component": "VoorwaardenPage"
+        },
+        {
+          "pathLiteral": "herroepingsrecht",
+          "pathExpression": "'herroepingsrecht'",
+          "component": "HerroepingPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "codeiptvpremiumeu",
+      "source": "apps/sites/designs/codeiptvpremiumeu/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "SmartTvPage"
+        },
+        {
+          "pathLiteral": "installation/firestick",
+          "pathExpression": "'installation/firestick'",
+          "component": "FirestickPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "codeiptvpremiumfr",
+      "source": "apps/sites/designs/codeiptvpremiumfr/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "SmartTvPage"
+        },
+        {
+          "pathLiteral": "installation/firestick",
+          "pathExpression": "'installation/firestick'",
+          "component": "FirestickPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-de-confidentialite",
+          "pathExpression": "'politique-de-confidentialite'",
+          "component": "PolitiqueConfidentialitePage"
+        },
+        {
+          "pathLiteral": "conditions-generales-de-vente",
+          "pathExpression": "'conditions-generales-de-vente'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "politique-de-remboursement",
+          "pathExpression": "'politique-de-remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "codeiptvpremiuminfo",
+      "source": "apps/sites/designs/codeiptvpremiuminfo/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "installation/firestick",
+          "pathExpression": "'installation/firestick'",
+          "component": "InstallationFirestickPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "codeiptvpremiumstore",
+      "source": "apps/sites/designs/codeiptvpremiumstore/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "installation/firestick",
+          "pathExpression": "'installation/firestick'",
+          "component": "InstallationFirestickPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "diablotv",
+      "source": "apps/sites/designs/diablotv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "app",
+          "pathExpression": "'app'",
+          "component": "AppPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "espana-iptv",
+      "source": "apps/sites/designs/espana-iptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "espana-iptv",
+          "pathExpression": "'espana-iptv'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "planes",
+          "pathExpression": "'planes'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "canales",
+          "pathExpression": "'canales'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contacto",
+          "pathExpression": "'contacto'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "aviso-legal",
+          "pathExpression": "'aviso-legal'",
+          "component": "AvisoLegalPage"
+        },
+        {
+          "pathLiteral": "privacidad",
+          "pathExpression": "'privacidad'",
+          "component": "PrivacidadPage"
+        },
+        {
+          "pathLiteral": "terminos",
+          "pathExpression": "'terminos'",
+          "component": "TerminosPage"
+        },
+        {
+          "pathLiteral": "reembolso",
+          "pathExpression": "'reembolso'",
+          "component": "ReembolsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "euroiptv",
+      "source": "apps/sites/designs/euroiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "fr",
+          "pathExpression": "'fr'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "extremeiptv",
+      "source": "apps/sites/designs/extremeiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abbonamento",
+          "pathExpression": "'abbonamento'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "canali",
+          "pathExpression": "'canali'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contatti",
+          "pathExpression": "'contatti'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "note-legali",
+          "pathExpression": "'note-legali'",
+          "component": "NoteLegaliPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "termini",
+          "pathExpression": "'termini'",
+          "component": "TerminiPage"
+        },
+        {
+          "pathLiteral": "rimborso",
+          "pathExpression": "'rimborso'",
+          "component": "RimborsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "flixiptv",
+      "source": "apps/sites/designs/flixiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "mediathek",
+          "pathExpression": "'mediathek'",
+          "component": "MediathekPage"
+        },
+        {
+          "pathLiteral": "test",
+          "pathExpression": "'test'",
+          "component": "TestPage"
+        },
+        {
+          "pathLiteral": "reseller",
+          "pathExpression": "'reseller'",
+          "component": "ResellerPage"
+        },
+        {
+          "pathLiteral": "receiver",
+          "pathExpression": "'receiver'",
+          "component": "ReceiverPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "flixwatch",
+      "source": "apps/sites/designs/flixwatch/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "live-tv",
+          "pathExpression": "'live-tv'",
+          "component": "LiveTvPage"
+        },
+        {
+          "pathLiteral": "sport",
+          "pathExpression": "'sport'",
+          "component": "SportPage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "smart-tv",
+          "pathExpression": "'smart-tv'",
+          "component": "SmartTvPage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "iptv-senderliste-deutschland",
+          "pathExpression": "'iptv-senderliste-deutschland'",
+          "component": "SenderlisteArticlePage"
+        },
+        {
+          "pathLiteral": "tuerkische-russische-sender-iptv",
+          "pathExpression": "'tuerkische-russische-sender-iptv'",
+          "component": "InternationalArticlePage"
+        },
+        {
+          "pathLiteral": "iptv-sport-streamen",
+          "pathExpression": "'iptv-sport-streamen'",
+          "component": "SportArticlePage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "germaniptvtestcom",
+      "source": "apps/sites/designs/germaniptvtestcom/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "installation/fire-tv-stick",
+          "pathExpression": "'installation/fire-tv-stick'",
+          "component": "InstallationFireTvStickPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "germaniptvtestde",
+      "source": "apps/sites/designs/germaniptvtestde/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "programm",
+          "pathExpression": "'programm'",
+          "component": "ProgrammPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/fire-tv-stick",
+          "pathExpression": "'installation/fire-tv-stick'",
+          "component": "InstallationFireTvPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "germaniptvtestglobal",
+      "source": "apps/sites/designs/germaniptvtestglobal/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarife",
+          "pathExpression": "'tarife'",
+          "component": "TarifePage"
+        },
+        {
+          "pathLiteral": "programm",
+          "pathExpression": "'programm'",
+          "component": "ProgrammPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "germaniptvteststore",
+      "source": "apps/sites/designs/germaniptvteststore/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/fire-tv-stick",
+          "pathExpression": "'installation/fire-tv-stick'",
+          "component": "FireTvInstallPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "SmartTvInstallPage"
+        },
+        {
+          "pathLiteral": "installation/android-ios",
+          "pathExpression": "'installation/android-ios'",
+          "component": "AndroidIosInstallPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "goalstream",
+      "source": "apps/sites/designs/goalstream/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptv-smarter",
+      "source": "apps/sites/designs/iptv-smarter/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-smarters",
+          "pathExpression": "'iptv-smarters'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptv-ss",
+      "source": "apps/sites/designs/iptv-ss/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-en-espana",
+          "pathExpression": "'iptv-en-espana'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "canales",
+          "pathExpression": "'canales'",
+          "component": "CanalesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contacto",
+          "pathExpression": "'contacto'",
+          "component": "ContactoPage"
+        },
+        {
+          "pathLiteral": "privacidad",
+          "pathExpression": "'privacidad'",
+          "component": "PrivacidadPage"
+        },
+        {
+          "pathLiteral": "cookies",
+          "pathExpression": "'cookies'",
+          "component": "CookiesPage"
+        },
+        {
+          "pathLiteral": "terminos",
+          "pathExpression": "'terminos'",
+          "component": "TerminosPage"
+        },
+        {
+          "pathLiteral": "reembolso",
+          "pathExpression": "'reembolso'",
+          "component": "ReembolsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvbritish",
+      "source": "apps/sites/designs/iptvbritish/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/firestick",
+          "pathExpression": "'installation/firestick'",
+          "component": "FirestickPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "SmartTvPage"
+        },
+        {
+          "pathLiteral": "terms-of-service",
+          "pathExpression": "'terms-of-service'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPage"
+        },
+        {
+          "pathLiteral": "dmca",
+          "pathExpression": "'dmca'",
+          "component": "DmcaPage"
+        },
+        {
+          "pathLiteral": "acceptable-use-policy",
+          "pathExpression": "'acceptable-use-policy'",
+          "component": "AcceptableUsePage"
+        },
+        {
+          "pathLiteral": "gdpr-compliance",
+          "pathExpression": "'gdpr-compliance'",
+          "component": "GdprPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvcodescom",
+      "source": "apps/sites/designs/iptvcodescom/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "guide-activation",
+          "pathExpression": "'guide-activation'",
+          "component": "GuideActivationPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-confidentialite",
+          "pathExpression": "'politique-confidentialite'",
+          "component": "PolitiqueConfidentialitePage"
+        },
+        {
+          "pathLiteral": "conditions-generales",
+          "pathExpression": "'conditions-generales'",
+          "component": "ConditionsGeneralesPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvcodesinfo",
+      "source": "apps/sites/designs/iptvcodesinfo/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "tester-iptv",
+          "pathExpression": "'tester-iptv'",
+          "component": "TesterIptvPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "politique-confidentialite",
+          "pathExpression": "'politique-confidentialite'",
+          "component": "PolitiqueConfidentialitePage"
+        },
+        {
+          "pathLiteral": "conditions-generales",
+          "pathExpression": "'conditions-generales'",
+          "component": "ConditionsGeneralesPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvcodesstore",
+      "source": "apps/sites/designs/iptvcodesstore/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "tutorial",
+          "pathExpression": "'tutorial'",
+          "component": "TutorialPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvcodesuk",
+      "source": "apps/sites/designs/iptvcodesuk/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "tutorial",
+          "pathExpression": "'tutorial'",
+          "component": "TutorialPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvdanmark",
+      "source": "apps/sites/designs/iptvdanmark/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-danmark-2026",
+          "pathExpression": "'iptv-danmark-2026'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-denmark-tv",
+          "pathExpression": "'iptv-denmark-tv'",
+          "component": "FilmSerierPage"
+        },
+        {
+          "pathLiteral": "iptv-danmark-anbefaling",
+          "pathExpression": "'iptv-danmark-anbefaling'",
+          "component": "KanalerPage"
+        },
+        {
+          "pathLiteral": "iptv-danmark-pricing",
+          "pathExpression": "'iptv-danmark-pricing'",
+          "component": "PriserPage"
+        },
+        {
+          "pathLiteral": "abonnement-iptv",
+          "pathExpression": "'abonnement-iptv'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "om-iptv-danmark",
+          "pathExpression": "'om-iptv-danmark'",
+          "component": "OmOsPage"
+        },
+        {
+          "pathLiteral": "kontakt-iptv-danmark",
+          "pathExpression": "'kontakt-iptv-danmark'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "iptv-danmark-sporgsmaal",
+          "pathExpression": "'iptv-danmark-sporgsmaal'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "iptv-danmark-anmeldelser",
+          "pathExpression": "'iptv-danmark-anmeldelser'",
+          "component": "AnmeldelserPage"
+        },
+        {
+          "pathLiteral": "iptv-danmark-guide",
+          "pathExpression": "'iptv-danmark-guide'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "iptv-danmark-privatlivspolitik",
+          "pathExpression": "'iptv-danmark-privatlivspolitik'",
+          "component": "PrivatlivspolitikPage"
+        },
+        {
+          "pathLiteral": "cookiepolitik",
+          "pathExpression": "'cookiepolitik'",
+          "component": "CookiepolitikPage"
+        },
+        {
+          "pathLiteral": "handelsbetingelser",
+          "pathExpression": "'handelsbetingelser'",
+          "component": "HandelsbetingelserPage"
+        },
+        {
+          "pathLiteral": "fortrydelsesret",
+          "pathExpression": "'fortrydelsesret'",
+          "component": "FortrydelsesretPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvfhd",
+      "source": "apps/sites/designs/iptvfhd/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvfreetrial",
+      "source": "apps/sites/designs/iptvfreetrial/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPolicyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPolicyPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvfreetrialca",
+      "source": "apps/sites/designs/iptvfreetrialca/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PlansPage"
+        },
+        {
+          "pathLiteral": "about-us-iptv-free-trial",
+          "pathExpression": "'about-us-iptv-free-trial'",
+          "component": "AboutPage"
+        },
+        {
+          "pathLiteral": "faq-iptv-free-trial",
+          "pathExpression": "'faq-iptv-free-trial'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog-iptv-free-trial",
+          "pathExpression": "'blog-iptv-free-trial'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "testomonials",
+          "pathExpression": "'testomonials'",
+          "component": "TestimonialsPage"
+        },
+        {
+          "pathLiteral": "contact-us-iptv-free-trial",
+          "pathExpression": "'contact-us-iptv-free-trial'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvgerman4kcom",
+      "source": "apps/sites/designs/iptvgerman4kcom/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/fire-tv-stick",
+          "pathExpression": "'installation/fire-tv-stick'",
+          "component": "InstallationFireTvPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvgerman4kde",
+      "source": "apps/sites/designs/iptvgerman4kde/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/fire-tv-stick",
+          "pathExpression": "'installation/fire-tv-stick'",
+          "component": "InstallationFireTvPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvgerman4kglobal",
+      "source": "apps/sites/designs/iptvgerman4kglobal/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarife",
+          "pathExpression": "'tarife'",
+          "component": "TarifePage"
+        },
+        {
+          "pathLiteral": "programm",
+          "pathExpression": "'programm'",
+          "component": "ProgrammPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "installation/fire-tv-stick",
+          "pathExpression": "'installation/fire-tv-stick'",
+          "component": "InstallationFireTvPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvgerman4kstore",
+      "source": "apps/sites/designs/iptvgerman4kstore/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "installation/fire-tv-stick",
+          "pathExpression": "'installation/fire-tv-stick'",
+          "component": "FireTvInstallPage"
+        },
+        {
+          "pathLiteral": "installation/smart-tv",
+          "pathExpression": "'installation/smart-tv'",
+          "component": "SmartTvInstallPage"
+        },
+        {
+          "pathLiteral": "installation/android-ios",
+          "pathExpression": "'installation/android-ios'",
+          "component": "AndroidIosInstallPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvgermany",
+      "source": "apps/sites/designs/iptvgermany/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_PATH.slice(1)",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "kanal-liste",
+          "pathExpression": "'kanal-liste'",
+          "component": "KanalListePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "installation",
+          "pathExpression": "'installation'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "ratgeber",
+          "pathExpression": "'ratgeber'",
+          "component": "RatgeberPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "CONTACT_PATH.slice(1)",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "QUEEN_ARTICLE_SLUG",
+          "component": "QueenArticlePage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvguatemala",
+      "source": "apps/sites/designs/iptvguatemala/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-guatemala",
+          "pathExpression": "'iptv-guatemala'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "planes",
+          "pathExpression": "'planes'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "canales",
+          "pathExpression": "'canales'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contacto",
+          "pathExpression": "'contacto'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "aviso-legal",
+          "pathExpression": "'aviso-legal'",
+          "component": "AvisoLegalPage"
+        },
+        {
+          "pathLiteral": "privacidad",
+          "pathExpression": "'privacidad'",
+          "component": "PrivacidadPage"
+        },
+        {
+          "pathLiteral": "terminos",
+          "pathExpression": "'terminos'",
+          "component": "TerminosPage"
+        },
+        {
+          "pathLiteral": "reembolso",
+          "pathExpression": "'reembolso'",
+          "component": "ReembolsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvkopennlcom",
+      "source": "apps/sites/designs/iptvkopennlcom/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "prijzen",
+          "pathExpression": "'prijzen'",
+          "component": "PrijzenPage"
+        },
+        {
+          "pathLiteral": "iptv-activeren",
+          "pathExpression": "'iptv-activeren'",
+          "component": "IptvActiverenPage"
+        },
+        {
+          "pathLiteral": "veelgestelde-vragen",
+          "pathExpression": "'veelgestelde-vragen'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacybeleid",
+          "pathExpression": "'privacybeleid'",
+          "component": "PrivacybeleidPage"
+        },
+        {
+          "pathLiteral": "cookiebeleid",
+          "pathExpression": "'cookiebeleid'",
+          "component": "CookiebeleidPage"
+        },
+        {
+          "pathLiteral": "voorwaarden",
+          "pathExpression": "'voorwaarden'",
+          "component": "VoorwaardenPage"
+        },
+        {
+          "pathLiteral": "herroepingsrecht",
+          "pathExpression": "'herroepingsrecht'",
+          "component": "HerroepingsrechtPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvkopennlinfo",
+      "source": "apps/sites/designs/iptvkopennlinfo/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarieven",
+          "pathExpression": "'tarieven'",
+          "component": "TarievenPage"
+        },
+        {
+          "pathLiteral": "aan-de-slag",
+          "pathExpression": "'aan-de-slag'",
+          "component": "AanDeSlagPage"
+        },
+        {
+          "pathLiteral": "hulp",
+          "pathExpression": "'hulp'",
+          "component": "HulpPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacyverklaring",
+          "pathExpression": "'privacyverklaring'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "gebruiksvoorwaarden",
+          "pathExpression": "'gebruiksvoorwaarden'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "geld-terug-garantie",
+          "pathExpression": "'geld-terug-garantie'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvkopennlnet",
+      "source": "apps/sites/designs/iptvkopennlnet/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "prijzen",
+          "pathExpression": "'prijzen'",
+          "component": "PrijzenPage"
+        },
+        {
+          "pathLiteral": "installatie",
+          "pathExpression": "'installatie'",
+          "component": "InstallatiePage"
+        },
+        {
+          "pathLiteral": "veelgestelde-vragen",
+          "pathExpression": "'veelgestelde-vragen'",
+          "component": "VragenPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacybeleid",
+          "pathExpression": "'privacybeleid'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "algemene-voorwaarden",
+          "pathExpression": "'algemene-voorwaarden'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "terugbetalingsbeleid",
+          "pathExpression": "'terugbetalingsbeleid'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvkopennlstore",
+      "source": "apps/sites/designs/iptvkopennlstore/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "prijzen-vergelijken",
+          "pathExpression": "'prijzen-vergelijken'",
+          "component": "PrijzenPage"
+        },
+        {
+          "pathLiteral": "apparaten",
+          "pathExpression": "'apparaten'",
+          "component": "ApparatenPage"
+        },
+        {
+          "pathLiteral": "vragen",
+          "pathExpression": "'vragen'",
+          "component": "VragenPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacybeleid",
+          "pathExpression": "'privacybeleid'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "algemene-voorwaarden",
+          "pathExpression": "'algemene-voorwaarden'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "terugbetalingsbeleid",
+          "pathExpression": "'terugbetalingsbeleid'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvmonde",
+      "source": "apps/sites/designs/iptvmonde/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-monde",
+          "pathExpression": "'iptv-monde'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvnederlands",
+      "source": "apps/sites/designs/iptvnederlands/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-code-ontvangen",
+          "pathExpression": "'iptv-code-ontvangen'",
+          "component": "IptvCodeOntvangenPage"
+        },
+        {
+          "pathLiteral": "betaalmethoden",
+          "pathExpression": "'betaalmethoden'",
+          "component": "BetaalmethodenPage"
+        },
+        {
+          "pathLiteral": "iptv-pakketten",
+          "pathExpression": "'iptv-pakketten'",
+          "component": "PakkettenPage"
+        },
+        {
+          "unknownExpression": "...pakketRoutes"
+        },
+        {
+          "pathLiteral": "iptv-activeren",
+          "pathExpression": "'iptv-activeren'",
+          "component": "IptvActiverenPage"
+        },
+        {
+          "pathLiteral": "reviews",
+          "pathExpression": "'reviews'",
+          "component": "ReviewsPage"
+        },
+        {
+          "pathLiteral": "veelgestelde-vragen",
+          "pathExpression": "'veelgestelde-vragen'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacybeleid",
+          "pathExpression": "'privacybeleid'",
+          "component": "PrivacybeleidPage"
+        },
+        {
+          "pathLiteral": "cookiebeleid",
+          "pathExpression": "'cookiebeleid'",
+          "component": "CookiebeleidPage"
+        },
+        {
+          "pathLiteral": "voorwaarden",
+          "pathExpression": "'voorwaarden'",
+          "component": "VoorwaardenPage"
+        },
+        {
+          "pathLiteral": "herroepingsrecht",
+          "pathExpression": "'herroepingsrecht'",
+          "component": "HerroepingsrechtPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvnordic",
+      "source": "apps/sites/designs/iptvnordic/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-nordic",
+          "pathExpression": "'iptv-nordic'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "priser",
+          "pathExpression": "'priser'",
+          "component": "PriserPage"
+        },
+        {
+          "pathLiteral": "kanaler",
+          "pathExpression": "'kanaler'",
+          "component": "KanalerPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blogg",
+          "pathExpression": "'blogg'",
+          "component": "BloggPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "integritetspolicy",
+          "pathExpression": "'integritetspolicy'",
+          "component": "IntegritetspolicyPage"
+        },
+        {
+          "pathLiteral": "villkor",
+          "pathExpression": "'villkor'",
+          "component": "VillkorPage"
+        },
+        {
+          "pathLiteral": "angerratt",
+          "pathExpression": "'angerratt'",
+          "component": "AngerrattPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "iptvwithbox",
+      "source": "apps/sites/designs/iptvwithbox/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-box-canada",
+          "pathExpression": "'iptv-box-canada'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPolicyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPolicyPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "kanaalgids",
+      "source": "apps/sites/designs/kanaalgids/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv",
+          "pathExpression": "'iptv'",
+          "component": "IptvPage"
+        },
+        {
+          "pathLiteral": "iptv-nederland",
+          "pathExpression": "'iptv-nederland'",
+          "component": "IptvNederlandPage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "iptv-abonnement-kopen",
+          "pathExpression": "'iptv-abonnement-kopen'",
+          "component": "AbonnementKopenPage"
+        },
+        {
+          "pathLiteral": "iptv-installeren",
+          "pathExpression": "'iptv-installeren'",
+          "component": "InstallerenPage"
+        },
+        {
+          "pathLiteral": "installatie-hulp",
+          "pathExpression": "'installatie-hulp'",
+          "component": "InstallatieHulpPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "garantie",
+          "pathExpression": "'garantie'",
+          "component": "GarantiePage"
+        },
+        {
+          "pathLiteral": "over-ons",
+          "pathExpression": "'over-ons'",
+          "component": "OverOnsPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "cookiebeleid",
+          "pathExpression": "'cookiebeleid'",
+          "component": "CookiePage"
+        },
+        {
+          "pathLiteral": "voorwaarden",
+          "pathExpression": "'voorwaarden'",
+          "component": "VoorwaardenPage"
+        },
+        {
+          "pathLiteral": "herroepingsrecht",
+          "pathExpression": "'herroepingsrecht'",
+          "component": "HerroepingPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "kaufeniptv",
+      "source": "apps/sites/designs/kaufeniptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "tarifs",
+          "pathExpression": "'tarifs'",
+          "component": "TarifsPage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "about-us",
+          "pathExpression": "'about-us'",
+          "component": "AboutUsPage"
+        },
+        {
+          "pathLiteral": "instalation-guide",
+          "pathExpression": "'instalation-guide'",
+          "component": "InstalationGuidePage"
+        },
+        {
+          "pathLiteral": "refund-and-returns-policy",
+          "pathExpression": "'refund-and-returns-policy'",
+          "component": "RefundPage"
+        },
+        {
+          "pathLiteral": "home",
+          "pathExpression": "'home'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "5-best-iptv-nordic-2024",
+          "pathExpression": "'5-best-iptv-nordic-2024'",
+          "component": "NordicArticlePage"
+        },
+        {
+          "pathLiteral": "was-ist-iptv-internet-protocol-tv",
+          "pathExpression": "'was-ist-iptv-internet-protocol-tv'",
+          "component": "WasIstIptvArticlePage"
+        },
+        {
+          "pathLiteral": "iptv-bundesliga-streamen",
+          "pathExpression": "'iptv-bundesliga-streamen'",
+          "component": "BundesligaArticlePage"
+        },
+        {
+          "pathLiteral": "iptv-wm-2026-alle-spiele-schauen",
+          "pathExpression": "'iptv-wm-2026-alle-spiele-schauen'",
+          "component": "() => <BlogPostPage slug=\"iptv-wm-2026-alle-spiele-schauen\" />"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutz",
+          "pathExpression": "'datenschutz'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerruf",
+          "pathExpression": "'widerruf'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "kemoiptv",
+      "source": "apps/sites/designs/kemoiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "app",
+          "pathExpression": "'app'",
+          "component": "AppPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "listeiptvcom",
+      "source": "apps/sites/designs/listeiptvcom/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "liste-iptv-funzionanti-2026",
+          "pathExpression": "'liste-iptv-funzionanti-2026'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abbonamento",
+          "pathExpression": "'abbonamento'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "guida-canali-iptv",
+          "pathExpression": "'guida-canali-iptv'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "assistenza-clienti-iptv",
+          "pathExpression": "'assistenza-clienti-iptv'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "note-legali",
+          "pathExpression": "'note-legali'",
+          "component": "NoteLegaliPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "termini",
+          "pathExpression": "'termini'",
+          "component": "TerminiPage"
+        },
+        {
+          "pathLiteral": "rimborso",
+          "pathExpression": "'rimborso'",
+          "component": "RimborsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "listeiptvinfo",
+      "source": "apps/sites/designs/listeiptvinfo/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "liste-iptv-m3u-gratis-2026",
+          "pathExpression": "'liste-iptv-m3u-gratis-2026'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abbonamento",
+          "pathExpression": "'abbonamento'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "canali",
+          "pathExpression": "'canali'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contatti",
+          "pathExpression": "'contatti'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "note-legali",
+          "pathExpression": "'note-legali'",
+          "component": "NoteLegaliPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "termini",
+          "pathExpression": "'termini'",
+          "component": "TerminiPage"
+        },
+        {
+          "pathLiteral": "rimborso",
+          "pathExpression": "'rimborso'",
+          "component": "RimborsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "listeiptvit",
+      "source": "apps/sites/designs/listeiptvit/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "liste-iptv-italia-2026",
+          "pathExpression": "'liste-iptv-italia-2026'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "attivazione-liste-iptv-italia",
+          "pathExpression": "'attivazione-liste-iptv-italia'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "canali",
+          "pathExpression": "'canali'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contatti",
+          "pathExpression": "'contatti'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "note-legali",
+          "pathExpression": "'note-legali'",
+          "component": "NoteLegaliPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "termini",
+          "pathExpression": "'termini'",
+          "component": "TerminiPage"
+        },
+        {
+          "pathLiteral": "rimborso",
+          "pathExpression": "'rimborso'",
+          "component": "RimborsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "listeiptvsrl",
+      "source": "apps/sites/designs/listeiptvsrl/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "attiva-abbonamento-iptv",
+          "pathExpression": "'attiva-abbonamento-iptv'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "elenco-canali-iptv",
+          "pathExpression": "'elenco-canali-iptv'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "domande-frequenti-liste-iptv",
+          "pathExpression": "'domande-frequenti-liste-iptv'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contatta-assistenza",
+          "pathExpression": "'contatta-assistenza'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "note-legali",
+          "pathExpression": "'note-legali'",
+          "component": "NoteLegaliPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "termini",
+          "pathExpression": "'termini'",
+          "component": "TerminiPage"
+        },
+        {
+          "pathLiteral": "rimborso",
+          "pathExpression": "'rimborso'",
+          "component": "RimborsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "marinios",
+      "source": "apps/sites/designs/marinios/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "app",
+          "pathExpression": "'app'",
+          "component": "AppPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "mejorstream",
+      "source": "apps/sites/designs/mejorstream/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "mejor-stream",
+          "pathExpression": "'mejor-stream'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "planes",
+          "pathExpression": "'planes'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "canales",
+          "pathExpression": "'canales'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contacto",
+          "pathExpression": "'contacto'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "aviso-legal",
+          "pathExpression": "'aviso-legal'",
+          "component": "AvisoLegalPage"
+        },
+        {
+          "pathLiteral": "privacidad",
+          "pathExpression": "'privacidad'",
+          "component": "PrivacidadPage"
+        },
+        {
+          "pathLiteral": "terminos",
+          "pathExpression": "'terminos'",
+          "component": "TerminosPage"
+        },
+        {
+          "pathLiteral": "reembolso",
+          "pathExpression": "'reembolso'",
+          "component": "ReembolsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "monsteriptvtv",
+      "source": "apps/sites/designs/monsteriptvtv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "monster-iptv-uk-stable-streaming",
+          "pathExpression": "'monster-iptv-uk-stable-streaming'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "monster-iptv-pricing-plans",
+          "pathExpression": "'monster-iptv-pricing-plans'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-channels-uk-sport",
+          "pathExpression": "'monster-iptv-channels-uk-sport'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-installation-setup",
+          "pathExpression": "'monster-iptv-installation-setup'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-devices-firestick-smart-tv",
+          "pathExpression": "'monster-iptv-devices-firestick-smart-tv'",
+          "component": "DevicesPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-faq",
+          "pathExpression": "'monster-iptv-faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-guides",
+          "pathExpression": "'monster-iptv-guides'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact-monster-iptv",
+          "pathExpression": "'contact-monster-iptv'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-privacy-policy",
+          "pathExpression": "'monster-iptv-privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-terms-of-service",
+          "pathExpression": "'monster-iptv-terms-of-service'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "monster-iptv-refund-policy",
+          "pathExpression": "'monster-iptv-refund-policy'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "netiptv",
+      "source": "apps/sites/designs/netiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "code-iptv",
+          "pathExpression": "'code-iptv'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "orbiswave",
+      "source": "apps/sites/designs/orbiswave/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "prezzi",
+          "pathExpression": "'prezzi'",
+          "component": "PrezziPage"
+        },
+        {
+          "pathLiteral": "catalogo",
+          "pathExpression": "'catalogo'",
+          "component": "CatalogoPage"
+        },
+        {
+          "pathLiteral": "prova",
+          "pathExpression": "'prova'",
+          "component": "ProvaPage"
+        },
+        {
+          "pathLiteral": "dispositivi",
+          "pathExpression": "'dispositivi'",
+          "component": "DispositiviPage"
+        },
+        {
+          "pathLiteral": "rivenditore",
+          "pathExpression": "'rivenditore'",
+          "component": "RivenditorePage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contatti",
+          "pathExpression": "'contatti'",
+          "component": "ContattiPage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "cookie",
+          "pathExpression": "'cookie'",
+          "component": "CookiePage"
+        },
+        {
+          "pathLiteral": "termini",
+          "pathExpression": "'termini'",
+          "component": "TerminiPage"
+        },
+        {
+          "pathLiteral": "recesso",
+          "pathExpression": "'recesso'",
+          "component": "RecessoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "polderiptv",
+      "source": "apps/sites/designs/polderiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-kopen-nederland",
+          "pathExpression": "'iptv-kopen-nederland'",
+          "component": "IptvKopenNederlandPage"
+        },
+        {
+          "pathLiteral": "iptv-app-en-box-installeren",
+          "pathExpression": "'iptv-app-en-box-installeren'",
+          "component": "IptvAppEnBoxInstallerenPage"
+        },
+        {
+          "pathLiteral": "hoe-werkt-iptv",
+          "pathExpression": "'hoe-werkt-iptv'",
+          "component": "HoeWerktIptvPage"
+        },
+        {
+          "pathLiteral": "is-iptv-legaal-in-nederland",
+          "pathExpression": "'is-iptv-legaal-in-nederland'",
+          "component": "IsIptvLegaalInNederlandPage"
+        },
+        {
+          "pathLiteral": "over-polder-iptv",
+          "pathExpression": "'over-polder-iptv'",
+          "component": "OverPolderIptvPage"
+        },
+        {
+          "pathLiteral": "pakketten",
+          "pathExpression": "'pakketten'",
+          "component": "PakkettenPage"
+        },
+        {
+          "unknownExpression": "...pakketRoutes"
+        },
+        {
+          "pathLiteral": "veelgestelde-vragen",
+          "pathExpression": "'veelgestelde-vragen'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacybeleid",
+          "pathExpression": "'privacybeleid'",
+          "component": "PrivacybeleidPage"
+        },
+        {
+          "pathLiteral": "cookiebeleid",
+          "pathExpression": "'cookiebeleid'",
+          "component": "CookiebeleidPage"
+        },
+        {
+          "pathLiteral": "voorwaarden",
+          "pathExpression": "'voorwaarden'",
+          "component": "VoorwaardenPage"
+        },
+        {
+          "pathLiteral": "retourbeleid",
+          "pathExpression": "'retourbeleid'",
+          "component": "RetourbeleidPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "quattro",
+      "source": "apps/sites/designs/quattro/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "iptv-premium-4k-kaufen",
+          "pathExpression": "'iptv-premium-4k-kaufen'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "preise",
+          "pathExpression": "'preise'",
+          "component": "PreisePage"
+        },
+        {
+          "pathLiteral": "sender",
+          "pathExpression": "'sender'",
+          "component": "SenderPage"
+        },
+        {
+          "pathLiteral": "iptv-premium-4k-fragen-antworten",
+          "pathExpression": "'iptv-premium-4k-fragen-antworten'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "iptv-4k-ratgeber",
+          "pathExpression": "'iptv-4k-ratgeber'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "impressum",
+          "pathExpression": "'impressum'",
+          "component": "ImpressumPage"
+        },
+        {
+          "pathLiteral": "datenschutzerklaerung-iptv-premium",
+          "pathExpression": "'datenschutzerklaerung-iptv-premium'",
+          "component": "DatenschutzPage"
+        },
+        {
+          "pathLiteral": "agb",
+          "pathExpression": "'agb'",
+          "component": "AgbPage"
+        },
+        {
+          "pathLiteral": "widerrufsrecht-iptv-premium",
+          "pathExpression": "'widerrufsrecht-iptv-premium'",
+          "component": "WiderrufPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "senegaliptv",
+      "source": "apps/sites/designs/senegaliptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "senegaliptvfr",
+      "source": "apps/sites/designs/senegaliptvfr/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "senegaliptvinfo",
+      "source": "apps/sites/designs/senegaliptvinfo/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "senegaliptvstore",
+      "source": "apps/sites/designs/senegaliptvstore/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": null,
+          "pathExpression": "HOME_SLUG",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "abonnement",
+          "pathExpression": "'abonnement'",
+          "component": "AbonnementPage"
+        },
+        {
+          "pathLiteral": "chaines",
+          "pathExpression": "'chaines'",
+          "component": "ChainesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "remboursement",
+          "pathExpression": "'remboursement'",
+          "component": "RemboursementPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "spain-stream",
+      "source": "apps/sites/designs/spain-stream/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "LandingPage"
+        },
+        {
+          "pathLiteral": "suscripcion",
+          "pathExpression": "'suscripcion'",
+          "component": "LandingPage"
+        },
+        {
+          "pathLiteral": "canales",
+          "pathExpression": "'canales'",
+          "component": "CanalesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contacto",
+          "pathExpression": "'contacto'",
+          "component": "ContactoPage"
+        },
+        {
+          "pathLiteral": "privacidad",
+          "pathExpression": "'privacidad'",
+          "component": "PrivacidadPage"
+        },
+        {
+          "pathLiteral": "cookies",
+          "pathExpression": "'cookies'",
+          "component": "CookiesPage"
+        },
+        {
+          "pathLiteral": "terminos",
+          "pathExpression": "'terminos'",
+          "component": "TerminosPage"
+        },
+        {
+          "pathLiteral": "reembolso",
+          "pathExpression": "'reembolso'",
+          "component": "ReembolsoPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "stratotv",
+      "source": "apps/sites/designs/stratotv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "cennik",
+          "pathExpression": "'cennik'",
+          "component": "CennikPage"
+        },
+        {
+          "pathLiteral": "lista-kanalow",
+          "pathExpression": "'lista-kanalow'",
+          "component": "ListaKanalowPage"
+        },
+        {
+          "pathLiteral": "box-iptv",
+          "pathExpression": "'box-iptv'",
+          "component": "BoxIptvPage"
+        },
+        {
+          "pathLiteral": "ranking",
+          "pathExpression": "'ranking'",
+          "component": "RankingPage"
+        },
+        {
+          "pathLiteral": "urzadzenia",
+          "pathExpression": "'urzadzenia'",
+          "component": "UrzadzeniaPage"
+        },
+        {
+          "pathLiteral": "reseller",
+          "pathExpression": "'reseller'",
+          "component": "ResellerPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "kontakt",
+          "pathExpression": "'kontakt'",
+          "component": "KontaktPage"
+        },
+        {
+          "pathLiteral": "polityka-prywatnosci",
+          "pathExpression": "'polityka-prywatnosci'",
+          "component": "PolitykaPrywatnosciPage"
+        },
+        {
+          "pathLiteral": "polityka-cookies",
+          "pathExpression": "'polityka-cookies'",
+          "component": "PolitykaCookiesPage"
+        },
+        {
+          "pathLiteral": "regulamin",
+          "pathExpression": "'regulamin'",
+          "component": "RegulaminPage"
+        },
+        {
+          "pathLiteral": "prawo-odstapienia",
+          "pathExpression": "'prawo-odstapienia'",
+          "component": "PrawoOdstapieniaPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "veott",
+      "source": "apps/sites/designs/veott/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "pricing",
+          "pathExpression": "'pricing'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "devices",
+          "pathExpression": "'devices'",
+          "component": "DevicesPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "legal",
+          "pathExpression": "'legal'",
+          "component": "LegalNoticePage"
+        },
+        {
+          "pathLiteral": "privacy",
+          "pathExpression": "'privacy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund",
+          "pathExpression": "'refund'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "vike",
+      "source": "apps/sites/designs/vike/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "femme",
+          "pathExpression": "'femme'",
+          "component": "() => CategoryPage({ genre: 'femme', ...CATEGORY_CONFIG.femme })"
+        },
+        {
+          "pathLiteral": "homme",
+          "pathExpression": "'homme'",
+          "component": "() => CategoryPage({ genre: 'homme', ...CATEGORY_CONFIG.homme })"
+        },
+        {
+          "pathLiteral": "enfants",
+          "pathExpression": "'enfants'",
+          "component": "() => CategoryPage({ genre: 'enfants', ...CATEGORY_CONFIG.enfants })"
+        },
+        {
+          "pathLiteral": "nouveautes",
+          "pathExpression": "'nouveautes'",
+          "component": "NouveautesPage"
+        },
+        {
+          "unknownExpression": "...PRODUCTS.map((product) => ({\n      path: `produit/${product.slug}`,\n      Component: () => ProductPage({ product }),\n      metadata: metadata.product(product.slug),\n    }))"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "a-propos",
+          "pathExpression": "'a-propos'",
+          "component": "AboutPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "panier",
+          "pathExpression": "'panier'",
+          "component": "CartPage"
+        },
+        {
+          "pathLiteral": "checkout",
+          "pathExpression": "'checkout'",
+          "component": "CheckoutPage"
+        },
+        {
+          "pathLiteral": "aide",
+          "pathExpression": "'aide'",
+          "component": "AidePage"
+        },
+        {
+          "pathLiteral": "livraison",
+          "pathExpression": "'livraison'",
+          "component": "LivraisonPage"
+        },
+        {
+          "pathLiteral": "retours",
+          "pathExpression": "'retours'",
+          "component": "RetoursPage"
+        },
+        {
+          "pathLiteral": "confidentialite",
+          "pathExpression": "'confidentialite'",
+          "component": "ConfidentialitePage"
+        },
+        {
+          "pathLiteral": "cgv",
+          "pathExpression": "'cgv'",
+          "component": "CgvPage"
+        },
+        {
+          "pathLiteral": "cookies",
+          "pathExpression": "'cookies'",
+          "component": "CookiesPage"
+        },
+        {
+          "pathLiteral": "mentions-legales",
+          "pathExpression": "'mentions-legales'",
+          "component": "MentionsLegalesPage"
+        }
+      ],
+      "clientPageFiles": [
+        "cart.tsx",
+        "checkout.tsx"
+      ]
+    },
+    {
+      "site": "vikingiptv",
+      "source": "apps/sites/designs/vikingiptv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "plans",
+          "pathExpression": "'plans'",
+          "component": "PlansPage"
+        },
+        {
+          "pathLiteral": "channels",
+          "pathExpression": "'channels'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "faq",
+          "pathExpression": "'faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "blog",
+          "pathExpression": "'blog'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact",
+          "pathExpression": "'contact'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "privacy-policy",
+          "pathExpression": "'privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "terms",
+          "pathExpression": "'terms'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "refund-policy",
+          "pathExpression": "'refund-policy'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "vikingiptvtv",
+      "source": "apps/sites/designs/vikingiptvtv/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-best-service",
+          "pathExpression": "'vikings-iptv-best-service'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "viking-iptv-pricing-plans",
+          "pathExpression": "'viking-iptv-pricing-plans'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "viking-iptv-channels-sports-movies",
+          "pathExpression": "'viking-iptv-channels-sports-movies'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "viking-iptv-devices-firestick-smart-tv",
+          "pathExpression": "'viking-iptv-devices-firestick-smart-tv'",
+          "component": "DevicesPage"
+        },
+        {
+          "pathLiteral": "viking-iptv-faq",
+          "pathExpression": "'viking-iptv-faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "viking-iptv-guides",
+          "pathExpression": "'viking-iptv-guides'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "contact-viking-iptv-whatsapp",
+          "pathExpression": "'contact-viking-iptv-whatsapp'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "viking-iptv-privacy-policy",
+          "pathExpression": "'viking-iptv-privacy-policy'",
+          "component": "PrivacyPage"
+        },
+        {
+          "pathLiteral": "viking-iptv-terms-conditions",
+          "pathExpression": "'viking-iptv-terms-conditions'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "viking-iptv-refund-policy",
+          "pathExpression": "'viking-iptv-refund-policy'",
+          "component": "RefundPage"
+        }
+      ],
+      "clientPageFiles": []
+    },
+    {
+      "site": "vikingiptvus",
+      "source": "apps/sites/designs/vikingiptvus/index.tsx",
+      "routes": [
+        {
+          "pathLiteral": "",
+          "pathExpression": "''",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-nordic-international-service",
+          "pathExpression": "'vikings-iptv-nordic-international-service'",
+          "component": "HomePage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-pricing-standard-premium",
+          "pathExpression": "'vikings-iptv-pricing-standard-premium'",
+          "component": "PricingPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-channels-nordic-sport-movies",
+          "pathExpression": "'vikings-iptv-channels-nordic-sport-movies'",
+          "component": "ChannelsPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-faq",
+          "pathExpression": "'vikings-iptv-faq'",
+          "component": "FaqPage"
+        },
+        {
+          "pathLiteral": "contact-vikings-iptv-whatsapp",
+          "pathExpression": "'contact-vikings-iptv-whatsapp'",
+          "component": "ContactPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-guides",
+          "pathExpression": "'vikings-iptv-guides'",
+          "component": "BlogPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-setup-guide",
+          "pathExpression": "'vikings-iptv-setup-guide'",
+          "component": "InstallationPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-fire-tv-stick-setup",
+          "pathExpression": "'vikings-iptv-fire-tv-stick-setup'",
+          "component": "InstallationFireTvPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-smart-tv-setup",
+          "pathExpression": "'vikings-iptv-smart-tv-setup'",
+          "component": "InstallationSmartTvPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-privacy-policy",
+          "pathExpression": "'vikings-iptv-privacy-policy'",
+          "component": "PrivacyPolicyPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-terms-conditions",
+          "pathExpression": "'vikings-iptv-terms-conditions'",
+          "component": "TermsPage"
+        },
+        {
+          "pathLiteral": "vikings-iptv-refund-policy",
+          "pathExpression": "'vikings-iptv-refund-policy'",
+          "component": "RefundPolicyPage"
+        }
+      ],
+      "clientPageFiles": []
+    }
+  ]
+}
