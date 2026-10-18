@@ -1,0 +1,22 @@
+{
+  "time": "2026-10-18T18:41:04.2478320Z",
+  "publicVersion": 2,
+  "all3RegisteredTitlesOriginal": true,
+  "titles": [
+    {
+      "matchesOriginal": true,
+      "role": "home.contact.heading"
+    },
+    {
+      "matchesOriginal": true,
+      "role": "home.features.heading"
+    },
+    {
+      "matchesOriginal": true,
+      "role": "home.why.heading"
+    }
+  ],
+  "afterNormalOwnerReload": true,
+  "noAutomaticReplayObserved": true,
+  "pixelPreserved": true
+}
