@@ -1,0 +1,150 @@
+✖ REAL immutable old/candidate build metadata: selected11, no shared IDs, never activation authority (213.290969ms)
+✖ actual Next14 numeric-string worker/layer schema can report unchanged without granting activation (6.426195ms)
+✖ one changed selected identity is explicit, with exact file-byte digests (5.684178ms)
+✔ missing/foreign worker/wrong module/layer or duplicate name refuses rather than partial mapping (50.421731ms)
+✔ AST exact loader/argument/final parameter shapes refuse lookalike tables (57.98872ms)
+✔ symlinked file and parent directory refuse (12.010454ms)
+✔ invalid UTF8 and oversized bounded input refuse (13.834998ms)
+✖ output is deeply frozen, includes no unrelated private manifest content (9.166007ms)
+✔ unknown input keys and relative paths refuse without touching another target (2.280625ms)
+✔ malformed forwarder/export binding and worker-to-wrapper mismatch refuse (24.902686ms)
+✔ accessor input is refused without executing it; exact .next root has no parent alias (3.178035ms)
+✔ malformed selected action cannot be hidden alongside an otherwise valid loader (7.340913ms)
+✖ duplicate forwarded ID cannot hide one unexported selected action (11.022609ms)
+✖ short descriptor read cannot certify a partial BUILD_ID/hash (18.401248ms)
+✖ malformed JS and noncanonical unsafe module literals refuse (14.123059ms)
+✖ noncanonical default/rest/async export-arrow forms are refused (15.556891ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 8
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 775.26585
+
+✖ failing tests:
+
+test at .studio-local/site463-compatibility-qa.cjs:11:1
+✖ REAL immutable old/candidate build metadata: selected11, no shared IDs, never activation authority (213.290969ms)
+  TypeError: Cannot read properties of undefined (reading 'length')
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:11:318)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.start (node:internal/test_runner/test:1177:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17)
+
+test at .studio-local/site463-compatibility-qa.cjs:12:1
+✖ actual Next14 numeric-string worker/layer schema can report unchanged without granting activation (6.426195ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  undefined !== 1
+
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:12:156)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .studio-local/site463-compatibility-qa.cjs:13:1
+✖ one changed selected identity is explicit, with exact file-byte digests (5.684178ms)
+  TypeError: Cannot read properties of undefined (reading 'every')
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:13:208)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7)
+
+test at .studio-local/site463-compatibility-qa.cjs:18:1
+✖ output is deeply frozen, includes no unrelated private manifest content (9.166007ms)
+  TypeError: Cannot read properties of undefined (reading '0')
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:18:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7)
+
+test at .studio-local/site463-compatibility-qa.cjs:23:1
+✖ duplicate forwarded ID cannot hide one unexported selected action (11.022609ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:23:280)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .studio-local/site463-compatibility-qa.cjs:24:1
+✖ short descriptor read cannot certify a partial BUILD_ID/hash (18.401248ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:24:255)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .studio-local/site463-compatibility-qa.cjs:25:1
+✖ malformed JS and noncanonical unsafe module literals refuse (14.123059ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:25:260)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .studio-local/site463-compatibility-qa.cjs:26:1
+✖ noncanonical default/rest/async export-arrow forms are refused (15.556891ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:26:377)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

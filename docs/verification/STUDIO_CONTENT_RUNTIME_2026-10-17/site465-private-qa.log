@@ -1,0 +1,25 @@
+✔ REAL immutable old/candidate build metadata: selected11, no shared IDs, never activation authority (315.362716ms)
+✔ actual Next14 numeric-string worker/layer schema can report unchanged without granting activation (11.740417ms)
+✔ one changed selected identity is explicit, with exact file-byte digests (11.52743ms)
+✔ missing/foreign worker/wrong module/layer or duplicate name refuses rather than partial mapping (74.93945ms)
+✔ AST exact loader/argument/final parameter shapes refuse lookalike tables (40.668536ms)
+✔ symlinked file and parent directory refuse (6.709547ms)
+✔ invalid UTF8 and oversized bounded input refuse (8.022227ms)
+✔ output is deeply frozen, includes no unrelated private manifest content (33.562026ms)
+✔ unknown input keys and relative paths refuse without touching another target (3.757721ms)
+✔ malformed forwarder/export binding and worker-to-wrapper mismatch refuse (27.609108ms)
+✔ accessor input is refused without executing it; exact .next root has no parent alias (4.333871ms)
+✔ malformed selected action cannot be hidden alongside an otherwise valid loader (8.663505ms)
+✔ duplicate forwarded ID cannot hide one unexported selected action (6.262529ms)
+✔ short descriptor read cannot certify a partial BUILD_ID/hash (2.450578ms)
+✔ malformed JS and noncanonical unsafe module literals refuse (19.538279ms)
+✔ noncanonical default/rest/async export-arrow forms are refused (47.821615ms)
+✔ actual Terser safe integer exponent is accepted while unsafe/fraction/hex imports refuse (33.906791ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1024.300832

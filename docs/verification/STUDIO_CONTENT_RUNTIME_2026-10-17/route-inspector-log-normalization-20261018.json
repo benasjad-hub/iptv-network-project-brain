@@ -1,0 +1,14 @@
+[
+  {
+    "file": "site462-expanded-rejected-qa.log",
+    "normalization": "Copied TAP trailing whitespace only; private original retained",
+    "brainCopySha256": "f3bdbb8ec27940f232869087f1728c03d540695f51ff14a0b966b86a456905ca",
+    "rawSha256": "2bc7611ee25ebdebf36efc7bbf6eb4f90f6a4f4a882d17742cb80bf260840da5"
+  },
+  {
+    "file": "site462-rejected-qa.log",
+    "normalization": "Copied TAP trailing whitespace only; private original retained",
+    "brainCopySha256": "db16ab5e4ba6d986cc11eea1abbb7f1015e0fd95cf604958f873618b37bec42d",
+    "rawSha256": "91c9963cbcaaa18bcc115c2eced4716f610a01d93106dad1d6a5823f8bb1ab69"
+  }
+]

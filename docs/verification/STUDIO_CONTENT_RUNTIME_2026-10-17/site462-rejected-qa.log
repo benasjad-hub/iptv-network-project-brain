@@ -1,0 +1,74 @@
+✖ REAL immutable old/candidate build metadata: selected11, no shared IDs, never activation authority (206.27ms)
+✖ actual Next14 numeric-string worker/layer schema can report unchanged without granting activation (7.842381ms)
+✖ one changed selected identity is explicit, with exact file-byte digests (5.237782ms)
+✔ missing/foreign worker/wrong module/layer or duplicate name refuses rather than partial mapping (52.365646ms)
+✔ AST exact loader/argument/final parameter shapes refuse lookalike tables (55.128563ms)
+✔ symlinked file and parent directory refuse (12.968837ms)
+✔ invalid UTF8 and oversized bounded input refuse (14.062399ms)
+✖ output is deeply frozen, includes no unrelated private manifest content (9.806804ms)
+✔ unknown input keys and relative paths refuse without touching another target (2.362759ms)
+✔ malformed forwarder/export binding and worker-to-wrapper mismatch refuse (29.227174ms)
+✔ accessor input is refused without executing it; exact .next root has no parent alias (3.545224ms)
+✔ malformed selected action cannot be hidden alongside an otherwise valid loader (8.343089ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 8
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 722.796912
+
+✖ failing tests:
+
+test at .studio-local/site462-compatibility-qa.cjs:11:1
+✖ REAL immutable old/candidate build metadata: selected11, no shared IDs, never activation authority (206.27ms)
+  TypeError: Cannot read properties of undefined (reading 'length')
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site462-compatibility-qa.cjs:11:318)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.start (node:internal/test_runner/test:1177:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17)
+
+test at .studio-local/site462-compatibility-qa.cjs:12:1
+✖ actual Next14 numeric-string worker/layer schema can report unchanged without granting activation (7.842381ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  undefined !== 1
+
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site462-compatibility-qa.cjs:12:156)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .studio-local/site462-compatibility-qa.cjs:13:1
+✖ one changed selected identity is explicit, with exact file-byte digests (5.237782ms)
+  TypeError: Cannot read properties of undefined (reading 'every')
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site462-compatibility-qa.cjs:13:208)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7)
+
+test at .studio-local/site462-compatibility-qa.cjs:18:1
+✖ output is deeply frozen, includes no unrelated private manifest content (9.806804ms)
+  TypeError: Cannot read properties of undefined (reading '0')
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site462-compatibility-qa.cjs:18:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7)

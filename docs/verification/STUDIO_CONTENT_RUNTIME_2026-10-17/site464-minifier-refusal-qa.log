@@ -1,0 +1,38 @@
+✖ REAL immutable old/candidate build metadata: selected11, no shared IDs, never activation authority (246.4582ms)
+✔ actual Next14 numeric-string worker/layer schema can report unchanged without granting activation (10.4293ms)
+✔ one changed selected identity is explicit, with exact file-byte digests (6.395639ms)
+✔ missing/foreign worker/wrong module/layer or duplicate name refuses rather than partial mapping (64.526498ms)
+✔ AST exact loader/argument/final parameter shapes refuse lookalike tables (34.062034ms)
+✔ symlinked file and parent directory refuse (5.736335ms)
+✔ invalid UTF8 and oversized bounded input refuse (15.991465ms)
+✔ output is deeply frozen, includes no unrelated private manifest content (17.654948ms)
+✔ unknown input keys and relative paths refuse without touching another target (2.477018ms)
+✔ malformed forwarder/export binding and worker-to-wrapper mismatch refuse (21.533079ms)
+✔ accessor input is refused without executing it; exact .next root has no parent alias (3.498362ms)
+✔ malformed selected action cannot be hidden alongside an otherwise valid loader (10.674307ms)
+✔ duplicate forwarded ID cannot hide one unexported selected action (5.999067ms)
+✔ short descriptor read cannot certify a partial BUILD_ID/hash (2.473462ms)
+✔ malformed JS and noncanonical unsafe module literals refuse (28.472119ms)
+✔ noncanonical default/rest/async export-arrow forms are refused (35.304509ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 15
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 832.758078
+
+✖ failing tests:
+
+test at .studio-local/site463-compatibility-qa.cjs:11:1
+✖ REAL immutable old/candidate build metadata: selected11, no shared IDs, never activation authority (246.4582ms)
+  Error: Bind numeric error
+      at parseAndValidateModule (/home/iptv/daoudstudio-content-runtime-20261017/scripts/studio/editor-action-compatibility.cjs:118:98)
+      at processBuild (/home/iptv/daoudstudio-content-runtime-20261017/scripts/studio/editor-action-compatibility.cjs:212:24)
+      at inspectEditorActionCompatibility (/home/iptv/daoudstudio-content-runtime-20261017/scripts/studio/editor-action-compatibility.cjs:237:25)
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site463-compatibility-qa.cjs:11:257)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.start (node:internal/test_runner/test:1177:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17)
