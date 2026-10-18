@@ -1,0 +1,15 @@
+✔ actual saved SQLite plan binds full request/hash/selection and exact six status filter/five receipt context (36.206288ms)
+✔ fullrequest corruption/foreign owner/doc/revision/model/selection and wrong shape refuse even with recomputed outer hash (284.297405ms)
+✔ field IDs/values are exact and limits/control/Unicode/blank values refuse (232.756991ms)
+✔ getter inputs never execute; fake request hash, extra and oversized envelopes refuse (51.441866ms)
+✔ historical request revision can be checked against newer draft but is not current document/write authority (40.212359ms)
+✔ synthetic committed DTO shape binding requires exact ten fields/operation/hash/version/model and never accepts absent/staged (49.23416ms)
+✔ actual private journal status binds exact request and historical receipt context without document mutation (552.264245ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1925.750089
