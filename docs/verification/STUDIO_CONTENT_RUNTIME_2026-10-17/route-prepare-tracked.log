@@ -1,0 +1,16 @@
+✔ read-only prepare uses captured absence and full14 request/hash without any journal status or store mutation (91.006673ms)
+✔ positive captured predecessor is retained; not reset to zero (63.37036ms)
+✔ foreign owner, stale revision, bad origin, missing current site refuse and release lock (141.006694ms)
+✔ OFF/invalid requests do not open storage; auth failures propagate before generic catch (80.930235ms)
+✔ known publication predecessor requires matching actual owned committed status (196.520161ms)
+✔ present null/malformed receipt never becomes absent base (441.674553ms)
+✔ same real document publication lock prevents preparation (80.577257ms)
+✔ actual owned private journal status determines predecessor without rebasing to a newer public head (1240.513596ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2982.051591
