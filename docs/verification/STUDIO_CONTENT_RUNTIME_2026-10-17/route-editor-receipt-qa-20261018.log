@@ -1,0 +1,16 @@
+✔ actual callback merges only verified metadata into newer saved view; all editing fields retain identity (3.844729ms)
+✔ old owner is rejected before scheduling metadata (0.901245ms)
+✔ owner change between outer validation and functional update is inert (1.108775ms)
+✔ document or immutable source change while callback queued preserves the current view (1.868539ms)
+✔ cross-owner/document/destination/article/model/binding/source mismatches refuse (9.178882ms)
+✔ same/older public metadata and receipt for future draft cannot overwrite current state (2.877054ms)
+✔ unsafe numbers, invalid versions and malformed authority refuse before update (11.560647ms)
+✔ existing AWS and article behavior stays separate; route pending joins the actual mutation gate (4.064217ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 519.495969

@@ -1,0 +1,85 @@
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/31) ...
+   Generating static pages (7/31)
+   Generating static pages (15/31)
+   Generating static pages (23/31)
+ ✓ Generating static pages (31/31)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                       Size     First Load JS
+┌ ƒ /                                             198 B          96.5 kB
+├ ○ /_not-found                                   878 B          88.5 kB
+├ ƒ /agents                                       3.37 kB          91 kB
+├ ƒ /analytics                                    221 B           101 kB
+├ ƒ /api/analytics/active                         0 B                0 B
+├ ƒ /api/analytics/diag                           0 B                0 B
+├ ƒ /api/analytics/session-replay                 0 B                0 B
+├ ƒ /api/studio/catalog/[site]                    0 B                0 B
+├ ƒ /api/studio/clones                            0 B                0 B
+├ ƒ /api/studio/media                             0 B                0 B
+├ ƒ /api/studio/published/[site]/[[...path]]      0 B                0 B
+├ ƒ /api/studio/route-content/[site]/[[...path]]  0 B                0 B
+├ ƒ /api/studio/task-documents                    0 B                0 B
+├ ƒ /api/studio/tasks                             0 B                0 B
+├ ƒ /api/studio/visual-catalog/[site]             0 B                0 B
+├ ƒ /articles                                     199 B          96.5 kB
+├ ƒ /auth/callback                                0 B                0 B
+├ ƒ /auth/flow-access                             0 B                0 B
+├ ○ /auth/password                                1.64 kB         154 kB
+├ ƒ /backlinks                                    5.52 kB        93.1 kB
+├ ƒ /content                                      199 B          96.5 kB
+├ ƒ /content/[id]                                 4.67 kB         101 kB
+├ ƒ /domains                                      171 B          87.8 kB
+├ ƒ /footprint                                    170 B          87.8 kB
+├ ○ /icon.svg                                     0 B                0 B
+├ ƒ /import                                       4.14 kB        91.8 kB
+├ ○ /login                                        3.34 kB         156 kB
+├ ƒ /network-report                               171 B          87.8 kB
+├ ƒ /nouveau                                      9.48 kB         110 kB
+├ ƒ /pipeline                                     97.2 kB         198 kB
+├ ƒ /prospection                                  7.4 kB          104 kB
+├ ƒ /reseau                                       2.8 kB         90.4 kB
+├ ƒ /seo                                          170 B          87.8 kB
+├ ƒ /sites/[slug]                                 2.4 kB         98.7 kB
+├ ƒ /sites/[slug]/analytics                       207 B          92.3 kB
+├ ƒ /sites/[slug]/articles                        4.1 kB          103 kB
+├ ƒ /sites/[slug]/domaine                         1.93 kB        89.5 kB
+├ ƒ /sites/[slug]/editer                          3.11 kB        90.7 kB
+├ ƒ /sites/[slug]/pages                           7.02 kB         102 kB
+├ ƒ /sites/[slug]/pipeline                        9.02 kB        96.6 kB
+├ ƒ /sites/[slug]/produits                        199 B          96.5 kB
+├ ƒ /sites/[slug]/produits/[productId]            147 B           106 kB
+├ ƒ /sites/[slug]/produits/nouveau                147 B           106 kB
+├ ƒ /sites/[slug]/reglages                        5.48 kB        93.1 kB
+├ ƒ /sites/[slug]/seo                             1.71 kB        89.3 kB
+├ ƒ /sites/[slug]/tarifs                          3.13 kB        90.7 kB
+├ ƒ /sites/[slug]/whatsapp                        2.23 kB        89.8 kB
+├ ƒ /status                                       169 B          87.8 kB
+├ ƒ /studio                                       863 B          97.2 kB
+├ ƒ /studio-media/[name]                          0 B                0 B
+├ ƒ /studio-preview/[site]/[[...path]]            169 B          87.8 kB
+├ ƒ /studio/articles                              196 B          96.5 kB
+├ ƒ /studio/articles/aws                          4.45 kB         103 kB
+├ ƒ /studio/comptes                               52.1 kB         148 kB
+├ ƒ /studio/historique                            198 B          96.5 kB
+├ ƒ /studio/sites                                 199 B          96.5 kB
+├ ƒ /studio/sites/[site]                          2.38 kB        98.7 kB
+├ ƒ /studio/sites/[site]/[id]                     4.19 kB         105 kB
+├ ƒ /studio/travail                               5.14 kB         101 kB
+└ ƒ /studio/visuel/[id]                           44.4 kB         141 kB
++ First Load JS shared by all                     87.6 kB
+  ├ chunks/7452-951f8a25478f53d1.js               31.9 kB
+  ├ chunks/c9ed6a0c-2b2e3aec8132ec00.js           53.6 kB
+  └ other shared chunks (total)                   2.08 kB
+
+
+ƒ Middleware                                      82 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

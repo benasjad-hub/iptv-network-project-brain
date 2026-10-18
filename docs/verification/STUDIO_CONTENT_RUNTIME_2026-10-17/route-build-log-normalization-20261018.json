@@ -1,0 +1,14 @@
+[
+  {
+    "rawSha256": "47a56b1f002ab0f32cf3347811e4f2c54be0532be49876c146d7b757c746fc98",
+    "brainCopySha256": "9eee971c5184550d430a76da9b946081a3335ac0747b8c12ea5047c79c961a78",
+    "normalization": "Trailing whitespace/blank EOF only; raw private VPS log preserved",
+    "file": "route-panel-build-20261018.log"
+  },
+  {
+    "rawSha256": "936740e8c152ebed876edac82021af828ee25e42b1f5fae6ac7abf63c42ef51f",
+    "brainCopySha256": "474bfc85247b60a86ea116166f92f03ed728ca550166ce9d09256a7331ab52ab",
+    "normalization": "Trailing whitespace/blank EOF only; raw private VPS log preserved",
+    "file": "route-panel-build-warnings-20261018.log"
+  }
+]

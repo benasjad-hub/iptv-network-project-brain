@@ -1,0 +1,12 @@
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (102kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (244kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ⚠ Compiled with warnings
+
+../../../daoudstudio/releases/7cfe5b7c/node_modules/.pnpm/@supabase+supabase-js@2.108.1/node_modules/@supabase/supabase-js/dist/index.mjs
+A Node.js API is used (process.version at line: 27) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+../../../daoudstudio/releases/7cfe5b7c/node_modules/.pnpm/@supabase+supabase-js@2.108.1/node_modules/@supabase/supabase-js/dist/index.mjs
+../../../daoudstudio/releases/7cfe5b7c/node_modules/.pnpm/@supabase+ssr@0.5.2_@supabase+supabase-js@2.108.1/node_modules/@supabase/ssr/dist/module/createServerClient.js
+../../../daoudstudio/releases/7cfe5b7c/node_modules/.pnpm/@supabase+ssr@0.5.2_@supabase+supabase-js@2.108.1/node_modules/@supabase/ssr/dist/module/index.js

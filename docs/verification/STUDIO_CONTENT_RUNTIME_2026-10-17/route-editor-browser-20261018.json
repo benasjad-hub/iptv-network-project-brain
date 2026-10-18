@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-18T14:09:38.8541177Z",
+  "kind": "actual parent editor with explicit private adapters",
+  "sourceSha": "08ee987666a737c04a27644e8f200fb7da097d582bbf17ff0baaffce2c8ef81f",
+  "authentication": "synthetic owner mocked; normal SSO not exercised",
+  "observed": [
+    "Actual StudioVisualEditor rendered",
+    "Plain Enter applied selected H2 to inert preview",
+    "Save advanced retained private document v7 to v8",
+    "Explicit confirmation named saved revision8 and exact destination",
+    "One real private journal publish, receipt version5",
+    "Same current title/selected field/preview retained after verification",
+    "History highest revision8, nine retained revisions0..8; publication added no draft revision"
+  ],
+  "writesSinceFixtureResume": 1,
+  "rpcPublish": 1,
+  "rpcPrepare": 1,
+  "rpcCheck": 0,
+  "documentRevision": 8,
+  "publishedVersion": 5,
+  "limitations": [
+    "Save/history use private fixture adapters over actual SQLite/HTML engine",
+    "Next Link replaced by anchor in fixture; navigation not tested",
+    "AI/AWS/article actions disabled in fixture",
+    "First parent harness failed process undefined before rendering; only QA NextLink shim corrected",
+    "Not normal SSO/public website/native allsite acceptance"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "observedAt": "2026-10-18T13:57:06.7625609Z",
+  "environment": "loopback-only private fixture",
+  "authentication": "mocked synthetic owner; not normal SSO",
+  "writes": 4,
+  "rpcPrepare": 5,
+  "rpcPublish": 4,
+  "rpcCheck": 2,
+  "held": 0,
+  "documentRevision": 6,
+  "publicVersion": 4,
+  "observed": [
+    "Explicit confirmation and Escape cancel",
+    "Genuine Save before publish",
+    "One first publish",
+    "Real 30s delayed publisher reply produced attempted/blocked; late reply did not clear",
+    "Explicit status recovered without a new write; unsaved input retained",
+    "Next publish after success accepted with original458",
+    "Lost reply: reload retained attempted identity, no automatic resend/status; explicit recovery",
+    "Delayed preparation plus newer input: no publish; late response inert; refresh restored ready",
+    "390px viewport: document clientWidth=380 and scrollWidth=380",
+    "Browser console error/warn list empty"
+  ],
+  "limits": [
+    "fixture auth/site/origin mocked",
+    "not actual parent editor integration",
+    "not normal SSO or public website deployment",
+    "held Enter native repeat and cross-tab concurrency not yet measured",
+    "fixture fonts omit actual Next layout"
+  ],
+  "sourceSha": "ebe7779fb68ab5de6b2fade17c69f0e46df3561d38e91bed25df62e7b48507fd"
+}
