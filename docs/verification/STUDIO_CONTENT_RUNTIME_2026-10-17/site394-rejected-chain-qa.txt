@@ -1,0 +1,199 @@
+test_bounded_preflight_and_cyclic_input (__main__.Tests.test_bounded_preflight_and_cyclic_input) ...
+  test_bounded_preflight_and_cyclic_input (__main__.Tests.test_bounded_preflight_and_cyclic_input) (kind='list') ... ERROR
+  test_bounded_preflight_and_cyclic_input (__main__.Tests.test_bounded_preflight_and_cyclic_input) (kind='dict') ... ERROR
+test_empty_read_does_not_initialize (__main__.Tests.test_empty_read_does_not_initialize) ... ok
+test_global_sequence_gap_refuses (__main__.Tests.test_global_sequence_gap_refuses) ... ok
+test_hash_and_intent_mismatch_refuse (__main__.Tests.test_hash_and_intent_mismatch_refuse) ... ok
+test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) ...
+  test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='ownerId') ... FAIL
+  test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='documentId') ... FAIL
+  test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='operationId') ... FAIL
+  test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='requestHash') ... FAIL
+  test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='documentHash') ... FAIL
+  test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='selectionHash') ... FAIL
+test_head_limit_before_traversal (__main__.Tests.test_head_limit_before_traversal) ... ok
+test_interleaved_namespaces_and_old_operation_lookup (__main__.Tests.test_interleaved_namespaces_and_old_operation_lookup) ... ERROR
+test_missing_entry_or_intent_refuse (__main__.Tests.test_missing_entry_or_intent_refuse) ... ok
+test_noncanonical_or_duplicate_head_refuse (__main__.Tests.test_noncanonical_or_duplicate_head_refuse) ... ok
+test_nonroot_valid_restore (__main__.Tests.test_nonroot_valid_restore) ... ERROR
+test_record_schema_namespace_and_types (__main__.Tests.test_record_schema_namespace_and_types) ... ERROR
+test_restore_appends_and_preserves_old_history (__main__.Tests.test_restore_appends_and_preserves_old_history) ... ERROR
+test_restore_different_values_refuses (__main__.Tests.test_restore_different_values_refuses) ... ok
+test_route_version_gap_refuses (__main__.Tests.test_route_version_gap_refuses) ... ok
+test_staged_and_absent_are_not_receipts (__main__.Tests.test_staged_and_absent_are_not_receipts) ... ERROR
+test_terminal_head_change_refuses_no_retry (__main__.Tests.test_terminal_head_change_refuses_no_retry) ... FAIL
+
+======================================================================
+ERROR: test_bounded_preflight_and_cyclic_input (__main__.Tests.test_bounded_preflight_and_cyclic_input) (kind='list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 146, in test_bounded_preflight_and_cyclic_input
+    with self.subTest(kind=type(extra).__name__),self.assertRaises(ValueError):ch.validate_record(r)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 85, in validate_record
+    _check_strict_builtins(value)
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 74, in _check_strict_builtins
+    _check_strict_builtins(v)
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 78, in _check_strict_builtins
+    _check_strict_builtins(item)
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 78, in _check_strict_builtins
+    _check_strict_builtins(item)
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 78, in _check_strict_builtins
+    _check_strict_builtins(item)
+  [Previous line repeated 983 more times]
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_bounded_preflight_and_cyclic_input (__main__.Tests.test_bounded_preflight_and_cyclic_input) (kind='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 146, in test_bounded_preflight_and_cyclic_input
+    with self.subTest(kind=type(extra).__name__),self.assertRaises(ValueError):ch.validate_record(r)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 85, in validate_record
+    _check_strict_builtins(value)
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 74, in _check_strict_builtins
+    _check_strict_builtins(v)
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 74, in _check_strict_builtins
+    _check_strict_builtins(v)
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 74, in _check_strict_builtins
+    _check_strict_builtins(v)
+  [Previous line repeated 984 more times]
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_interleaved_namespaces_and_old_operation_lookup (__main__.Tests.test_interleaved_namespaces_and_old_operation_lookup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 57, in test_interleaved_namespaces_and_old_operation_lookup
+    self.commit(self.record(value='Second'));s=self.read()
+                                               ^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-qa.py", line 51, in read
+    with io.open_root(str(self.root)) as fd:return ch.read_state(fd)
+                                                   ^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 221, in read_state
+    rec = validate_record(entry_dict)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 124, in validate_record
+    raise ValueError("Invalid routePath")
+ValueError: Invalid routePath
+
+======================================================================
+ERROR: test_nonroot_valid_restore (__main__.Tests.test_nonroot_valid_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 139, in test_nonroot_valid_restore
+    self.assertEqual(len(self.read()['records']),3)
+                         ^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-qa.py", line 51, in read
+    with io.open_root(str(self.root)) as fd:return ch.read_state(fd)
+                                                   ^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 320, in read_state
+    raise ValueError("Overridden field missing in model index")
+ValueError: Overridden field missing in model index
+
+======================================================================
+ERROR: test_record_schema_namespace_and_types (__main__.Tests.test_record_schema_namespace_and_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 100, in test_record_schema_namespace_and_types
+    self.assertEqual(ch.validate_record(r),r);self.assertEqual(r,before)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 124, in validate_record
+    raise ValueError("Invalid routePath")
+ValueError: Invalid routePath
+
+======================================================================
+ERROR: test_restore_appends_and_preserves_old_history (__main__.Tests.test_restore_appends_and_preserves_old_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 108, in test_restore_appends_and_preserves_old_history
+    self.commit(self.record(value='First',restore=1));s=self.read()
+                                                        ^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-qa.py", line 51, in read
+    with io.open_root(str(self.root)) as fd:return ch.read_state(fd)
+                                                   ^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 221, in read_state
+    rec = validate_record(entry_dict)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 124, in validate_record
+    raise ValueError("Invalid routePath")
+ValueError: Invalid routePath
+
+======================================================================
+ERROR: test_staged_and_absent_are_not_receipts (__main__.Tests.test_staged_and_absent_are_not_receipts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 70, in test_staged_and_absent_are_not_receipts
+    status=ch.operation_status(fd,staged['operationId'],staged['requestHash'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 351, in operation_status
+    state = read_state(root_fd)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 221, in read_state
+    rec = validate_record(entry_dict)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/daoudstudio-staging/site394-route-journal-chain.py", line 124, in validate_record
+    raise ValueError("Invalid routePath")
+ValueError: Invalid routePath
+
+======================================================================
+FAIL: test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='ownerId')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 151, in test_hash_and_uuid_exact_no_terminal_newline
+    with self.subTest(key=key),self.assertRaises(ValueError):ch.validate_record(r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='documentId')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 151, in test_hash_and_uuid_exact_no_terminal_newline
+    with self.subTest(key=key),self.assertRaises(ValueError):ch.validate_record(r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='operationId')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 151, in test_hash_and_uuid_exact_no_terminal_newline
+    with self.subTest(key=key),self.assertRaises(ValueError):ch.validate_record(r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='requestHash')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 151, in test_hash_and_uuid_exact_no_terminal_newline
+    with self.subTest(key=key),self.assertRaises(ValueError):ch.validate_record(r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='documentHash')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 151, in test_hash_and_uuid_exact_no_terminal_newline
+    with self.subTest(key=key),self.assertRaises(ValueError):ch.validate_record(r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) (key='selectionHash')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 151, in test_hash_and_uuid_exact_no_terminal_newline
+    with self.subTest(key=key),self.assertRaises(ValueError):ch.validate_record(r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_terminal_head_change_refuses_no_retry (__main__.Tests.test_terminal_head_change_refuses_no_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site394-qa.py", line 128, in test_terminal_head_change_refuses_no_retry
+    self.assertEqual(heads,2)
+AssertionError: 1 != 2
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.170s
+
+FAILED (failures=7, errors=7)

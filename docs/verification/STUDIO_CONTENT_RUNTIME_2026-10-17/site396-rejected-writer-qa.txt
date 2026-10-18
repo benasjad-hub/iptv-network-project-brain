@@ -1,0 +1,39 @@
+test_claim_only_interruption_resumes_exact_record_time (__main__.Tests.test_claim_only_interruption_resumes_exact_record_time) ... ok
+test_committed_uuid_replay_after_newer_edits_no_writes (__main__.Tests.test_committed_uuid_replay_after_newer_edits_no_writes) ... ok
+test_current_model_mismatch_and_unknown_fields_no_claim (__main__.Tests.test_current_model_mismatch_and_unknown_fields_no_claim) ... FAIL
+test_entry_interruption_resumes_without_new_identity (__main__.Tests.test_entry_interruption_resumes_without_new_identity) ... ok
+test_explicit_unset_returns_to_current_default (__main__.Tests.test_explicit_unset_returns_to_current_default) ... ok
+test_head_committed_then_lost_reply_reads_same_receipt (__main__.Tests.test_head_committed_then_lost_reply_reads_same_receipt) ... ok
+test_identity_reuse_conflicts (__main__.Tests.test_identity_reuse_conflicts) ... ok
+test_new_source_defaults_and_added_fields_preserve_overrides (__main__.Tests.test_new_source_defaults_and_added_fields_preserve_overrides) ... ok
+test_partial_claim_preserved_and_refused (__main__.Tests.test_partial_claim_preserved_and_refused) ... ok
+test_publish_sparse_edits_and_restore_history (__main__.Tests.test_publish_sparse_edits_and_restore_history) ... ok
+test_removed_overridden_field_refuses (__main__.Tests.test_removed_overridden_field_refuses) ... ok
+test_special_permission_orphan_refuses (__main__.Tests.test_special_permission_orphan_refuses) ... FAIL
+test_staged_predecessor_advance_never_rebases (__main__.Tests.test_staged_predecessor_advance_never_rebases) ... ok
+test_stale_version_refuses_before_claim (__main__.Tests.test_stale_version_refuses_before_claim) ... ok
+test_two_processes_same_base_only_one_commit (__main__.Tests.test_two_processes_same_base_only_one_commit) ... ok
+test_two_processes_same_uuid_one_durable_operation (__main__.Tests.test_two_processes_same_uuid_one_durable_operation) ... ok
+test_unknown_root_file_blocks_without_deletion (__main__.Tests.test_unknown_root_file_blocks_without_deletion) ... ok
+
+======================================================================
+FAIL: test_current_model_mismatch_and_unknown_fields_no_claim (__main__.Tests.test_current_model_mismatch_and_unknown_fields_no_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site396-qa.py", line 82, in test_current_model_mismatch_and_unknown_fields_no_claim
+    self.assertNotIn('0'*64,str(cm.exception));self.assertEqual(set(self.files()),{'writer.lock'})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '0000000000000000000000000000000000000000000000000000000000000000' unexpectedly found in 'fieldId 0000000000000000000000000000000000000000000000000000000000000000 is not recognized in current model'
+
+======================================================================
+FAIL: test_special_permission_orphan_refuses (__main__.Tests.test_special_permission_orphan_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site396-qa.py", line 109, in test_special_permission_orphan_refuses
+    with self.assertRaises(ValueError):self.pub(m,self.req(m))
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.834s
+
+FAILED (failures=2)

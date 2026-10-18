@@ -1,0 +1,24 @@
+test_bounded_preflight_and_cyclic_input (__main__.Tests.test_bounded_preflight_and_cyclic_input) ... ok
+test_empty_read_does_not_initialize (__main__.Tests.test_empty_read_does_not_initialize) ... ok
+test_global_sequence_gap_refuses (__main__.Tests.test_global_sequence_gap_refuses) ... ok
+test_hash_and_intent_mismatch_refuse (__main__.Tests.test_hash_and_intent_mismatch_refuse) ... ok
+test_hash_and_uuid_exact_no_terminal_newline (__main__.Tests.test_hash_and_uuid_exact_no_terminal_newline) ... ok
+test_head_limit_before_traversal (__main__.Tests.test_head_limit_before_traversal) ... ok
+test_interleaved_namespaces_and_old_operation_lookup (__main__.Tests.test_interleaved_namespaces_and_old_operation_lookup) ... ok
+test_missing_entry_or_intent_refuse (__main__.Tests.test_missing_entry_or_intent_refuse) ... ok
+test_noncanonical_or_duplicate_head_refuse (__main__.Tests.test_noncanonical_or_duplicate_head_refuse) ... ok
+test_nonroot_valid_restore (__main__.Tests.test_nonroot_valid_restore) ... ok
+test_record_schema_namespace_and_types (__main__.Tests.test_record_schema_namespace_and_types) ... ok
+test_restore_added_unused_field_is_compatible (__main__.Tests.test_restore_added_unused_field_is_compatible) ... ok
+test_restore_appends_and_preserves_old_history (__main__.Tests.test_restore_appends_and_preserves_old_history) ... ok
+test_restore_changed_overridden_semantics_refuses (__main__.Tests.test_restore_changed_overridden_semantics_refuses) ... ok
+test_restore_different_values_refuses (__main__.Tests.test_restore_different_values_refuses) ... ok
+test_route_version_gap_refuses (__main__.Tests.test_route_version_gap_refuses) ... ok
+test_staged_and_absent_are_not_receipts (__main__.Tests.test_staged_and_absent_are_not_receipts) ... ok
+test_staged_identity_file_mismatch_refuses (__main__.Tests.test_staged_identity_file_mismatch_refuses) ... ok
+test_terminal_head_change_refuses_no_retry (__main__.Tests.test_terminal_head_change_refuses_no_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.229s
+
+OK
