@@ -1,0 +1,3 @@
+apps/panel/lib/studio-source.ts(73,3): error TS2322: Type '{ schema: number; site: string; basePath: any; routes: {}; primaryPaths: {}; }' is not assignable to type 'RouteCatalog'.
+  Types of property 'schema' are incompatible.
+    Type 'number' is not assignable to type '1'.

@@ -1,0 +1,60 @@
+TAP version 13
+# Subtest: source aliases retain all paths and choose one deterministic editing target
+ok 1 - source aliases retain all paths and choose one deterministic editing target
+  ---
+  duration_ms: 1.5354
+  ...
+# Subtest: validation returns a detached map and refuses a different mapped alias as primary
+ok 2 - validation returns a detached map and refuses a different mapped alias as primary
+  ---
+  duration_ms: 0.3058
+  ...
+# Subtest: unknown source models and conflicting root editing targets refuse atomically
+ok 3 - unknown source models and conflicting root editing targets refuse atomically
+  ---
+  duration_ms: 0.1715
+  ...
+# Subtest: catalog rejects wrong site, extra fields and missing primary choices
+ok 4 - catalog rejects wrong site, extra fields and missing primary choices
+  ---
+  duration_ms: 0.6735
+  ...
+# Subtest: exact current accented source slugs survive without transliteration or encoding
+ok 5 - exact current accented source slugs survive without transliteration or encoding
+  ---
+  duration_ms: 0.136
+  ...
+# Subtest: unsafe or normalized-instead-of-exact route keys refuse
+ok 6 - unsafe or normalized-instead-of-exact route keys refuse
+  ---
+  duration_ms: 0.1632
+  ...
+# Subtest: prototype objects and duplicate or noncanonical source slugs refuse
+ok 7 - prototype objects and duplicate or noncanonical source slugs refuse
+  ---
+  duration_ms: 0.2041
+  ...
+# Subtest: a rejected source manifest never becomes a trusted route catalog
+ok 8 - a rejected source manifest never becomes a trusted route catalog
+  ---
+  duration_ms: 0.0759
+  ...
+# Subtest: a lone unrelated two-segment route does not invent a primary editing target
+ok 9 - a lone unrelated two-segment route does not invent a primary editing target
+  ---
+  duration_ms: 0.1013
+  ...
+# Subtest: bounded catalogs reject excessive source collections and accept empty source sites
+ok 10 - bounded catalogs reject excessive source collections and accept empty source sites
+  ---
+  duration_ms: 0.2213
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9.6876

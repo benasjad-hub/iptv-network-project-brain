@@ -1,0 +1,50 @@
+{
+  "originalWorkers": [
+    338,
+    339,
+    340,
+    341,
+    342
+  ],
+  "implementationAdaptation": false,
+  "fullPanelTypes": {
+    "exit": 0,
+    "seconds": 4.313
+  },
+  "runtimeAcceptance": false,
+  "publicDeployment": false,
+  "paths": {
+    "scripts/studio/article-route-manifest.cjs": {
+      "bytes": 43335,
+      "sha256": "494628a075dccbb51fa1c705f1dae8edf7e64eed7dc70d7334458e165a353ff3"
+    },
+    "scripts/studio/article-route-paths.cjs": {
+      "bytes": 1259,
+      "sha256": "7ea71a4af4607f206e9a3c8393eb8d35231c7f05a760bec794b2f54657cee08f"
+    },
+    "scripts/studio/article-route-catalog.cjs": {
+      "bytes": 7489,
+      "sha256": "c1aa75f6b67a72d004406c1e408589a334b5169e7be4dc06fca741c88b37558b"
+    },
+    "scripts/studio/export-source-catalog.ts": {
+      "bytes": 4413,
+      "sha256": "2d80184d66b178e74062aa8ea8e56fdc75f98bb2806d85f0ac6191c1c48f43e8"
+    },
+    "apps/panel/lib/studio-source.ts": {
+      "bytes": 2637,
+      "sha256": "76b194e92212e7173b9fc4cec37bcc1ac06a3927e9ebc4f28198a668a4342799"
+    },
+    "scripts/studio/article-route-context.cjs": {
+      "bytes": 3306,
+      "sha256": "549cbf589569a4337ac006fd4e767d1caef77cd67e5a4aa6770b391666c8b2e9"
+    },
+    "scripts/studio/visual-article-envelope.cjs": {
+      "bytes": 24010,
+      "sha256": "8cf46f3c5b250a9e31f21ab966ae8f61cb623b350c83aae8ec990090bb926b25"
+    },
+    "scripts/studio/visual-site-article-binding.cjs": {
+      "bytes": 11643,
+      "sha256": "c60fe126e857c3b3ca8e410ba47dda1a258cc27d14f244d864488fa466b22e82"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "sites": 78,
+  "fullModels": 3193,
+  "preservedAliases": 5,
+  "modelsAndHomeEqual": true,
+  "privateModes": true,
+  "existingFilesUnchanged": true,
+  "refusalCases": [
+    {
+      "case": "existing",
+      "exit": 1,
+      "output": "Destination directory already exists: /root/daoudstudio-staging/site338-candidate/exported"
+    },
+    {
+      "case": "symlink",
+      "exit": 1,
+      "output": "Destination directory already exists: /root/daoudstudio-staging/site338-candidate/export-symlink"
+    }
+  ]
+}

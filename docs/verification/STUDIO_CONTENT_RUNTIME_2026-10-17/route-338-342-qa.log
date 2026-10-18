@@ -1,0 +1,15 @@
+✔ all eight prefixes bind and apply only their trusted primary path (45.728879ms)
+✔ root aliases with different model slugs use one row and refuse prefix writes (1.383025ms)
+✔ NFC Unicode raw destination matches exact canonical encoded URL (1.865466ms)
+✔ malformed context never falls back to legacy path authorization (1.227423ms)
+✔ destination and source URL remain exact and site bound (0.523964ms)
+✔ legacy calls retain exact envelope data and reject unsupported roots (1.85467ms)
+✔ saved selected field projects with context while stale ownership remains blocked (4.332952ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 64.995205

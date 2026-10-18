@@ -1,0 +1,30 @@
+TAP version 13
+# Subtest: body remains byte equal to existing source formatting
+ok 1 - body remains byte equal to existing source formatting
+  ---
+  duration_ms: 35.9697
+  ...
+# Subtest: articles, home and routes share a request loader without losing full models
+ok 2 - articles, home and routes share a request loader without losing full models
+  ---
+  duration_ms: 7.2986
+  ...
+# Subtest: missing file and legacy map are nullable; malformed new maps refuse
+ok 3 - missing file and legacy map are nullable; malformed new maps refuse
+  ---
+  duration_ms: 32.5455
+  ...
+# Subtest: wrong site and corrupt source refuse before returning route authority
+ok 4 - wrong site and corrupt source refuse before returning route authority
+  ---
+  duration_ms: 10.7251
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 92.9631

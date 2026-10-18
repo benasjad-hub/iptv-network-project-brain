@@ -1,0 +1,31 @@
+{
+  "sourceOnly": true,
+  "publicDeployment": false,
+  "independentReconstruction": true,
+  "sourceSHA256": "874a67bd449cd16c77d808599050f73451729c29ae162ac3fe18792e0805f574",
+  "chain": "exact original335 source +five unique original336 literal patches +four unique original337 literal patches; no implementation adaptation",
+  "jobs": {
+    "335": {
+      "originalStatus": "SUCCESS",
+      "durationSeconds": 226.982733849,
+      "elapsedSeconds": 234.793,
+      "turns": 1,
+      "decision": "REJECTED: actual7spread/duplicate/prototype gaps"
+    },
+    "336": {
+      "originalStatus": "SUCCESS",
+      "durationSeconds": 260.410774503,
+      "elapsedSeconds": 268.069,
+      "turns": 1,
+      "decision": "REJECTED: new default-parameter/metaKey initializer tests24PASS3FAIL"
+    },
+    "337": {
+      "originalStatus": "SUCCESS",
+      "durationSeconds": 183.767515643,
+      "elapsedSeconds": 189.642,
+      "turns": 1,
+      "decision": "ACCEPTED SOURCE after27strict actual-source tests"
+    }
+  },
+  "limits": "Build-time source manifest only; not publication authority from clients. Backend/site consumers and canonical writers not yet integrated; no native/public/hydration/hosting-cutover acceptance."
+}

@@ -1,0 +1,24 @@
+✔ fullcopyimmutability: input models and envelope are never mutated (10.188977ms)
+✔ deterministichash keyordering includingallmetadata: identical 64-char hex SHA regardless of key order (1.162816ms)
+✔ stalehash/site/path/revision/schema/extra-privatefields: validation failures throw (8.084625ms)
+✔ malformedsource/models/sizes/cycles/getter/prototype: rejected strictly (1.752196ms)
+✔ validselectedH1/paragraph/cover changes preservectas/inline: applied successfully (2.588146ms)
+✔ privateencoded/unsafeURLs/structuralchanges fail: rejected (9.964132ms)
+✔ RegressionnonewURLcredentials/relative links canremainrenderercompatibleonlyhttpsmarkdown: credential rejection & legacy HTTP preservation (5.548537ms)
+✔ nested unknown metadata rejection and preservation (9.931192ms)
+✔ bindSiteArticleSource generates expected canonical binding (10.263959ms)
+✔ bindSiteArticleSource validates published envelope and positive version (6.298316ms)
+✔ bindSiteArticleSource rejects non-matching destination, port, uppercase domain or wrong path (0.843409ms)
+✔ projectSavedSiteArticle enforces strict actor, revision, and binding validation (2.749725ms)
+✔ projectSavedSiteArticle preserves previous publication edits and applies new patches (19.08197ms)
+✔ projectSavedSiteArticle rejects private /studio-media images in changes (3.845523ms)
+✔ review: explicit standard port, whitespace and normalized paths fail closed (0.337365ms)
+✔ review: saved changes must exist as a plain object (1.017911ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 147.80076
