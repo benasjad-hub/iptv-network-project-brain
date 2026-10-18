@@ -1,0 +1,18 @@
+✔ OFF/absent preserves exact authored values and returns immutable own isolated maps (3.293997ms)
+✔ sparse known overrides project one field, retain others, never mutate inputs or imply authority (0.592173ms)
+✔ scope/hash/version/extra-key tampering always falls back as a whole (1.040793ms)
+✔ unsafe URL values and mixed malformed values reject the whole snapshot (2.131843ms)
+✔ accessors and inherited properties never execute getters and never become fields (0.691041ms)
+✔ malformed descriptor, duplicate IDs and paths refuse before processing data (0.514938ms)
+✔ size caps refuse snapshots without leaking partial changes (6.065094ms)
+✔ descriptor route cap is 500 characters rather than 500 segments (0.249012ms)
+✔ descriptor field array accessors and noncanonical index properties never execute (0.342041ms)
+✔ encoded backslash and controls in root URLs never reach projected output (0.604823ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 24.746103

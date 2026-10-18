@@ -1,0 +1,45 @@
+TAP version 13
+# Subtest: OFF/absent preserves exact authored values and returns immutable own isolated maps
+ok 1 - OFF/absent preserves exact authored values and returns immutable own isolated maps
+  ---
+  duration_ms: 1.6478
+  ...
+# Subtest: sparse known overrides project one field, retain others, never mutate inputs or imply authority
+ok 2 - sparse known overrides project one field, retain others, never mutate inputs or imply authority
+  ---
+  duration_ms: 0.2962
+  ...
+# Subtest: scope/hash/version/extra-key tampering always falls back as a whole
+ok 3 - scope/hash/version/extra-key tampering always falls back as a whole
+  ---
+  duration_ms: 0.5462
+  ...
+# Subtest: unsafe URL values and mixed malformed values reject the whole snapshot
+ok 4 - unsafe URL values and mixed malformed values reject the whole snapshot
+  ---
+  duration_ms: 0.531
+  ...
+# Subtest: accessors and inherited properties never execute getters and never become fields
+ok 5 - accessors and inherited properties never execute getters and never become fields
+  ---
+  duration_ms: 0.3677
+  ...
+# Subtest: malformed descriptor, duplicate IDs and paths refuse before processing data
+ok 6 - malformed descriptor, duplicate IDs and paths refuse before processing data
+  ---
+  duration_ms: 0.2639
+  ...
+# Subtest: size caps refuse snapshots without leaking partial changes
+ok 7 - size caps refuse snapshots without leaking partial changes
+  ---
+  duration_ms: 1.892
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11.0405
