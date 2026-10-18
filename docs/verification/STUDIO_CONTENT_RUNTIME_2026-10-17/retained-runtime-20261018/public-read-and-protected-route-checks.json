@@ -1,0 +1,58 @@
+[
+  {
+    "method": "GET",
+    "url": "https://studio.viziona.tv/api/studio/route-content/veott",
+    "status": 200,
+    "location": "",
+    "noindex": "noindex noindex, nofollow",
+    "bodyBytes": 702,
+    "keys": [
+      "schema",
+      "siteId",
+      "routePath",
+      "modelHash",
+      "compiledSourceFingerprint",
+      "storedModelHash",
+      "version",
+      "state",
+      "applied",
+      "values",
+      "refusals",
+      "bindingAuthority"
+    ],
+    "state": "absent",
+    "version": null
+  },
+  {
+    "method": "HEAD",
+    "url": "https://studio.viziona.tv/api/studio/route-content/veott",
+    "status": 200,
+    "location": "",
+    "noindex": "noindex noindex, nofollow",
+    "bodyBytes": 0
+  },
+  {
+    "method": "POST",
+    "url": "https://studio.viziona.tv/api/studio/route-content/veott",
+    "status": 307,
+    "location": "https://studio.viziona.tv/login",
+    "noindex": "noindex, nofollow",
+    "bodyBytes": 31
+  },
+  {
+    "method": "GET",
+    "url": "https://studio.viziona.tv/__studio_candidate_99246ca1/studio/visuel/e2e71d29-136e-41e8-b17c-87a17a1ef96a",
+    "status": 307,
+    "location": "https://studio.viziona.tv/login",
+    "noindex": "noindex, nofollow",
+    "bodyBytes": 31
+  },
+  {
+    "method": "GET",
+    "url": "https://studio.viziona.tv/review/site-76s62u9btrhjsd1vnmfrnxuxb/",
+    "status": 302,
+    "location": "https://studio.viziona.tv/login",
+    "noindex": "noindex, nofollow, noarchive",
+    "bodyBytes": 154
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "time": 1792346584.9849627,
+  "fullConfigTest": 0,
+  "installedConfigTest": 0,
+  "reloadExitCode": 0,
+  "studioSha256": "487f401f9db96cbdea80cb096616c7ed824a0217e048da68403476fd5cf2d678",
+  "mapsSha256": "b2c706a4f1ad92b7c12ae190820a2c09007aa386433fa7e85ce9af28fed6818f",
+  "servicesUnchanged": {
+    "daoudstudio-staging.service": "982",
+    "daoudstudio-content-b7a9fb79.service": "979743",
+    "daoudstudio-content-99246ca1.service": "1077052"
+  },
+  "mainStillB7a": true,
+  "journalEntries": 0
+}

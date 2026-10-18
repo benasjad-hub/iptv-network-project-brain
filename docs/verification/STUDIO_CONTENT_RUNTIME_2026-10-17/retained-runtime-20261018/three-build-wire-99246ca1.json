@@ -1,0 +1,33 @@
+{
+  "time": 1792345211.1012266,
+  "passed": true,
+  "error": null,
+  "configTestExitCode": 0,
+  "staticByteAndBackendChecks": 241,
+  "anonymousActionChecks": [
+    {
+      "generation": "old7cfe",
+      "backendPort": 4299,
+      "httpStatus": 307,
+      "anonymousOwnerGate": true
+    },
+    {
+      "generation": "currentb7a",
+      "backendPort": 4301,
+      "httpStatus": 307,
+      "anonymousOwnerGate": true
+    },
+    {
+      "generation": "candidate246d",
+      "backendPort": 4303,
+      "httpStatus": 307,
+      "anonymousOwnerGate": true
+    }
+  ],
+  "actualJournalPublicProjectionRead": true,
+  "normalAuthenticatedWireAcceptance": false,
+  "publicContentCommitted": false,
+  "productionTrafficChanged": false,
+  "privateProxyStopped": true,
+  "root": "/tmp/studio-three-release-proxy-6nfolb2u"
+}

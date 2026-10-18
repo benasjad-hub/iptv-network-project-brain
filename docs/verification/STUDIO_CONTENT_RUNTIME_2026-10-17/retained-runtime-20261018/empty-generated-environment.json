@@ -1,0 +1,10 @@
+{
+  "time": 1792346552.864907,
+  "scope": "replace generated embedded-env module with exact previous empty official export records; no unrelatedVPSprivatevaluesuploaded",
+  "original488Sha256": "416accf14b168ff3fa513587aba2bccc654257a8fc6e7c6aafa679c98a817046",
+  "sameAsPreviousPublicWorkerModule": true,
+  "existingWorkerBindingsPreserved": true,
+  "publicDeployment": false,
+  "changedFiles": 1,
+  "emptyModuleByteIdenticalToPrevious": true
+}

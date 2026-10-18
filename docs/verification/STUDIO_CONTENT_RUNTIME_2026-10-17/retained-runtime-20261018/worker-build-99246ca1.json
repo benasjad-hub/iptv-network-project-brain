@@ -1,0 +1,16 @@
+{
+  "startedAt": 1792345071.6843905,
+  "endedAt": 1792345176.660736,
+  "elapsedSeconds": 104.976,
+  "exitCode": 0,
+  "buildId": "50ymJmoFkr-itSixEFfBw",
+  "workerArtifactExists": true,
+  "sourceCommit": "99246ca1dc4309a8b63e78b526f7b10ce0c84472",
+  "normalExistingConfigReferenced": true,
+  "noManualCredentialExport": true,
+  "articleManifestSha256": "88ae3ae09664c5a1ff7a0a48f3f26501faabd5965f3525ef80bfcb007b04145f",
+  "articleManifestUnchanged": true,
+  "sharedFontLoaderUnchanged": true,
+  "assetFiles": 4697,
+  "deployed": false
+}

@@ -1,0 +1,12 @@
+✔ official AST rule changes exactly one body, preserves other bytes, then idempotent (11.328651ms)
+✔ missing, multiple, unexpected and commented bodies all refuse (2.648513ms)
+✔ invalid input and inherited or missing official methods refuse (0.340509ms)
+✔ actual immutable generated handler has exact one official replacement and retains surrounding code (2084.363768ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2451.209145

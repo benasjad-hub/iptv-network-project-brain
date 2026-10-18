@@ -1,0 +1,9 @@
+{
+  "time": 1792345823.2097623,
+  "scope": "retain only24current-public-byte-verified staticfiles in private candidate ASSETS",
+  "newFiles": 19,
+  "sameByteShared": 5,
+  "noPublicDeployment": true,
+  "retained": 19,
+  "all24AvailableByteIdentical": true
+}

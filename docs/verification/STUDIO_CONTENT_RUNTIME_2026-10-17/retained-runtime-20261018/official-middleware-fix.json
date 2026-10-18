@@ -1,0 +1,10 @@
+{
+  "time": 1792345985.545885,
+  "changedFiles": 1,
+  "officialRuleApplied": true,
+  "handlerAfterSha256": "19567e5d3222bda00e1d097b25272391fd124a63f73fe48f129db2aeb456b69e",
+  "helperSha256": "896f5150699522016ee88808d03e817bb2d9557f0824adf5ab0c46d5adac7d0d",
+  "separateMiddlewareUnchanged": true,
+  "workerEntrypointUnchanged": true,
+  "publicDeployed": false
+}
