@@ -1,0 +1,50 @@
+TAP version 13
+# Subtest: transparent source text and scope preserve outer DOM with no added wrappers
+ok 1 - transparent source text and scope preserve outer DOM with no added wrappers
+  ---
+  duration_ms: 2.6873
+  ...
+# Subtest: separate providers and outside context never leak values
+ok 2 - separate providers and outside context never leak values
+  ---
+  duration_ms: 0.2972
+  ...
+# Subtest: disabled provider does not inspect accessor maps or remove authored UI
+ok 3 - disabled provider does not inspect accessor maps or remove authored UI
+  ---
+  duration_ms: 0.1473
+  ...
+# Subtest: enabled accessors, inherited maps, duplicate binding targets and unused values disable whole projection
+ok 4 - enabled accessors, inherited maps, duplicate binding targets and unused values disable whole projection
+  ---
+  duration_ms: 0.3704
+  ...
+# Subtest: invalid scope or marker cannot inherit editable root and missing value falls back
+ok 5 - invalid scope or marker cannot inherit editable root and missing value falls back
+  ---
+  duration_ms: 0.5031
+  ...
+# Subtest: nested provider starts its own root; depth32 allowed and depth33 disabled
+ok 6 - nested provider starts its own root; depth32 allowed and depth33 disabled
+  ---
+  duration_ms: 0.6517
+  ...
+# Subtest: bound text is escaped by React and supplied immutable maps are unchanged
+ok 7 - bound text is escaped by React and supplied immutable maps are unchanged
+  ---
+  duration_ms: 0.1873
+  ...
+# Subtest: invalid keys, controls and total payload bounds fall back as a whole
+ok 8 - invalid keys, controls and total payload bounds fall back as a whole
+  ---
+  duration_ms: 1.0391
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12.6843

@@ -1,0 +1,53 @@
+{
+  "state": "passed",
+  "actualProductionNext": true,
+  "actualReactContextSSR": true,
+  "streamedServerChild": true,
+  "requestIsolation": true,
+  "sameBuildId": true,
+  "originalSourceUnchanged": true,
+  "privateFixtureOnly": true,
+  "noProductionDeployment": true,
+  "noDB": true,
+  "browser": {
+    "browserChecked": true,
+    "observationOnly": true,
+    "tool": "cua_repl",
+    "mixedHydrated": "yes",
+    "mixedHeadings": [
+      "A phase 2",
+      "B phase 2"
+    ],
+    "streamedNestedVisible": [
+      "A nested 2",
+      "B nested 2"
+    ],
+    "unmappedOriginalRetained": true,
+    "invalidScopeOriginalRetained": true,
+    "offHydrated": "yes",
+    "offHeading": "Original heading",
+    "offNested": "Original nested",
+    "consoleWarnErrorEntries": 0,
+    "screenshot": "captured in CUA tool output; no local image export claimed",
+    "ownTabClosed": true,
+    "productionPageChecked": false
+  },
+  "steps": [
+    {
+      "case": "actual-next-ssr-streamed-child-provider-isolation-and-OFF",
+      "passed": true
+    },
+    {
+      "case": "20-concurrent-requests",
+      "passed": true
+    },
+    {
+      "case": "second-value-same-build",
+      "passed": true
+    },
+    {
+      "case": "restore-authored-same-build",
+      "passed": true
+    }
+  ]
+}
