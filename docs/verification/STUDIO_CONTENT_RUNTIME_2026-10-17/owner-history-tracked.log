@@ -1,0 +1,20 @@
+✔ owned genuine SQLite history returns revision/count only (68.784532ms)
+✔ foreign owner, absent and malformed ids reveal no history (43.787187ms)
+✔ authentication failure remains outside generic storage catch and reads nothing (79.983633ms)
+✔ actual SQLite save holds real publication lock and increments genuine saved revision (62.672271ms)
+✔ foreign owner cannot save or restore and keeps actor/revision/history unchanged (77.200665ms)
+✔ stale revision, invalid input and validation failure all release own lock without changing storage (84.339852ms)
+✔ restore creates a new draft revision, does not rewrite history or publish (101.06624ms)
+✔ a separate process publication lock blocks save and restore until normal release (116.010716ms)
+✔ OFF preserves original source and legacy binding with zero new bridge calls (211.035402ms)
+✔ other sites and article paths retain the legacy flow even when enabled (116.34118ms)
+✔ enabled pilot retains BOTH prepared binding and exact projection without guessing fields (85.69825ms)
+✔ unknown prepared pilot source propagates before document creation, no legacy downgrade/retry (30.521268ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 917.92956

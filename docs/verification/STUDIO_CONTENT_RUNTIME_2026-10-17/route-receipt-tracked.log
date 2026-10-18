@@ -1,0 +1,26 @@
+✔ synthetic verified-metadata input updates only source on one genuine saved owned document (111.713695ms)
+✔ nonzero captured publicVersion is the actual predecessor, never fake absence (90.790224ms)
+✔ invented destination aliases do not authorize receipt metadata (95.913632ms)
+✔ bad status/context/owner/revision input never mutates metadata and rollback keeps store usable (66.161213ms)
+✔ metadata accessors/symbols/custom prototypes never execute (40.978977ms)
+✔ newer receipt follows known predecessor, exact replay/older status cannot overwrite newer draft or receipt (82.687791ms)
+✔ invalid stored publication/source projection is refused instead of overwritten or treated as absence (324.569707ms)
+✔ actual private journal publish/status then receipt metadata, second edit/history restore and old-operation readback (2203.997639ms)
+✔ actual SQLite save holds real publication lock and increments genuine saved revision (48.755913ms)
+✔ foreign owner cannot save or restore and keeps actor/revision/history unchanged (51.649243ms)
+✔ stale revision, invalid input and validation failure all release own lock without changing storage (96.435741ms)
+✔ restore creates a new draft revision, does not rewrite history or publish (148.439061ms)
+✔ a separate process publication lock blocks save and restore until normal release (128.262656ms)
+✔ OFF preserves original source and legacy binding with zero new bridge calls (228.512771ms)
+✔ other sites and article paths retain the legacy flow even when enabled (139.283376ms)
+✔ enabled pilot retains BOTH prepared binding and exact projection without guessing fields (112.136797ms)
+✔ unknown prepared pilot source propagates before document creation, no legacy downgrade/retry (29.768553ms)
+✔ actual native SSR + real private journal + normal source preparation persist genuine captured document revision0 (623.627665ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3833.92958
