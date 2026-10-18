@@ -1,0 +1,41 @@
+▶ visual-article-publications foundation suite
+  ✔ 1. firstnull/read/record/readcuratedsafe (20.325951ms)
+  ✔ 2. freshdoc sameowner/base expected1 successfulversion2 (8.942243ms)
+  ✔ 3. staleexpected/noowner/basehash/operationreuse mutation nothingchanged (7.676483ms)
+  ✔ 4. replay sameoperation returnsversion1 no extra history evenafter2 (2.859659ms)
+  ✔ 5. twoindependenthandles CASconcurrency (9.160619ms)
+  ✔ 6. close/reopen persistence (1.671556ms)
+  ✔ 7. failedcodec no rows (0.231797ms)
+  ✔ 8. wronghistoryowner (0.943548ms)
+  ✔ 9. historycap100 after105writes/olderoperationreceipt persists (335.820648ms)
+  ✔ 10. completeJSONimmutability (1.331157ms)
+  ✔ 11. invalidparams/prototypeprivatepayload rejected (0.310764ms)
+  ✔ 12. regression: canonicalkeyorder retry and context rejection (2.331501ms)
+  ✔ 13. regression: persistedunexpectedprivatefield rejection and corruption privacy (7.027704ms)
+  ✔ 14. regression: detect missing required columns in undeployed schema (6.150333ms)
+  ✔ 15. regression: safe exclusive creation without truncation (13.739106ms)
+  ✔ 16. publicCatalogue and readOwnedVersion foundation and noleaks (2.588185ms)
+  ✔ 17. foreignowner cannotreadversion and missing/unknown versions (1.026553ms)
+  ✔ 18. historyv1 readable afterv2, historical edit op replay across versions, unchanged receipts (15.194939ms)
+  ✔ 19. corruptedhistoryprivateextras/wrongbase/missingoriginal rejects and history preserved (13.352518ms)
+  ✔ 20. publiccatalogue unknownsite, invalidsite, bounds and corruption failure (823.708867ms)
+✔ visual-article-publications foundation suite (1293.231893ms)
+✔ own foreign database initialization is byte-for-byte unchanged on rejection (7.004869ms)
+✔ own exclusive creation race preserves another creator database (9.98522ms)
+✔ own public catalogue serialized bound checked against 8MiB limit (1053.077667ms)
+✔ own original JSON byte bound checked before parsing (32.878134ms)
+▶ readOnly mode suite
+  ✔ readOnly options validation (0.216764ms)
+  ✔ readOnly missing file does not create file and throws (0.413266ms)
+  ✔ readOnly empty database throws and remains byte-for-byte unchanged (1.016037ms)
+  ✔ readOnly foreign database throws and remains byte-for-byte unchanged (6.958981ms)
+  ✔ valid database opened readOnly: reads succeed, record throws, bytes and journal mode unchanged (17.909213ms)
+✔ readOnly mode suite (28.158357ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2541.730168

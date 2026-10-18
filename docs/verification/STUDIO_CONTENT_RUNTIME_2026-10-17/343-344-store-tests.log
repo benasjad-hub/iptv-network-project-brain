@@ -1,0 +1,14 @@
+✔ eight prefixes, root alias and Unicode persist with exact receipts and history (90.441661ms)
+✔ context callback is server owned and refreshed; malformed or thrown contexts refuse reads (3.40916ms)
+✔ per-record forged context cannot enable unsupported legacy writes (1.583344ms)
+✔ invalid callback refuses before creating database files (0.854485ms)
+✔ aliases cannot create a competing publication row or bypass expected version (2.862633ms)
+✔ root publications remain readable without modifying the existing database or schema (15.630619ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 122.33349

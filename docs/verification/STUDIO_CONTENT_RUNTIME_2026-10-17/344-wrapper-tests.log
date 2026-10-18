@@ -1,0 +1,25 @@
+TAP version 13
+# Subtest: server wrapper ignores an injected callback and derives trusted source context
+ok 1 - server wrapper ignores an injected callback and derives trusted source context
+  ---
+  duration_ms: 35.4487
+  ...
+# Subtest: legacy missing map stays undefined and malformed source never becomes fallback
+ok 2 - legacy missing map stays undefined and malformed source never becomes fallback
+  ---
+  duration_ms: 12.5552
+  ...
+# Subtest: operation failure always closes the store; invalid readOnly never opens it
+ok 3 - operation failure always closes the store; invalid readOnly never opens it
+  ---
+  duration_ms: 10.4491
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 64.6425

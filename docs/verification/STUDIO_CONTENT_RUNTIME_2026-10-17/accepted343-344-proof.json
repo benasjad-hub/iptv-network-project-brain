@@ -1,0 +1,22 @@
+{
+  "workers": [
+    343,
+    344
+  ],
+  "implementationAdaptation": false,
+  "sqlCallsByteEqual": true,
+  "schemaChange": false,
+  "tests": {
+    "newTemporaryDatabaseCases": 6,
+    "legacyStoreCases": 31,
+    "serverWrapperCases": 3,
+    "panelTypesExit": 0,
+    "panelTypesSeconds": 4.453
+  },
+  "publicDeployment": false,
+  "nativeAcceptance": false,
+  "paths": {
+    "scripts/studio/visual-article-publications.cjs": "06e10103352095ce5948b853a88252ffc8d9e33761e9158766bc70ce61570b32",
+    "apps/panel/lib/studio-visual-publications.ts": "e04996eebd84651e6f4fc3d93d3a80d0a9ffdd165f4f9289043bb7731dadfd47"
+  }
+}
