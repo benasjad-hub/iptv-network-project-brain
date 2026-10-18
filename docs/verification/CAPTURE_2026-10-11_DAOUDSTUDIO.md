@@ -1644,3 +1644,5 @@ Fresh readonly origin/main remains2462d58e831784974e130596b012e5a8b38222e3, same
 2026-10-18 original383 actualprivate originalVeoTThome3H2adapterPASS: exact6patches/8338c1c9..., source70nativeattrs unchanged, component3PASSWindows/Linux. ActualNext75.2789s+nativeCUAbefore/afterfonts/colors/interaction, 3mockedits/wrongsourcefallback/restore samebuild. No authenticatededitor/store/CAS/publication/allsites proof. Setupfailures preserved, allownservers/tabs/tunnelclosed/live982unchanged; no productpush/DDL/deploy. Original384plan corrected/notaccepted,385purestablecodecactive. Fullprooflimits in STUDIO_CONTENT_RUNTIME capture.
 
 2026-10-18: isolated product b398e3f0 accepted exact385+386 stabletextcodec;15PythonQA+3crosslanguage canonicalvectors passed, source-only. See STUDIO_CONTENT_RUNTIME_2026-10-17. JournalIO387proposal pending; no production/schema/deploy/productpush.
+
+2026-10-18: local2c4099c7 exact388+389+391 I/O primitives accepted after17actualPOSIX passes/5HEADdeferred. No productioninit/SQL/runtimechange. Rejected387malformed/388failures/390empty preserved. HEAD392proposal pending. ReadonlyVercel93associations/46apex is notDNSoriginproof.

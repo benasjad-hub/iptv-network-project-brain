@@ -1,0 +1,583 @@
+{
+  "observedAt": "2026-10-18",
+  "scope": "read-only Vercel project/domain association; not DNS or serving-origin proof",
+  "project": {
+    "id": "prj_1UAZSmpzhcIab3wUL2jAHorMN2oB",
+    "name": "network-sites",
+    "framework": "nextjs",
+    "nodeVersion": "24.x",
+    "latestDeployment": {
+      "id": "dpl_Pr4oNsK7nM8xPZTsHPD9mVFPKFPd",
+      "url": "network-sites-f06x4cm7k-benasjad-hubs-projects.vercel.app",
+      "createdAt": 1792298719845,
+      "readyState": "READY",
+      "target": "production"
+    }
+  },
+  "domains": [
+    {
+      "name": "www.iptv-german4k.store",
+      "redirect": "iptv-german4k.store",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptv-german4k.store",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptv-german4k.global",
+      "redirect": "iptv-german4k.global",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptv-german4k.global",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptv-german4k.com",
+      "redirect": "iptv-german4k.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptv-german4k.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptv-german4k.de",
+      "redirect": "iptv-german4k.de",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptv-german4k.de",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.kanaalgids.nl",
+      "redirect": "kanaalgids.nl",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "kanaalgids.nl",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.polderiptv.nl",
+      "redirect": "polderiptv.nl",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "polderiptv.nl",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.codeiptvpremium.info",
+      "redirect": "codeiptvpremium.info",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "codeiptvpremium.info",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.codeiptvpremium.store",
+      "redirect": "codeiptvpremium.store",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "codeiptvpremium.store",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.codeiptvpremium.eu",
+      "redirect": "codeiptvpremium.eu",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "codeiptvpremium.eu",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.codeiptvpremium.fr",
+      "redirect": "codeiptvpremium.fr",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "codeiptvpremium.fr",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.chaussure.io",
+      "redirect": "chaussure.io",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "chaussure.io",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.senegaliptv.store",
+      "redirect": "senegaliptv.store",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "senegaliptv.store",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.senegaliptv.info",
+      "redirect": "senegaliptv.info",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "senegaliptv.info",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.liste-iptv.it",
+      "redirect": "liste-iptv.it",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "liste-iptv.it",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.senegaliptv.fr",
+      "redirect": "senegaliptv.fr",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "senegaliptv.fr",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.senegaliptv.com",
+      "redirect": "senegaliptv.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "senegaliptv.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvfreetrial.ca",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "iptvfreetrial.ca",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.extremeiptv.it",
+      "redirect": "extremeiptv.it",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "extremeiptv.it",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.mejorstream.com",
+      "redirect": "mejorstream.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "mejorstream.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvwithbox.ca",
+      "redirect": "iptvwithbox.ca",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvwithbox.ca",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvguatemala.es",
+      "redirect": "iptvguatemala.es",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvguatemala.es",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.espana-iptv.es",
+      "redirect": "espana-iptv.es",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "espana-iptv.es",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.euroiptv.co",
+      "redirect": "euroiptv.co",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "euroiptv.co",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvnordic.us",
+      "redirect": "iptvnordic.us",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvnordic.us",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvfreetrial.co",
+      "redirect": "iptvfreetrial.co",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvfreetrial.co",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptv-smarter.us",
+      "redirect": "iptv-smarter.us",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptv-smarter.us",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvmonde.com",
+      "redirect": "iptvmonde.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvmonde.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.netiptv.us",
+      "redirect": "netiptv.us",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "netiptv.us",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.spain-stream.com",
+      "redirect": "spain-stream.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "spain-stream.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvgermany.top",
+      "redirect": "iptvgermany.top",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvgermany.top",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.british-iptv.us",
+      "redirect": "british-iptv.us",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "british-iptv.us",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "iptv-ss.co",
+      "redirect": "www.iptv-ss.co",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "www.iptv-ss.co",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.vikingiptv.ca",
+      "redirect": "vikingiptv.ca",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "vikingiptv.ca",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.blyxo.de",
+      "redirect": "blyxo.de",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "blyxo.de",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "flixiptv.watch",
+      "redirect": "www.flixiptv.watch",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "www.flixiptv.watch",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "kaufeniptv.info",
+      "redirect": "www.kaufeniptv.info",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "www.kaufeniptv.info",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "anbieteriptv.tv",
+      "redirect": "www.anbieteriptv.tv",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "www.anbieteriptv.tv",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "abonnementiptvfrance.tv",
+      "redirect": "www.abonnementiptvfrance.tv",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "www.abonnementiptvfrance.tv",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvdanmark.tv",
+      "redirect": "iptvdanmark.tv",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvdanmark.tv",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.stratotv.com",
+      "redirect": "stratotv.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "stratotv.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.cieloflux.com",
+      "redirect": "cieloflux.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "cieloflux.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.orbiswave.com",
+      "redirect": "orbiswave.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "orbiswave.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.flixip.de",
+      "redirect": "flixip.de",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "flixip.de",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptvkaufen-4k.com",
+      "redirect": "iptvkaufen-4k.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptvkaufen-4k.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.iptv-fhd.de",
+      "redirect": "iptv-fhd.de",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "iptv-fhd.de",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "www.goalstreamtv.com",
+      "redirect": "goalstreamtv.com",
+      "redirectStatusCode": 308,
+      "verified": true
+    },
+    {
+      "name": "goalstreamtv.com",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    },
+    {
+      "name": "network-sites.vercel.app",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "verified": true
+    }
+  ],
+  "pagination": {
+    "count": 93,
+    "next": null,
+    "prev": 1784807153446
+  },
+  "mutations": 0
+}

@@ -1,0 +1,49 @@
+test_builtin_only_paths_and_data (__main__.Tests.test_builtin_only_paths_and_data) ... ok
+test_existing_same_bytes_durability (__main__.Tests.test_existing_same_bytes_durability) ... FAIL
+test_file_fsync_failure_retains_data_and_reports_generic (__main__.Tests.test_file_fsync_failure_retains_data_and_reports_generic) ... ok
+test_head_before_rename_failure_cleans_only_own_temp (__main__.Tests.test_head_before_rename_failure_cleans_only_own_temp) ... skipped 'Atomic HEAD implementation deferred'
+test_head_replacement (__main__.Tests.test_head_replacement) ... skipped 'Atomic HEAD implementation deferred'
+test_head_symlink_never_followed (__main__.Tests.test_head_symlink_never_followed) ... skipped 'Atomic HEAD implementation deferred'
+test_immutable_roundtrip_and_lock (__main__.Tests.test_immutable_roundtrip_and_lock) ... ok
+test_inode_replacement_during_read (__main__.Tests.test_inode_replacement_during_read) ... ok
+test_links_fifo_modes_and_caps (__main__.Tests.test_links_fifo_modes_and_caps) ... ok
+test_lock_preserves_existing_invalid_file (__main__.Tests.test_lock_preserves_existing_invalid_file) ... ok
+test_name_and_type_limits (__main__.Tests.test_name_and_type_limits) ... ok
+test_no_implicit_initialization (__main__.Tests.test_no_implicit_initialization) ... ok
+test_partial_immutable_retained_not_replayed (__main__.Tests.test_partial_immutable_retained_not_replayed) ... ok
+test_process_lock_and_process_death_release (__main__.Tests.test_process_lock_and_process_death_release) ... ok
+test_read_mutation_refuses (__main__.Tests.test_read_mutation_refuses) ... FAIL
+test_read_syscall_error_is_generic (__main__.Tests.test_read_syscall_error_is_generic) ... ok
+test_root_and_ancestor_custody (__main__.Tests.test_root_and_ancestor_custody) ... ok
+test_root_changed_permissions_after_open (__main__.Tests.test_root_changed_permissions_after_open) ... ok
+test_special_permission_bits_refuse (__main__.Tests.test_special_permission_bits_refuse) ... FAIL
+
+======================================================================
+FAIL: test_existing_same_bytes_durability (__main__.Tests.test_existing_same_bytes_durability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site387-qa.py", line 209, in test_existing_same_bytes_durability
+    self.assertIn(False,calls);self.assertIn(True,calls)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False not found in []
+
+======================================================================
+FAIL: test_read_mutation_refuses (__main__.Tests.test_read_mutation_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site387-qa.py", line 87, in test_read_mutation_refuses
+    with self.assertRaises(ValueError):j.read_blob(fd,ENTRY,100)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_special_permission_bits_refuse (__main__.Tests.test_special_permission_bits_refuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site387-qa.py", line 197, in test_special_permission_bits_refuse
+    with self.assertRaises(ValueError):j.read_blob(fd,ENTRY,100)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.025s
+
+FAILED (failures=3, skipped=3)
