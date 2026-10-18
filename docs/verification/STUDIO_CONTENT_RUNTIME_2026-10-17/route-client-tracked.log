@@ -1,0 +1,19 @@
+✔ activation reads local journal only; actual client->server->SQLite/journal publishes once then confirms (1766.792031ms)
+✔ corrupt storage blocks before network and explicit refresh never auto-publishes (146.432819ms)
+✔ duplicate client actions have synchronous guard and one actual write (1361.884084ms)
+✔ dirty input during read-only prepare prevents persist/attempt/server write (786.411913ms)
+✔ whole-operation deadline makes late committed reply inert; explicit status recovers while dirty input survives (2046.16734ms)
+✔ deactivate/reactivate same scope invalidates old continuation (ABA) and old cleanup cannot cancel new activation (1245.396841ms)
+✔ unsupported site/path aliases never enable capability or block legacy mutations (103.786303ms)
+✔ public methods after deactivation cannot create a fresh operation (151.044044ms)
+✔ factory construction and explicit refresh before activation never read storage (142.725475ms)
+✔ lost owner affinity before delayed response cannot emit errors or callbacks into another scope (279.406245ms)
+✔ explicit discard after pre-attempt storage failure restores ready state and leaves draft intact (197.418325ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9101.286947
