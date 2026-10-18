@@ -1,0 +1,12 @@
+✔ actual server action and SQLite stores preserve two edits, reload and conditional rollback (244.152883ms)
+✔ lost receipt reply retains operation and explicit same-operation retry cannot duplicate publication (42.016279ms)
+✔ owner, flag, legacy collision and a newer saved revision all block before publication record (143.104015ms)
+✔ same-site canonical alias publishes while forged cross-site captured origin cannot write (45.135055ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 481.004959

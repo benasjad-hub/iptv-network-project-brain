@@ -1,0 +1,1 @@
+{"sourceOnly": true, "reason": "new Anbieter fourth full-pool arg must not change existing route manifest", "exit": 0, "before": "a6be7c3f698497bd918f7769e4aa6a04a6f40457f50d486b74c0be4290cbaf2f", "after": "a6be7c3f698497bd918f7769e4aa6a04a6f40457f50d486b74c0be4290cbaf2f", "same": true, "output": "Generated studio article routes for 78 sites.\n", "error": ""}

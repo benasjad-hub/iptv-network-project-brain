@@ -1,0 +1,9 @@
+{"diagnosticCount":1,"seconds":12.537702823000002}
+[96mapps/panel/lib/studio-visual.ts[0m:[93m79[0m:[93m103[0m - [91merror[0m[90m TS2345: [0mArgument of type 'Site' is not assignable to parameter of type '{ slug: string; domain: string; }'.
+  Types of property 'domain' are incompatible.
+    Type 'string | null' is not assignable to type 'string'.
+      Type 'null' is not assignable to type 'string'.
+
+[7m79[0m   const initialUrl=new URL(path,`https://${site.domain}`);const {html,url}=await fetchSite(initialUrl,site);inspect(html);const source={url:url.href,destination:{type:'site',site:site.slug,path}};const siteArticleBinding=await prepareVisualSiteBinding(source,site);return {html,source:siteArticleBinding?{...source,siteArticleBinding}:source};
+[7m  [0m [91m                                                                                                      ~~~~[0m
+

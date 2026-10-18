@@ -1,0 +1,12 @@
+✔ exact exporter bytes replace generated map atomically and only own temp directory is removed (7.781384ms)
+✔ failed exporter or invalid/prototype JSON never replaces previous generated map (12.090909ms)
+✔ symlinked private staging directory refuses before exporter or external temporary writes (1.783323ms)
+✔ symlinked generated target or parent never modifies the external file (5.391213ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.149025

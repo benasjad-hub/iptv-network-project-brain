@@ -1,0 +1,18 @@
+{
+  "apps/panel/app/(app)/nouveau/page.tsx": {
+    "candidate": "8e2ea98768a6555b0915c08501230efded5e280c0d4ff81dae6123d4513d4a00",
+    "preservedDirtyCheckout": "20f4b470d9d1cd81b0817e05cd0b8ebd44782b297d73631dcb2dc41c8186e71a"
+  },
+  "apps/panel/app/api/studio/clones/route.ts": {
+    "candidate": "6cd8d3903730e22f5630031dd7f6b27be530adc5e62b39c27693b2e8086e6417",
+    "preservedDirtyCheckout": "845d938f161fe1d7d2a1ce25d6875374abb37fa2c4a3f6fe86e745a9457421f6"
+  },
+  "apps/panel/components/StudioCloneWizard.tsx": {
+    "candidate": "e65506b73235123cc28e6946dd8f7173f73dd8b8ce1aec511199c4e544d164b0",
+    "preservedDirtyCheckout": "fac9874cbccd3399fd413a218269be1b46ca8b54318ae0f414a9e4ae3194a7a1"
+  },
+  "apps/panel/lib/studio-clone-store.ts": {
+    "candidate": null,
+    "preservedDirtyCheckout": null
+  }
+}
