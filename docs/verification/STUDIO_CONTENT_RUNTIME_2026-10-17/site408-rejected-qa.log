@@ -1,0 +1,99 @@
+✔ actual Python projection vectors: absent, published, defaults, compatible, refused (6.754061ms)
+✖ actual Python raw route compatibility uses 500 codepoints (0.81096ms)
+✔ status and publication exact namespace/request receipt; no actor or values exposure (4.679045ms)
+✖ strict wire rejects duplicate keys, invalid UTF8, BOM, whitespace and multiple replies (5.022597ms)
+✔ action/outer schema/extra keys/error replies never become absence (0.925061ms)
+✔ projection modelHash is semantic modelHash, not hash of entire model (3.81143ms)
+✔ projection requires complete own known field values and valid controls/length/empty (2.510457ms)
+✔ projection state invariants cannot fabricate successful or absent delivery (5.37258ms)
+✔ expected accessors/prototypes are refused without executing getters (1.535974ms)
+✖ terminal LF in site/UUID/hash is refused even matching reply (0.879383ms)
+✖ actual strict TypeScript compiler (4398.616828ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 7
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4533.186202
+
+✖ failing tests:
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:29:1
+✖ actual Python raw route compatibility uses 500 codepoints (0.81096ms)
+  RouteJournalReplyError: Route journal reply error
+      at parseRouteJournalReply (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/studio-route-journal-reply.ts:423:15)
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:29:121)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    outcome: 'unknown'
+  }
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:37:1
+✖ strict wire rejects duplicate keys, invalid UTF8, BOM, whitespace and multiple replies (5.022597ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception (unknown).
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:38:294)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function: unknown],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:61:1
+✖ terminal LF in site/UUID/hash is refused even matching reply (0.879383ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception (unknown).
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:63:104)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function: unknown],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:65:1
+✖ actual strict TypeScript compiler (4398.616828ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   {
+  +     code: 2339,
+  +     message: "Property 'bindingAuthority' does not exist on type 'object'."
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site408-runtime/site408-reply-qa.cjs:66:349)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

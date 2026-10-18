@@ -1,0 +1,19 @@
+✔ actual Python projection vectors: absent, published, defaults, compatible, refused (5.543665ms)
+✔ actual Python raw route compatibility uses 500 codepoints (1.946376ms)
+✔ status and publication exact namespace/request receipt; no actor or values exposure (5.517505ms)
+✔ strict wire rejects duplicate keys, invalid UTF8, BOM, whitespace and multiple replies (3.472683ms)
+✔ action/outer schema/extra keys/error replies never become absence (1.156968ms)
+✔ projection modelHash is semantic modelHash, not hash of entire model (2.41172ms)
+✔ projection requires complete own known field values and valid controls/length/empty (2.88671ms)
+✔ projection state invariants cannot fabricate successful or absent delivery (4.91695ms)
+✔ expected accessors/prototypes are refused without executing getters (0.694197ms)
+✔ terminal LF in site/UUID/hash is refused even matching reply (1.783622ms)
+✔ actual strict TypeScript compiler (1274.011667ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1315.175835

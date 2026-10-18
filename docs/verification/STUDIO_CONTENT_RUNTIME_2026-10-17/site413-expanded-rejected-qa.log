@@ -1,0 +1,158 @@
+✔ actual original Home/index/context: exactly three explicit native-heading candidates (57.022338ms)
+✔ actual Python seal keeps identity/model hash across default/layout/source changes (137.892989ms)
+✔ literal metadata only; never execute dynamic authored value or imported source (9.734333ms)
+✔ metadata marker/scope/default shape refuses duplicate, invalid and dynamic entries (12.818497ms)
+✔ changed reviewed context refuses rather than inventing renderer compatibility (0.44847ms)
+✔ unknown import aliases and lexical component shadows refuse (10.163213ms)
+✔ native H2 and marker/fallback relationship required (10.2748ms)
+✔ scope and invocation must be unique and exact, no conditional bypass (30.00882ms)
+✔ provider ancestor required; no stray fourth renderer candidate (11.237866ms)
+✔ actual registered index root required; duplicate/aliased/dynamic route cannot authorize (27.091635ms)
+✖ generic failure exposes required unknown outcome property (1.700168ms)
+✖ metadata role lookups are own keys; SHA full match and const declaration required (9.070972ms)
+✖ design object spread/duplicate property and unreturned provider refuse (7.111376ms)
+✖ all independently measured unsafe static registrations refuse (43.854892ms)
+✔ parse, primitive UTF16 and byte caps fail closed; no global candidate cache mutation (46.048776ms)
+✖ actual strict TypeScript compiler (1079.682892ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 11
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1505.461875
+
+✖ failing tests:
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:49:1
+✖ generic failure exposes required unknown outcome property (1.700168ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'unknown'
+  
+      at Object.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:49:126)
+      at expectedException (node:assert:578:17)
+      at expectsError (node:assert:703:21)
+      at strict.throws (node:assert:759:3)
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:49:78)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'unknown',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:50:1
+✖ metadata role lookups are own keys; SHA full match and const declaration required (9.070972ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception (unknown).
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:51:351)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function: unknown],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:53:1
+✖ design object spread/duplicate property and unreturned provider refuse (7.111376ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception (unknown).
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:54:204)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function: unknown],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:57:1
+✖ all independently measured unsafe static registrations refuse (43.854892ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   'prototype-role',
+  +   'mutable-export',
+  +   'index-spread',
+  +   'index-duplicate',
+  +   'provider-after-return',
+  +   'heading-after-return'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:66:123)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:72:1
+✖ actual strict TypeScript compiler (1079.682892ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   {
+  +     code: 2345,
+  +     message: "Argument of type 'VariableStatement' is not assignable to parameter of type 'Declaration'.   Property '_declarationBrand' is missing in type 'VariableStatement' but required in type 'Declaration'."
+  +   },
+  +   {
+  +     code: 2345,
+  +     message: "Argument of type 'VariableStatement' is not assignable to parameter of type 'Declaration'.   Property '_declarationBrand' is missing in type 'VariableStatement' but required in type 'Declaration'."
+  +   },
+  +   {
+  +     code: 2345,
+  +     message: "Argument of type 'VariableStatement' is not assignable to parameter of type 'Declaration'.   Property '_declarationBrand' is missing in type 'VariableStatement' but required in type 'Declaration'."
+  +   },
+  +   {
+  +     code: 2345,
+  +     message: "Argument of type 'VariableStatement' is not assignable to parameter of type 'Declaration'.   Property '_declarationBrand' is missing in type 'VariableStatement' but required in type 'Declaration'."
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site413-runtime/site413-registration-expanded-qa.cjs:72:394)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

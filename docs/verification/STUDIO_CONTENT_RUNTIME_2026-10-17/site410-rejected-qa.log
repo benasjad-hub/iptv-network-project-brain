@@ -1,0 +1,44 @@
+✔ OFF/invalid server configuration refuses before custody or child (256.594636ms)
+✔ publish uses configured root and exact request hash; cleans once after child close (47.421125ms)
+✔ caller mutation during custody await does not change model/request/expected reply (55.465407ms)
+✔ exact input shape forbids caller root/config injection and accessors (99.953601ms)
+✔ unknown child closure preserves cache; known closed failure cleans once (121.849569ms)
+✔ parse mismatch/cleanup failure cannot report success after possible commit (132.141167ms)
+✔ one deadline across custody/process/cleanup, no false late success (111.631369ms)
+✖ unexpected clock failures never leak raw internal exceptions (60.332816ms)
+✔ real service-user transport: two edits, status, old UUID, conditional restore, no build (3944.809497ms)
+✔ actual strict TypeScript compiler (3079.653665ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8031.373768
+
+✖ failing tests:
+
+test at ../../.studio-local/site410-runtime/site410-transport-qa-fixed.cjs:56:1
+✖ unexpected clock failures never leak raw internal exceptions (60.332816ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'unknown'
+  
+      at Object.unknown (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site410-runtime/site410-transport-qa-fixed.cjs:8:28)
+      at expectedException (node:assert:578:17)
+      at expectsError (node:assert:703:21)
+      at strict.rejects (node:assert:769:3)
+      at async config (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site410-runtime/site410-transport-qa-fixed.cjs:26:13)
+      at async TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site410-runtime/site410-transport-qa-fixed.cjs:57:108)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'unknown',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

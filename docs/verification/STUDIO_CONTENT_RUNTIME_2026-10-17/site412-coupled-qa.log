@@ -1,0 +1,18 @@
+✔ OFF/invalid server configuration refuses before custody or child (211.909572ms)
+✔ publish uses configured root and exact request hash; cleans once after child close (32.492333ms)
+✔ caller mutation during custody await does not change model/request/expected reply (36.32851ms)
+✔ exact input shape forbids caller root/config injection and accessors (79.908368ms)
+✔ unknown child closure preserves cache; known closed failure cleans once (87.280505ms)
+✔ parse mismatch/cleanup failure cannot report success after possible commit (86.353611ms)
+✔ one deadline across custody/process/cleanup, no false late success (113.216258ms)
+✔ unexpected clock failures never leak raw internal exceptions (48.21703ms)
+✔ real service-user transport: two edits, status, old UUID, conditional restore, no build (2474.975964ms)
+✔ actual strict TypeScript compiler (1003.712076ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4213.10782
