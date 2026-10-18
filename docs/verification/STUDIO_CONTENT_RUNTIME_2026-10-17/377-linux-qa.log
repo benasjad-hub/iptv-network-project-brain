@@ -1,0 +1,18 @@
+✔ exact source spans, UTF16 line columns, stable scoped unique IDs, no writable authority (9.360784ms)
+✔ leading/trailing/newline and escaped literals are refused instead of guessing source normalization (2.008609ms)
+✔ noncanonical source files refuse before parsing (0.347039ms)
+✔ spread attributes do not yield ambiguous attribute candidates (0.695419ms)
+✔ malformed/client/dynamic/control subtrees refuse candidates (2.475396ms)
+✔ hash mismatch, foreign source, unsafe URLs and entity ambiguity fail closed (1.025161ms)
+✔ candidate/refusal/depth analysis limits return no partial candidates (46.955404ms)
+✔ Unicode line separators are refused with original source bytes intact (0.889208ms)
+✔ conditional and iteration statement subtrees never yield unconditional source candidates (3.140768ms)
+✔ custom descendants remain explicitly unbound; namespaced attributes skipped, canonical Unicode and exact hash supported (2.471158ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.213989

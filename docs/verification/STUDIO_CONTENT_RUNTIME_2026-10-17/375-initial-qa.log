@@ -1,0 +1,45 @@
+TAP version 13
+# Subtest: exact source spans, UTF16 line columns, stable scoped unique IDs, no writable authority
+ok 1 - exact source spans, UTF16 line columns, stable scoped unique IDs, no writable authority
+  ---
+  duration_ms: 3.9658
+  ...
+# Subtest: leading/trailing/newline and escaped literals are refused instead of guessing source normalization
+ok 2 - leading/trailing/newline and escaped literals are refused instead of guessing source normalization
+  ---
+  duration_ms: 1.0292
+  ...
+# Subtest: noncanonical source files refuse before parsing
+ok 3 - noncanonical source files refuse before parsing
+  ---
+  duration_ms: 0.219
+  ...
+# Subtest: spread attributes do not yield ambiguous attribute candidates
+ok 4 - spread attributes do not yield ambiguous attribute candidates
+  ---
+  duration_ms: 0.5054
+  ...
+# Subtest: malformed/client/dynamic/control subtrees refuse candidates
+ok 5 - malformed/client/dynamic/control subtrees refuse candidates
+  ---
+  duration_ms: 1.2472
+  ...
+# Subtest: hash mismatch, foreign source, unsafe URLs and entity ambiguity fail closed
+ok 6 - hash mismatch, foreign source, unsafe URLs and entity ambiguity fail closed
+  ---
+  duration_ms: 0.7368
+  ...
+# Subtest: candidate/refusal/depth analysis limits return no partial candidates
+ok 7 - candidate/refusal/depth analysis limits return no partial candidates
+  ---
+  duration_ms: 27.8523
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 43.0652

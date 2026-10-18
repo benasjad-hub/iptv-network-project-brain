@@ -1,0 +1,29 @@
+{
+  "sourceOnly": true,
+  "routeLabelOnly": true,
+  "bindingAuthority": false,
+  "publicDeployment": false,
+  "files": 1980,
+  "acceptedFiles": 1383,
+  "refusedFiles": 597,
+  "candidates": 2972,
+  "refusals": 11615,
+  "integrityFailures": [],
+  "refusalReasons": {
+    "Dynamic JSX expression in text parent unsupported": 376,
+    "Conditional expression ancestor skipped": 179,
+    "Own 'use client' directive detected; client component extraction refused": 597,
+    "Parent text element has multiple or non-single children": 2857,
+    "Newline in literal value unsupported": 3638,
+    "Call or map expression ancestor skipped": 3065,
+    "Dynamic JSX expression in attribute unsupported": 361,
+    "Logical expression ancestor skipped": 344,
+    "Dynamic statement subtree skipped": 109,
+    "Entity or ampersand in literal value unsupported": 73,
+    "Leading, trailing, or empty whitespace in literal value unsupported": 16
+  },
+  "seconds": 10.5104226,
+  "designDirectories": 84,
+  "registeredIndexCount": 78,
+  "registeredRouteAuthority": false
+}
