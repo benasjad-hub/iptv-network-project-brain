@@ -1,0 +1,16 @@
+✔ actual owner-prepared request publishes once and ACKs metadata without replacing saved draft/history (1323.14943ms)
+✔ known actual committed operation and staged boundary never cause another publish (1125.945335ms)
+✔ lost publish reply retains original identity and explicit status-only recovery never sends another write (2328.173077ms)
+✔ concurrent same-operation calls commit at most once under real document/journal locks (1244.521589ms)
+✔ new save or source metadata change after prepare closes race before any write (1276.134666ms)
+✔ foreign actor/corrupt full request/unsaved revision/OFF cannot publish (378.928319ms)
+✔ newer other-document public head is never silently rebased or overwritten (1312.546059ms)
+✔ normal auth failure propagates before generic catch and any write (286.526424ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9957.215705
