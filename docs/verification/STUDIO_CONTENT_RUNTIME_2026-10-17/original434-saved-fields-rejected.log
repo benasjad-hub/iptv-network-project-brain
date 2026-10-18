@@ -1,0 +1,35 @@
+✔ real saved revision1 produces full three-field plan and independently bound hashes (31.632155ms)
+✔ history-restored empty changes preserve captured live values rather than reset authored defaults (24.458457ms)
+✔ wrong owner, unsaved/stale revisions, forged bindings and missing captured projection refuse (24.209395ms)
+✔ every unsupported saved field refuses even if text did not change (25.71941ms)
+✔ text codepoint limits and controls align with the current model without trimming (33.811988ms)
+✖ whitespace-only output that the native visual engine cannot recapture refuses before publication (30.996435ms)
+✔ accessor input does not execute before strict own-data validation (0.380237ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 191.226026
+
+✖ failing tests:
+
+test at tests/.site434-fields-qa.cjs:15:1
+✖ whitespace-only output that the native visual engine cannot recapture refuses before publication (30.996435ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception (unknown).
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site434-fields-qa.cjs:15:459)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function: unknown],
+    operator: 'throws',
+    diff: 'simple'
+  }

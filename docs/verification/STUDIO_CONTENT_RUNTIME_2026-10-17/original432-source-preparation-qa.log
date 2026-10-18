@@ -1,0 +1,13 @@
+✔ normal owner gate occurs first; off skips registry/config/project (416.814749ms)
+✔ unsupported namespace/type/path returns undefined without project (187.943653ms)
+✔ re-read actual site configuration drives source binding, caller domain ignored (66.547506ms)
+✔ unknown registry/config/project/source evidence never returns unsupported or leaks raw errors (331.758242ms)
+✔ actual existing private journal and actual native SSR produce one fresh immutable capture binding (365.174167ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1373.805745

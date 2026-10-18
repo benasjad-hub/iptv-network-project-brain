@@ -1,0 +1,13 @@
+✔ OFF preserves original source and legacy binding with zero new bridge calls (257.230281ms)
+✔ other sites and article paths retain the legacy flow even when enabled (275.194129ms)
+✔ enabled pilot retains BOTH prepared binding and exact projection without guessing fields (256.679609ms)
+✔ unknown prepared pilot source propagates before document creation, no legacy downgrade/retry (83.351597ms)
+✔ actual native SSR + real private journal + normal source preparation persist genuine captured document revision0 (889.94524ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1769.127697

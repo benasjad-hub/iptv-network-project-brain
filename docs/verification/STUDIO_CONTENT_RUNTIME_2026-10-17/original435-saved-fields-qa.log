@@ -1,0 +1,15 @@
+✔ real saved revision1 produces full three-field plan and independently bound hashes (35.572017ms)
+✔ history-restored empty changes preserve captured live values rather than reset authored defaults (30.80417ms)
+✔ wrong owner, unsaved/stale revisions, forged bindings and missing captured projection refuse (32.898717ms)
+✔ every unsupported saved field refuses even if text did not change (29.415178ms)
+✔ text codepoint limits and controls align with the current model without trimming (30.966604ms)
+✔ whitespace-only output that the native visual engine cannot recapture refuses before publication (24.08411ms)
+✔ accessor input does not execute before strict own-data validation (0.313158ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 203.587829
