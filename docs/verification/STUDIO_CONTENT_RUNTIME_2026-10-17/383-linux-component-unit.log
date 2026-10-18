@@ -1,0 +1,11 @@
+✔ default optional inputs preserve all three authored headings and async query counts (25.373774ms)
+✔ each named scope changes only its own heading while all native attributes and unrelated headings stay unchanged (25.047107ms)
+✔ all three independent overrides coexist; disabled inputs restore authored source (10.207116ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78.17598

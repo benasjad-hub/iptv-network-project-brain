@@ -1,0 +1,82 @@
+{
+  "state": "passed",
+  "actualOriginalVeoTTComponent": true,
+  "actualProjection380": true,
+  "actualNextProductionBuild": true,
+  "sourceHash": "8338c1c95d4243119f7e033f1383fdeac55a507699ae4419b7e157290c24dd0c",
+  "sameCandidateBuildId": true,
+  "mockSnapshotTransport": true,
+  "noPublicationStoreOrAuthAcceptance": true,
+  "noDB": true,
+  "noProductionDeployment": true,
+  "browser": {
+    "browserChecked": true,
+    "observationOnly": true,
+    "tool": "cua_repl",
+    "actualOriginalTheme": true,
+    "threeEditedHeadingsObserved": [
+      "Private home heading one",
+      "Private home heading two",
+      "Private contact heading three"
+    ],
+    "nativeH2ChildrenCount": 0,
+    "classNamesIdentical": true,
+    "computedFontFamilyIdentical": "__Bebas_Neue_e75d01, __Bebas_Neue_Fallback_e75d01",
+    "computedFontSizeIdentical": "48px",
+    "computedFontWeightIdentical": "400",
+    "whyAndFeaturesColorIdentical": "rgb(247, 244, 238)",
+    "contactColorIdentical": "rgb(255, 255, 255)",
+    "clientInteraction": "language menu aria-expanded false->true->false; no language selected",
+    "animatedCounterClientEffectObserved": true,
+    "capturedHydrationWarnErrorEntries": 0,
+    "pixelSDKDeliveryTested": false,
+    "qaResponseCSPBlocksThirdPartySDK": true,
+    "screenshots": "actual baseline and candidate shown in CUA tool output; no local image export claimed",
+    "ownTabsClosed": [
+      23,
+      24
+    ],
+    "authenticatedEditorOrPublicationTested": false
+  },
+  "steps": [
+    {
+      "case": "build-routes",
+      "seconds": 4.707474262000001,
+      "passed": true
+    },
+    {
+      "case": "build-fonts",
+      "seconds": 0.05163325400000031,
+      "passed": true
+    },
+    {
+      "case": "build-next",
+      "seconds": 75.278912008,
+      "passed": true
+    },
+    {
+      "case": "actual-default-original-main-text-native-heading-classes-canonical-brand-image-pixel",
+      "passed": true
+    },
+    {
+      "case": "heading-edit-1",
+      "passed": true
+    },
+    {
+      "case": "heading-edit-2",
+      "passed": true
+    },
+    {
+      "case": "heading-edit-3",
+      "passed": true
+    },
+    {
+      "case": "wrong-source-hash-falls-back-original",
+      "passed": true
+    },
+    {
+      "case": "restore-authored-same-build",
+      "passed": true
+    }
+  ]
+}

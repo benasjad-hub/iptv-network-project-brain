@@ -1,0 +1,25 @@
+TAP version 13
+# Subtest: default optional inputs preserve all three authored headings and async query counts
+ok 1 - default optional inputs preserve all three authored headings and async query counts
+  ---
+  duration_ms: 12.9798
+  ...
+# Subtest: each named scope changes only its own heading while all native attributes and unrelated headings stay unchanged
+ok 2 - each named scope changes only its own heading while all native attributes and unrelated headings stay unchanged
+  ---
+  duration_ms: 12.4662
+  ...
+# Subtest: all three independent overrides coexist; disabled inputs restore authored source
+ok 3 - all three independent overrides coexist; disabled inputs restore authored source
+  ---
+  duration_ms: 5.8948
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 48.3106

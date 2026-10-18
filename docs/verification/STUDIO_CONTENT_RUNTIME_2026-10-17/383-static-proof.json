@@ -1,0 +1,9 @@
+{
+  "originalLFHash": "86d7578bf3c20aae1a3e69931c178dda4cc2adce2ef9210740f382d778fab5e3",
+  "candidateHash": "8338c1c95d4243119f7e033f1383fdeac55a507699ae4419b7e157290c24dd0c",
+  "exactPatches": 6,
+  "nativeElementAttributesUnchanged": true,
+  "nativeElementCount": 70,
+  "statsAndRuntimeCallCountsUnchanged": true,
+  "liveRuntimePropProvided": false
+}
