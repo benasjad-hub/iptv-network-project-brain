@@ -1,0 +1,32 @@
+{
+  "state": "passed",
+  "actualBuiltNextRenderer": true,
+  "actualPublicCatalogHandler": true,
+  "actualTemporarySQLite": true,
+  "sourceCacheAndOwner": "explicit fixtures; not authenticated UI/customer/publication acceptance",
+  "fixtureOnly": true,
+  "publicDeployment": false,
+  "buildIdUnchanged": true,
+  "pixelRetained": true,
+  "canonicalAndBrandImageRetained": true,
+  "apiRequests": 4,
+  "steps": [
+    {
+      "step": "first-edit",
+      "version": 1,
+      "visible": true
+    },
+    {
+      "step": "second-edit",
+      "version": 2,
+      "firstEditPreserved": true,
+      "visible": true
+    },
+    {
+      "step": "conditional-rollback",
+      "version": 3,
+      "historyRetained": true,
+      "visible": true
+    }
+  ]
+}

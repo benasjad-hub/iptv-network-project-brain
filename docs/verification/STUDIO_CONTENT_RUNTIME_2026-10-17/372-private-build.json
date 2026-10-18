@@ -1,0 +1,1 @@
+{"state": "completed", "startedAt": 1792296053.138655, "endedAt": 1792296139.9073555, "steps": [{"step": "source-map", "exitCode": 0, "seconds": 4.368}, {"step": "font-compatibility", "exitCode": 0, "seconds": 0.035}, {"step": "next-build", "exitCode": 0, "seconds": 82.317}], "sourceUnchanged": true, "publicDeployment": false, "vercelBuild": false, "serviceRestart": false}

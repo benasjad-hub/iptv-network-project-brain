@@ -1,0 +1,95 @@
+TAP version 13
+# Subtest: exact source spans, UTF16 line columns, stable scoped unique IDs, no writable authority
+ok 1 - exact source spans, UTF16 line columns, stable scoped unique IDs, no writable authority
+  ---
+  duration_ms: 4.0328
+  ...
+# Subtest: leading/trailing/newline and escaped literals are refused instead of guessing source normalization
+not ok 2 - leading/trailing/newline and escaped literals are refused instead of guessing source normalization
+  ---
+  duration_ms: 0.7467
+  location: 'C:\\Users\\pc\\Documents\\ChatGPT\\Daoudchat Saas\\studio-content-runtime-20261017\\.studio-local\\site374-qa.cjs:4:1'
+  failureType: 'testCodeFailure'
+  error: '" Hello"'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\pc\Documents\ChatGPT\Daoudchat Saas\studio-content-runtime-20261017\.studio-local\site374-qa.cjs:4:182)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:527:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:527:7)
+  ...
+# Subtest: noncanonical source files refuse before parsing
+not ok 3 - noncanonical source files refuse before parsing
+  ---
+  duration_ms: 0.3453
+  location: 'C:\\Users\\pc\\Documents\\ChatGPT\\Daoudchat Saas\\studio-content-runtime-20261017\\.studio-local\\site374-qa.cjs:5:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: /page.tsx'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\pc\Documents\ChatGPT\Daoudchat Saas\studio-content-runtime-20261017\.studio-local\site374-qa.cjs:5:140)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:527:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:527:7)
+  ...
+# Subtest: spread attributes do not yield ambiguous attribute candidates
+not ok 4 - spread attributes do not yield ambiguous attribute candidates
+  ---
+  duration_ms: 1.2907
+  location: 'C:\\Users\\pc\\Documents\\ChatGPT\\Daoudchat Saas\\studio-content-runtime-20261017\\.studio-local\\site374-qa.cjs:6:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\pc\Documents\ChatGPT\Daoudchat Saas\studio-content-runtime-20261017\.studio-local\site374-qa.cjs:6:193)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:527:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:527:7)
+  ...
+# Subtest: malformed/client/dynamic/control subtrees refuse candidates
+ok 5 - malformed/client/dynamic/control subtrees refuse candidates
+  ---
+  duration_ms: 1.4308
+  ...
+# Subtest: hash mismatch, foreign source, unsafe URLs and entity ambiguity fail closed
+ok 6 - hash mismatch, foreign source, unsafe URLs and entity ambiguity fail closed
+  ---
+  duration_ms: 0.6543
+  ...
+# Subtest: candidate/refusal/depth analysis limits return no partial candidates
+ok 7 - candidate/refusal/depth analysis limits return no partial candidates
+  ---
+  duration_ms: 27.2742
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 4
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 45.8008
