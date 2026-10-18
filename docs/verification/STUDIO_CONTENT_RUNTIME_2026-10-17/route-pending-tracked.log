@@ -1,0 +1,19 @@
+✔ absent is actual null; complete request persists and reads back before attempt (128.941847ms)
+✔ concurrent attempts authorize at most one send, repeat persist cannot reset attempted state (32.975776ms)
+✔ other pending identity refuses overwrite and mismatched confirmation retains it (27.607852ms)
+✔ confirmed same operation clears only its local metadata; other document key survives (21.898537ms)
+✔ corrupt duplicate/noncanonical/foreign stored JSON is unknown and never deleted (70.908776ms)
+✔ storage failures or readback uncertainty never permit sending (51.935687ms)
+✔ unsupported Web Locks/storage fails closed without import-time access (27.721141ms)
+✔ getters, extra keys, invalid unicode/empty values, wrong shape and unsafe versions refuse before write (15.728464ms)
+✔ two isolated browser realms sharing storage/locks authorize only one sender (21.285261ms)
+✔ top-level request accessor is never invoked before safe clone (15.055058ms)
+✔ oversized raw storage is refused before parsing and retained; all errors expose generic unknown (15.028831ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 754.822346
