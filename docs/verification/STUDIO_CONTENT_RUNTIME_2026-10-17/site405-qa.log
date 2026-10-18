@@ -1,0 +1,17 @@
+✔ actual service user / actual six accepted sources / private cache lifecycle (24.046131ms)
+✔ invalid / expired / excessively distant deadlines refuse (0.862947ms)
+✔ source read corruption refuses before cache; real source stays unchanged (11.456661ms)
+✔ opened source descriptor closes when open completes after deadline (4.629761ms)
+✔ valid cache identity recorded before later realpath failure cleanup (23.725303ms)
+✔ deadline on final return guard does not leak verified cache (20.669613ms)
+✔ nonempty cache evidence preserved; cleanup never recurses (19.912192ms)
+✔ foreign replacement cache directory never removed (20.369745ms)
+✔ actual strict TypeScript compiler (0.308641ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1328.246583

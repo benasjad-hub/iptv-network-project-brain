@@ -1,0 +1,67 @@
+✔ successful mock pipe: exact fixed command, minimal env, copied stdin, close before receipt (133.281346ms)
+✔ invalid payload/deadline refuse without spawn (107.900072ms)
+✔ stderr discarded and bounded; output overflow never success after exit0 (40.346073ms)
+✔ child/stream/stdin errors latch unknown even if exit0 arrives (73.124852ms)
+✔ nonzero code, signal, unfinished stdin cannot return success (45.082854ms)
+✔ timeout term once then kill once; only reject after owned child close (295.384946ms)
+✔ termination grace without close is honestly unresolved, not cleanup permission (1043.134837ms)
+✔ clock reversal at final close refuses (15.811723ms)
+✖ late close cannot succeed just because deadline timer has not run yet (15.644793ms)
+✔ real Linux service-user custody + Python pipes + journal publish/project/status (1326.484247ms)
+✖ actual strict TypeScript compiler (1129.234807ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 9
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4255.612481
+
+✖ failing tests:
+
+test at ../../.studio-local/site406-runtime/site406-process-qa.cjs:71:1
+✖ late close cannot succeed just because deadline timer has not run yet (15.644793ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site406-runtime/site406-process-qa.cjs:72:159)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function (anonymous)],
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at ../../.studio-local/site406-runtime/site406-process-qa.cjs:92:1
+✖ actual strict TypeScript compiler (1129.234807ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   {
+  +     code: 2769,
+  +     message: "No overload matches this call.   Overload 1 of 3, '(chunk: any, cb?: (() => void) | undefined): Writable', gave the following error.     Argument of type '(err: any) => void' is not assignable to parameter of type '() => void'.       Target signature provides too few arguments. Expected 1 or more, but got 0.   Overload 2 of 3, '(chunk: any, encoding: BufferEncoding, cb?: (() => void) | undefined): Writable', gave the following error.     Argument of type '(err: any) => void' is not assignable to parameter of type 'BufferEncoding'."
+  +   },
+  +   {
+  +     code: 7006,
+  +     message: "Parameter 'err' implicitly has an 'any' type."
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site406-runtime/site406-process-qa.cjs:94:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

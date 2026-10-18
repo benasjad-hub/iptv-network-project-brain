@@ -1,0 +1,104 @@
+✔ actual service user / actual six accepted sources / private cache lifecycle (20.757282ms)
+✔ invalid / expired / excessively distant deadlines refuse (1.053532ms)
+✔ source read corruption refuses before cache; real source stays unchanged (5.074173ms)
+✖ opened source descriptor closes when open completes after deadline (4.925792ms)
+✖ valid cache identity recorded before later realpath failure cleanup (10.669785ms)
+✖ deadline on final return guard does not leak verified cache (13.920707ms)
+✔ nonempty cache evidence preserved; cleanup never recurses (17.946556ms)
+✔ foreign replacement cache directory never removed (13.934889ms)
+✔ actual strict TypeScript compiler (0.173008ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 6
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1150.983262
+
+✖ failing tests:
+
+test at ../../.studio-local/site404-runtime/site404-custody-qa.cjs:40:1
+✖ opened source descriptor closes when open completes after deadline (4.925792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site404-runtime/site404-custody-qa.cjs:44:65)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../.studio-local/site404-runtime/site404-custody-qa.cjs:46:1
+✖ valid cache identity recorded before later realpath failure cleanup (10.669785ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + Stats {
+  +   atimeMs: 1792310369224.5354,
+  +   birthtimeMs: 1792310369224.5354,
+  +   blksize: 4096,
+  +   blocks: 8,
+  +   ctimeMs: 1792310369224.5354,
+  +   dev: 2049,
+  +   gid: 1001,
+  +   ino: 65386,
+  +   mode: 16832,
+  +   mtimeMs: 1792310369224.5354,
+  +   nlink: 2,
+  +   rdev: 0,
+  +   size: 4096,
+  +   uid: 1001
+  + }
+  - null
+  
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site404-runtime/site404-custody-qa.cjs:50:102)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Stats],
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../.studio-local/site404-runtime/site404-custody-qa.cjs:52:1
+✖ deadline on final return guard does not leak verified cache (13.920707ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + Stats {
+  +   atimeMs: 1792310369238.5352,
+  +   birthtimeMs: 1792310369238.5352,
+  +   blksize: 4096,
+  +   blocks: 8,
+  +   ctimeMs: 1792310369238.5352,
+  +   dev: 2049,
+  +   gid: 1001,
+  +   ino: 65386,
+  +   mode: 16832,
+  +   mtimeMs: 1792310369238.5352,
+  +   nlink: 2,
+  +   rdev: 0,
+  +   size: 4096,
+  +   uid: 1001
+  + }
+  - null
+  
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site404-runtime/site404-custody-qa.cjs:57:120)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Stats],
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

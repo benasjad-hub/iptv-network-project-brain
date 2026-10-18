@@ -1650,3 +1650,5 @@ Fresh readonly origin/main remains2462d58e831784974e130596b012e5a8b38222e3, same
 2026-10-18: LOCAL7123fc00 exact392+393 atomicHEAD accepted after24actualPOSIX testsPASS0skip; initial22pass overturned by2racefailures, correctedbeforeadoption. Readonlychain394proposal active; wholepublisher/auth/E2E/hosting OPEN. No productioninit/SQL/deploy.
 
 2026-10-18: LOCAL21557c48 exact395readonlychain19QA+397privatewriter18QA accepted. Realtempdisk/twoprocessconcurrency/recovery, syntheticmodels/actorIDs; NOTauthenticatededitor/publicsiteproof. CLI398sourceproposal active; noSQL/rootinit/flags/deploy/productpush. See STUDIO_CONTENT_RUNTIME_2026-10-17 rawreject+passlogs/limits.
+
+2026-10-18: existing STUDIO_CONTENT_RUNTIME_2026-10-17 capture appended through original407 and current-main5e47e6c2; safe source backup pushed, branch deployments0, actual service-user private pipes tested, live/editor/public acceptance still OPEN.

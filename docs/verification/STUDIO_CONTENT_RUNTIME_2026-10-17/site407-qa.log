@@ -1,0 +1,19 @@
+✔ successful mock pipe: exact fixed command, minimal env, copied stdin, close before receipt (130.821026ms)
+✔ invalid payload/deadline refuse without spawn (102.695744ms)
+✔ stderr discarded and bounded; output overflow never success after exit0 (38.405517ms)
+✔ child/stream/stdin errors latch unknown even if exit0 arrives (59.452804ms)
+✔ nonzero code, signal, unfinished stdin cannot return success (42.069887ms)
+✔ timeout term once then kill once; only reject after owned child close (292.713973ms)
+✔ termination grace without close is honestly unresolved, not cleanup permission (1042.095391ms)
+✔ clock reversal at final close refuses (13.031122ms)
+✔ late close cannot succeed just because deadline timer has not run yet (29.259456ms)
+✔ real Linux service-user custody + Python pipes + journal publish/project/status (1478.558777ms)
+✔ actual strict TypeScript compiler (1370.806677ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4703.617857

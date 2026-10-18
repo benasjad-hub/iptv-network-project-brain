@@ -1,0 +1,16 @@
+test_absent_valid_store_does_not_create_anything (__main__.Tests.test_absent_valid_store_does_not_create_anything) ... ok
+test_invalid_json_utf8_duplicate_and_input_limit_no_files (__main__.Tests.test_invalid_json_utf8_duplicate_and_input_limit_no_files) ... ok
+test_malformed_project_dependency_never_becomes_absence (__main__.Tests.test_malformed_project_dependency_never_becomes_absence) ... ok
+test_malformed_status_dependency_never_becomes_absence (__main__.Tests.test_malformed_status_dependency_never_becomes_absence) ... ok
+test_missing_or_corrupt_root_never_absent (__main__.Tests.test_missing_or_corrupt_root_never_absent) ... ok
+test_model_mismatch_cannot_publish (__main__.Tests.test_model_mismatch_cannot_publish) ... ok
+test_partial_output_failure_never_appends_another_json (__main__.Tests.test_partial_output_failure_never_appends_another_json) ... ok
+test_real_pipe_publish_project_status_minimal_receipt (__main__.Tests.test_real_pipe_publish_project_status_minimal_receipt) ... ok
+test_same_uuid_pipe_replay_after_later_publication (__main__.Tests.test_same_uuid_pipe_replay_after_later_publication) ... ok
+test_status_actor_document_namespace_are_bound (__main__.Tests.test_status_actor_document_namespace_are_bound) ... ok
+test_unknown_action_or_extra_key_no_files (__main__.Tests.test_unknown_action_or_extra_key_no_files) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.195s
+
+OK
