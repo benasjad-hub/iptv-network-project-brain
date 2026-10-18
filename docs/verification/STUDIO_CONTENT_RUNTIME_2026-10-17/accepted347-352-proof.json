@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "originalJobs": [
+    347,
+    348,
+    349,
+    350,
+    351,
+    352
+  ],
+  "acceptedAssembly": "347+348+349+350 plus351patch1,3,4+352replacementPatch",
+  "productImplementationAdapted": false,
+  "sourceOnly": true,
+  "nativeAcceptance": false,
+  "publicDeployment": false,
+  "customerData": false,
+  "publicationActionTests": {
+    "realTemporarySQLite": true,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "milliseconds": 388.458018
+  },
+  "fullSource": {
+    "sites": 78,
+    "models": 3193,
+    "mapped": 3191,
+    "unmappedPreserved": 2,
+    "aliasesPreserved": 5,
+    "fail": 0
+  },
+  "pending": {
+    "newTests": 3,
+    "legacyTests": 12,
+    "fail": 0,
+    "typesExit": 0,
+    "typesSeconds": 3.327
+  },
+  "cancel345": {
+    "humanAuthorized": true,
+    "ownCLIOnly": true,
+    "terminal": "uncertain",
+    "exitCode": -9,
+    "receiptAdopted": false
+  },
+  "liveServiceTouched": false,
+  "open": [
+    "UI primary paths",
+    "Unicode source opener",
+    "trusted host aliases",
+    "public runtime",
+    "authenticated no-build publication",
+    "Home/Page/Product"
+  ]
+}
