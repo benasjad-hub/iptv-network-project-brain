@@ -1,0 +1,15 @@
+✔ synthetic actual-status boundary ACKs metadata only under same owner lock and preserves newer draft (166.327651ms)
+✔ absent/staged statuses retain source/draft/history and never ACK or publish (197.582276ms)
+✔ foreign actor/stale source/wrong registered origin/hash refuse before transport (317.859593ms)
+✔ unknown transport or mismatched committed status exposes generic unknown and preserves source (158.251933ms)
+✔ OFF/input guards/auth failure do not read storage; existing lock refuses recovery (166.399799ms)
+✔ real private owned journal recovery ACKs lost reply without external replay or newer draft overwrite (925.526396ms)
+✔ actual older operation recovery returns verified old status while retaining newer receipt metadata and draft (1088.880998ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3650.24951
