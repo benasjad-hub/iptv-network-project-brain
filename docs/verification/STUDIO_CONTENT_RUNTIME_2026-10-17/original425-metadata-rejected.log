@@ -1,0 +1,25 @@
+✔ default optional inputs preserve all three authored headings and async query counts (25.130365ms)
+✔ each named scope changes only its own heading while all native attributes and unrelated headings stay unchanged (24.87894ms)
+✔ all three independent overrides coexist; disabled inputs restore authored source (11.69294ms)
+✔ native roles identify exactly three H2s without reserved Studio attribute (4.801049ms)
+✔ valid publication metadata is stamped on original main, absence remains explicit with no invented version0 (6.156303ms)
+✖ disabled/invalid metadata never stamps source authority and retains authored visible headings (4.883643ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 98.678048
+
+✖ failing tests:
+
+test at tests/.site425-metadata-qa.cjs:14:1
+✖ disabled/invalid metadata never stamps source authority and retains authored visible headings (4.883643ms)
+  TypeError: Cannot read properties of null (reading 'compiledSourceFingerprint')
+      at Object.HomePage (<anonymous>:159:25)
+      at async markup (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site425-metadata-qa.cjs:10:79)
+      at async TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site425-metadata-qa.cjs:14:406)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7)

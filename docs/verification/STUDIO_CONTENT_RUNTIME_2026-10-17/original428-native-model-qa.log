@@ -1,0 +1,26 @@
+✔ actual code-owned artifact pin, namespace, complete frozen snapshot (5.056249ms)
+✔ only explicit raw root is registered; no aliases/default site (0.539266ms)
+✔ unsupported namespaces do not inspect broken artifact data (0.438894ms)
+✔ artifact drift throws unknown rather than absence or another namespace (5.58552ms)
+✔ accessors/toJSON/symbols/prototypes/nonenumerable properties/hole/cycle refuse before hashing (1.710564ms)
+✔ UTF8 byte cap includes keys and JSON escaping before hashing (2.188748ms)
+✔ bounded deep data refuses without recursion escape (0.45627ms)
+✔ other designs retain original page and zero runtime reads (81.810041ms)
+✔ pilot unavailable returns exact authored default page (13.993563ms)
+✔ pilot receives only accepted reader studioFields, no projection/private props (12.962574ms)
+✔ missing design/route stays notFound before reading (15.845137ms)
+✔ metadata resolver and fallback preserved without route-content fetch (14.510505ms)
+✔ default optional inputs preserve all three authored headings and async query counts (24.995161ms)
+✔ each named scope changes only its own heading while all native attributes and unrelated headings stay unchanged (26.496452ms)
+✔ all three independent overrides coexist; disabled inputs restore authored source (9.696648ms)
+✔ native roles identify exactly three H2s without reserved Studio attribute (5.439621ms)
+✔ valid publication metadata is stamped on original main, absence remains explicit with no invented version0 (7.953066ms)
+✔ disabled/invalid metadata never stamps source authority and retains authored visible headings (52.927777ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 654.355661

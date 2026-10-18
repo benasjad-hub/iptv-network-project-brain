@@ -1,0 +1,13 @@
+✔ actual SQLite save holds real publication lock and increments genuine saved revision (36.476252ms)
+✔ foreign owner cannot save or restore and keeps actor/revision/history unchanged (25.412799ms)
+✔ stale revision, invalid input and validation failure all release own lock without changing storage (22.473364ms)
+✔ restore creates a new draft revision, does not rewrite history or publish (46.674576ms)
+✔ a separate process publication lock blocks save and restore until normal release (77.527651ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 214.133112

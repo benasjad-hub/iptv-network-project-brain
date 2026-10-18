@@ -1,0 +1,43 @@
+  ▲ Next.js 14.2.35
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/53) ...
+   Generating static pages (13/53) 
+   Generating static pages (26/53) 
+   Generating static pages (39/53) 
+ ✓ Generating static pages (53/53)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /_not-found                          872 B          88.2 kB
+├ ● /[site]                              236 B           227 kB
+├   └ /veott
+├ ● /[site]/[...path]                    236 B           227 kB
+├   ├ /veott/pricing
+├   ├ /veott/channels
+├   ├ /veott/devices
+├   └ [+46 more paths]
+├ ƒ /api/cron/refresh-fixtures           0 B                0 B
+├ ƒ /api/lead                            0 B                0 B
+├ ƒ /api/revalidate                      0 B                0 B
+├ ƒ /robots.txt                          0 B                0 B
+├ ƒ /sitemap-images.xml                  0 B                0 B
+└ ƒ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87.3 kB
+  ├ chunks/427-6b2b1e36a7d669c7.js       31.7 kB
+  ├ chunks/ea1fa9df-0df5af6e8b64e985.js  53.6 kB
+  └ other shared chunks (total)          1.96 kB
+
+
+ƒ Middleware                             34.8 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+

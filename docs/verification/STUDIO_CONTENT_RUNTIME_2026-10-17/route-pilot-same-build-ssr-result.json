@@ -1,0 +1,33 @@
+{
+  "state": "passed",
+  "buildId": "MFXdlR0R8CKPFbdYf6UsN",
+  "steps": [
+    {
+      "case": "actual-SSR-absent-authored-theme-parity",
+      "passed": true
+    },
+    {
+      "case": "actual-SSR-edit-1-same-build",
+      "passed": true
+    },
+    {
+      "case": "actual-SSR-edit-2-same-build",
+      "passed": true
+    },
+    {
+      "case": "conditional-restore-same-build",
+      "passed": true
+    },
+    {
+      "case": "unavailable-authored-fallback-without-false-absence-stamp",
+      "passed": true
+    }
+  ],
+  "sourceFingerprint": "ec9970e0081cb4953e74bb1f2d0e60ecb0220adbe5ede2b12f02fddeb9bfdf48",
+  "actualNextSSR": true,
+  "actualAcceptedHTTPPipeline": true,
+  "syntheticPrivateJournalOnly": true,
+  "authenticatedEditorProof": false,
+  "publicDeployment": false,
+  "ownerInputsTouched": false
+}

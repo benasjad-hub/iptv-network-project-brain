@@ -1,0 +1,36 @@
+✔ actual model/engine offsets and independent hashes, owned deeply frozen binding without authority (14.413801ms)
+✔ actual private Next SSR source with current stamped model binds all three native text fields (177.071246ms)
+✔ source URL/namespace/model/projection guards refuse without guessed aliases (3.148851ms)
+✔ missing/stale source and publication stamps never become valid absence (3.720825ms)
+✔ wrong/duplicate/outside/nested native roles or mismatched values refuse (3.453096ms)
+✖ inert template content is part of whole document uniqueness, not ignored extra roles (2.080317ms)
+✔ JSON accessors never execute and bounded HTML tree refuses deep structures (1.802121ms)
+✔ published escaped text maps as plain text, no markup substitution (0.936098ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 213.388489
+
+✖ failing tests:
+
+test at tests/.site429-binding-qa.cjs:16:1
+✖ inert template content is part of whole document uniqueness, not ignored extra roles (2.080317ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception (unknown).
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site429-binding-qa.cjs:16:292)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function: unknown],
+    operator: 'throws',
+    diff: 'simple'
+  }

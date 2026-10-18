@@ -1,0 +1,16 @@
+✔ actual model/engine offsets and independent hashes, owned deeply frozen binding without authority (18.795691ms)
+✔ actual private Next SSR source with current stamped model binds all three native text fields (162.456691ms)
+✔ source URL/namespace/model/projection guards refuse without guessed aliases (2.928074ms)
+✔ missing/stale source and publication stamps never become valid absence (3.825092ms)
+✔ wrong/duplicate/outside/nested native roles or mismatched values refuse (4.518006ms)
+✔ inert template content is part of whole document uniqueness, not ignored extra roles (2.110958ms)
+✔ JSON accessors never execute and bounded HTML tree refuses deep structures (2.217697ms)
+✔ published escaped text maps as plain text, no markup substitution (1.156163ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 206.205972

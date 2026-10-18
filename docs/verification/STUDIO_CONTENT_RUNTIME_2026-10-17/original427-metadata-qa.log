@@ -1,0 +1,14 @@
+✔ default optional inputs preserve all three authored headings and async query counts (21.944967ms)
+✔ each named scope changes only its own heading while all native attributes and unrelated headings stay unchanged (23.672547ms)
+✔ all three independent overrides coexist; disabled inputs restore authored source (10.544795ms)
+✔ native roles identify exactly three H2s without reserved Studio attribute (4.195084ms)
+✔ valid publication metadata is stamped on original main, absence remains explicit with no invented version0 (6.422099ms)
+✔ disabled/invalid metadata never stamps source authority and retains authored visible headings (38.827886ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.984459
