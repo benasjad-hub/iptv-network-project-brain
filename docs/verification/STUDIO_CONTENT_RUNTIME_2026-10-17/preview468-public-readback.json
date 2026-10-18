@@ -1,0 +1,33 @@
+{
+  "time": 1792338961.516384,
+  "reads": [
+    {
+      "path": "/login",
+      "status": 200,
+      "location": null,
+      "nosniff": "nosniff",
+      "referrerPolicy": "strict-origin-when-cross-origin",
+      "robots": null,
+      "bytes": 7723
+    },
+    {
+      "path": "/__studio_candidate_b7a9fb79/studio/visuel/e2e71d29-136e-41e8-b17c-87a17a1ef96a",
+      "status": 307,
+      "location": "https://studio.viziona.tv/login",
+      "nosniff": "nosniff",
+      "referrerPolicy": "strict-origin-when-cross-origin",
+      "robots": "noindex, nofollow",
+      "bytes": 31
+    },
+    {
+      "path": "/review/site-76s62u9btrhjsd1vnmfrnxuxb/",
+      "status": 302,
+      "location": "https://studio.viziona.tv/login",
+      "nosniff": null,
+      "referrerPolicy": null,
+      "robots": "noindex, nofollow, noarchive",
+      "bytes": 154
+    }
+  ],
+  "noCredentials": true
+}

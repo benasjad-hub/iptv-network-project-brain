@@ -1,0 +1,9 @@
+{
+  "time": 1792339420.6600733,
+  "reloadExitCode": 0,
+  "nginxActive": true,
+  "oldPid": "982",
+  "candidatePid": "979743",
+  "oldServiceRetained": true,
+  "journalEnabled": false
+}

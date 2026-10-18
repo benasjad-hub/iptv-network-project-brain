@@ -1,0 +1,14 @@
+✔ only exact public projection GET and HEAD pass without contacting authentication (4.655691ms)
+✔ query text cannot widen the public pathname or create a write exception (1.35926ms)
+✔ every other method to the same endpoint remains owner gated (6.465052ms)
+✔ other sites, descendants, trailing slash, case changes and encoded paths remain gated (5.723765ms)
+✔ administrative, draft and write/status routes still require authentication (5.55297ms)
+✔ existing signed-in owner and login redirect behavior is preserved (1.127443ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 431.454099

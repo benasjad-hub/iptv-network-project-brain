@@ -1,0 +1,20 @@
+✔ preview keeps normal assets old; cutover retains exact old POST IDs and paths with no authority (4.091187ms)
+✔ output is stable across input ordering and inputs remain untouched (1.376004ms)
+✔ action overlap and duplicate IDs refuse instead of silently guessing compatibility (0.682289ms)
+✔ same public asset path with different bytes cannot silently replace an old chunk (0.467288ms)
+✔ Nginx URI/directive injection, traversal and encoded paths refuse (2.777937ms)
+✔ unknown keys, symbols, prototypes and invalid ports/releases refuse (0.865402ms)
+✔ top-level and nested object accessors are refused without execution (0.30768ms)
+✔ array index accessors, symbols, extra keys, holes and exotic prototypes refuse without execution (0.350483ms)
+✔ invalid URI value is refused without invoking coercion code (0.258115ms)
+✔ case-only URI collisions refuse because Nginx literal map keys ignore case (0.430652ms)
+✔ stable ASCII ordering does not depend on host locale (0.335901ms)
+✔ preview alias is editor-only, preserves standard origin headers and never rewrites action identity (0.289762ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.154195

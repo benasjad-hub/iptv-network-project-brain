@@ -1,0 +1,17 @@
+{
+  "time": 1792339393.7047222,
+  "scope": "new Studio UI main; exact old POST action IDs and old static paths retain old backend; no publication flag",
+  "originalSha256": "048b7bfb76d448d8a29c3bc205b8feddd9af73e73619ce72e216c9a5d8464023",
+  "proposedSha256": "3e3dc97348f089db6938c63bdb16687fb561d3e6286fc0a25696e5dab4efd75b",
+  "originalMapSha256": "2b18ae0230b3d679916881cfc9d852c3141f8c3c45e3b20adc387b609f258052",
+  "proposedMapSha256": "b5086ff9e7177dd5bd10b8849dac87586ab549727aea87768ec6b474f243a7c5",
+  "mapPath": "/etc/nginx/conf.d/studio-candidate-b7a9fb79-preview.conf",
+  "source": "/etc/nginx/sites-available/studio.viziona.tv",
+  "fullNginxTestExitCode": 0,
+  "oldBackendPid": 982,
+  "candidateMainPid": 979743,
+  "journalEnabled": false,
+  "oldServiceRetained": true,
+  "normalCandidateSaveRestoreVerified": true,
+  "oldAuthenticatedPostAfterCutoverStillToVerify": true
+}
