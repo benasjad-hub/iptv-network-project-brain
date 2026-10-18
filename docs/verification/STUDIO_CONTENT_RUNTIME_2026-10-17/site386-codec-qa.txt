@@ -1,0 +1,20 @@
+test_builtin_only_field_kind (__main__.Tests.test_builtin_only_field_kind) ... ok
+test_canonical_and_hash (__main__.Tests.test_canonical_and_hash) ... ok
+test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) ... ok
+test_immutability_empty_and_absence (__main__.Tests.test_immutability_empty_and_absence) ... ok
+test_json_invalid (__main__.Tests.test_json_invalid) ... ok
+test_model_tamper_duplicate_and_bool (__main__.Tests.test_model_tamper_duplicate_and_bool) ... ok
+test_no_custom_equality_execution (__main__.Tests.test_no_custom_equality_execution) ... ok
+test_refusal_is_whole (__main__.Tests.test_refusal_is_whole) ... ok
+test_routes (__main__.Tests.test_routes) ... ok
+test_sealed_output_byte_cap (__main__.Tests.test_sealed_output_byte_cap) ... ok
+test_semantic_change_and_removal (__main__.Tests.test_semantic_change_and_removal) ... ok
+test_snapshot_unicode_byte_cap (__main__.Tests.test_snapshot_unicode_byte_cap) ... ok
+test_stable_identity_sparse_defaults (__main__.Tests.test_stable_identity_sparse_defaults) ... ok
+test_total_model_byte_cap (__main__.Tests.test_total_model_byte_cap) ... ok
+test_unsafe_types_all_positions (__main__.Tests.test_unsafe_types_all_positions) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.836s
+
+OK

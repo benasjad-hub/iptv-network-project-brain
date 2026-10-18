@@ -1,0 +1,86 @@
+test_builtin_only_field_kind (__main__.Tests.test_builtin_only_field_kind) ... ok
+test_canonical_and_hash (__main__.Tests.test_canonical_and_hash) ... ok
+test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) ...
+  test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) (api='seal_model') ... FAIL
+  test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) (api='validate_model') ... FAIL
+  test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) (api='validate_snapshot') ... FAIL
+test_immutability_empty_and_absence (__main__.Tests.test_immutability_empty_and_absence) ... ok
+test_json_invalid (__main__.Tests.test_json_invalid) ... ok
+test_model_tamper_duplicate_and_bool (__main__.Tests.test_model_tamper_duplicate_and_bool) ... ok
+test_no_custom_equality_execution (__main__.Tests.test_no_custom_equality_execution) ... FAIL
+test_refusal_is_whole (__main__.Tests.test_refusal_is_whole) ... ok
+test_routes (__main__.Tests.test_routes) ... ok
+test_sealed_output_byte_cap (__main__.Tests.test_sealed_output_byte_cap) ... FAIL
+test_semantic_change_and_removal (__main__.Tests.test_semantic_change_and_removal) ... ok
+test_snapshot_unicode_byte_cap (__main__.Tests.test_snapshot_unicode_byte_cap) ... FAIL
+test_stable_identity_sparse_defaults (__main__.Tests.test_stable_identity_sparse_defaults) ... ok
+test_total_model_byte_cap (__main__.Tests.test_total_model_byte_cap) ... FAIL
+test_unsafe_types_all_positions (__main__.Tests.test_unsafe_types_all_positions) ... ok
+
+======================================================================
+FAIL: test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) (api='seal_model')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site385-qa.py", line 139, in test_custom_keys_never_compared
+    with self.assertRaises(ValueError):api(x)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) (api='validate_model')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site385-qa.py", line 139, in test_custom_keys_never_compared
+    with self.assertRaises(ValueError):api(x)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_custom_keys_never_compared (__main__.Tests.test_custom_keys_never_compared) (api='validate_snapshot')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site385-qa.py", line 139, in test_custom_keys_never_compared
+    with self.assertRaises(ValueError):api(x)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_no_custom_equality_execution (__main__.Tests.test_no_custom_equality_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site385-qa.py", line 112, in test_no_custom_equality_execution
+    self.assertEqual(calls,[])
+AssertionError: Lists differ: ['ne'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'ne'
+
+- ['ne']
++ []
+
+======================================================================
+FAIL: test_sealed_output_byte_cap (__main__.Tests.test_sealed_output_byte_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site385-qa.py", line 167, in test_sealed_output_byte_cap
+    with self.assertRaises(ValueError):c.seal_model(r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_snapshot_unicode_byte_cap (__main__.Tests.test_snapshot_unicode_byte_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site385-qa.py", line 128, in test_snapshot_unicode_byte_cap
+    with self.assertRaises(ValueError):c.validate_snapshot(s)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_total_model_byte_cap (__main__.Tests.test_total_model_byte_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site385-qa.py", line 120, in test_total_model_byte_cap
+    with self.assertRaises(ValueError):c.seal_model(r)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.965s
+
+FAILED (failures=7)
