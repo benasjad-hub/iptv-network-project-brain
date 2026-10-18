@@ -1,0 +1,51 @@
+✔ actual validator + source model: absent NULL version, correct r/scoped bindings and plain RSC maps (285.007474ms)
+✔ published text and compatible-model preserve untouched fields and independent results (165.515457ms)
+✔ OFF, unregistered namespace and invalid origin return null before network (350.515493ms)
+✔ all invalid protocol/model/value states refuse, never fake absence (347.857866ms)
+✔ HTTP/JSON/UTF8/byte/body failures refuse without retry (287.73761ms)
+✔ abort-resistant fetch and body are both bounded by whole deadline (5046.862495ms)
+✔ ordinary digit Content-Length is accepted with a complete valid response (28.811654ms)
+✖ clock exceptions remain unavailable rather than escaping raw errors (26.462217ms)
+✖ early non-200 cancels the network instead of leaving an unbounded body (26.81913ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 7
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6611.328992
+
+✖ failing tests:
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:17:1
+✖ clock exceptions remain unavailable rather than escaping raw errors (26.462217ms)
+  Error: private synthetic clock
+      at Object.now (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:17:244)
+      at Object.readStudioRouteContent (/home/iptv/daoudstudio-content-runtime-20261017/.studio-local/site422-reader.ts:37:35)
+      at /home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:17:348
+      at run (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:9:388)
+      at TestContext.<anonymous> (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:17:287)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+
+test at ../home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:18:1
+✖ early non-200 cancels the network instead of leaving an unbounded body (26.81913ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at /home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:18:253
+      at async run (/home/iptv/daoudstudio-content-runtime-20261017/tests/.site422-reader-qa.cjs:9:382)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

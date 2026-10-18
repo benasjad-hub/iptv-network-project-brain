@@ -1,0 +1,15 @@
+✔ actual code-owned artifact pin, namespace, complete frozen snapshot (6.277803ms)
+✔ only explicit raw root is registered; no aliases/default site (0.630251ms)
+✔ unsupported namespaces do not inspect broken artifact data (0.464493ms)
+✔ artifact drift throws unknown rather than absence or another namespace (5.253153ms)
+✔ accessors/toJSON/symbols/prototypes/nonenumerable properties/hole/cycle refuse before hashing (1.896411ms)
+✔ UTF8 byte cap includes keys and JSON escaping before hashing (2.442898ms)
+✔ bounded deep data refuses without recursion escape (0.470161ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31.088154

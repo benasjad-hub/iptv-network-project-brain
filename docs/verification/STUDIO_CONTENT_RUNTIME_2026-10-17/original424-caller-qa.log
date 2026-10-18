@@ -1,0 +1,13 @@
+✔ other designs retain original page and zero runtime reads (80.561647ms)
+✔ pilot unavailable returns exact authored default page (17.910056ms)
+✔ pilot receives only accepted reader studioFields, no projection/private props (11.282188ms)
+✔ missing design/route stays notFound before reading (21.700656ms)
+✔ metadata resolver and fallback preserved without route-content fetch (15.767007ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 155.009602

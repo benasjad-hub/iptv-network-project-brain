@@ -1,0 +1,19 @@
+✔ actual validator + source model: absent NULL version, correct r/scoped bindings and plain RSC maps (220.030159ms)
+✔ published text and compatible-model preserve untouched fields and independent results (161.931835ms)
+✔ OFF, unregistered namespace and invalid origin return null before network (300.873544ms)
+✔ all invalid protocol/model/value states refuse, never fake absence (318.720469ms)
+✔ HTTP/JSON/UTF8/byte/body failures refuse without retry (285.180745ms)
+✔ abort-resistant fetch and body are both bounded by whole deadline (5062.152188ms)
+✔ ordinary digit Content-Length is accepted with a complete valid response (25.91778ms)
+✔ clock exceptions remain unavailable rather than escaping raw errors (27.1904ms)
+✔ early non-200 cancels the network instead of leaving an unbounded body (29.261725ms)
+✔ exact deadline equality refuses before accepting a late body (27.886851ms)
+✔ late abort-ignoring fetch cannot acquire a reader after caller returned (2545.746371ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9011.212529

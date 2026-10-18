@@ -1,0 +1,14 @@
+✔ only registered root uses server model; query/body/header cannot choose namespace (140.585639ms)
+✔ unregistered site/path refuses without journal read (56.147916ms)
+✔ malformed parameters refuse without invoking journal (50.676788ms)
+✔ transport unknown and registry failures never become absent or leak private error (19.634703ms)
+✔ published and compatible public values pass through without private wrapper (20.101792ms)
+✔ actual service-user handler + transport + Python journal: two edits/read-only projection, no build (1056.112321ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1348.938389
