@@ -1,0 +1,46 @@
+test_builtin_only_paths_and_data (__main__.Tests.test_builtin_only_paths_and_data) ... ok
+test_empty_existing_blob_is_corruption (__main__.Tests.test_empty_existing_blob_is_corruption) ... ok
+test_existing_same_bytes_durability (__main__.Tests.test_existing_same_bytes_durability) ... ok
+test_file_fsync_failure_retains_data_and_reports_generic (__main__.Tests.test_file_fsync_failure_retains_data_and_reports_generic) ... ok
+test_head_before_rename_failure_cleans_only_own_temp (__main__.Tests.test_head_before_rename_failure_cleans_only_own_temp) ... ok
+test_head_directory_sync_failure_no_rollback (__main__.Tests.test_head_directory_sync_failure_no_rollback) ... ok
+test_head_disappears_during_initial_snapshot_refuses (__main__.Tests.test_head_disappears_during_initial_snapshot_refuses) ... FAIL
+test_head_replacement (__main__.Tests.test_head_replacement) ... ok
+test_head_symlink_never_followed (__main__.Tests.test_head_symlink_never_followed) ... ok
+test_immutable_roundtrip_and_lock (__main__.Tests.test_immutable_roundtrip_and_lock) ... ok
+test_inode_replacement_during_read (__main__.Tests.test_inode_replacement_during_read) ... ok
+test_links_fifo_modes_and_caps (__main__.Tests.test_links_fifo_modes_and_caps) ... ok
+test_lock_preserves_existing_invalid_file (__main__.Tests.test_lock_preserves_existing_invalid_file) ... ok
+test_name_and_type_limits (__main__.Tests.test_name_and_type_limits) ... ok
+test_no_implicit_initialization (__main__.Tests.test_no_implicit_initialization) ... ok
+test_partial_immutable_retained_not_replayed (__main__.Tests.test_partial_immutable_retained_not_replayed) ... ok
+test_process_lock_and_process_death_release (__main__.Tests.test_process_lock_and_process_death_release) ... ok
+test_read_mutation_refuses (__main__.Tests.test_read_mutation_refuses) ... ok
+test_read_syscall_error_is_generic (__main__.Tests.test_read_syscall_error_is_generic) ... ok
+test_root_and_ancestor_custody (__main__.Tests.test_root_and_ancestor_custody) ... ok
+test_root_changed_permissions_after_open (__main__.Tests.test_root_changed_permissions_after_open) ... ok
+test_special_permission_bits_refuse (__main__.Tests.test_special_permission_bits_refuse) ... ok
+test_temp_content_readback_before_rename (__main__.Tests.test_temp_content_readback_before_rename) ... ok
+test_temp_path_swap_during_head_recheck_refuses_before_switch (__main__.Tests.test_temp_path_swap_during_head_recheck_refuses_before_switch) ... FAIL
+
+======================================================================
+FAIL: test_head_disappears_during_initial_snapshot_refuses (__main__.Tests.test_head_disappears_during_initial_snapshot_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site387-qa.py", line 259, in test_head_disappears_during_initial_snapshot_refuses
+    with patch.object(h,'read_blob',vanished),self.assertRaises(ValueError):j.replace_head(fd,b'new')
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_temp_path_swap_during_head_recheck_refuses_before_switch (__main__.Tests.test_temp_path_swap_during_head_recheck_refuses_before_switch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/daoudstudio-staging/site387-qa.py", line 277, in test_temp_path_swap_during_head_recheck_refuses_before_switch
+    self.assertTrue(changed);self.assertFalse((self.root/'HEAD').is_symlink())
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.079s
+
+FAILED (failures=2)
